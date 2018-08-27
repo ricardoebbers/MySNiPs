@@ -1,25 +1,19 @@
-services:
-  - postgresql
-
-before_script:
-  - psql -c 'create database db_test;'
-
-addons:
-  postgresql: "10"
-  apt:
-    packages:
-    - postgresql-10
-    - postgresql-client-10
-env:
-  global:
-  - PGPORT=5433
-
 language: ruby
 rvm:
   - 2.5.1
 
+cache:
+- bundler
+
+before_script:
+  - bundle exec rake db:create
+  - bundle exec rake db:migrate
+  - bundle exec rake assets:precompile
+
 deploy:
   provider: heroku
-  app: mysnips
   api_key:
     secure: QwOenhNzGWNnaIO7Va857lHYGRCPeSfG64LsS6JlppXpkOYOjTVdz26AhmepsJL2g9eYfvdgegX1AHeJY9LncaI4W/keooSIk77IEuW9LM68hhIR9swPj2gzNw4NXvHx1ax+bmcXDIMjTC5tn7CuwZ4lCeQLyPRH2/oyPngKm9SNtCd9CG4xUhJguY8rXoD5KzBsNGN+y5KsxdqaWcHxEyPX/DuSk3sWR9SIhPFPkRnPnNap0Vc2pxUXvrjdeLG/U6QfsNYW8tns+716uwhqbkP3rgQJK+L5WW/Aw+141ZeVyNvjdiH62j5aDx8dMP9WOQGZgufzZGd9MIWtNz4k5bHeThGCVJ4NRfPWq89U0TtwFcZjUla9bAmBjgMMwD162wKfP4gOshwpBDyKJ7FclAdxRFYN+UyRbV6YWrkEwWuMSB0r5VOtCBthE0s47GPURKSjnX95A2IcOTmIM+LJ74eReTfLs6tRwpcFli6XDdjdDMiUk0E5NdniFgW+j6tJNozvq03GUx2PiHNzDOdU7oqmZakFEM5RkMvrV1QX+acf7XLzJayg1zc9cu9ZhB0RytOJuYwgSqXbxbdBBpdif4NGAH8L59EoObxI2NqQd7OqeZVm35sCV2PqfCVHZpQC5t/Zp7M57mVCLrdzLRezZs4oeVaBFozjXDY3gWmJkKg=
+  app: mysnips
+  on:
+    repo: ricardoebbers/MySNiPs
