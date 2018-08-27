@@ -1,3 +1,19 @@
+services:
+  - postgresql
+
+before_script:
+  - psql -c 'create database db_test;' -U postgres
+
+addons:
+  postgresql: "10"
+  apt:
+    packages:
+    - postgresql-10
+    - postgresql-client-10
+env:
+  global:
+  - PGPORT=5433
+
 language: ruby
 rvm:
   - 2.5.1
