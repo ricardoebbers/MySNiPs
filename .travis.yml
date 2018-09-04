@@ -13,6 +13,9 @@ before_script:
   - bundle exec rake db:migrate
   - bundle exec rake assets:precompile
 
+before_deploy:
+  - cd ./MySNiPs
+
 deploy:
   provider: heroku
   api_key:
@@ -20,3 +23,4 @@ deploy:
   app: mysnips
   on:
     repo: ricardoebbers/MySNiPs
+    branch: master
