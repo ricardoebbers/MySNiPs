@@ -6,17 +6,18 @@ Link do App: [TBD]
 Screencast: [TBD]
 
 # Equipe
-
-* Jaime Fernandes de Araujo Neto <jfan@cin.ufpe.br> - UI/UX Designer & Dev QA
-* João Pedro Lira dos Santos <jpls@cin.ufpe.br> - Developer Back-end
-* João Rafael Santos Camelo <jrsc2@cin.ufpe.br> - Developer Back-end
-* José Reginaldo de Barros Junior <jrbj@cin.ufpe.br> - Developer Front-end
-* Ricardo Ebbers Carneiro Leão <recl@cin.ufpe.br> - Dev QA & Dev-ops & Project Manager
+| Nome (id CIn) | Função |
+| ------------- | ------ |
+| [Jaime Fernandes de Araujo Neto](https://github.com/jfernan10) (jfan) | UI/UX Designer & Dev QA |
+| [João Pedro Lira dos Santos](https://github.com/jpmagi10) (jpls) | Developer Back-end |
+| [João Rafael Santos Camelo](https://github.com/JoaoRafaelCamelo) (jrsc2) | Developer Back-end |
+| [José Reginaldo de Barros Junior](https://github.com/jrbj0) (jrbj) | Developer Front-end |
+| [Ricardo Ebbers Carneiro Leão](https://github.com/ricardoebbers) (recl) | Dev QA & Dev-ops & Project Manager |
 
 # Descrição
 
-O MySNiPs é um serviço web que possibilita _insights_ baseados no DNA dos usuários e dados públicos disponíveis na SNPedia.
+O MySNiPs é um SaaS que integra mapamentos genéticos com bases de dados públicas e possibilita _insights_ baseados no DNA dos usuários.
 
 # Justificativa
 
-[TBD]
+Nosso cliente é uma empresa inovadora na área de testes genéticos e imunológicos e atua hoje exclusivamente na medicina diagnóstica. O projeto MySNiPs surgiu de uma oportunidade percebida em aproveitar a estrutura instalada do cliente e expandir a sua fatia de mercado além das demandas hospitalares.
