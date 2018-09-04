@@ -2,11 +2,13 @@ language: ruby
 rvm:
   - 2.5.1
 
+before_install:
+  - cd MySNiPs
+
 cache:
 - bundler
 
 before_script:
-  - cd MySNiPs
   - bundle exec rake db:create
   - bundle exec rake db:migrate
   - bundle exec rake assets:precompile
