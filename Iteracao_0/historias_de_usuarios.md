@@ -30,7 +30,7 @@
 
 ## Épico: Geração do relatório
 
-    Como um cliente final
+    Como usuário final
     Dado que eu já fiz a coleta de material genético previamente
     Eu gostaria de ter acesso a um relatório contendo informações relevantes derivadas
         desse material e pesquisas científicas, que seja possível filtrar e pesquisar e
