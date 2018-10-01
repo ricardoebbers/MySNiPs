@@ -67,9 +67,11 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# Gem that connects to SNPedia's API
+# Only used in the spike snapi-MediawikTory
+# gem 'mediawiktory'
 
-#
-#
-#
-# API usada para pegar informações do SNPedia
-gem 'mediawiktory'
+# Gems used to connect to bots.snpedia.com
+gem 'addressable'
+gem 'faraday'
+gem 'faraday_middleware'

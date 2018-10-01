@@ -1,6 +1,10 @@
 Rails:
   Enabled: true
 
+AllCops:
+  Exclude:
+    - Gemfile*
+
 # Commonly used screens these days easily fit more than 80 characters.
 Metrics/LineLength:
   Max: 120
@@ -53,7 +57,6 @@ Style/CollectionMethods:
     # inject seems more common in the community.
     reduce: "inject"
 
-
 # Either allow this style or don't. Marking it as safe with parenthesis
 # is silly. Let's try to live without them for now.
 Style/ParenthesesAroundCondition:
@@ -70,12 +73,6 @@ Style/RaiseArgs:
 # see https://github.com/bbatsov/rubocop/issues/1633
 Layout/MultilineOperationIndentation:
   Enabled: false
-
-# Fail is an alias of raise. Avoid aliases, it's more cognitive load for no gain.
-# The argument that fail should be used to abort the program is wrong too,
-# there's Kernel#abort for that.
-Style/SignalException:
-  EnforcedStyle: only_raise
 
 # Suppressing exceptions can be perfectly fine, and be it to avoid to
 # explicitly type nil into the rescue since that's what you want to return,
@@ -136,11 +133,22 @@ Style/MethodDefParentheses:
   Enabled: false
 
 ######################################################################
+# Personally modified cops from now on
 
-#Português necessita de sinais
+# Just in case we need portuguese signals somewhere
 Style/AsciiComments:
   Enabled: false
 
-#
+# Preference as most came from Python
+# *Considering
+Style/AndOr:
+  EnforcedStyle: conditionals
+
+# No need to add the comment in every file
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+# 'raise' is easier to understand and does the same as 'fail'
+# *Considering
+Style/SignalException:
+  EnforcedStyle: only_raise
