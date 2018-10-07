@@ -5,27 +5,28 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/MySNiPs/.bundle
+MySNiPs/.bundle
 
 # Ignore the default SQLite database.
-/MySNiPs/db/*.sqlite3
-/MySNiPs/db/*.sqlite3-journal
+MySNiPs/db/*.sqlite3
+MySNiPs/db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
-/MySNiPs/log/*
-/MySNiPs/tmp/*
-!/MySNiPs/log/.keep
-!/MySNiPs/tmp/.keep
+MySNiPs/log/*
+MySNiPs/tmp/*
+!MySNiPs/log/.keep
+!MySNiPs/tmp/.keep
 
 # Ignore uploaded files in development
-/MySNiPs/storage/*
-!/MySNiPs/storage/.keep
+MySNiPs/storage/*
+!MySNiPs/storage/.keep
 
-/MySNiPs/node_modules
-/MySNiPs/yarn-error.log
+MySNiPs/node_modules
+MySNiPs/yarn-error.log
 
-/MySNiPs/public/assets
-/MySNiPs/.byebug_history
+MySNiPs/public/assets
+MySNiPs/.byebug_history
 
 # Ignore master key for decrypting credentials and more.
-/MySNiPs/config/master.key
+MySNiPs/config/master.key
+.vscode
