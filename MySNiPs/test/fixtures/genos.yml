@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rsd: 1
+  allele1: MyString
+  allele2: MyString
+  magnitude: 1.5
+  reputation: 1
+  summary: MyString
+
+two:
+  rsd: 1
+  allele1: MyString
+  allele2: MyString
+  magnitude: 1.5
+  reputation: 1
+  summary: MyString

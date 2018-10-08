@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rsd: 1
+  name: MyString
+  chromosome: 1
+  position: 1
+  orientation: false
+  stabilized: false
+  summary: MyString
+  geno1a1: MyString
+  geno1a2: MyString
+  geno2a1: MyString
+  geno2a2: MyString
+  geno3a1: MyString
+  geno3a2: MyString
+  gmaf: 1.5
+
+two:
+  rsd: 1
+  name: MyString
+  chromosome: 1
+  position: 1
+  orientation: false
+  stabilized: false
+  summary: MyString
+  geno1a1: MyString
+  geno1a2: MyString
+  geno2a1: MyString
+  geno2a2: MyString
+  geno3a1: MyString
+  geno3a2: MyString
+  gmaf: 1.5
