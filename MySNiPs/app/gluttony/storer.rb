@@ -7,9 +7,11 @@ module Gluttony
       @pedia = pedia
     end
 
+    # Returns the title of the Gene page
     def genotype_info(geno)
-      # return geneid
-      geno[:id]
+      # TODO
+
+      [geno[:title][0..(geno[:title].index("(") - 1)]]
     end
   end
 end

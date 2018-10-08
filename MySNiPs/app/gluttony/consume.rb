@@ -21,17 +21,18 @@ module Gluttony
 
     def gather_genotypes
       # Sets don't allow repetition and are light enough
-      geneids = Set[]
+      genetitles = Set[]
+      puts @harvest.genotypes
       @harvest.genotypes.each do |genoid|
         genoinfo = @harvest.genotype_info genoid
-        geneids.add(@store.genotype_info(genoinfo)) unless genoinfo.nil?
+        genetitles.add(@store.genotype_info(genoinfo)) unless genoinfo.nil?
       end
-      geneids
+      genetitles
     end
 
-    def gather_genes(geneids)
-      geneids.each do |geneid|
-        @store.genotype_info(@harvest.gene_info(geneid))
+    def gather_genes(genetitles)
+      genetitles.each do |title|
+        @store.gene_info(@harvest.gene_info(title))
       end
     end
   end
