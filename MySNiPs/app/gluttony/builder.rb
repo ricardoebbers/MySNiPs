@@ -3,13 +3,14 @@ module Gluttony
     # Class that will get informations about Genos or Genes from raw text
     class << Builder
       # This is a static class
-      def Builder.genotype(raw)
+      def genotype(raw)
         geno = {}
         geno[:pageid] = raw["pageid"]
         geno[:title] = raw["title"]
         geno[:revid] = raw["revid"]
 
         text = raw["wikitext"]["*"].delete("\n")
+
         genolen = "{{Genotype".freeze.length + 1
         endindex = text.index("}}") - 1
         text = text.delete("\n")[genolen..endindex].split("|")
@@ -25,7 +26,7 @@ module Gluttony
 
       def _genotype(key, val, geno)
         case key
-        when "rsid", "iid" then geno[:id] = val
+        when "rsid" then geno[:rsid] = val
         when "summary" then geno[:summary] = val
         when "allele1" then geno[:allele1] = val
         when "allele2" then geno[:allele2] = val
@@ -34,6 +35,10 @@ module Gluttony
         end
         geno
       end
+    end
+
+    def gene(rsnum, raw)
+      #
     end
   end
 end
