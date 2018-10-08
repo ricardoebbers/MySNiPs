@@ -13,25 +13,25 @@ module Gluttony
 
       # i is just so i don't download every snp when i'm testing
       i = 0
-      while @harvest.continue? && i < 10
+      while @harvest.continue? && i < 1
         i += 1
-        gather_genes(gather_genos)
+        gather_genes(gather_genotypes)
       end
     end
 
-    def gather_genos
+    def gather_genotypes
       # Sets don't allow repetition and are light enough
       geneids = Set[]
-      @harvest.genos.each do |genoid|
-        genoinfo = @harvest.geno_info genoid
-        geneids.add(@store.geno_info(genoinfo)) unless genoinfo.nil?
+      @harvest.genotypes.each do |genoid|
+        genoinfo = @harvest.genotype_info genoid
+        geneids.add(@store.genotype_info(genoinfo)) unless genoinfo.nil?
       end
       geneids
     end
 
     def gather_genes(geneids)
       geneids.each do |geneid|
-        @store.geno_info(@harvest.gene_info(geneid))
+        @store.genotype_info(@harvest.gene_info(geneid))
       end
     end
   end
