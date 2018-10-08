@@ -13,7 +13,7 @@ module Gluttony
 
       # i is just so i don't download every snp when i'm testing
       i = 0
-      while harvest.continue? && i < 10
+      while @harvest.continue? && i < 10
         i += 1
         gather_genes(gather_genos)
       end
@@ -24,10 +24,7 @@ module Gluttony
       geneids = Set[]
       @harvest.genos.each do |genoid|
         genoinfo = @harvest.geno_info genoid
-        unless genoinfo.nil?
-          @store.geno_info genoinfo
-          geneids.add genoinfo["RSID"]
-        end
+        geneids.add(@store.geno_info(genoinfo)) unless genoinfo.nil?
       end
       geneids
     end
@@ -39,3 +36,6 @@ module Gluttony
     end
   end
 end
+
+x = Gluttony::Consume.new
+x.snpedia
