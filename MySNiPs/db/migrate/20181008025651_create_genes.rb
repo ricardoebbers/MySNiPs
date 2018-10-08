@@ -1,7 +1,7 @@
 class CreateGenes < ActiveRecord::Migration[5.2]
   def change
     create_table :genes do |t|
-      t.integer :rsd, limit: 13
+      t.string :rsd, limit: 13
       t.string :name, limit: 17
       t.integer :chromosome, limit: 2
       t.integer :position, limit: 10
@@ -15,6 +15,7 @@ class CreateGenes < ActiveRecord::Migration[5.2]
       t.string :geno3a1, limit: 1
       t.string :geno3a2, limit: 1
       t.float :gmaf
+      t.string :link, limit: 16
 
       t.timestamps
     end
