@@ -14,6 +14,10 @@ module SNaPi
       "#<#{self.class.name}(#{@client.url})>"
     end
 
+    def consume
+      Consume.new
+    end
+
     include SNaPi::Actions
   end
 end
