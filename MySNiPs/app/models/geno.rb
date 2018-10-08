@@ -1,0 +1,2 @@
+class Geno < ApplicationRecord
+end
