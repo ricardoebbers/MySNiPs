@@ -7,8 +7,9 @@ module Gluttony
       @pedia = pedia
     end
 
-    def geno_info(genoid)
+    def genotype_info(geno)
       # return geneid
+      geno[:id]
     end
   end
 end
