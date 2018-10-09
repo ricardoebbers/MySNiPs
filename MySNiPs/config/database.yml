@@ -12,6 +12,9 @@ default: &default
 development:
   <<: *default
   database: db_development
+  
+  
+  
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -19,7 +22,9 @@ development:
 test:
   <<: *default
   database: db_test
+  
 
 production:
   <<: *default
   database: db_production
+  
