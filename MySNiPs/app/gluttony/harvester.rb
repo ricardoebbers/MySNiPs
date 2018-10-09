@@ -9,12 +9,26 @@ module Gluttony
 
     # Returns a list of IDs
     def genotypes
-      @response = if @response.nil?
-                    @pedia.query.list.title("Category:Is a genotype").prop(:ids).limit(:max).response
-                  else
-                    @response.continue
-                  end
-      @response.to_h["categorymembers"].map(&:first).map(&:last)
+      tries = 0
+      begin
+        @response = if @response.nil?
+                      @pedia.query.list.title("Category:Is a genotype").prop(:ids).limit(:max).response
+                    else
+                      @response.continue
+                    end
+        @response.to_h["categorymembers"].map(&:first).map(&:last)
+      rescue JSON::ParserError
+        if tries == 5
+          puts "Limit retries achieved"
+          puts @response.metadata
+          raise
+        end
+
+        tries += 1
+        puts "JSON Parser Error while gathering Genotypes, retrying - ", tries.to_s
+        sleep(5)
+        retry
+      end
     end
 
     # Needed only when gathering genotype IDs
@@ -33,8 +47,22 @@ module Gluttony
     end
 
     def gene_info(genetitle)
-      resp = @pedia.parse.page(genetitle).prop(:wikitext, :revid).response
-      Gluttony::Builder.gene(resp.to_h)
+      tries = 0
+      begin
+        resp = @pedia.parse.page(genetitle).prop(:wikitext, :revid).response
+        Gluttony::Builder.gene(resp.to_h, genetitle)
+      rescue JSON::ParserError
+        if tries == 5
+          puts "Limit retries achieved"
+          puts @response.metadata
+          raise
+        end
+
+        tries += 1
+        puts "JSON Parser Error while gathering Genotypes, retrying - ", tries.to_s
+        sleep(20)
+        retry
+      end
     end
   end
 end

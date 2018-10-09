@@ -6,23 +6,37 @@ require_relative "./storer"
 module Gluttony
   class Consume
     # Controller for SNaPi
+    # Run Gluttony::Consume.snpedia and it will fill the database automatically
     def snpedia
+      beginning_time = Time.now.utc
+      puts "Started Gluttony at: #{beginning_time}"
+
       pedia = SNaPi::Pedia.new
       @harvest = Gluttony::Harvester.new(pedia)
       @store = Gluttony::Storer.new(pedia)
 
-      # i is just so i don't download every snp when i'm testing
-      i = 0
-      while @harvest.continue? && i < 1
-        i += 1
-        gather_genes(gather_genotypes)
+      gather_genes(gather_genotypes) while @harvest.continue?
+
+      end_time = Time.now.utc
+
+      File.open("log.txt", "w+") do |f|
+        f.puts "Time elapsed #{(end_time - beginning_time)} seconds"
+        f.puts "Genotypes stored: #{@store.genos.size}"
+        f.puts "Genes stored: #{@store.genes.size}"
+      end
+
+      File.open("genos.txt", "w+") do |f|
+        f.puts(@store.genos)
+      end
+
+      File.open("genes.txt", "w+") do |f|
+        f.puts(@store.genes)
       end
     end
 
     def gather_genotypes
       # Sets don't allow repetition and are light enough
       genetitles = Set[]
-      puts @harvest.genotypes
       @harvest.genotypes.each do |genoid|
         genoinfo = @harvest.genotype_info genoid
         genetitles.add(@store.genotype_info(genoinfo)) unless genoinfo.nil?
@@ -37,6 +51,3 @@ module Gluttony
     end
   end
 end
-
-x = Gluttony::Consume.new
-x.snpedia

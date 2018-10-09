@@ -1,0 +1,3 @@
+Time elapsed 2419.211812286 seconds
+Genotypes stored: 1978
+Genes stored: 1150
