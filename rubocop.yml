@@ -152,3 +152,7 @@ Style/FrozenStringLiteralComment:
 # *Considering
 Style/SignalException:
   EnforcedStyle: only_raise
+
+# It was returning an error sometimes
+Style/Semicolon:
+  Enabled: false
