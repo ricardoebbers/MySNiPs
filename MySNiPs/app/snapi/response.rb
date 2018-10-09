@@ -56,7 +56,7 @@ module SNaPi
     end
 
     def error!
-      raise Error, hash_dig(@metadata, "error")
+      @metadata["error"]
     end
 
     def hash_dig(hash, *keys)
