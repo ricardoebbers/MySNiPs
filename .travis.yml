@@ -13,8 +13,8 @@ before_script:
   - bundle exec rake db:migrate
   - bundle exec rake assets:precompile
 
-before_deploy:
-  - cd ./MySNiPs
+#before_deploy:
+#  - cd ./MySNiPs
 
 deploy:
   provider: heroku
