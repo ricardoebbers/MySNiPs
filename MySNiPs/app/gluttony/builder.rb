@@ -30,6 +30,7 @@ module Gluttony
       def _genotype(key, val, geno)
         case key
         when "rsid" then geno[:rsid] = val
+        when "iid" then geno[:iid] = val
         when "summary" then geno[:summary] = val
         when "allele1" then geno[:allele1] = val
         when "allele2" then geno[:allele2] = val
@@ -40,7 +41,7 @@ module Gluttony
       end
 
       def ok?(geno)
-        true if !geno[:repute].zero? || (geno.key? :summary)
+        true if !geno[:magnitude].zero? && (geno.key? :summary)
       end
 
       def gene(raw, genetitle)
@@ -75,6 +76,7 @@ module Gluttony
       def _gene(key, val, gene)
         case key
         when "rsid" then gene[:rsid] = val
+        when "iid" then gene[:iid] = val
         when "Summary" then gene[:summary] = val
         when "Gene" then gene[:name] = val
         when "Chromosome" then gene[:chromosome] = val
@@ -95,7 +97,7 @@ module Gluttony
           gene[:geno3a1] = alles[0]
           gene[:geno3a2] = alles[1]
         end
-        gene
+        gene if Builder.complete? geno
       end
 
       def geno_to_allele(geno)
@@ -104,6 +106,10 @@ module Gluttony
 
       def allele_to_geno(allele1, allele2)
         "(" + allele1 + "," + allele2 + ")"
+      end
+          
+      def complete?(gene)
+        true if ((gene.key :chromosome) && (gene.key? :position)) || ((gene.key? :rsid) || (gene.key? :iid))
       end
     end
   end
