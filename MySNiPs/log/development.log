@@ -746,3 +746,395 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 281ms (Views: 269.0ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (363.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (142.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to CreateGenos (20181008024504)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (163.5ms)[0m  [1m[35mCREATE TABLE "genos" ("id" bigserial primary key, "rsid" character varying(13), "revid" character varying(13), "allele1" character varying(1), "allele2" character varying(1), "magnitude" float, "repute" smallint, "summary" character varying(130), "title" character varying(16), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181008024504_create_genos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181008024504"]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (20.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to CreateGenes (20181008025651)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (66.8ms)[0m  [1m[35mCREATE TABLE "genes" ("id" bigserial primary key, "rsid" character varying(13), "revid" character varying(13), "name" character varying(17), "chromosome" smallint, "position" character varying(10), "orientation" boolean, "stabilized" boolean, "summary" character varying(130), "geno1a1" character varying(1), "geno1a2" character varying(1), "geno2a1" character varying(1), "geno2a2" character varying(1), "geno3a1" character varying(1), "geno3a2" character varying(1), "gmaf" float, "title" character varying(16), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181008025651_create_genes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181008025651"]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (15.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to CreateUsers (20181009194345)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (56.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "identifier" bigint, "password" bigint, "report_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181009194345_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181009194345"]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (14.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-10-10 03:02:13.187664"], ["updated_at", "2018-10-10 03:02:13.187664"]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (30.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to Dropgenestable (20181010031158)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181010031158"]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (14.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to Dropgenostable (20181010031206)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181010031206"]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (16.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to CreateGenes (20181010032037)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to CreateGenes (20181010032037)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "genes" ("id" bigserial primary key, "rsid" character varying(13), "revid" character varying(13), "name" character varying(17), "chromosome" smallint, "position" character varying(10), "orientation" boolean, "stabilized" boolean, "summary" text, "geno1a1" character varying(1), "geno1a2" character varying(1), "geno2a1" character varying(1), "geno2a2" character varying(1), "geno3a1" character varying(1), "geno3a2" character varying(1), "gmaf" float, "title" character varying(16) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181010032037_create_genes.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to Dropgenestable (20181010034508)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (344.7ms)[0m  [1m[35mDROP TABLE "genes"[0m
+  ↳ db/migrate/20181010034508_dropgenestable.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181010034508"]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (835.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to Dropgenostable (20181010034516)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE "genos"[0m
+  ↳ db/migrate/20181010034516_dropgenostable.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181010034516"]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (109.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to CreateGenes (20181010034755)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (46.8ms)[0m  [1m[35mCREATE TABLE "genes" ("id" bigserial primary key, "title" character varying(16) NOT NULL, "rsid" character varying(13), "iid" character varying(13), "chromosome" smallint, "position" character varying(10), "summary" character varying(130), "name" character varying(17), "orientation" boolean, "stabilized" boolean, "gmaf" float, "geno1a1" character varying(1), "geno1a2" character varying(1), "geno2a1" character varying(1), "geno2a2" character varying(1), "geno3a1" character varying(1), "geno3a2" character varying(1), "revid" character varying(13), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181010034755_create_genes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181010034755"]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (21.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to CreateGenos (20181010034801)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (42.3ms)[0m  [1m[35mCREATE TABLE "genos" ("id" bigserial primary key, "title" character varying(16) NOT NULL, "allele1" character varying(1), "allele2" character varying(1), "summary" character varying(130), "repute" smallint, "magnitude" float, "revid" character varying(13), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181010034801_create_genos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181010034801"]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (13.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to Dropgenostable (20181010035510)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "genos"[0m
+  ↳ db/migrate/20181010035510_dropgenostable.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181010035510"]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (251.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to CreateGenotypes (20181010035603)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (65.7ms)[0m  [1m[35mCREATE TABLE "genotypes" ("id" bigserial primary key, "title" character varying(16) NOT NULL, "allele1" character varying(1), "allele2" character varying(1), "summary" character varying(130), "repute" smallint, "magnitude" float, "revid" character varying(13), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181010035603_create_genotypes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181010035603"]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (21.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to Dropgenotypetable (20181010041756)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "genotypes"[0m
+  ↳ db/migrate/20181010041756_dropgenotypetable.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181010041756"]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (24.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to Dropgenestable (20181010041809)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (2.2ms)[0m  [1m[35mDROP TABLE "genes"[0m
+  ↳ db/migrate/20181010041809_dropgenestable.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181010041809"]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (19.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to CreateGenotypes (20181010041929)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (347.3ms)[0m  [1m[35mCREATE TABLE "genotypes" ("id" bigserial primary key, "title" character varying(16) NOT NULL, "allele1" character varying(1), "allele2" character varying(1), "summary" character varying(130), "repute" smallint, "magnitude" float, "revid" character varying(13), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181010041929_create_genotypes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181010041929"]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (20.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to CreateGenes (20181010041941)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (42.4ms)[0m  [1m[35mCREATE TABLE "genes" ("id" bigserial primary key, "title" character varying(16) NOT NULL, "rsid" character varying(13), "iid" character varying(13), "chromosome" smallint, "position" character varying(10), "summary" character varying(130), "name" character varying(17), "orientation" boolean, "stabilized" boolean, "gmaf" float, "geno1a1" character varying(1), "geno1a2" character varying(1), "geno2a1" character varying(1), "geno2a2" character varying(1), "geno3a1" character varying(1), "geno3a2" character varying(1), "revid" character varying(13), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181010041941_create_genes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181010041941"]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (15.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to Dropuserstable (20181010042857)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "users"[0m
+  ↳ db/migrate/20181010042857_dropuserstable.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181010042857"]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (114.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to CreateUsers (20181010043114)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (580.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "identifier" bigint NOT NULL, "password" bigint, "report_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181010043114_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181010043114"]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (247.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to CreateUsers (20181010043347)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "identifier" bigint NOT NULL, "password" bigint, "report_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181010043347_create_users.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to Dropuserstable (20181010043541)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "users"[0m
+  ↳ db/migrate/20181010043541_dropuserstable.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181010043541"]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (567.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to CreateUsers (20181010043628)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (69.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "identifier" bigint NOT NULL, "password" bigint, "report_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181010043628_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181010043628"]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (21.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
