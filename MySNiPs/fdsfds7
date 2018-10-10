@@ -1,0 +1,4 @@
+ id | title | rsid | iid | chromosome | position | summary | name | orientation | stabilized | gmaf | geno1a1 | geno1a2 | geno2a1 | geno2a2 | geno3a1 | geno3a2 | revid | created_at | updated_at 
+----+-------+------+-----+------------+----------+---------+------+-------------+------------+------+---------+---------+---------+---------+---------+---------+-------+------------+------------
+(0 rows)
+
