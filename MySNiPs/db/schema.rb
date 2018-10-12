@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_12_220409) do
+ActiveRecord::Schema.define(version: 2018_10_12_222857) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,9 @@ ActiveRecord::Schema.define(version: 2018_10_12_220409) do
     t.string "revid", limit: 13
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["iid"], name: "index_genes_on_iid", unique: true
+    t.index ["rsid"], name: "index_genes_on_rsid", unique: true
+    t.index ["title"], name: "index_genes_on_title", unique: true
   end
 
   create_table "genotypes", force: :cascade do |t|
@@ -48,6 +51,7 @@ ActiveRecord::Schema.define(version: 2018_10_12_220409) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "page_content"
+    t.index ["title"], name: "index_genotypes_on_title", unique: true
   end
 
   create_table "users", force: :cascade do |t|
