@@ -2,6 +2,7 @@ require_relative "./builder"
 
 module Gluttony
   class Harvester
+    attr_reader :response
     def initialize(pedia)
       @pedia = pedia
       @response = nil
@@ -21,7 +22,7 @@ module Gluttony
         if tries == 5
           puts "Limit retries achieved"
           puts @response.metadata
-          raise
+          raise "JSON Parser Error"
         end
 
         tries += 1

@@ -39,7 +39,7 @@ module Gluttony
       end
 
       def ok?(geno)
-        true if !geno[:magnitude].zero? && (geno.key? :summary)
+        true if geno.key?(:magnitude) && !geno[:magnitude].zero? && geno.key?(:summary)
       end
 
       def gene(raw, genetitle)
@@ -68,7 +68,7 @@ module Gluttony
           info = info.split("=")
           gene = Builder._gene(info[0], info[1], gene)
         end
-        gene
+        gene if Builder.complete? gene
       end
 
       def _gene(key, val, gene)
@@ -95,7 +95,7 @@ module Gluttony
           gene[:geno3a1] = alles[0]
           gene[:geno3a2] = alles[1]
         end
-        gene if Builder.complete? geno
+        gene
       end
 
       def geno_to_allele(geno)

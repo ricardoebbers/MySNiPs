@@ -43,10 +43,12 @@ module SNaPi
 
     # Continues current request and returns current & next pages merged.
     # @return [Response]
-    def continue
+    def continue(cmcontinue = nil)
       raise "This is the last page" unless continue?
 
-      action = @action.merge(@metadata.fetch("continue"))
+      cmcontinue = @metadata.fetch("continue") if cmcontinue.nil?
+
+      action = @action.merge(cmcontinue)
       self.class.new(action, JSON.parse(action.perform))
     end
 

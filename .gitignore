@@ -30,3 +30,5 @@ MySNiPs/.byebug_history
 # Ignore master key for decrypting credentials and more.
 MySNiPs/config/master.key
 .vscode
+
+MySNiPs/app/gluttony/*.txt
