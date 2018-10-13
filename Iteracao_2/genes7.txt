@@ -1,0 +1,881 @@
+{:title=>"Rs74315351", :revid=>1364836, :orientation=>true, :stabilized=>false, :rsid=>"74315351", :chromosome=>"1", :name=>"PARK7", :position=>7962863}
+{:title=>"Rs74315352", :revid=>1364839, :orientation=>true, :stabilized=>false, :rsid=>"74315352", :name=>"PARK7", :chromosome=>"1", :position=>7984930, :gmaf=>0.002296}
+{:title=>"Rs74315353", :revid=>1364838, :orientation=>true, :stabilized=>false, :rsid=>"74315353", :chromosome=>"1", :name=>"PARK7", :position=>7965425}
+{:title=>"Rs74315354", :revid=>1364840, :orientation=>true, :stabilized=>false, :rsid=>"74315354", :chromosome=>"1", :name=>"PARK7", :position=>7984971}
+{:title=>"Rs74315355", :revid=>1365176, :orientation=>true, :stabilized=>false, :rsid=>"74315355", :chromosome=>"1", :name=>"PINK1", :position=>20644639}
+{:title=>"Rs74315356", :revid=>1365182, :orientation=>true, :stabilized=>false, :rsid=>"74315356", :chromosome=>"1", :name=>"PINK1", :position=>20649054}
+{:title=>"Rs74315357", :revid=>1365173, :orientation=>true, :stabilized=>false, :rsid=>"74315357", :chromosome=>"1", :name=>"PINK1", :position=>20639952}
+{:title=>"Rs74315358", :revid=>1365175, :orientation=>true, :stabilized=>false, :rsid=>"74315358", :chromosome=>"1", :name=>"PINK1", :position=>20644549}
+{:title=>"Rs74315359", :revid=>1365177, :orientation=>true, :stabilized=>false, :rsid=>"74315359", :chromosome=>"1", :name=>"PINK1", :position=>20644651}
+{:title=>"Rs74315360", :revid=>1365172, :orientation=>true, :stabilized=>false, :rsid=>"74315360", :chromosome=>"1", :name=>"PINK1", :position=>20638104}
+{:title=>"Rs74315379", :revid=>1368029, :orientation=>false, :stabilized=>false, :rsid=>"74315379", :chromosome=>"1", :name=>"TNNT2", :position=>201364336}
+{:title=>"Rs74315401", :revid=>1277818, :orientation=>true, :stabilized=>false, :rsid=>"74315401", :chromosome=>"20", :name=>"PRNP", :position=>4699525}
+{:title=>"Rs74315402", :revid=>1277821, :orientation=>true, :stabilized=>false, :rsid=>"74315402", :chromosome=>"20", :name=>"PRNP", :position=>4699570}
+{:title=>"Rs74315403", :revid=>1277827, :orientation=>true, :stabilized=>false, :rsid=>"74315403", :chromosome=>"20", :name=>"PRNP", :position=>4699752}
+{:title=>"Rs74315405", :revid=>1299604, :orientation=>true, :stabilized=>false, :rsid=>"74315405", :chromosome=>"20", :name=>"PRNP", :position=>4699813}
+{:title=>"Rs74315406", :revid=>1277837, :orientation=>true, :stabilized=>false, :rsid=>"74315406", :chromosome=>"20", :name=>"PRNP", :position=>4699870}
+{:title=>"Rs74315410", :revid=>1413973, :orientation=>true, :stabilized=>false, :rsid=>"74315410", :chromosome=>"20", :name=>"PRNP", :position=>4699612}
+{:title=>"Rs74315413", :revid=>1277830, :orientation=>true, :stabilized=>false, :rsid=>"74315413", :chromosome=>"20", :name=>"PRNP", :position=>4699780}
+{:title=>"Rs74315414", :revid=>1277819, :orientation=>true, :stabilized=>false, :rsid=>"74315414", :chromosome=>"20", :name=>"PRNP", :position=>4699533}
+{:title=>"Rs74315415", :revid=>1413974, :orientation=>true, :stabilized=>false, :rsid=>"74315415", :chromosome=>"20", :name=>"PRNP", :position=>4699618}
+{:title=>"Rs74315432", :revid=>1505903, :orientation=>false, :stabilized=>false, :rsid=>"74315432", :chromosome=>"20", :name=>"VSX1", :position=>25079443}
+{:title=>"Rs74315433", :revid=>1414165, :orientation=>false, :stabilized=>false, :rsid=>"74315433", :name=>"VSX1", :chromosome=>"20", :position=>25079460, :gmaf=>0.005051}
+{:title=>"Rs74315435", :revid=>1414163, :orientation=>false, :stabilized=>false, :rsid=>"74315435", :name=>"VSX1", :chromosome=>"20", :position=>25077727, :gmaf=>0.001377}
+{:title=>"Rs74315436", :revid=>1414168, :orientation=>false, :stabilized=>false, :rsid=>"74315436", :chromosome=>"20", :name=>"VSX1", :position=>25082047}
+{:title=>"Rs74315437", :revid=>1480063, :orientation=>false, :stabilized=>false, :rsid=>"74315437", :chromosome=>"21", :name=>"LOC105369301", :position=>36461442}
+{:title=>"Rs74315438", :revid=>1506311, :orientation=>false, :stabilized=>false, :rsid=>"74315438", :chromosome=>"21", :name=>"LOC105369301", :position=>36461395}
+{:title=>"Rs74315472", :revid=>1416146, :orientation=>false, :stabilized=>false, :rsid=>"74315472", :chromosome=>"22", :name=>"ARSA", :position=>50626618}
+{:title=>"Rs74315493", :revid=>1415627, :orientation=>true, :stabilized=>false, :rsid=>"74315493", :chromosome=>"22", :name=>"NF2", :position=>29681468}
+{:title=>"Rs74315494", :revid=>1415628, :orientation=>true, :stabilized=>false, :rsid=>"74315494", :chromosome=>"22", :name=>"NF2", :position=>29681477}
+{:title=>"Rs74315495", :revid=>1415616, :orientation=>true, :stabilized=>false, :rsid=>"74315495", :chromosome=>"22", :name=>"NF2", :position=>29655621}
+{:title=>"Rs74315496", :revid=>1415618, :orientation=>true, :stabilized=>false, :rsid=>"74315496", :chromosome=>"22", :name=>"NF2", :position=>29661313}
+{:title=>"Rs74315497", :revid=>1415619, :orientation=>true, :stabilized=>false, :rsid=>"74315497", :chromosome=>"22", :name=>"NF2", :position=>29668405}
+{:title=>"Rs74315499", :revid=>1415621, :orientation=>true, :stabilized=>false, :rsid=>"74315499", :chromosome=>"22", :name=>"NF2", :position=>29671847}
+{:title=>"Rs74315501", :revid=>1415623, :orientation=>true, :stabilized=>false, :rsid=>"74315501", :chromosome=>"22", :name=>"NF2", :position=>29673365}
+{:title=>"Rs74315503", :revid=>1415624, :orientation=>true, :stabilized=>false, :rsid=>"74315503", :chromosome=>"22", :name=>"NF2", :position=>29674882}
+{:title=>"Rs74315504", :revid=>1415625, :orientation=>true, :stabilized=>false, :rsid=>"74315504", :chromosome=>"22", :name=>"NF2", :position=>29674891}
+{:title=>"Rs74315505", :revid=>1415626, :orientation=>true, :stabilized=>false, :rsid=>"74315505", :chromosome=>"22", :name=>"NF2", :position=>29681443}
+{:title=>"Rs743554", :revid=>1529660, :orientation=>false, :stabilized=>false, :rsid=>"743554", :name=>"GALK1", :chromosome=>"17", :position=>75758167, :gmaf=>0.1373}
+{:title=>"Rs743777", :revid=>1529662, :orientation=>true, :stabilized=>false, :rsid=>"743777", :chromosome=>"22", :position=>37155567, :gmaf=>0.2828, :name=>"IL2RB"}
+{:title=>"Rs7439293", :revid=>1529663, :orientation=>true, :stabilized=>false, :rsid=>"7439293", :name=>"PALLD", :chromosome=>"4", :position=>168756335, :gmaf=>0.3329}
+{:title=>"Rs7442295", :revid=>1529667, :orientation=>true, :stabilized=>false, :rsid=>"7442295", :name=>"SLC2A9", :chromosome=>"4", :position=>9964756, :gmaf=>0.2172}
+{:title=>"Rs74435397", :revid=>1523683, :orientation=>true, :stabilized=>false, :rsid=>"74435397", :chromosome=>"12", :name=>"EMG1", :position=>6974427}
+{:title=>"Rs744373", :revid=>1486868, :orientation=>false, :stabilized=>false, :rsid=>"744373", :chromosome=>"2", :position=>127137039, :gmaf=>0.3714}
+{:title=>"Rs74462743", :revid=>1545379, :orientation=>false, :stabilized=>false, :rsid=>"74462743", :chromosome=>"1", :name=>"GBA", :position=>155238194}
+{:title=>"Rs74467662", :revid=>1251113, :orientation=>true, :stabilized=>false, :rsid=>"74467662", :chromosome=>"7", :name=>"CFTR", :position=>117509145}
+{:title=>"Rs74486803", :revid=>1395227, :orientation=>true, :stabilized=>false, :rsid=>"74486803", :chromosome=>"12", :name=>"PAH", :position=>102855315}
+{:title=>"Rs74500255", :revid=>1545201, :orientation=>false, :stabilized=>false, :rsid=>"74500255", :chromosome=>"1", :name=>"GBA", :position=>155237576}
+{:title=>"Rs74503222", :revid=>1545360, :orientation=>true, :stabilized=>false, :rsid=>"74503222", :chromosome=>"12", :name=>"PAH", :position=>102852912}
+{:title=>"Rs74503330", :revid=>1545347, :orientation=>true, :stabilized=>false, :rsid=>"74503330", :chromosome=>"7", :name=>"CFTR", :position=>117642472, :summary=>"Cystic Fibrosis related"}
+{:title=>"Rs745343524", :revid=>1523463, :orientation=>true, :stabilized=>false, :rsid=>"745343524", :chromosome=>"19", :name=>"LDLR", :position=>11113392}
+{:title=>"Rs7453920", :revid=>1533955, :orientation=>true, :stabilized=>false, :rsid=>"7453920", :name=>"HLA-DOB", :chromosome=>"6", :position=>32762235, :gmaf=>0.2975}
+{:title=>"Rs7454108", :revid=>1536847, :orientation=>true, :stabilized=>false, :rsid=>"7454108", :chromosome=>"6", :position=>32713706, :gmaf=>0.09826, :summary=>"Higher risk of type-1 diabetes"}
+{:title=>"Rs745452577", :revid=>1484082, :orientation=>true, :stabilized=>false, :rsid=>"745452577", :chromosome=>"1", :name=>"HSPG2", :position=>21865798}
+{:title=>"Rs745456776", :revid=>1545754, :orientation=>true, :stabilized=>false, :rsid=>"745456776", :chromosome=>"13", :name=>"BRCA2", :position=>32338942}
+{:title=>"Rs74551128", :revid=>1383627, :orientation=>false, :stabilized=>false, :rsid=>"74551128", :chromosome=>"7", :name=>"CFTR", :position=>117548795}
+{:title=>"Rs745670264", :revid=>1338027, :orientation=>true, :stabilized=>false, :rsid=>"745670264", :chromosome=>"12", :name=>"PAH", :position=>102844438}
+{:title=>"Rs74571530", :revid=>1540401, :orientation=>true, :stabilized=>false, :rsid=>"74571530", :name=>"CFTR", :chromosome=>"7", :position=>117559594, :gmaf=>0.001837}
+{:title=>"Rs74575103", :revid=>1545182, :orientation=>true, :stabilized=>false, :rsid=>"74575103", :chromosome=>"X", :name=>"G6PD", :position=>154533586}
+{:title=>"Rs745753810", :revid=>1505161, :orientation=>true, :stabilized=>false, :rsid=>"745753810", :chromosome=>"19", :name=>"LDLR", :position=>11120408}
+{:title=>"Rs745770404", :revid=>1381270, :orientation=>true, :stabilized=>false, :rsid=>"745770404", :chromosome=>"6", :name=>"PKHD1", :position=>52050157}
+{:title=>"Rs745776977", :revid=>1411692, :orientation=>true, :stabilized=>false, :rsid=>"745776977", :chromosome=>"19", :name=>"LDLR", :position=>11102753}
+{:title=>"Rs745830614", :revid=>1060366, :orientation=>true, :stabilized=>false, :rsid=>"745830614", :chromosome=>"1", :name=>"ALPL", :position=>21573779}
+{:title=>"Rs745912756", :revid=>1541424, :orientation=>true, :stabilized=>false, :rsid=>"745912756", :chromosome=>"16", :name=>"PKD1", :position=>2093032}
+{:title=>"Rs74597325", :revid=>1545335, :orientation=>true, :stabilized=>false, :rsid=>"74597325", :name=>"CFTR", :chromosome=>"7", :position=>117587811, :gmaf=>0.0004591, :summary=>"Cystic Fibrosis related"}
+{:title=>"Rs74603784", :revid=>1395292, :orientation=>true, :stabilized=>false, :rsid=>"74603784", :chromosome=>"12", :name=>"PAH", :position=>102912823}
+{:title=>"Rs746091400", :revid=>1411910, :orientation=>true, :stabilized=>false, :rsid=>"746091400", :chromosome=>"19", :name=>"LDLR", :position=>11105597}
+{:title=>"Rs746118995", :revid=>1430361, :orientation=>true, :stabilized=>false, :rsid=>"746118995", :chromosome=>"19", :name=>"LDLR", :position=>11120143}
+{:title=>"Rs746155190", :revid=>1383156, :orientation=>true, :stabilized=>false, :rsid=>"746155190", :chromosome=>"7", :name=>"SLC25A13", :position=>96189654}
+{:title=>"Rs746229647", :revid=>1357648, :orientation=>true, :stabilized=>false, :rsid=>"746229647", :chromosome=>"13", :name=>"BRCA2", :position=>32338201}
+{:title=>"Rs746390776", :revid=>1060367, :orientation=>true, :stabilized=>false, :rsid=>"746390776", :chromosome=>"1", :name=>"ALPL", :position=>21575901}
+{:title=>"Rs746471701", :revid=>1381149, :orientation=>true, :stabilized=>false, :rsid=>"746471701", :chromosome=>"6", :name=>"PKHD1", :position=>51632706}
+{:title=>"Rs746541266", :revid=>1295715, :orientation=>true, :stabilized=>false, :rsid=>"746541266", :chromosome=>"1", :name=>"ABCA4", :position=>94032035}
+{:title=>"Rs74654358", :revid=>1533393, :orientation=>true, :stabilized=>false, :rsid=>"74654358", :chromosome=>"12", :name=>"TBK1", :position=>64488187}
+{:title=>"Rs746566873", :revid=>1366298, :orientation=>true, :stabilized=>false, :rsid=>"746566873", :chromosome=>"1", :name=>"ABCA4", :position=>94051677}
+{:title=>"Rs746616623", :revid=>1466509, :orientation=>true, :stabilized=>false, :rsid=>"746616623", :chromosome=>"19", :name=>"LDLR", :position=>11129563}
+{:title=>"Rs746834149", :revid=>1386305, :orientation=>true, :stabilized=>false, :rsid=>"746834149", :chromosome=>"9", :name=>"CDKN2A", :position=>21974724}
+{:title=>"Rs746834464", :revid=>1412018, :orientation=>true, :stabilized=>false, :rsid=>"746834464", :chromosome=>"19", :name=>"LDLR", :position=>11110660}
+{:title=>"Rs746838237", :revid=>1381218, :orientation=>true, :stabilized=>false, :rsid=>"746838237", :chromosome=>"6", :name=>"PKHD1", :position=>51959882}
+{:title=>"Rs746930141", :revid=>1334999, :orientation=>true, :stabilized=>false, :rsid=>"746930141", :chromosome=>"10", :name=>"PTEN", :position=>87961011}
+{:title=>"Rs746939188", :revid=>1467055, :orientation=>true, :stabilized=>false, :rsid=>"746939188", :chromosome=>"19", :name=>"LDLR", :position=>11116105}
+{:title=>"Rs746959386", :revid=>1412320, :orientation=>true, :stabilized=>false, :rsid=>"746959386", :chromosome=>"19", :name=>"LDLR", :position=>11116209}
+{:title=>"Rs746972457", :revid=>1381246, :orientation=>true, :stabilized=>false, :rsid=>"746972457", :chromosome=>"6", :name=>"PKHD1", :position=>52026044}
+{:title=>"Rs746982741", :revid=>1412088, :orientation=>true, :stabilized=>false, :rsid=>"746982741", :chromosome=>"19", :name=>"LDLR", :position=>11111550}
+{:title=>"Rs746988006", :revid=>1237670, :orientation=>true, :stabilized=>false, :rsid=>"746988006", :chromosome=>"16", :name=>"HBA2", :position=>173513}
+{:title=>"Rs747068848", :revid=>1411589, :orientation=>true, :stabilized=>false, :rsid=>"747068848", :chromosome=>"19", :name=>"LDLR", :position=>11089448}
+{:title=>"Rs747070579", :revid=>1397235, :orientation=>true, :stabilized=>false, :rsid=>"747070579", :chromosome=>"13", :name=>"BRCA2", :position=>32338358}
+{:title=>"Rs747134711", :revid=>1412389, :orientation=>true, :stabilized=>false, :rsid=>"747134711", :chromosome=>"19", :name=>"LDLR", :position=>11120101}
+{:title=>"Rs747169857", :revid=>1543326, :orientation=>true, :stabilized=>false, :rsid=>"747169857", :chromosome=>"17", :name=>"UNC13D", :position=>75840050}
+{:title=>"Rs747344293", :revid=>1412556, :orientation=>true, :stabilized=>false, :rsid=>"747344293", :chromosome=>"19", :name=>"LDLR", :position=>11129601}
+{:title=>"Rs747483368", :revid=>1541425, :orientation=>true, :stabilized=>false, :rsid=>"747483368", :chromosome=>"16", :name=>"PKD1", :position=>2114808}
+{:title=>"Rs747488546", :revid=>1060368, :orientation=>true, :stabilized=>false, :rsid=>"747488546", :chromosome=>"1", :name=>"ALPL", :position=>21568113}
+{:title=>"Rs747507019", :revid=>1466541, :orientation=>true, :stabilized=>false, :rsid=>"747507019", :chromosome=>"19", :name=>"LDLR", :position=>11110690}
+{:title=>"Rs747539984", :revid=>1407562, :orientation=>true, :stabilized=>false, :rsid=>"747539984", :chromosome=>"17", :name=>"BRCA1", :position=>43074503}
+{:title=>"Rs747650", :revid=>1497474, :orientation=>false, :stabilized=>false, :rsid=>"747650", :chromosome=>"11", :name=>"C11orf49", :position=>47154454}
+{:title=>"Rs74767530", :revid=>1545222, :orientation=>false, :stabilized=>false, :rsid=>"74767530", :chromosome=>"7", :name=>"CFTR", :position=>117627537}
+{:title=>"Rs748031071", :revid=>1060369, :orientation=>true, :stabilized=>false, :rsid=>"748031071", :chromosome=>"1", :name=>"ALPL", :position=>21564197}
+{:title=>"Rs748131256", :revid=>1411923, :orientation=>true, :stabilized=>false, :rsid=>"748131256", :chromosome=>"19", :name=>"LDLR", :position=>11106592}
+{:title=>"Rs748190164", :revid=>1402275, :orientation=>true, :stabilized=>false, :rsid=>"748190164", :chromosome=>"15", :name=>"HEXA", :position=>72356531}
+{:title=>"Rs748300548", :revid=>1412057, :orientation=>true, :stabilized=>false, :rsid=>"748300548", :chromosome=>"19", :name=>"LDLR", :position=>11110756}
+{:title=>"Rs74830677", :revid=>1395810, :orientation=>false, :stabilized=>false, :rsid=>"74830677", :chromosome=>"12", :name=>"SCARB1", :position=>124800125}
+{:title=>"Rs748404", :revid=>1529680, :orientation=>true, :stabilized=>false, :rsid=>"748404", :name=>"TGM5", :chromosome=>"15", :position=>43267033, :gmaf=>0.1524}
+{:title=>"Rs748508287", :revid=>1339022, :orientation=>true, :stabilized=>false, :rsid=>"748508287", :chromosome=>"13", :name=>"BRCA2", :position=>32337401}
+{:title=>"Rs748540413", :revid=>1202099, :orientation=>true, :stabilized=>false, :rsid=>"748540413", :chromosome=>"6", :name=>"PKHD1", :position=>52026063}
+{:title=>"Rs748554592", :revid=>1412154, :orientation=>true, :stabilized=>false, :rsid=>"748554592", :chromosome=>"19", :name=>"LDLR", :position=>11113332}
+{:title=>"Rs748573754", :revid=>1400419, :orientation=>true, :stabilized=>false, :rsid=>"748573754", :chromosome=>"14", :name=>"GALC", :position=>87945566}
+{:title=>"Rs748672083", :revid=>1411846, :orientation=>true, :stabilized=>false, :rsid=>"748672083", :chromosome=>"19", :name=>"LDLR", :position=>11105499}
+{:title=>"Rs748714307", :revid=>1408715, :orientation=>true, :stabilized=>false, :rsid=>"748714307", :chromosome=>"17", :name=>"BRCA1", :position=>43094341}
+{:title=>"Rs748863662", :revid=>1202100, :orientation=>true, :stabilized=>false, :rsid=>"748863662", :chromosome=>"6", :name=>"PKHD1", :position=>51659724}
+{:title=>"Rs748944640", :revid=>1466537, :orientation=>true, :stabilized=>false, :rsid=>"748944640", :chromosome=>"19", :name=>"LDLR", :position=>11105324}
+{:title=>"Rs749004212", :revid=>1537024, :orientation=>true, :stabilized=>false, :rsid=>"749004212", :chromosome=>"4", :name=>"PKD2", :position=>88038365}
+{:title=>"Rs749038326", :revid=>1411689, :orientation=>true, :stabilized=>false, :rsid=>"749038326", :chromosome=>"19", :name=>"LDLR", :position=>11102741}
+{:title=>"Rs749210663", :revid=>1238535, :orientation=>true, :stabilized=>false, :rsid=>"749210663", :chromosome=>"12", :name=>"PTPRQ", :position=>80669467}
+{:title=>"Rs749220643", :revid=>1411955, :orientation=>true, :stabilized=>false, :rsid=>"749220643", :chromosome=>"19", :name=>"LDLR", :position=>11106681}
+{:title=>"Rs749293235", :revid=>1381276, :orientation=>true, :stabilized=>false, :rsid=>"749293235", :chromosome=>"6", :name=>"PKHD1", :position=>52055593}
+{:title=>"Rs749318706", :revid=>1313256, :orientation=>true, :stabilized=>false, :rsid=>"749318706", :chromosome=>"5", :name=>"WWC1", :position=>168467849}
+{:title=>"Rs749508254", :revid=>1408771, :orientation=>true, :stabilized=>false, :rsid=>"749508254", :chromosome=>"17", :name=>"BRCA1", :position=>43094492}
+{:title=>"Rs7495174", :revid=>1529684, :orientation=>true, :stabilized=>false, :rsid=>"7495174", :name=>"OCA2", :chromosome=>"15", :position=>28099092, :gmaf=>0.2585}
+{:title=>"Rs749544042", :revid=>1365215, :orientation=>true, :stabilized=>false, :rsid=>"749544042", :chromosome=>"1", :name=>"ALPL", :position=>21564217}
+{:title=>"Rs749780672", :revid=>1412187, :orientation=>true, :stabilized=>false, :rsid=>"749780672", :chromosome=>"19", :name=>"LDLR", :position=>11113426}
+{:title=>"Rs749788626", :revid=>1149595, :orientation=>true, :stabilized=>false, :rsid=>"749788626", :name=>"ASL", :chromosome=>"7", :position=>66092848}
+{:title=>"Rs749798211", :revid=>1484020, :orientation=>true, :stabilized=>false, :rsid=>"749798211", :chromosome=>"1", :name=>"ATP13A2", :position=>17004818}
+{:title=>"Rs749893889", :revid=>1400422, :orientation=>true, :stabilized=>false, :rsid=>"749893889", :chromosome=>"14", :name=>"GALC", :position=>87945632}
+{:title=>"Rs749980674", :revid=>1500218, :orientation=>true, :stabilized=>false, :rsid=>"749980674", :chromosome=>"13", :name=>"BRCA2", :position=>32339596}
+{:title=>"Rs7501331", :revid=>1532139, :orientation=>true, :stabilized=>false, :rsid=>"7501331", :name=>"BCO1", :chromosome=>"16", :position=>81280891, :gmaf=>0.1621}
+{:title=>"Rs7503034", :revid=>1529691, :orientation=>true, :stabilized=>false, :rsid=>"7503034", :name=>"SGSH", :chromosome=>"17", :position=>80210594, :gmaf=>0.3264}
+{:title=>"Rs75030631", :revid=>1490937, :orientation=>true, :stabilized=>false, :rsid=>"75030631", :chromosome=>"5", :name=>"SMN1", :position=>70925108}
+{:title=>"Rs750345068", :revid=>1392010, :orientation=>true, :stabilized=>false, :rsid=>"750345068", :chromosome=>"11", :name=>"DHCR7", :position=>71444203}
+{:title=>"Rs750385844", :revid=>1338751, :orientation=>true, :stabilized=>false, :rsid=>"750385844", :chromosome=>"13", :name=>"BRCA2", :position=>32326505}
+{:title=>"Rs75039782", :revid=>1545356, :orientation=>true, :stabilized=>false, :rsid=>"75039782", :chromosome=>"7", :name=>"CFTR", :position=>117639961, :summary=>"Cystic Fibrosis related"}
+{:title=>"Rs750474121", :revid=>1411697, :orientation=>true, :stabilized=>false, :rsid=>"750474121", :chromosome=>"19", :name=>"LDLR", :position=>11102765}
+{:title=>"Rs750518671", :revid=>1523464, :orientation=>true, :stabilized=>false, :rsid=>"750518671", :chromosome=>"19", :name=>"LDLR", :position=>11128085}
+{:title=>"Rs750524447", :revid=>1400441, :orientation=>true, :stabilized=>false, :rsid=>"750524447", :chromosome=>"14", :name=>"GALC", :position=>87968334}
+{:title=>"Rs75053309", :revid=>1542463, :orientation=>true, :stabilized=>false, :rsid=>"75053309", :chromosome=>"7", :name=>"CFTR", :position=>117540309}
+{:title=>"Rs750649426", :revid=>1466907, :orientation=>true, :stabilized=>false, :rsid=>"750649426", :chromosome=>"19", :name=>"LDLR", :position=>11111629}
+{:title=>"Rs750704702", :revid=>1397274, :orientation=>true, :stabilized=>false, :rsid=>"750704702", :chromosome=>"13", :name=>"BRCA2", :position=>32338517}
+{:title=>"Rs750798165", :revid=>1541426, :orientation=>true, :stabilized=>false, :rsid=>"750798165", :chromosome=>"16", :name=>"PKD1", :position=>2116856}
+{:title=>"Rs75086406", :revid=>1368843, :orientation=>false, :stabilized=>false, :rsid=>"75086406", :name=>"FH", :chromosome=>"1", :position=>241513679, :gmaf=>0.0004591}
+{:title=>"Rs75087725", :revid=>1536864, :orientation=>true, :stabilized=>false, :rsid=>"75087725", :chromosome=>"21", :name=>"C21orf2", :position=>44333234}
+{:title=>"Rs75096551", :revid=>1383833, :orientation=>true, :stabilized=>false, :rsid=>"75096551", :name=>"CFTR", :chromosome=>"7", :position=>117606754, :gmaf=>0.0004591, :summary=>"Cystic Fibrosis related"}
+{:title=>"Rs75096777", :revid=>1396512, :orientation=>true, :stabilized=>false, :rsid=>"75096777", :chromosome=>"13", :position=>32331012, :name=>"BRCA2"}
+{:title=>"Rs751037529", :revid=>1473301, :orientation=>true, :stabilized=>false, :rsid=>"751037529", :chromosome=>"6", :name=>"PARK2", :position=>161785793}
+{:title=>"Rs751122998", :revid=>1411961, :orientation=>true, :stabilized=>false, :rsid=>"751122998", :chromosome=>"19", :name=>"LDLR", :position=>11107394}
+{:title=>"Rs75115087", :revid=>1545338, :orientation=>true, :stabilized=>false, :rsid=>"75115087", :chromosome=>"7", :name=>"CFTR", :position=>117592295, :summary=>"Cystic Fibrosis related"}
+{:title=>"Rs751170778", :revid=>1387352, :orientation=>true, :stabilized=>false, :rsid=>"751170778", :chromosome=>"9", :name=>"STXBP1", :position=>127668083}
+{:title=>"Rs751228587", :revid=>1466860, :orientation=>true, :stabilized=>false, :rsid=>"751228587", :chromosome=>"19", :name=>"LDLR", :position=>11120442}
+{:title=>"Rs751247865", :revid=>1541597, :orientation=>true, :stabilized=>false, :rsid=>"751247865", :chromosome=>"10", :name=>"PRF1", :position=>70599055}
+{:title=>"Rs751292739", :revid=>1060370, :orientation=>true, :stabilized=>false, :rsid=>"751292739", :chromosome=>"1", :name=>"ALPL", :position=>21575847}
+{:title=>"Rs751293870", :revid=>1541301, :orientation=>true, :stabilized=>false, :rsid=>"751293870", :chromosome=>"16", :name=>"PKD1", :position=>2111673}
+{:title=>"Rs751317621", :revid=>1505096, :orientation=>true, :stabilized=>false, :rsid=>"751317621", :chromosome=>"19", :name=>"LDLR", :position=>11100281}
+{:title=>"Rs751368967", :revid=>1536865, :orientation=>true, :stabilized=>false, :rsid=>"751368967", :chromosome=>"17", :name=>"SCN4A", :position=>63957493}
+{:title=>"Rs751415161", :revid=>1357690, :orientation=>true, :stabilized=>false, :rsid=>"751415161", :chromosome=>"16", :name=>"PALB2", :position=>23603591}
+{:title=>"Rs7514229", :revid=>1511922, :orientation=>true, :stabilized=>false, :rsid=>"7514229", :chromosome=>"1", :name=>"TNFSF4", :position=>173185165}
+{:title=>"Rs751570838", :revid=>1386312, :orientation=>true, :stabilized=>false, :rsid=>"751570838", :chromosome=>"9", :name=>"CDKN2A", :position=>21974796}
+{:title=>"Rs751590073", :revid=>1382776, :orientation=>true, :stabilized=>false, :rsid=>"751590073", :chromosome=>"7", :name=>"ASL", :position=>66086764}
+{:title=>"Rs751603969", :revid=>1412245, :orientation=>true, :stabilized=>false, :rsid=>"751603969", :chromosome=>"19", :name=>"LDLR", :position=>11113663}
+{:title=>"Rs751604696", :revid=>1288572, :orientation=>true, :stabilized=>false, :rsid=>"751604696", :chromosome=>"11", :name=>"DHCR7", :position=>71435466}
+{:title=>"Rs75166491", :revid=>1545277, :orientation=>false, :stabilized=>false, :rsid=>"75166491", :chromosome=>"12", :name=>"PAH", :position=>102866633}
+{:title=>"Rs7517847", :revid=>1529700, :orientation=>true, :stabilized=>false, :rsid=>"7517847", :name=>"IL23R", :chromosome=>"1", :position=>67215986, :gmaf=>0.4031}
+{:title=>"Rs75193786", :revid=>1395278, :orientation=>false, :stabilized=>false, :rsid=>"75193786", :name=>"PAH", :chromosome=>"12", :position=>102894893, :gmaf=>0.0004591}
+{:title=>"Rs751977466", :revid=>1060371, :orientation=>true, :stabilized=>false, :rsid=>"751977466", :chromosome=>"1", :name=>"ALPL", :position=>21575919}
+{:title=>"Rs752100894", :revid=>1149613, :orientation=>true, :stabilized=>false, :rsid=>"752100894", :name=>"ASL", :chromosome=>"7", :position=>66082420}
+{:title=>"Rs752114168", :revid=>1541427, :orientation=>true, :stabilized=>false, :rsid=>"752114168", :chromosome=>"16", :name=>"PKD1", :position=>2106877}
+{:title=>"Rs752147871", :revid=>1366171, :orientation=>true, :stabilized=>false, :rsid=>"752147871", :chromosome=>"1", :name=>"ABCA4", :position=>94007697}
+{:title=>"Rs752218005", :revid=>1413868, :orientation=>true, :stabilized=>false, :rsid=>"752218005", :chromosome=>"20", :name=>"SLC52A3", :position=>763636}
+{:title=>"Rs752474843", :revid=>1408516, :orientation=>true, :stabilized=>false, :rsid=>"752474843", :chromosome=>"17", :name=>"BRCA1", :position=>43093691}
+{:title=>"Rs752537626", :revid=>1501374, :orientation=>true, :stabilized=>false, :rsid=>"752537626", :chromosome=>"14", :name=>"GALC", :position=>87941529}
+{:title=>"Rs752596535", :revid=>1411799, :orientation=>true, :stabilized=>false, :rsid=>"752596535", :chromosome=>"19", :name=>"LDLR", :position=>11105407}
+{:title=>"Rs752619600", :revid=>1541300, :orientation=>true, :stabilized=>false, :rsid=>"752619600", :chromosome=>"16", :name=>"PKD1", :position=>2108274}
+{:title=>"Rs752858869", :revid=>1541624, :orientation=>true, :stabilized=>false, :rsid=>"752858869", :chromosome=>"10", :name=>"PRF1", :position=>70598640}
+{:title=>"Rs7528684", :revid=>1484973, :orientation=>true, :stabilized=>false, :rsid=>"7528684", :name=>"FCRL3", :chromosome=>"1", :position=>157701026, :gmaf=>0.4357}
+{:title=>"Rs752898811", :revid=>1508751, :orientation=>true, :stabilized=>false, :rsid=>"752898811", :chromosome=>"6", :name=>"MUT", :position=>49453645}
+{:title=>"Rs7529229", :revid=>1165137, :orientation=>true, :stabilized=>false, :rsid=>"7529229", :name=>"IL6R", :chromosome=>"1", :position=>154448302, :gmaf=>0.4642}
+{:title=>"Rs752935814", :revid=>1412444, :orientation=>true, :stabilized=>false, :rsid=>"752935814", :chromosome=>"19", :name=>"LDLR", :position=>11120380}
+{:title=>"Rs752951310", :revid=>1412106, :orientation=>true, :stabilized=>false, :rsid=>"752951310", :chromosome=>"19", :name=>"LDLR", :position=>11111598}
+{:title=>"Rs753047625", :revid=>1466786, :orientation=>true, :stabilized=>false, :rsid=>"753047625", :chromosome=>"19", :name=>"LDLR", :position=>11128007}
+{:title=>"Rs7530511", :revid=>1529704, :orientation=>true, :stabilized=>false, :rsid=>"7530511", :name=>"IL23R", :chromosome=>"1", :position=>67219704, :gmaf=>0.1309}
+{:title=>"Rs753107507", :revid=>1351810, :orientation=>true, :stabilized=>false, :rsid=>"753107507", :chromosome=>"2", :name=>"SAG", :position=>233327125}
+{:title=>"Rs753153576", :revid=>1403592, :orientation=>true, :stabilized=>false, :rsid=>"753153576", :chromosome=>"16", :name=>"PALB2", :position=>23626235}
+{:title=>"Rs753180", :revid=>928960, :orientation=>true, :stabilized=>false, :rsid=>"753180", :chromosome=>"13", :position=>111963048}
+{:title=>"Rs7531806", :revid=>1531430, :orientation=>true, :stabilized=>false, :rsid=>"7531806", :chromosome=>"1", :position=>169681903, :name=>"LOC107985745"}
+{:title=>"Rs753248521", :revid=>1412078, :orientation=>true, :stabilized=>false, :rsid=>"753248521", :chromosome=>"19", :name=>"LDLR", :position=>11111523}
+{:title=>"Rs753288303", :revid=>1381080, :orientation=>true, :stabilized=>false, :rsid=>"753288303", :chromosome=>"6", :name=>"MUT", :position=>49451518}
+{:title=>"Rs753338851", :revid=>1060372, :orientation=>true, :stabilized=>false, :rsid=>"753338851", :chromosome=>"1", :name=>"ALPL", :position=>21573780}
+{:title=>"Rs753430282", :revid=>1466792, :orientation=>true, :stabilized=>false, :rsid=>"753430282", :chromosome=>"19", :name=>"LDLR", :position=>11116914}
+{:title=>"Rs753469193", :revid=>1541299, :orientation=>true, :stabilized=>false, :rsid=>"753469193", :chromosome=>"16", :name=>"PKD1", :position=>2106866}
+{:title=>"Rs753524038", :revid=>1408563, :orientation=>true, :stabilized=>false, :rsid=>"753524038", :chromosome=>"17", :name=>"BRCA1", :position=>43093880}
+{:title=>"Rs7536563", :revid=>1529705, :orientation=>true, :stabilized=>false, :rsid=>"7536563", :name=>"FAM69A", :chromosome=>"1", :position=>92883489, :gmaf=>0.343, :summary=>"Associated with multiple sclerosis"}
+{:title=>"Rs753707206", :revid=>1412366, :orientation=>true, :stabilized=>false, :rsid=>"753707206", :chromosome=>"19", :name=>"LDLR", :position=>11116954}
+{:title=>"Rs7538876", :revid=>1529707, :orientation=>true, :stabilized=>false, :rsid=>"7538876", :name=>"PADI6", :chromosome=>"1", :position=>17395867, :gmaf=>0.3168}
+{:title=>"Rs75389940", :revid=>1545346, :orientation=>true, :stabilized=>false, :rsid=>"75389940", :chromosome=>"7", :name=>"CFTR", :position=>117627753, :summary=>"Cystic Fibrosis related"}
+{:title=>"Rs75391579", :revid=>1520872, :orientation=>true, :stabilized=>false, :rsid=>"75391579", :name=>"GALT", :chromosome=>"9", :position=>34648170, :gmaf=>0.001377}
+{:title=>"Rs7539542", :revid=>1314601, :orientation=>true, :stabilized=>false, :rsid=>"7539542", :name=>"ADIPOR1", :chromosome=>"1", :position=>202940846, :gmaf=>0.4986}
+{:title=>"Rs753960624", :revid=>1288497, :orientation=>true, :stabilized=>false, :rsid=>"753960624", :chromosome=>"11", :name=>"DHCR7", :position=>71441383}
+{:title=>"Rs754313225", :revid=>1237671, :orientation=>true, :stabilized=>false, :rsid=>"754313225", :chromosome=>"16", :name=>"HBA1", :position=>177308}
+{:title=>"Rs754320812", :revid=>1386085, :orientation=>true, :stabilized=>false, :rsid=>"754320812", :chromosome=>"8", :name=>"SLC52A2", :position=>144360427}
+{:title=>"Rs7543472", :revid=>929016, :orientation=>true, :stabilized=>false, :rsid=>"7543472", :chromosome=>"1", :position=>16113897, :gmaf=>0.2002}
+{:title=>"Rs754392766", :revid=>1381281, :orientation=>true, :stabilized=>false, :rsid=>"754392766", :chromosome=>"6", :name=>"PKHD1", :position=>52058355}
+{:title=>"Rs754536745", :revid=>1505158, :orientation=>true, :stabilized=>false, :rsid=>"754536745", :chromosome=>"19", :name=>"LDLR", :position=>11120144}
+{:title=>"Rs754611265", :revid=>1500321, :orientation=>true, :stabilized=>false, :rsid=>"754611265", :chromosome=>"13", :name=>"BRCA2", :position=>32346886}
+{:title=>"Rs754621494", :revid=>1543664, :orientation=>true, :stabilized=>false, :rsid=>"754621494", :chromosome=>"17", :name=>"UNC13D", :position=>75835410}
+{:title=>"Rs754676104", :revid=>1411632, :orientation=>true, :stabilized=>false, :rsid=>"754676104", :chromosome=>"19", :name=>"LDLR", :position=>11100293}
+{:title=>"Rs754753126", :revid=>1413864, :orientation=>true, :stabilized=>false, :rsid=>"754753126", :chromosome=>"20", :name=>"SLC52A3", :position=>761240}
+{:title=>"Rs754792932", :revid=>1407732, :orientation=>true, :stabilized=>false, :rsid=>"754792932", :chromosome=>"17", :name=>"BRCA1", :position=>43091523}
+{:title=>"Rs754820795", :revid=>1541298, :orientation=>true, :stabilized=>false, :rsid=>"754820795", :chromosome=>"16", :name=>"PKD1", :position=>2110946}
+{:title=>"Rs75485205", :revid=>1484214, :orientation=>true, :stabilized=>false, :rsid=>"75485205", :chromosome=>"1", :name=>"SLC2A1", :position=>42927224}
+{:title=>"Rs754882266", :revid=>1543665, :orientation=>true, :stabilized=>false, :rsid=>"754882266", :chromosome=>"17", :name=>"UNC13D", :position=>75835646}
+{:title=>"Rs755101354", :revid=>1467029, :orientation=>true, :stabilized=>false, :rsid=>"755101354", :chromosome=>"1", :name=>"PSEN2", :position=>226885663}
+{:title=>"Rs755154048", :revid=>1412255, :orientation=>true, :stabilized=>false, :rsid=>"755154048", :chromosome=>"19", :name=>"LDLR", :position=>11113705}
+{:title=>"Rs755226061", :revid=>1537026, :orientation=>true, :stabilized=>false, :rsid=>"755226061", :chromosome=>"4", :name=>"PKD2", :position=>88074903}
+{:title=>"Rs75527207", :revid=>1545332, :orientation=>true, :stabilized=>false, :rsid=>"75527207", :name=>"CFTR", :chromosome=>"7", :position=>117587806, :summary=>"Cystic Fibrosis related"}
+{:title=>"Rs755389753", :revid=>1505139, :orientation=>true, :stabilized=>false, :rsid=>"755389753", :chromosome=>"19", :name=>"LDLR", :position=>11113763}
+{:title=>"Rs755416052", :revid=>1383893, :orientation=>true, :stabilized=>false, :rsid=>"755416052", :chromosome=>"7", :name=>"CFTR", :position=>117614611}
+{:title=>"Rs75541969", :revid=>1545344, :orientation=>true, :stabilized=>false, :rsid=>"75541969", :chromosome=>"7", :name=>"CFTR", :position=>117614699, :summary=>"Cystic Fibrosis related"}
+{:title=>"Rs755449669", :revid=>1466439, :orientation=>true, :stabilized=>false, :rsid=>"755449669", :chromosome=>"19", :name=>"LDLR", :position=>11111514}
+{:title=>"Rs75549581", :revid=>1383685, :orientation=>true, :stabilized=>false, :rsid=>"75549581", :chromosome=>"7", :name=>"CFTR", :position=>117587829, :summary=>"Cystic Fibrosis related"}
+{:title=>"Rs755522953", :revid=>1541297, :orientation=>true, :stabilized=>false, :rsid=>"755522953", :chromosome=>"16", :name=>"PKD1", :position=>2103485}
+{:title=>"Rs755529290", :revid=>1365228, :orientation=>true, :stabilized=>false, :rsid=>"755529290", :chromosome=>"1", :name=>"ALPL", :position=>21573693}
+{:title=>"Rs755654557", :revid=>1202102, :orientation=>true, :stabilized=>false, :rsid=>"755654557", :chromosome=>"6", :name=>"PKHD1", :position=>52084884}
+{:title=>"Rs755667663", :revid=>1466536, :orientation=>true, :stabilized=>false, :rsid=>"755667663", :chromosome=>"19", :name=>"LDLR", :position=>11113678}
+{:title=>"Rs755757866", :revid=>1466795, :orientation=>true, :stabilized=>false, :rsid=>"755757866", :chromosome=>"19", :name=>"LDLR", :position=>11110730}
+{:title=>"Rs755799528", :revid=>1466952, :orientation=>true, :stabilized=>false, :rsid=>"755799528", :chromosome=>"19", :name=>"LDLR", :position=>11105319}
+{:title=>"Rs755800734", :revid=>1530680, :orientation=>true, :stabilized=>false, :rsid=>"755800734", :chromosome=>"7", :name=>"CCM2", :position=>45038277}
+{:title=>"Rs755878230", :revid=>1541296, :orientation=>true, :stabilized=>false, :rsid=>"755878230", :chromosome=>"16", :name=>"PKD1", :position=>2117615}
+{:title=>"Rs756039188", :revid=>1411596, :orientation=>true, :stabilized=>false, :rsid=>"756039188", :chromosome=>"19", :name=>"LDLR", :position=>11089560}
+{:title=>"Rs756418235", :revid=>1060373, :orientation=>true, :stabilized=>false, :rsid=>"756418235", :chromosome=>"1", :name=>"ALPL", :position=>21575865}
+{:title=>"Rs756484720", :revid=>1395899, :orientation=>true, :stabilized=>false, :rsid=>"756484720", :chromosome=>"13", :name=>"GJB2", :position=>20189247}
+{:title=>"Rs75660264", :revid=>1470706, :orientation=>true, :stabilized=>false, :rsid=>"75660264", :chromosome=>"5", :name=>"SMN1", :position=>70946127}
+{:title=>"Rs756613387", :revid=>1411886, :orientation=>true, :stabilized=>false, :rsid=>"756613387", :chromosome=>"19", :name=>"LDLR", :position=>11105572}
+{:title=>"Rs756660214", :revid=>1357577, :orientation=>true, :stabilized=>false, :rsid=>"756660214", :chromosome=>"16", :name=>"PALB2", :position=>23635787}
+{:title=>"Rs7566605", :revid=>1529725, :orientation=>true, :stabilized=>false, :rsid=>"7566605", :chromosome=>"2", :position=>118078449, :gmaf=>0.2957, :name=>"LOC107985940"}
+{:title=>"Rs756677845", :revid=>1365171, :orientation=>true, :stabilized=>false, :rsid=>"756677845", :chromosome=>"1", :name=>"PINK1", :position=>20638074}
+{:title=>"Rs7568369", :revid=>929125, :orientation=>true, :stabilized=>false, :rsid=>"7568369", :name=>"KLF7", :chromosome=>"2", :position=>207166591, :gmaf=>0.3122}
+{:title=>"Rs756840095", :revid=>1366267, :orientation=>true, :stabilized=>false, :rsid=>"756840095", :chromosome=>"1", :name=>"ABCA4", :position=>94042797}
+{:title=>"Rs7570682", :revid=>1486778, :orientation=>true, :stabilized=>false, :rsid=>"7570682", :chromosome=>"2", :position=>104366809, :gmaf=>0.3347}
+{:title=>"Rs757086563", :revid=>1466975, :orientation=>true, :stabilized=>false, :rsid=>"757086563", :chromosome=>"19", :name=>"LDLR", :position=>11107460}
+{:title=>"Rs7571842", :revid=>1544042, :orientation=>true, :stabilized=>false, :rsid=>"7571842", :name=>"SLC4A5", :chromosome=>"2", :position=>74233777, :gmaf=>0.4192}
+{:title=>"Rs757252110", :revid=>1411996, :orientation=>true, :stabilized=>false, :rsid=>"757252110", :chromosome=>"19", :name=>"LDLR", :position=>11107489}
+{:title=>"Rs757326350", :revid=>1393686, :orientation=>true, :stabilized=>false, :rsid=>"757326350", :chromosome=>"12", :name=>"PLCZ1", :position=>18688215}
+{:title=>"Rs7574865", :revid=>1545941, :orientation=>true, :stabilized=>false, :rsid=>"7574865", :name=>"STAT4", :chromosome=>"2", :position=>191099907, :gmaf=>0.2493}
+{:title=>"Rs757583846", :revid=>1531240, :orientation=>true, :stabilized=>false, :rsid=>"757583846", :chromosome=>"2", :name=>"PROC", :position=>127421381}
+{:title=>"Rs757619679", :revid=>1541295, :orientation=>true, :stabilized=>false, :rsid=>"757619679", :chromosome=>"16", :name=>"PKD1", :position=>2106124}
+{:title=>"Rs7577363", :revid=>1529733, :orientation=>true, :stabilized=>false, :rsid=>"7577363", :name=>"ALK", :chromosome=>"2", :position=>29653477, :gmaf=>0.07668}
+{:title=>"Rs757757289", :revid=>1537027, :orientation=>true, :stabilized=>false, :rsid=>"757757289", :chromosome=>"4", :name=>"PKD2", :position=>88065407}
+{:title=>"Rs757768731", :revid=>1541294, :orientation=>true, :stabilized=>false, :rsid=>"757768731", :chromosome=>"16", :name=>"PKD1", :position=>2105354}
+{:title=>"Rs757771793", :revid=>1060374, :orientation=>true, :stabilized=>false, :rsid=>"757771793", :chromosome=>"1", :name=>"ALPL", :position=>21563206}
+{:title=>"Rs75789129", :revid=>1383682, :orientation=>true, :stabilized=>false, :rsid=>"75789129", :name=>"CFTR", :chromosome=>"7", :position=>117587820, :gmaf=>0.01469}
+{:title=>"Rs75790268", :revid=>1545212, :orientation=>false, :stabilized=>false, :rsid=>"75790268", :chromosome=>"4", :name=>"FGFR3", :position=>1804377}
+{:title=>"Rs757972971", :revid=>1238480, :orientation=>true, :stabilized=>false, :rsid=>"757972971", :chromosome=>"16", :name=>"SLC7A5", :position=>87837861}
+{:title=>"Rs758008398", :revid=>1508752, :orientation=>true, :stabilized=>false, :rsid=>"758008398", :chromosome=>"6", :name=>"MUT", :position=>49457765}
+{:title=>"Rs758051959", :revid=>1340134, :orientation=>true, :stabilized=>false, :rsid=>"758051959", :chromosome=>"13", :name=>"BRCA2", :position=>32398459}
+{:title=>"Rs758194385", :revid=>1412316, :orientation=>true, :stabilized=>false, :rsid=>"758194385", :chromosome=>"19", :name=>"LDLR", :position=>11116198}
+{:title=>"Rs7582694", :revid=>1529741, :orientation=>true, :stabilized=>false, :rsid=>"7582694", :name=>"STAT4", :chromosome=>"2", :position=>191105394, :gmaf=>0.2668}
+{:title=>"Rs758452450", :revid=>1376803, :orientation=>true, :stabilized=>false, :rsid=>"758452450", :chromosome=>"4", :name=>"IDUA", :position=>987873}
+{:title=>"Rs758570021", :revid=>1413860, :orientation=>true, :stabilized=>false, :rsid=>"758570021", :chromosome=>"20", :name=>"SLC52A3", :position=>761140}
+{:title=>"Rs758927662", :revid=>1411665, :orientation=>true, :stabilized=>false, :rsid=>"758927662", :chromosome=>"19", :name=>"LDLR", :position=>11102698}
+{:title=>"Rs759017288", :revid=>1060375, :orientation=>true, :stabilized=>false, :rsid=>"759017288", :chromosome=>"1", :name=>"ALPL", :position=>21576614}
+{:title=>"Rs759109699", :revid=>1411935, :orientation=>true, :stabilized=>false, :rsid=>"759109699", :chromosome=>"19", :name=>"LDLR", :position=>11106630}
+{:title=>"Rs759154440", :revid=>1357787, :orientation=>true, :stabilized=>false, :rsid=>"759154440", :chromosome=>"12", :name=>"PAH", :position=>102855177}
+{:title=>"Rs759178", :revid=>1529749, :orientation=>false, :stabilized=>false, :rsid=>"759178", :name=>"CNTNAP2", :chromosome=>"7", :position=>147878020, :gmaf=>0.399}
+{:title=>"Rs759218713", :revid=>1535825, :orientation=>true, :stabilized=>false, :rsid=>"759218713", :chromosome=>"1", :name=>"MECR", :position=>29196235}
+{:title=>"Rs75932628", :revid=>1533675, :orientation=>true, :stabilized=>false, :rsid=>"75932628", :name=>"LOC105375056", :chromosome=>"6", :position=>41161514, :gmaf=>0.002755}
+{:title=>"Rs7594645", :revid=>1487937, :orientation=>true, :stabilized=>false, :rsid=>"7594645", :name=>"FASTKD2", :chromosome=>"2", :position=>206781950, :summary=>"Associated with memory performance in older adults."}
+{:title=>"Rs75961395", :revid=>1545349, :orientation=>true, :stabilized=>false, :rsid=>"75961395", :chromosome=>"7", :summary=>"Cystic Fibrosis related", :name=>"CFTR", :position=>117509123}
+{:title=>"Rs759672616", :revid=>1366218, :orientation=>true, :stabilized=>false, :rsid=>"759672616", :chromosome=>"1", :name=>"ABCA4", :position=>94021843}
+{:title=>"Rs759858813", :revid=>1412490, :orientation=>true, :stabilized=>false, :rsid=>"759858813", :chromosome=>"19", :name=>"LDLR", :position=>11120482}
+{:title=>"Rs759876319", :revid=>1412290, :orientation=>true, :stabilized=>false, :rsid=>"759876319", :chromosome=>"19", :name=>"LDLR", :position=>11116141}
+{:title=>"Rs759952363", :revid=>1493764, :orientation=>true, :stabilized=>false, :rsid=>"759952363", :chromosome=>"7", :name=>"ASL", :position=>66086645}
+{:title=>"Rs760021635", :revid=>1401938, :orientation=>true, :stabilized=>false, :rsid=>"760021635", :chromosome=>"15", :name=>"AP4E1", :position=>50958492}
+{:title=>"Rs760029254", :revid=>1060376, :orientation=>true, :stabilized=>false, :rsid=>"760029254", :chromosome=>"1", :name=>"ALPL", :position=>21564052}
+{:title=>"Rs760188581", :revid=>1407235, :orientation=>true, :stabilized=>false, :rsid=>"760188581", :chromosome=>"17", :name=>"BRCA1", :position=>43049161}
+{:title=>"Rs760222236", :revid=>1381182, :orientation=>true, :stabilized=>false, :rsid=>"760222236", :chromosome=>"6", :name=>"PKHD1", :position=>51753281}
+{:title=>"Rs760436036", :revid=>1412460, :orientation=>true, :stabilized=>false, :rsid=>"760436036", :chromosome=>"19", :name=>"LDLR", :position=>11120419}
+{:title=>"Rs760549861", :revid=>1366195, :orientation=>true, :stabilized=>false, :rsid=>"760549861", :chromosome=>"1", :name=>"ABCA4", :position=>94014685}
+{:title=>"Rs760782399", :revid=>1492796, :orientation=>true, :stabilized=>false, :rsid=>"760782399", :chromosome=>"6", :name=>"MUT", :position=>49457872}
+{:title=>"Rs760805", :revid=>1467351, :orientation=>true, :stabilized=>false, :rsid=>"760805", :name=>"LOC107984932", :chromosome=>"1", :position=>24925432, :gmaf=>0.4229}
+{:title=>"Rs760815829", :revid=>1338826, :orientation=>true, :stabilized=>false, :rsid=>"760815829", :chromosome=>"13", :name=>"BRCA2", :position=>32332667}
+{:title=>"Rs761064915", :revid=>1404997, :orientation=>true, :stabilized=>false, :rsid=>"761064915", :chromosome=>"17", :name=>"ASPA", :position=>3498966}
+{:title=>"Rs761100", :revid=>1491994, :orientation=>false, :stabilized=>false, :rsid=>"761100", :name=>"KIAA0319", :chromosome=>"6", :position=>24632414, :gmaf=>0.3173}
+{:title=>"Rs761143251", :revid=>1407912, :orientation=>true, :stabilized=>false, :rsid=>"761143251", :chromosome=>"17", :name=>"BRCA1", :position=>43091999}
+{:title=>"Rs7611694", :revid=>1489079, :orientation=>true, :stabilized=>false, :rsid=>"7611694", :name=>"SIDT1", :chromosome=>"3", :position=>113556777, :gmaf=>0.4656}
+{:title=>"Rs761224042", :revid=>1413858, :orientation=>true, :stabilized=>false, :rsid=>"761224042", :chromosome=>"20", :name=>"SLC52A3", :position=>761102}
+{:title=>"Rs761458977", :revid=>1288573, :orientation=>true, :stabilized=>false, :rsid=>"761458977", :chromosome=>"11", :name=>"DHCR7", :position=>71435452}
+{:title=>"Rs76151636", :revid=>1545359, :orientation=>true, :stabilized=>false, :rsid=>"76151636", :name=>"ATP7B", :chromosome=>"13", :position=>51944145, :gmaf=>0.001377}
+{:title=>"Rs76151804", :revid=>1545355, :orientation=>true, :stabilized=>false, :rsid=>"76151804", :chromosome=>"7", :name=>"CFTR", :position=>117611555, :summary=>"Cystic Fibrosis related"}
+{:title=>"Rs761550284", :revid=>1400450, :orientation=>true, :stabilized=>false, :rsid=>"761550284", :chromosome=>"14", :name=>"GALC", :position=>87984487}
+{:title=>"Rs76157638", :revid=>1529757, :orientation=>true, :stabilized=>false, :rsid=>"76157638", :name=>"ABCA4", :chromosome=>"1", :position=>94051698, :gmaf=>0.0004591}
+{:title=>"Rs761595544", :revid=>1398342, :orientation=>true, :stabilized=>false, :rsid=>"761595544", :chromosome=>"13", :name=>"BRCA2", :position=>32363380}
+{:title=>"Rs76163360", :revid=>1490945, :orientation=>false, :stabilized=>false, :rsid=>"76163360", :chromosome=>"5", :name=>"SMN1", :position=>70951942}
+{:title=>"Rs76173977", :revid=>1402225, :orientation=>true, :stabilized=>false, :rsid=>"76173977", :chromosome=>"15", :name=>"HEXA", :position=>72348047}
+{:title=>"Rs761765254", :revid=>1412004, :orientation=>true, :stabilized=>false, :rsid=>"761765254", :chromosome=>"19", :name=>"LDLR", :position=>11107506}
+{:title=>"Rs761773115", :revid=>1381133, :orientation=>true, :stabilized=>false, :rsid=>"761773115", :chromosome=>"6", :name=>"MUT", :position=>49459448}
+{:title=>"Rs761954844", :revid=>1430286, :orientation=>true, :stabilized=>false, :rsid=>"761954844", :chromosome=>"19", :name=>"LDLR", :position=>11110697}
+{:title=>"Rs762003393", :revid=>1541428, :orientation=>true, :stabilized=>false, :rsid=>"762003393", :chromosome=>"16", :name=>"PKD1", :position=>2105867}
+{:title=>"Rs762033589", :revid=>1365079, :orientation=>true, :stabilized=>false, :rsid=>"762033589", :chromosome=>"1", :name=>"ATP13A2", :position=>16997112}
+{:title=>"Rs762060470", :revid=>1433808, :orientation=>true, :stabilized=>false, :rsid=>"762060470", :chromosome=>"15", :name=>"HEXA", :position=>72353686}
+{:title=>"Rs76212747", :revid=>1395181, :orientation=>false, :stabilized=>false, :rsid=>"76212747", :chromosome=>"12", :name=>"PAH", :position=>102852923}
+{:title=>"Rs762281715", :revid=>1482369, :orientation=>true, :stabilized=>false, :rsid=>"762281715", :chromosome=>"1", :name=>"HSPG2", :position=>21833551}
+{:title=>"Rs762374961", :revid=>1519001, :orientation=>true, :stabilized=>false, :rsid=>"762374961", :chromosome=>"15", :position=>72346235, :name=>"HEXA"}
+{:title=>"Rs762417023", :revid=>1523465, :orientation=>true, :stabilized=>false, :rsid=>"762417023", :chromosome=>"19", :name=>"LDLR", :position=>11089616}
+{:title=>"Rs762462102", :revid=>1358088, :orientation=>true, :stabilized=>false, :rsid=>"762462102", :chromosome=>"12", :name=>"PAH", :position=>102912841}
+{:title=>"Rs762551", :revid=>1544832, :orientation=>true, :stabilized=>false, :rsid=>"762551", :name=>"CYP1A2", :chromosome=>"15", :position=>74749576, :gmaf=>0.3522}
+{:title=>"Rs762635795", :revid=>1408963, :orientation=>true, :stabilized=>false, :rsid=>"762635795", :chromosome=>"17", :name=>"BRCA1", :position=>43104217}
+{:title=>"Rs7626962", :revid=>1529764, :orientation=>true, :stabilized=>false, :rsid=>"7626962", :name=>"SCN5A", :chromosome=>"3", :position=>38579416, :gmaf=>0.01194}
+{:title=>"Rs762815611", :revid=>1466695, :orientation=>true, :stabilized=>false, :rsid=>"762815611", :chromosome=>"19", :name=>"LDLR", :position=>11120212}
+{:title=>"Rs762913101", :revid=>1535827, :orientation=>true, :stabilized=>false, :rsid=>"762913101", :chromosome=>"1", :name=>"MECR", :position=>29202004}
+{:title=>"Rs762949770", :revid=>1338149, :orientation=>true, :stabilized=>false, :rsid=>"762949770", :chromosome=>"12", :name=>"PAH", :position=>102894861}
+{:title=>"Rs76296470", :revid=>1545274, :orientation=>false, :stabilized=>false, :rsid=>"76296470", :chromosome=>"12", :name=>"PAH", :position=>102894756}
+{:title=>"Rs763035", :revid=>1492424, :orientation=>false, :stabilized=>false, :rsid=>"763035", :chromosome=>"6", :position=>32427068}
+{:title=>"Rs763073466", :revid=>1060377, :orientation=>true, :stabilized=>false, :rsid=>"763073466", :chromosome=>"1", :name=>"ALPL", :position=>21577473}
+{:title=>"Rs763110", :revid=>1542426, :orientation=>true, :stabilized=>false, :rsid=>"763110", :name=>"FASLG", :chromosome=>"1", :position=>172658358, :gmaf=>0.4311}
+{:title=>"Rs763147599", :revid=>1467059, :orientation=>true, :stabilized=>false, :rsid=>"763147599", :chromosome=>"19", :name=>"LDLR", :position=>11116927}
+{:title=>"Rs763159520", :revid=>1060378, :orientation=>true, :stabilized=>false, :rsid=>"763159520", :chromosome=>"1", :name=>"ALPL", :position=>21564118}
+{:title=>"Rs763191789", :revid=>1383154, :orientation=>true, :stabilized=>false, :rsid=>"763191789", :chromosome=>"7", :name=>"SLC25A13", :position=>96184990}
+{:title=>"Rs763199691", :revid=>1541293, :orientation=>true, :stabilized=>false, :rsid=>"763199691", :chromosome=>"16", :name=>"PKD1", :position=>2114184}
+{:title=>"Rs763244290", :revid=>1060379, :orientation=>true, :stabilized=>false, :rsid=>"763244290", :chromosome=>"1", :name=>"ALPL", :position=>21560692}
+{:title=>"Rs763317", :revid=>1493741, :orientation=>true, :stabilized=>false, :rsid=>"763317", :name=>"EGFR", :chromosome=>"7", :position=>55027504, :gmaf=>0.3485}
+{:title=>"Rs763361", :revid=>1544517, :orientation=>true, :stabilized=>false, :rsid=>"763361", :name=>"CD226", :chromosome=>"18", :position=>69864406, :gmaf=>0.4917}
+{:title=>"Rs763457259", :revid=>1060380, :orientation=>true, :stabilized=>false, :rsid=>"763457259", :chromosome=>"1", :name=>"ALPL", :position=>21573733}
+{:title=>"Rs76353203", :revid=>1393061, :orientation=>true, :stabilized=>false, :rsid=>"76353203", :chromosome=>"11", :name=>"APOC3", :position=>116830637}
+{:title=>"Rs763625913", :revid=>1505168, :orientation=>true, :stabilized=>false, :rsid=>"763625913", :chromosome=>"19", :name=>"LDLR", :position=>11123341}
+{:title=>"Rs7639618", :revid=>1488446, :orientation=>true, :stabilized=>false, :rsid=>"7639618", :name=>"DVWA", :chromosome=>"3", :position=>15174922, :gmaf=>0.2635}
+{:title=>"Rs763998635", :revid=>1411790, :orientation=>true, :stabilized=>false, :rsid=>"763998635", :chromosome=>"19", :name=>"LDLR", :position=>11105379}
+{:title=>"Rs764042910", :revid=>1411867, :orientation=>true, :stabilized=>false, :rsid=>"764042910", :chromosome=>"19", :name=>"LDLR", :position=>11105549}
+{:title=>"Rs764104777", :revid=>1523466, :orientation=>true, :stabilized=>false, :rsid=>"764104777", :chromosome=>"19", :name=>"LDLR", :position=>11116953}
+{:title=>"Rs764173488", :revid=>1508753, :orientation=>true, :stabilized=>false, :rsid=>"764173488", :chromosome=>"6", :name=>"MUT", :position=>49447749}
+{:title=>"Rs764196809", :revid=>1543021, :orientation=>true, :stabilized=>false, :rsid=>"764196809", :chromosome=>"17", :name=>"UNC13D", :position=>75834093}
+{:title=>"Rs764313717", :revid=>1391499, :orientation=>true, :stabilized=>false, :rsid=>"764313717", :chromosome=>"11", :name=>"PYGM", :position=>64758375}
+{:title=>"Rs764328696", :revid=>1350879, :orientation=>true, :stabilized=>false, :rsid=>"764328696", :chromosome=>"7", :name=>"TBX20", :position=>35248696}
+{:title=>"Rs764343937", :revid=>1433902, :orientation=>true, :stabilized=>false, :rsid=>"764343937", :chromosome=>"15", :name=>"HEXA", :position=>72353179}
+{:title=>"Rs764493597", :revid=>1412531, :orientation=>true, :stabilized=>false, :rsid=>"764493597", :chromosome=>"19", :name=>"LDLR", :position=>11128071}
+{:title=>"Rs764509489", :revid=>1403620, :orientation=>true, :stabilized=>false, :rsid=>"764509489", :chromosome=>"16", :name=>"PALB2", :position=>23629818}
+{:title=>"Rs764526789", :revid=>1411937, :orientation=>true, :stabilized=>false, :rsid=>"764526789", :chromosome=>"19", :name=>"LDLR", :position=>11106632}
+{:title=>"Rs764550980", :revid=>1505159, :orientation=>true, :stabilized=>false, :rsid=>"764550980", :chromosome=>"19", :name=>"LDLR", :position=>11120152}
+{:title=>"Rs7646054", :revid=>1529773, :orientation=>true, :stabilized=>false, :rsid=>"7646054", :name=>"ARHGEF3", :chromosome=>"3", :position=>56775600, :gmaf=>0.3122}
+{:title=>"Rs7647305", :revid=>1529774, :orientation=>true, :stabilized=>false, :rsid=>"7647305", :chromosome=>"3", :position=>186116501, :gmaf=>0.2241}
+{:title=>"Rs764797225", :revid=>1411704, :orientation=>true, :stabilized=>false, :rsid=>"764797225", :chromosome=>"19", :name=>"LDLR", :position=>11102776}
+{:title=>"Rs765011829", :revid=>1060381, :orientation=>true, :stabilized=>false, :rsid=>"765011829", :chromosome=>"1", :name=>"ALPL", :position=>21564143}
+{:title=>"Rs7651446", :revid=>1489359, :orientation=>true, :stabilized=>false, :rsid=>"7651446", :name=>"TIPARP", :chromosome=>"3", :position=>156689208, :gmaf=>0.06061}
+{:title=>"Rs7652331", :revid=>1440910, :orientation=>true, :stabilized=>false, :rsid=>"7652331", :name=>"FYCO1", :chromosome=>"3", :position=>45921260, :gmaf=>0.1511}
+{:title=>"Rs76542238", :revid=>1395026, :orientation=>true, :stabilized=>false, :rsid=>"76542238", :chromosome=>"12", :name=>"PAH", :position=>102839194}
+{:title=>"Rs765458125", :revid=>1060382, :orientation=>true, :stabilized=>false, :rsid=>"765458125", :chromosome=>"1", :name=>"ALPL", :position=>21573676}
+{:title=>"Rs76546355", :revid=>1238383, :orientation=>true, :stabilized=>false, :rsid=>"76546355", :chromosome=>"6", :position=>31381371, :summary=>"(A) allele has increased risk of Behçet's disease"}
+{:title=>"Rs76554633", :revid=>1383677, :orientation=>true, :stabilized=>false, :rsid=>"76554633", :chromosome=>"7", :name=>"CFTR", :position=>117587808, :summary=>"Cystic Fibrosis related"}
+{:title=>"Rs765548101", :revid=>1530653, :orientation=>true, :stabilized=>false, :rsid=>"765548101", :chromosome=>"7", :name=>"CCM2", :position=>45064528}
+{:title=>"Rs765696008", :revid=>1505128, :orientation=>true, :stabilized=>false, :rsid=>"765696008", :chromosome=>"19", :name=>"LDLR", :position=>11113268}
+{:title=>"Rs765707028", :revid=>1366344, :orientation=>true, :stabilized=>false, :rsid=>"765707028", :chromosome=>"1", :name=>"ABCA4", :position=>94079321}
+{:title=>"Rs7659604", :revid=>1529779, :orientation=>true, :stabilized=>false, :rsid=>"7659604", :chromosome=>"4", :position=>121744359, :gmaf=>0.4504}
+{:title=>"Rs766018741", :revid=>1541292, :orientation=>true, :stabilized=>false, :rsid=>"766018741", :chromosome=>"16", :name=>"PKD1", :position=>2108437}
+{:title=>"Rs766076920", :revid=>1365217, :orientation=>true, :stabilized=>false, :rsid=>"766076920", :chromosome=>"1", :name=>"ALPL", :position=>21568122}
+{:title=>"Rs766094434", :revid=>1411787, :orientation=>true, :stabilized=>false, :rsid=>"766094434", :chromosome=>"19", :name=>"LDLR", :position=>11105371}
+{:title=>"Rs766107583", :revid=>1338001, :orientation=>true, :stabilized=>false, :rsid=>"766107583", :chromosome=>"12", :name=>"PAH", :position=>102843774}
+{:title=>"Rs766251541", :revid=>1398193, :orientation=>true, :stabilized=>false, :rsid=>"766251541", :chromosome=>"13", :name=>"BRCA2", :position=>32357807}
+{:title=>"Rs766299724", :revid=>1288511, :orientation=>true, :stabilized=>false, :rsid=>"766299724", :chromosome=>"11", :name=>"DHCR7", :position=>71441278}
+{:title=>"Rs766310671", :revid=>1400446, :orientation=>true, :stabilized=>false, :rsid=>"766310671", :chromosome=>"14", :name=>"GALC", :position=>87976452}
+{:title=>"Rs766317663", :revid=>1387463, :orientation=>true, :stabilized=>false, :rsid=>"766317663", :chromosome=>"9", :name=>"COQ4", :position=>128323135}
+{:title=>"Rs766328537", :revid=>1404975, :orientation=>true, :stabilized=>false, :rsid=>"766328537", :chromosome=>"17", :name=>"ASPA", :position=>3476238}
+{:title=>"Rs76645461", :revid=>1507951, :orientation=>false, :stabilized=>false, :rsid=>"76645461", :chromosome=>"X", :name=>"G6PD", :position=>154536156}
+{:title=>"Rs766474188", :revid=>1430297, :orientation=>true, :stabilized=>false, :rsid=>"766474188", :chromosome=>"19", :name=>"LDLR", :position=>11113278}
+{:title=>"Rs766495775", :revid=>1288550, :orientation=>true, :stabilized=>false, :rsid=>"766495775", :chromosome=>"11", :name=>"DHCR7", :position=>71437914}
+{:title=>"Rs76649725", :revid=>1494253, :orientation=>true, :stabilized=>false, :rsid=>"76649725", :name=>"CFTR", :chromosome=>"7", :position=>117642484, :gmaf=>0.0004591, :summary=>"Cystic Fibrosis related"}
+{:title=>"Rs766551411", :revid=>1541291, :orientation=>true, :stabilized=>false, :rsid=>"766551411", :chromosome=>"16", :name=>"PKD1", :position=>2090802}
+{:title=>"Rs766570903", :revid=>1366320, :orientation=>true, :stabilized=>false, :rsid=>"766570903", :chromosome=>"1", :name=>"ABCA4", :position=>94062596}
+{:title=>"Rs766657895", :revid=>1543319, :orientation=>true, :stabilized=>false, :rsid=>"766657895", :chromosome=>"17", :name=>"UNC13D", :position=>75830592}
+{:title=>"Rs766709484", :revid=>1430194, :orientation=>true, :stabilized=>false, :rsid=>"766709484", :chromosome=>"19", :name=>"LDLR", :position=>11102773}
+{:title=>"Rs76687508", :revid=>1545283, :orientation=>false, :stabilized=>false, :rsid=>"76687508", :chromosome=>"12", :name=>"PAH", :position=>102852936}
+{:title=>"Rs767024374", :revid=>1412039, :orientation=>true, :stabilized=>false, :rsid=>"767024374", :chromosome=>"19", :name=>"LDLR", :position=>11110719}
+{:title=>"Rs767041069", :revid=>1434003, :orientation=>true, :stabilized=>false, :rsid=>"767041069", :chromosome=>"15", :name=>"HEXA", :position=>72346526}
+{:title=>"Rs76713772", :revid=>1545354, :orientation=>true, :stabilized=>false, :rsid=>"76713772", :name=>"CFTR", :chromosome=>"7", :position=>117587738, :gmaf=>0.0004591}
+{:title=>"Rs767167623", :revid=>1201691, :orientation=>true, :stabilized=>false, :rsid=>"767167623", :chromosome=>"1", :name=>"HSD3B2", :position=>119422368}
+{:title=>"Rs767178508", :revid=>1395883, :orientation=>true, :stabilized=>false, :rsid=>"767178508", :chromosome=>"13", :name=>"GJB2", :position=>20189143}
+{:title=>"Rs767234936", :revid=>1397295, :orientation=>true, :stabilized=>false, :rsid=>"767234936", :chromosome=>"13", :name=>"BRCA2", :position=>32338600}
+{:title=>"Rs767263985", :revid=>1347109, :orientation=>true, :stabilized=>false, :rsid=>"767263985", :chromosome=>"20", :name=>"SLC52A3", :position=>765401}
+{:title=>"Rs767543051", :revid=>1149704, :orientation=>true, :stabilized=>false, :rsid=>"767543051", :name=>"ASL", :chromosome=>"7", :position=>66082925}
+{:title=>"Rs767568897", :revid=>1370802, :orientation=>true, :stabilized=>false, :rsid=>"767568897", :chromosome=>"2", :name=>"LIPT1", :position=>99162169}
+{:title=>"Rs767595162", :revid=>1408515, :orientation=>true, :stabilized=>false, :rsid=>"767595162", :chromosome=>"17", :name=>"BRCA1", :position=>43093687}
+{:title=>"Rs767603", :revid=>1477361, :orientation=>true, :stabilized=>false, :rsid=>"767603", :chromosome=>"14", :position=>60631965, :gmaf=>0.1616, :name=>"LOC105378189"}
+{:title=>"Rs767618089", :revid=>1505116, :orientation=>true, :stabilized=>false, :rsid=>"767618089", :chromosome=>"19", :name=>"LDLR", :position=>11107472}
+{:title=>"Rs767623493", :revid=>1388954, :orientation=>true, :stabilized=>false, :rsid=>"767623493", :chromosome=>"10", :name=>"PTEN", :position=>87957968}
+{:title=>"Rs76763715", :revid=>1467887, :orientation=>true, :stabilized=>false, :rsid=>"76763715", :name=>"GBA", :chromosome=>"1", :position=>155235843, :gmaf=>0.001377}
+{:title=>"Rs767666474", :revid=>1404973, :orientation=>true, :stabilized=>false, :rsid=>"767666474", :chromosome=>"17", :name=>"ASPA", :position=>3476191}
+{:title=>"Rs767767730", :revid=>1430291, :orientation=>true, :stabilized=>false, :rsid=>"767767730", :chromosome=>"19", :name=>"LDLR", :position=>11111519}
+{:title=>"Rs767790696", :revid=>1505171, :orientation=>true, :stabilized=>false, :rsid=>"767790696", :chromosome=>"19", :name=>"LDLR", :position=>11129511}
+{:title=>"Rs767911847", :revid=>1237672, :orientation=>true, :stabilized=>false, :rsid=>"767911847", :chromosome=>"16", :name=>"HBA1", :position=>177070}
+{:title=>"Rs76811038", :revid=>1409204, :orientation=>false, :stabilized=>false, :rsid=>"76811038", :chromosome=>"17", :name=>"ITGA2B", :position=>44379780, :summary=>"Glanzmann's thrombasthenia"}
+{:title=>"Rs768128088", :revid=>1375303, :orientation=>true, :stabilized=>false, :rsid=>"768128088", :chromosome=>"3", :name=>"COL7A1", :position=>48573864}
+{:title=>"Rs7682260", :revid=>1470462, :orientation=>true, :stabilized=>false, :rsid=>"7682260", :chromosome=>"4", :name=>"GYPA", :position=>144120567}
+{:title=>"Rs768242833", :revid=>1339553, :orientation=>true, :stabilized=>false, :rsid=>"768242833", :chromosome=>"13", :name=>"BRCA2", :position=>32340333}
+{:title=>"Rs768278935", :revid=>1366258, :orientation=>true, :stabilized=>false, :rsid=>"768278935", :chromosome=>"1", :name=>"ABCA4", :position=>94041249}
+{:title=>"Rs7683365", :revid=>1083111, :orientation=>true, :stabilized=>false, :rsid=>"7683365", :chromosome=>"4", :name=>"GYPB", :position=>143999443}
+{:title=>"Rs768401297", :revid=>1407180, :orientation=>true, :stabilized=>false, :rsid=>"768401297", :chromosome=>"17", :name=>"BRCA1", :position=>43045784}
+{:title=>"Rs768430352", :revid=>1412091, :orientation=>true, :stabilized=>false, :rsid=>"768430352", :chromosome=>"19", :name=>"LDLR", :position=>11111556}
+{:title=>"Rs768555495", :revid=>1365231, :orientation=>true, :stabilized=>false, :rsid=>"768555495", :chromosome=>"1", :name=>"ALPL", :position=>21573722}
+{:title=>"Rs768563000", :revid=>1411922, :orientation=>true, :stabilized=>false, :rsid=>"768563000", :chromosome=>"19", :name=>"LDLR", :position=>11106588}
+{:title=>"Rs76871093", :revid=>1470708, :orientation=>true, :stabilized=>false, :rsid=>"76871093", :chromosome=>"5", :name=>"SMN1", :position=>70946163}
+{:title=>"Rs7687256", :revid=>1470461, :orientation=>true, :stabilized=>false, :rsid=>"7687256", :chromosome=>"4", :name=>"GYPA", :position=>144120555}
+{:title=>"Rs768737101", :revid=>1390361, :orientation=>true, :stabilized=>false, :rsid=>"768737101", :summary=>"Mitral Valve Prolapse", :chromosome=>"11", :name=>"DCHS1", :position=>6625356}
+{:title=>"Rs76879328", :revid=>1545225, :orientation=>false, :stabilized=>false, :rsid=>"76879328", :chromosome=>"7", :name=>"CFTR", :position=>117540305, :summary=>"Cystic Fibrosis related"}
+{:title=>"Rs7688672", :revid=>1173793, :orientation=>true, :stabilized=>false, :rsid=>"7688672", :name=>"PRKG2", :chromosome=>"4", :position=>81148295, :gmaf=>0.4605}
+{:title=>"Rs768966657", :revid=>1386263, :orientation=>true, :stabilized=>false, :rsid=>"768966657", :chromosome=>"9", :name=>"CDKN2A", :position=>21971021}
+{:title=>"Rs769017108", :revid=>1397403, :orientation=>true, :stabilized=>false, :rsid=>"769017108", :chromosome=>"13", :name=>"BRCA2", :position=>32339176}
+{:title=>"Rs769020799", :revid=>1060384, :orientation=>true, :stabilized=>false, :rsid=>"769020799", :chromosome=>"1", :name=>"ALPL", :position=>21568116}
+{:title=>"Rs76917243", :revid=>1495691, :orientation=>true, :stabilized=>false, :rsid=>"76917243", :name=>"ALDOB", :chromosome=>"9", :position=>101427498, :gmaf=>0.0009183}
+{:title=>"Rs769284314", :revid=>1535883, :orientation=>true, :stabilized=>false, :rsid=>"769284314", :chromosome=>"9", :name=>"DNAI1", :position=>34506870}
+{:title=>"Rs769318035", :revid=>1411816, :orientation=>true, :stabilized=>false, :rsid=>"769318035", :chromosome=>"19", :name=>"LDLR", :position=>11105425}
+{:title=>"Rs769368098", :revid=>1396569, :orientation=>true, :stabilized=>false, :rsid=>"769368098", :chromosome=>"13", :name=>"BRCA2", :position=>32332536}
+{:title=>"Rs769370816", :revid=>1466759, :orientation=>true, :stabilized=>false, :rsid=>"769370816", :chromosome=>"19", :name=>"LDLR", :position=>11116125}
+{:title=>"Rs769383881", :revid=>1411726, :orientation=>true, :stabilized=>false, :rsid=>"769383881", :chromosome=>"19", :name=>"LDLR", :position=>11105243}
+{:title=>"Rs769446356", :revid=>1523467, :orientation=>true, :stabilized=>false, :rsid=>"769446356", :chromosome=>"19", :name=>"LDLR", :position=>11100349}
+{:title=>"Rs76947760", :revid=>1536023, :orientation=>true, :stabilized=>false, :rsid=>"76947760", :chromosome=>"20", :name=>"SLC52A3", :position=>763523}
+{:title=>"Rs769506424", :revid=>1109293, :orientation=>true, :stabilized=>false, :rsid=>"769506424", :chromosome=>"7", :name=>"ASL", :position=>66089282}
+{:title=>"Rs769737896", :revid=>1466775, :orientation=>true, :stabilized=>false, :rsid=>"769737896", :chromosome=>"19", :name=>"LDLR", :position=>11110759}
+{:title=>"Rs769900251", :revid=>1531405, :orientation=>true, :stabilized=>false, :rsid=>"769900251", :chromosome=>"2", :name=>"PROC", :position=>127421324}
+{:title=>"Rs76992529", :revid=>1504700, :orientation=>true, :stabilized=>false, :rsid=>"76992529", :name=>"TTR", :chromosome=>"18", :position=>31598655, :gmaf=>0.005969}
+{:title=>"Rs769960006", :revid=>1149713, :orientation=>true, :stabilized=>false, :rsid=>"769960006", :name=>"ASL", :chromosome=>"7", :position=>66086614}
+{:title=>"Rs770093969", :revid=>1060385, :orientation=>true, :stabilized=>false, :rsid=>"770093969", :chromosome=>"1", :name=>"ALPL", :position=>21560683}
+{:title=>"Rs77010315", :revid=>1491483, :orientation=>true, :stabilized=>false, :rsid=>"77010315", :name=>"SLC36A2", :chromosome=>"5", :position=>151343594, :gmaf=>0.007346}
+{:title=>"Rs77010898", :revid=>1545348, :orientation=>true, :stabilized=>false, :rsid=>"77010898", :chromosome=>"7", :name=>"CFTR", :position=>117642566, :summary=>"Cystic Fibrosis related"}
+{:title=>"Rs770167670", :revid=>1331241, :orientation=>true, :stabilized=>false, :rsid=>"770167670", :chromosome=>"7", :name=>"ASL", :position=>66092606}
+{:title=>"Rs7701890", :revid=>1491133, :orientation=>true, :stabilized=>false, :rsid=>"7701890", :name=>"TMEM232", :chromosome=>"5", :position=>110523120, :gmaf=>0.1474}
+{:title=>"Rs770318608", :revid=>1358091, :orientation=>true, :stabilized=>false, :rsid=>"770318608", :chromosome=>"13", :name=>"BRCA2", :position=>32339929}
+{:title=>"Rs770374710", :revid=>1400786, :orientation=>true, :stabilized=>false, :rsid=>"770374710", :chromosome=>"15", :name=>"MAGEL2", :position=>23645746}
+{:title=>"Rs770460699", :revid=>1408306, :orientation=>true, :stabilized=>false, :rsid=>"770460699", :chromosome=>"17", :name=>"BRCA1", :position=>43093122}
+{:title=>"Rs770461067", :revid=>1381156, :orientation=>true, :stabilized=>false, :rsid=>"770461067", :chromosome=>"6", :name=>"PKHD1", :position=>51659489}
+{:title=>"Rs770548228", :revid=>1060386, :orientation=>true, :stabilized=>false, :rsid=>"770548228", :chromosome=>"1", :name=>"ALPL", :position=>21576608}
+{:title=>"Rs770579313", :revid=>1372278, :orientation=>true, :stabilized=>false, :rsid=>"770579313", :chromosome=>"2", :name=>"TTN", :position=>178724117}
+{:title=>"Rs7705924", :revid=>1491111, :orientation=>true, :stabilized=>false, :rsid=>"7705924", :chromosome=>"5", :position=>102611094, :gmaf=>0.06015, :name=>"LINC00491"}
+{:title=>"Rs770744861", :revid=>1412452, :orientation=>true, :stabilized=>false, :rsid=>"770744861", :chromosome=>"19", :name=>"LDLR", :position=>11120405}
+{:title=>"Rs770810987", :revid=>1508754, :orientation=>true, :stabilized=>false, :rsid=>"770810987", :chromosome=>"6", :name=>"MUT", :position=>49457761}
+{:title=>"Rs770815049", :revid=>1201692, :orientation=>true, :stabilized=>false, :rsid=>"770815049", :chromosome=>"1", :name=>"HSD3B2", :position=>119422056}
+{:title=>"Rs770932296", :revid=>1402237, :orientation=>true, :stabilized=>false, :rsid=>"770932296", :chromosome=>"15", :name=>"HEXA", :position=>72349266}
+{:title=>"Rs770947426", :revid=>1286196, :orientation=>true, :stabilized=>false, :rsid=>"770947426", :chromosome=>"17", :name=>"SGSH", :position=>80210881}
+{:title=>"Rs77101217", :revid=>1383647, :orientation=>true, :stabilized=>false, :rsid=>"77101217", :chromosome=>"7", :name=>"CFTR", :position=>117559548}
+{:title=>"Rs771019366", :revid=>1466677, :orientation=>true, :stabilized=>false, :rsid=>"771019366", :chromosome=>"19", :name=>"LDLR", :position=>11102742}
+{:title=>"Rs771180444", :revid=>1381219, :orientation=>true, :stabilized=>false, :rsid=>"771180444", :chromosome=>"6", :name=>"PKHD1", :position=>51959898}
+{:title=>"Rs771203198", :revid=>1398676, :orientation=>true, :stabilized=>false, :rsid=>"771203198", :chromosome=>"13", :name=>"BRCA2", :position=>32394750}
+{:title=>"Rs771489305", :revid=>1400424, :orientation=>true, :stabilized=>false, :rsid=>"771489305", :chromosome=>"14", :name=>"GALC", :position=>87947745}
+{:title=>"Rs771540767", :revid=>1365239, :orientation=>true, :stabilized=>false, :rsid=>"771540767", :chromosome=>"1", :name=>"ALPL", :position=>21575879}
+{:title=>"Rs771552960", :revid=>1541579, :orientation=>true, :stabilized=>false, :rsid=>"771552960", :chromosome=>"10", :name=>"PRF1", :position=>70598630}
+{:title=>"Rs771578775", :revid=>1485616, :orientation=>true, :stabilized=>false, :rsid=>"771578775", :chromosome=>"1", :name=>"COQ8A", :position=>226982996}
+{:title=>"Rs771623148", :revid=>1381158, :orientation=>true, :stabilized=>false, :rsid=>"771623148", :chromosome=>"6", :name=>"PKHD1", :position=>51659673}
+{:title=>"Rs771748289", :revid=>1395868, :orientation=>true, :stabilized=>false, :rsid=>"771748289", :chromosome=>"13", :name=>"GJB2", :position=>20188986}
+{:title=>"Rs77188391", :revid=>1545352, :orientation=>true, :stabilized=>false, :rsid=>"77188391", :chromosome=>"7", :name=>"CFTR", :position=>117534366, :summary=>"Cystic Fibrosis related"}
+{:title=>"Rs771917370", :revid=>1411862, :orientation=>true, :stabilized=>false, :rsid=>"771917370", :chromosome=>"19", :name=>"LDLR", :position=>11105537}
+{:title=>"Rs772180415", :revid=>1402231, :orientation=>true, :stabilized=>false, :rsid=>"772180415", :chromosome=>"15", :name=>"HEXA", :position=>72349101}
+{:title=>"Rs772264564", :revid=>1395880, :orientation=>true, :stabilized=>false, :rsid=>"772264564", :chromosome=>"13", :name=>"GJB2", :position=>20189117}
+{:title=>"Rs772432010", :revid=>1060388, :orientation=>true, :stabilized=>false, :rsid=>"772432010", :chromosome=>"1", :name=>"ALPL", :position=>21568110}
+{:title=>"Rs772552898", :revid=>1381088, :orientation=>true, :stabilized=>false, :rsid=>"772552898", :chromosome=>"6", :name=>"MUT", :position=>49451693}
+{:title=>"Rs772682471", :revid=>1060389, :orientation=>true, :stabilized=>false, :rsid=>"772682471", :chromosome=>"1", :name=>"ALPL", :position=>21575918}
+{:title=>"Rs772701127", :revid=>1521155, :orientation=>true, :stabilized=>false, :rsid=>"772701127", :chromosome=>"1", :name=>"MFN2", :position=>12007074}
+{:title=>"Rs772724819", :revid=>1351811, :orientation=>true, :stabilized=>false, :rsid=>"772724819", :chromosome=>"7", :name=>"SNX10", :position=>26364636}
+{:title=>"Rs77284892", :revid=>1545219, :orientation=>false, :stabilized=>false, :rsid=>"77284892", :chromosome=>"7", :summary=>"Cystic Fibrosis related", :name=>"CFTR", :position=>117509047}
+{:title=>"Rs77301881", :revid=>1470709, :orientation=>false, :stabilized=>false, :rsid=>"77301881", :chromosome=>"5", :name=>"SMN1", :position=>70946165}
+{:title=>"Rs773064328", :revid=>1412101, :orientation=>true, :stabilized=>false, :rsid=>"773064328", :chromosome=>"19", :name=>"LDLR", :position=>11111582}
+{:title=>"Rs773134475", :revid=>1288570, :orientation=>true, :stabilized=>false, :rsid=>"773134475", :chromosome=>"11", :name=>"DHCR7", :position=>71435613}
+{:title=>"Rs773136605", :revid=>1381258, :orientation=>true, :stabilized=>false, :rsid=>"773136605", :chromosome=>"6", :name=>"PKHD1", :position=>52043102}
+{:title=>"Rs773257111", :revid=>1060390, :orientation=>true, :stabilized=>false, :rsid=>"773257111", :chromosome=>"1", :name=>"ALPL", :position=>21563143}
+{:title=>"Rs773328511", :revid=>1411954, :orientation=>true, :stabilized=>false, :rsid=>"773328511", :chromosome=>"19", :name=>"LDLR", :position=>11106680}
+{:title=>"Rs773360200", :revid=>1543668, :orientation=>true, :stabilized=>false, :rsid=>"773360200", :chromosome=>"19", :name=>"STXBP2", :position=>7644720}
+{:title=>"Rs773413634", :revid=>1408468, :orientation=>true, :stabilized=>false, :rsid=>"773413634", :chromosome=>"17", :name=>"BRCA1", :position=>43093553}
+{:title=>"Rs773446161", :revid=>1434251, :orientation=>true, :stabilized=>false, :rsid=>"773446161", :chromosome=>"15", :name=>"HEXA", :position=>72356555}
+{:title=>"Rs773528125", :revid=>1395877, :orientation=>true, :stabilized=>false, :rsid=>"773528125", :chromosome=>"13", :name=>"GJB2", :position=>20189070}
+{:title=>"Rs773569201", :revid=>1540806, :orientation=>true, :stabilized=>false, :rsid=>"773569201", :chromosome=>"7", :name=>"CFTR", :position=>117590397}
+{:title=>"Rs773618064", :revid=>1467030, :orientation=>true, :stabilized=>false, :rsid=>"773618064", :chromosome=>"19", :name=>"LDLR", :position=>11129534}
+{:title=>"Rs773658037", :revid=>1412158, :orientation=>true, :stabilized=>false, :rsid=>"773658037", :chromosome=>"19", :name=>"LDLR", :position=>11113338}
+{:title=>"Rs77375493", :revid=>1545358, :orientation=>true, :stabilized=>false, :rsid=>"77375493", :name=>"JAK2", :chromosome=>"9", :position=>5073770, :gmaf=>0.0}
+{:title=>"Rs773876739", :revid=>1377109, :orientation=>true, :stabilized=>false, :rsid=>"773876739", :chromosome=>"4", :name=>"SEPSECS", :position=>25123971}
+{:title=>"Rs774016801", :revid=>1430185, :orientation=>true, :stabilized=>false, :rsid=>"774016801", :chromosome=>"19", :name=>"LDLR", :position=>11102664}
+{:title=>"Rs774069731", :revid=>1467049, :orientation=>true, :stabilized=>false, :rsid=>"774069731", :chromosome=>"19", :name=>"LDLR", :position=>11110773}
+{:title=>"Rs77409459", :revid=>1545327, :orientation=>true, :stabilized=>false, :rsid=>"77409459", :chromosome=>"7", :name=>"CFTR", :position=>117540243, :summary=>"Cystic Fibrosis related"}
+{:title=>"Rs774277300", :revid=>1392344, :orientation=>true, :stabilized=>false, :rsid=>"774277300", :chromosome=>"11", :name=>"MRE11A", :position=>94447276}
+{:title=>"Rs774323189", :revid=>1405000, :orientation=>true, :stabilized=>false, :rsid=>"774323189", :chromosome=>"17", :name=>"ASPA", :position=>3499005}
+{:title=>"Rs7743761", :revid=>1492194, :orientation=>true, :stabilized=>false, :rsid=>"7743761", :name=>"DHFRP2", :chromosome=>"6", :position=>31368323, :gmaf=>0.3402}
+{:title=>"Rs774395996", :revid=>1387470, :orientation=>true, :stabilized=>false, :rsid=>"774395996", :chromosome=>"9", :name=>"COQ4", :position=>128332183}
+{:title=>"Rs774439908", :revid=>1466491, :orientation=>true, :stabilized=>false, :rsid=>"774439908", :chromosome=>"19", :name=>"LDLR", :position=>11113348}
+{:title=>"Rs774452124", :revid=>1536866, :orientation=>true, :stabilized=>false, :rsid=>"774452124", :chromosome=>"17", :name=>"SCN4A", :position=>63941958}
+{:title=>"Rs774453167", :revid=>1536867, :orientation=>true, :stabilized=>false, :rsid=>"774453167", :chromosome=>"17", :name=>"SCN4A", :position=>63941895}
+{:title=>"Rs774539540", :revid=>1396463, :orientation=>true, :stabilized=>false, :rsid=>"774539540", :chromosome=>"13", :name=>"BRCA2", :position=>32329454}
+{:title=>"Rs774572099", :revid=>1531406, :orientation=>true, :stabilized=>false, :rsid=>"774572099", :chromosome=>"2", :name=>"PROC", :position=>127421336}
+{:title=>"Rs774615547", :revid=>1411597, :orientation=>true, :stabilized=>false, :rsid=>"774615547", :chromosome=>"19", :name=>"LDLR", :position=>11089562}
+{:title=>"Rs774679104", :revid=>1407849, :orientation=>true, :stabilized=>false, :rsid=>"774679104", :chromosome=>"17", :name=>"BRCA1", :position=>43091834}
+{:title=>"Rs774723292", :revid=>1411729, :orientation=>true, :stabilized=>false, :rsid=>"774723292", :chromosome=>"19", :name=>"LDLR", :position=>11105249}
+{:title=>"Rs774730452", :revid=>1412465, :orientation=>true, :stabilized=>false, :rsid=>"774730452", :chromosome=>"19", :name=>"LDLR", :position=>11120432}
+{:title=>"Rs774808238", :revid=>1396859, :orientation=>true, :stabilized=>false, :rsid=>"774808238", :chromosome=>"13", :name=>"BRCA2", :position=>32336674}
+{:title=>"Rs774988515", :revid=>1407227, :orientation=>true, :stabilized=>false, :rsid=>"774988515", :chromosome=>"17", :name=>"BRCA1", :position=>43049136}
+{:title=>"Rs775034584", :revid=>1391966, :orientation=>true, :stabilized=>false, :rsid=>"775034584", :chromosome=>"11", :name=>"DHCR7", :position=>71435377}
+{:title=>"Rs775092314", :revid=>1466576, :orientation=>true, :stabilized=>false, :rsid=>"775092314", :chromosome=>"19", :name=>"LDLR", :position=>11120411}
+{:title=>"Rs775129424", :revid=>1511904, :orientation=>true, :stabilized=>false, :rsid=>"775129424", :chromosome=>"2", :name=>"ACMSD", :position=>134898383}
+{:title=>"Rs775145486", :revid=>1511974, :orientation=>true, :stabilized=>false, :rsid=>"775145486", :chromosome=>"1", :name=>"PSEN2", :position=>226888116}
+{:title=>"Rs775334315", :revid=>1090664, :orientation=>true, :stabilized=>false, :rsid=>"775334315", :chromosome=>"22", :name=>"SAMM50", :position=>43976097}
+{:title=>"Rs7753394", :revid=>1493222, :orientation=>true, :stabilized=>false, :rsid=>"7753394", :chromosome=>"6", :position=>137764111, :gmaf=>0.4343}
+{:title=>"Rs77542170", :revid=>1365696, :orientation=>true, :stabilized=>false, :rsid=>"77542170", :name=>"MUTYH", :chromosome=>"1", :position=>45332088, :gmaf=>0.002296}
+{:title=>"Rs7754840", :revid=>1545582, :orientation=>true, :stabilized=>false, :rsid=>"7754840", :name=>"CDKAL1", :chromosome=>"6", :position=>20661019, :gmaf=>0.4068, :summary=>"risk for type-2 diabetes"}
+{:title=>"Rs7755898", :revid=>1380773, :orientation=>true, :stabilized=>false, :rsid=>"7755898", :name=>"CYP21A2", :chromosome=>"6", :position=>32040421, :summary=>"Q318X allele of the 21-hydroxylase gene.  T is the risk allele.  This represents a null allele (no function)."}
+{:title=>"Rs775595174", :revid=>1434347, :orientation=>true, :stabilized=>false, :rsid=>"775595174", :chromosome=>"19", :name=>"STK11", :position=>1218484}
+{:title=>"Rs775607037", :revid=>1387469, :orientation=>true, :stabilized=>false, :rsid=>"775607037", :chromosome=>"9", :name=>"COQ4", :position=>128332171}
+{:title=>"Rs7756992", :revid=>1537576, :orientation=>true, :stabilized=>false, :rsid=>"7756992", :name=>"CDKAL1", :chromosome=>"6", :position=>20679478, :gmaf=>0.4054}
+{:title=>"Rs7757037", :revid=>1492651, :orientation=>true, :stabilized=>false, :rsid=>"7757037", :name=>"FKBP5", :chromosome=>"6", :position=>35580459, :gmaf=>0.4991}
+{:title=>"Rs775773057", :revid=>1288518, :orientation=>true, :stabilized=>false, :rsid=>"775773057", :chromosome=>"11", :name=>"DHCR7", :position=>71439028}
+{:title=>"Rs775859905", :revid=>1397970, :orientation=>true, :stabilized=>false, :rsid=>"775859905", :chromosome=>"13", :name=>"BRCA2", :position=>32341031}
+{:title=>"Rs775863165", :revid=>1365408, :orientation=>true, :stabilized=>false, :rsid=>"775863165", :chromosome=>"1", :name=>"HPCA", :position=>32889110}
+{:title=>"Rs775924858", :revid=>1466994, :orientation=>true, :stabilized=>false, :rsid=>"775924858", :chromosome=>"19", :name=>"LDLR", :position=>11113450}
+{:title=>"Rs775982338", :revid=>1406839, :orientation=>true, :stabilized=>false, :rsid=>"775982338", :chromosome=>"14", :name=>"SERPINA1", :position=>94383009}
+{:title=>"Rs7759938", :revid=>1533743, :orientation=>true, :stabilized=>false, :rsid=>"7759938", :chromosome=>"6", :position=>104931079, :gmaf=>0.3893}
+{:title=>"Rs77615401", :revid=>1413821, :orientation=>true, :stabilized=>false, :rsid=>"77615401", :name=>"TNNI3", :chromosome=>"19", :position=>55156239, :gmaf=>0.003214}
+{:title=>"Rs776217028", :revid=>1412483, :orientation=>true, :stabilized=>false, :rsid=>"776217028", :chromosome=>"19", :name=>"LDLR", :position=>11120471}
+{:title=>"Rs776353983", :revid=>1398429, :orientation=>true, :stabilized=>false, :rsid=>"776353983", :chromosome=>"13", :name=>"BRCA2", :position=>32370548}
+{:title=>"Rs776400380", :revid=>1533534, :orientation=>true, :stabilized=>false, :rsid=>"776400380", :chromosome=>"13", :name=>"THSD1", :position=>52378592}
+{:title=>"Rs776421777", :revid=>1411613, :orientation=>true, :stabilized=>false, :rsid=>"776421777", :chromosome=>"19", :name=>"LDLR", :position=>11100246}
+{:title=>"Rs77646904", :revid=>1383656, :orientation=>false, :stabilized=>false, :rsid=>"77646904", :name=>"CFTR", :chromosome=>"7", :position=>117559629, :gmaf=>0.0009183}
+{:title=>"Rs7765379", :revid=>1492515, :orientation=>true, :stabilized=>false, :rsid=>"7765379", :chromosome=>"6", :position=>32713151, :gmaf=>0.1157}
+{:title=>"Rs776746", :revid=>1529824, :orientation=>false, :stabilized=>false, :rsid=>"776746", :name=>"CYP3A5", :chromosome=>"7", :position=>99672916, :gmaf=>0.3118}
+{:title=>"Rs7769409", :revid=>1380774, :orientation=>true, :stabilized=>false, :rsid=>"7769409", :name=>"C4B", :chromosome=>"6", :position=>32040535}
+{:title=>"Rs777183511", :revid=>1381272, :orientation=>true, :stabilized=>false, :rsid=>"777183511", :chromosome=>"6", :name=>"PKHD1", :position=>52050167}
+{:title=>"Rs777188764", :revid=>1412331, :orientation=>true, :stabilized=>false, :rsid=>"777188764", :chromosome=>"19", :name=>"LDLR", :position=>11116874}
+{:title=>"Rs77718928", :revid=>1545228, :orientation=>false, :stabilized=>false, :rsid=>"77718928", :chromosome=>"9", :name=>"ALDOB", :position=>101421891}
+{:title=>"Rs7771980", :revid=>1189203, :orientation=>true, :stabilized=>false, :rsid=>"7771980", :name=>"RUNX2", :chromosome=>"6", :position=>45421552, :gmaf=>0.07208}
+{:title=>"Rs77722678", :revid=>1376864, :orientation=>false, :stabilized=>false, :rsid=>"77722678", :name=>"FGFR3", :chromosome=>"4", :position=>1805643, :summary=>"Likely Pathogenic Variant for Hypochondroplasia"}
+{:title=>"Rs777248132", :revid=>1288543, :orientation=>true, :stabilized=>false, :rsid=>"777248132", :chromosome=>"11", :name=>"DHCR7", :position=>71438982}
+{:title=>"Rs777269070", :revid=>1541290, :orientation=>true, :stabilized=>false, :rsid=>"777269070", :chromosome=>"16", :name=>"PKD1", :position=>2090777}
+{:title=>"Rs777295041", :revid=>1376809, :orientation=>true, :stabilized=>false, :rsid=>"777295041", :chromosome=>"4", :name=>"IDUA", :position=>1000880}
+{:title=>"Rs777321035", :revid=>1411802, :orientation=>true, :stabilized=>false, :rsid=>"777321035", :chromosome=>"19", :name=>"LDLR", :position=>11105410}
+{:title=>"Rs777326720", :revid=>1466942, :orientation=>true, :stabilized=>false, :rsid=>"777326720", :chromosome=>"19", :name=>"LDLR", :position=>11105426}
+{:title=>"Rs777371832", :revid=>1407841, :orientation=>true, :stabilized=>false, :rsid=>"777371832", :chromosome=>"17", :name=>"BRCA1", :position=>43091819}
+{:title=>"Rs777415466", :revid=>1366220, :orientation=>true, :stabilized=>false, :rsid=>"777415466", :chromosome=>"1", :name=>"ABCA4", :position=>94021880}
+{:title=>"Rs777421358", :revid=>1500044, :orientation=>true, :stabilized=>false, :rsid=>"777421358", :chromosome=>"13", :name=>"BRCA2", :position=>32337006}
+{:title=>"Rs7774434", :revid=>1492487, :orientation=>true, :stabilized=>false, :rsid=>"7774434", :chromosome=>"6", :position=>32689801, :gmaf=>0.4435}
+{:title=>"Rs777460677", :revid=>1541429, :orientation=>true, :stabilized=>false, :rsid=>"777460677", :chromosome=>"16", :name=>"PKD1", :position=>2093916}
+{:title=>"Rs777524402", :revid=>1412046, :orientation=>true, :stabilized=>false, :rsid=>"777524402", :chromosome=>"19", :name=>"LDLR", :position=>11110731}
+{:title=>"Rs777640882", :revid=>1411688, :orientation=>true, :stabilized=>false, :rsid=>"777640882", :chromosome=>"19", :name=>"LDLR", :position=>11102740}
+{:title=>"Rs7776725", :revid=>1529830, :orientation=>true, :stabilized=>false, :rsid=>"7776725", :name=>"FAM3C", :chromosome=>"7", :position=>121393067, :gmaf=>0.2489}
+{:title=>"Rs777716188", :revid=>1411587, :orientation=>true, :stabilized=>false, :rsid=>"777716188", :chromosome=>"19", :name=>"LDLR", :position=>11089428}
+{:title=>"Rs777758903", :revid=>1330340, :orientation=>true, :stabilized=>false, :rsid=>"777758903", :chromosome=>"6", :name=>"MUT", :position=>49435500}
+{:title=>"Rs777759523", :revid=>1543059, :orientation=>true, :stabilized=>false, :rsid=>"777759523", :chromosome=>"17", :name=>"UNC13D", :position=>75836338}
+{:title=>"Rs777923890", :revid=>1296700, :orientation=>true, :stabilized=>false, :rsid=>"777923890", :chromosome=>"14", :name=>"PSEN1", :position=>73173727}
+{:title=>"Rs777948908", :revid=>1151614, :orientation=>true, :stabilized=>false, :rsid=>"777948908", :chromosome=>"9", :name=>"CDKN2A", :position=>21974722}
+{:title=>"Rs777999875", :revid=>1381222, :orientation=>true, :stabilized=>false, :rsid=>"777999875", :chromosome=>"6", :name=>"PKHD1", :position=>52017497}
+{:title=>"Rs77804083", :revid=>1470700, :orientation=>false, :stabilized=>false, :rsid=>"77804083", :chromosome=>"5", :name=>"SMN1", :position=>70942389}
+{:title=>"Rs778154939", :revid=>1395161, :orientation=>true, :stabilized=>false, :rsid=>"778154939", :chromosome=>"12", :name=>"PAH", :position=>102852857}
+{:title=>"Rs778232217", :revid=>1060391, :orientation=>true, :stabilized=>false, :rsid=>"778232217", :chromosome=>"1", :name=>"ALPL", :position=>21564080}
+{:title=>"Rs778235410", :revid=>1537029, :orientation=>true, :stabilized=>false, :rsid=>"778235410", :chromosome=>"4", :name=>"PKD2", :position=>88067946}
+{:title=>"Rs778284147", :revid=>1466585, :orientation=>true, :stabilized=>false, :rsid=>"778284147", :chromosome=>"19", :name=>"LDLR", :position=>11100294}
+{:title=>"Rs77829017", :revid=>1545192, :orientation=>false, :stabilized=>false, :rsid=>"77829017", :chromosome=>"1", :name=>"GBA", :position=>155239939}
+{:title=>"Rs778309692", :revid=>1466892, :orientation=>true, :stabilized=>false, :rsid=>"778309692", :chromosome=>"19", :name=>"LDLR", :position=>11113390}
+{:title=>"Rs77834169", :revid=>1494185, :orientation=>true, :stabilized=>false, :rsid=>"77834169", :chromosome=>"7", :summary=>"Cystic Fibrosis related", :name=>"CFTR", :position=>117530974}
+{:title=>"Rs778363575", :revid=>1413873, :orientation=>true, :stabilized=>false, :rsid=>"778363575", :chromosome=>"20", :name=>"SLC52A3", :position=>763932}
+{:title=>"Rs778376925", :revid=>1518131, :orientation=>true, :stabilized=>false, :rsid=>"778376925", :chromosome=>"19", :name=>"STK11", :position=>1207093}
+{:title=>"Rs778408161", :revid=>1466796, :orientation=>true, :stabilized=>false, :rsid=>"778408161", :chromosome=>"19", :name=>"LDLR", :position=>11117000}
+{:title=>"Rs778424518", :revid=>1523468, :orientation=>true, :stabilized=>false, :rsid=>"778424518", :chromosome=>"19", :name=>"LDLR", :position=>11113312}
+{:title=>"Rs778479139", :revid=>1347107, :orientation=>true, :stabilized=>false, :rsid=>"778479139", :chromosome=>"20", :name=>"SLC52A3", :position=>763937}
+{:title=>"Rs778653296", :revid=>1482380, :orientation=>true, :stabilized=>false, :rsid=>"778653296", :chromosome=>"1", :name=>"HSPG2", :position=>21851790}
+{:title=>"Rs778700037", :revid=>1504535, :orientation=>true, :stabilized=>false, :rsid=>"778700037", :chromosome=>"17", :name=>"SGSH", :position=>80210933}
+{:title=>"Rs778702777", :revid=>1330394, :orientation=>true, :stabilized=>false, :rsid=>"778702777", :chromosome=>"6", :name=>"MUT", :position=>49457837}
+{:title=>"Rs7787082", :revid=>1544818, :orientation=>true, :stabilized=>false, :rsid=>"7787082", :name=>"ABCB1", :chromosome=>"7", :position=>87527735, :gmaf=>0.3678}
+{:title=>"Rs77902683", :revid=>1383954, :orientation=>true, :stabilized=>false, :rsid=>"77902683", :chromosome=>"7", :name=>"CFTR", :position=>117642568}
+{:title=>"Rs77931234", :revid=>1545189, :orientation=>false, :stabilized=>false, :rsid=>"77931234", :name=>"ACADM", :chromosome=>"1", :position=>75761161, :gmaf=>0.002296}
+{:title=>"Rs77932196", :revid=>1383594, :orientation=>true, :stabilized=>false, :rsid=>"77932196", :chromosome=>"7", :name=>"CFTR", :position=>117540270, :summary=>"Cystic Fibrosis related"}
+{:title=>"Rs7794745", :revid=>1529838, :orientation=>true, :stabilized=>false, :rsid=>"7794745", :name=>"CNTNAP2", :chromosome=>"7", :position=>146792514, :gmaf=>0.4766}
+{:title=>"Rs77969175", :revid=>1470710, :orientation=>false, :stabilized=>false, :rsid=>"77969175", :chromosome=>"5", :name=>"SMN1", :position=>70951941}
+{:title=>"Rs779702016", :revid=>1413900, :orientation=>true, :stabilized=>false, :rsid=>"779702016", :chromosome=>"20", :name=>"TGM3", :position=>2332019}
+{:title=>"Rs779709646", :revid=>1391973, :orientation=>true, :stabilized=>false, :rsid=>"779709646", :chromosome=>"11", :name=>"DHCR7", :position=>71435664}
+{:title=>"Rs779732323", :revid=>1434508, :orientation=>true, :stabilized=>false, :rsid=>"779732323", :chromosome=>"19", :name=>"LDLR", :position=>11113398}
+{:title=>"Rs779913921", :revid=>1412274, :orientation=>true, :stabilized=>false, :rsid=>"779913921", :chromosome=>"19", :name=>"LDLR", :position=>11116099}
+{:title=>"Rs779940524", :revid=>1412420, :orientation=>true, :stabilized=>false, :rsid=>"779940524", :chromosome=>"19", :name=>"LDLR", :position=>11120182}
+{:title=>"Rs779990936", :revid=>1482572, :orientation=>true, :stabilized=>false, :rsid=>"779990936", :chromosome=>"6", :name=>"MUT", :position=>49431802}
+{:title=>"Rs780001199", :revid=>1368826, :orientation=>true, :stabilized=>false, :rsid=>"780001199", :chromosome=>"1", :name=>"FH", :position=>241508669}
+{:title=>"Rs780009030", :revid=>1541430, :orientation=>true, :stabilized=>false, :rsid=>"780009030", :chromosome=>"16", :name=>"PKD1", :position=>2097376}
+{:title=>"Rs780094", :revid=>1543955, :orientation=>false, :stabilized=>false, :rsid=>"780094", :name=>"GCKR", :chromosome=>"2", :position=>27518370, :gmaf=>0.3857}
+{:title=>"Rs780150341", :revid=>1533482, :orientation=>true, :stabilized=>false, :rsid=>"780150341", :chromosome=>"13", :name=>"THSD1", :position=>52377647}
+{:title=>"Rs780166965", :revid=>1466996, :orientation=>true, :stabilized=>false, :rsid=>"780166965", :chromosome=>"19", :name=>"LDLR", :position=>11128031}
+{:title=>"Rs780583917", :revid=>1060392, :orientation=>true, :stabilized=>false, :rsid=>"780583917", :chromosome=>"1", :name=>"ALPL", :position=>21563213}
+{:title=>"Rs7807268", :revid=>1529846, :orientation=>true, :stabilized=>false, :rsid=>"7807268", :chromosome=>"7", :position=>148560956, :gmaf=>0.4931}
+{:title=>"Rs780936696", :revid=>1518787, :orientation=>true, :stabilized=>false, :rsid=>"780936696", :chromosome=>"17", :name=>"SPATA22", :position=>3481601}
+{:title=>"Rs78117248", :revid=>1080926, :orientation=>true, :stabilized=>false, :rsid=>"78117248", :chromosome=>"19", :name=>"ABCA7", :position=>1052854}
+{:title=>"Rs781264043", :revid=>1365199, :orientation=>true, :stabilized=>false, :rsid=>"781264043", :chromosome=>"1", :name=>"ALPL", :position=>21561130}
+{:title=>"Rs781272386", :revid=>1060393, :orientation=>true, :stabilized=>false, :rsid=>"781272386", :chromosome=>"1", :name=>"ALPL", :position=>21570327}
+{:title=>"Rs781319410", :revid=>1545857, :orientation=>true, :stabilized=>false, :rsid=>"781319410", :chromosome=>"17", :name=>"BRCA1", :position=>43092150}
+{:title=>"Rs781362878", :revid=>1505140, :orientation=>true, :stabilized=>false, :rsid=>"781362878", :chromosome=>"19", :name=>"LDLR", :position=>11113767}
+{:title=>"Rs781368899", :revid=>1492808, :orientation=>true, :stabilized=>false, :rsid=>"781368899", :chromosome=>"6", :name=>"PKHD1", :position=>51659907}
+{:title=>"Rs781534323", :revid=>1395912, :orientation=>true, :stabilized=>false, :rsid=>"781534323", :chromosome=>"13", :name=>"GJB2", :position=>20189336}
+{:title=>"Rs7816345", :revid=>1545554, :orientation=>true, :stabilized=>false, :rsid=>"7816345", :name=>"RPL26P25", :chromosome=>"8", :position=>36988591, :gmaf=>0.2691}
+{:title=>"Rs781797609", :revid=>1513670, :orientation=>true, :stabilized=>false, :rsid=>"781797609", :chromosome=>"X", :name=>"ABCD1", :position=>153725625}
+{:title=>"Rs781862879", :revid=>1513692, :orientation=>true, :stabilized=>false, :rsid=>"781862879", :chromosome=>"X", :name=>"ABCD1", :position=>153740200}
+{:title=>"Rs781904944", :revid=>1513679, :orientation=>true, :stabilized=>false, :rsid=>"781904944", :chromosome=>"X", :name=>"ABCD1", :position=>153726105}
+{:title=>"Rs781923855", :revid=>1333428, :orientation=>true, :stabilized=>false, :rsid=>"781923855", :chromosome=>"8", :name=>"SLC52A2", :position=>144360409}
+{:title=>"Rs781924420", :revid=>1513694, :orientation=>true, :stabilized=>false, :rsid=>"781924420", :chromosome=>"X", :name=>"ABCD1", :position=>153740654}
+{:title=>"Rs78194216", :revid=>1545342, :orientation=>true, :stabilized=>false, :rsid=>"78194216", :chromosome=>"7", :name=>"CFTR", :position=>117611637, :summary=>"Cystic Fibrosis related"}
+{:title=>"Rs781948018", :revid=>1513676, :orientation=>true, :stabilized=>false, :rsid=>"781948018", :chromosome=>"X", :name=>"ABCD1", :position=>153726041}
+{:title=>"Rs781951552", :revid=>1513674, :orientation=>true, :stabilized=>false, :rsid=>"781951552", :chromosome=>"X", :name=>"ABCD1", :position=>153725930}
+{:title=>"Rs781999115", :revid=>1293263, :orientation=>true, :stabilized=>false, :rsid=>"781999115", :chromosome=>"3", :name=>"HYAL2", :position=>50319741}
+{:title=>"Rs782041940", :revid=>1544288, :orientation=>true, :stabilized=>false, :rsid=>"782041940", :chromosome=>"X", :name=>"ABCD1", :position=>153743255}
+{:title=>"Rs782083931", :revid=>1544282, :orientation=>true, :stabilized=>false, :rsid=>"782083931", :chromosome=>"X", :name=>"ABCD1", :position=>153726089}
+{:title=>"Rs782095095", :revid=>1395894, :orientation=>true, :stabilized=>false, :rsid=>"782095095", :chromosome=>"8", :name=>"SLC52A2", :position=>144359640}
+{:title=>"Rs782158792", :revid=>1513689, :orientation=>true, :stabilized=>false, :rsid=>"782158792", :chromosome=>"X", :name=>"ABCD1", :position=>153740129}
+{:title=>"Rs782178199", :revid=>1513684, :orientation=>true, :stabilized=>false, :rsid=>"782178199", :chromosome=>"X", :name=>"ABCD1", :position=>153729237}
+{:title=>"Rs782230740", :revid=>1513675, :orientation=>true, :stabilized=>false, :rsid=>"782230740", :chromosome=>"X", :name=>"ABCD1", :position=>153725934}
+{:title=>"Rs782311214", :revid=>1513701, :orientation=>true, :stabilized=>false, :rsid=>"782311214", :chromosome=>"X", :name=>"ABCD1", :position=>153743575}
+{:title=>"Rs782325478", :revid=>1513696, :orientation=>true, :stabilized=>false, :rsid=>"782325478", :chromosome=>"X", :name=>"ABCD1", :position=>153743053}
+{:title=>"Rs782345472", :revid=>1495242, :orientation=>true, :stabilized=>false, :rsid=>"782345472", :chromosome=>"8", :name=>"SLC52A2", :position=>144359997}
+{:title=>"Rs782370364", :revid=>1513690, :orientation=>true, :stabilized=>false, :rsid=>"782370364", :chromosome=>"X", :name=>"ABCD1", :position=>153740136}
+{:title=>"Rs78242949", :revid=>1479161, :orientation=>true, :stabilized=>false, :rsid=>"78242949", :name=>"LOC105372093", :chromosome=>"18", :position=>45739587, :gmaf=>0.003214}
+{:title=>"Rs782509393", :revid=>1513680, :orientation=>true, :stabilized=>false, :rsid=>"782509393", :chromosome=>"X", :name=>"ABCD1", :position=>153726113}
+{:title=>"Rs782567454", :revid=>1513686, :orientation=>true, :stabilized=>false, :rsid=>"782567454", :chromosome=>"X", :name=>"ABCD1", :position=>153736241}
+{:title=>"Rs782567718", :revid=>1513673, :orientation=>true, :stabilized=>false, :rsid=>"782567718", :chromosome=>"X", :name=>"ABCD1", :position=>153725904}
+{:title=>"Rs782635828", :revid=>1513681, :orientation=>true, :stabilized=>false, :rsid=>"782635828", :chromosome=>"X", :name=>"ABCD1", :position=>153726120}
+{:title=>"Rs782695425", :revid=>1543983, :orientation=>true, :stabilized=>false, :rsid=>"782695425", :chromosome=>"8", :name=>"SLC39A4", :position=>144414021}
+{:title=>"Rs782726660", :revid=>1513685, :orientation=>true, :stabilized=>false, :rsid=>"782726660", :chromosome=>"X", :name=>"ABCD1", :position=>153729275}
+{:title=>"Rs782747420", :revid=>1513678, :orientation=>true, :stabilized=>false, :rsid=>"782747420", :chromosome=>"X", :name=>"ABCD1", :position=>153726098}
+{:title=>"Rs782760033", :revid=>1513677, :orientation=>true, :stabilized=>false, :rsid=>"782760033", :chromosome=>"X", :name=>"ABCD1", :position=>153726086}
+{:title=>"Rs78310315", :revid=>1545362, :orientation=>true, :stabilized=>false, :rsid=>"78310315", :chromosome=>"15", :name=>"CYP19A1", :position=>51211010}
+{:title=>"Rs7832552", :revid=>1529853, :orientation=>true, :stabilized=>false, :rsid=>"7832552", :name=>"TRHR", :chromosome=>"8", :position=>109103447, :gmaf=>0.337}
+{:title=>"Rs78340951", :revid=>1545233, :orientation=>false, :stabilized=>false, :rsid=>"78340951", :chromosome=>"9", :name=>"ALDOB", :position=>101421899}
+{:title=>"Rs7837688", :revid=>1495156, :orientation=>true, :stabilized=>false, :rsid=>"7837688", :chromosome=>"8", :position=>127527115, :gmaf=>0.1097}
+{:title=>"Rs78378222", :revid=>1503466, :orientation=>false, :stabilized=>false, :rsid=>"78378222", :name=>"TP53", :chromosome=>"17", :position=>7668434, :gmaf=>0.00551}
+{:title=>"Rs78396650", :revid=>1545207, :orientation=>false, :stabilized=>false, :rsid=>"78396650", :chromosome=>"1", :name=>"GBA", :position=>155236426}
+{:title=>"Rs78440224", :revid=>1545353, :orientation=>true, :stabilized=>false, :rsid=>"78440224", :chromosome=>"7", :name=>"CFTR", :position=>117534370, :summary=>"Cystic Fibrosis related"}
+{:title=>"Rs78478128", :revid=>1315949, :orientation=>true, :stabilized=>false, :rsid=>"78478128", :chromosome=>"X", :name=>"G6PD", :position=>154536168}
+{:title=>"Rs7850258", :revid=>1495654, :orientation=>true, :stabilized=>false, :rsid=>"7850258", :chromosome=>"9", :position=>97786731, :gmaf=>0.2195}
+{:title=>"Rs7853989", :revid=>1529859, :orientation=>true, :stabilized=>false, :rsid=>"7853989", :name=>"ABO", :chromosome=>"9", :position=>133256205, :gmaf=>0.1377}
+{:title=>"Rs786200861", :revid=>1357784, :orientation=>false, :stabilized=>false, :rsid=>"786200861", :chromosome=>"12", :name=>"PAH", :position=>102843751}
+{:title=>"Rs786200885", :revid=>1414924, :orientation=>false, :stabilized=>false, :rsid=>"786200885", :chromosome=>"21", :name=>"CLDN14", :position=>36461298}
+{:title=>"Rs786200976", :revid=>1523798, :orientation=>true, :stabilized=>false, :rsid=>"786200976", :chromosome=>"7", :name=>"FOXP2", :position=>114631608}
+{:title=>"Rs786200991", :revid=>1504967, :orientation=>true, :stabilized=>false, :rsid=>"786200991", :chromosome=>"19", :name=>"STK11", :position=>1223052}
+{:title=>"Rs786201044", :revid=>1388890, :orientation=>true, :stabilized=>false, :rsid=>"786201044", :chromosome=>"10", :name=>"PTEN", :position=>87933165}
+{:title=>"Rs786201045", :revid=>1404350, :orientation=>true, :stabilized=>false, :rsid=>"786201045", :chromosome=>"16", :name=>"CDH1", :position=>68812135}
+{:title=>"Rs786201058", :revid=>1404327, :orientation=>true, :stabilized=>false, :rsid=>"786201058", :chromosome=>"16", :name=>"CDH1", :position=>68738324}
+{:title=>"Rs786201090", :revid=>1518113, :orientation=>true, :stabilized=>false, :rsid=>"786201090", :chromosome=>"19", :name=>"STK11", :position=>1221996}
+{:title=>"Rs786201213", :revid=>1434589, :orientation=>true, :stabilized=>false, :rsid=>"786201213", :chromosome=>"19", :name=>"STK11", :position=>1220613}
+{:title=>"Rs786201727", :revid=>1357716, :orientation=>true, :stabilized=>false, :rsid=>"786201727", :chromosome=>"13", :name=>"BRCA2", :position=>32340289}
+{:title=>"Rs786201773", :revid=>1502764, :orientation=>false, :stabilized=>false, :rsid=>"786201773", :chromosome=>"16", :name=>"PALB2", :position=>23634898}
+{:title=>"Rs786201855", :revid=>1519545, :orientation=>true, :stabilized=>false, :rsid=>"786201855", :chromosome=>"2", :name=>"MSH6", :position=>47806633}
+{:title=>"Rs786201950", :revid=>1499971, :orientation=>true, :stabilized=>false, :rsid=>"786201950", :chromosome=>"13", :name=>"BRCA2", :position=>32332786}
+{:title=>"Rs786201986", :revid=>1499989, :orientation=>true, :stabilized=>false, :rsid=>"786201986", :chromosome=>"13", :name=>"BRCA2", :position=>32333030}
+{:title=>"Rs786201995", :revid=>1325564, :orientation=>true, :stabilized=>false, :rsid=>"786201995", :chromosome=>"10", :name=>"PTEN", :position=>87864539}
+{:title=>"Rs786202004", :revid=>1496654, :orientation=>true, :stabilized=>false, :rsid=>"786202004", :chromosome=>"10", :name=>"PTEN", :position=>87961056}
+{:title=>"Rs786202008", :revid=>1502730, :orientation=>false, :stabilized=>false, :rsid=>"786202008", :chromosome=>"16", :name=>"PALB2", :position=>23607969}
+{:title=>"Rs786202033", :revid=>1404376, :orientation=>true, :stabilized=>false, :rsid=>"786202033", :chromosome=>"16", :name=>"CDH1", :position=>68823461}
+{:title=>"Rs786202040", :revid=>1407297, :orientation=>false, :stabilized=>false, :rsid=>"786202040", :chromosome=>"17", :name=>"BRCA1", :position=>43057056}
+{:title=>"Rs786202061", :revid=>1500252, :orientation=>true, :stabilized=>false, :rsid=>"786202061", :chromosome=>"13", :name=>"BRCA2", :position=>32340118}
+{:title=>"Rs786202064", :revid=>1503841, :orientation=>false, :stabilized=>false, :rsid=>"786202064", :chromosome=>"17", :name=>"BRCA1", :position=>43071080}
+{:title=>"Rs786202134", :revid=>1504956, :orientation=>true, :stabilized=>false, :rsid=>"786202134", :chromosome=>"19", :name=>"STK11", :position=>1220490}
+{:title=>"Rs786202151", :revid=>1503070, :orientation=>true, :stabilized=>false, :rsid=>"786202151", :chromosome=>"16", :name=>"CDH1", :position=>68801708}
+{:title=>"Rs786202156", :revid=>1338759, :orientation=>true, :stabilized=>false, :rsid=>"786202156", :chromosome=>"13", :name=>"BRCA2", :position=>32326575}
+{:title=>"Rs786202157", :revid=>1500300, :orientation=>true, :stabilized=>false, :rsid=>"786202157", :chromosome=>"13", :name=>"BRCA2", :position=>32341018}
+{:title=>"Rs786202160", :revid=>1500087, :orientation=>true, :stabilized=>false, :rsid=>"786202160", :chromosome=>"13", :name=>"BRCA2", :position=>32337720}
+{:title=>"Rs786202290", :revid=>1503082, :orientation=>true, :stabilized=>false, :rsid=>"786202290", :chromosome=>"16", :name=>"CDH1", :position=>68819425}
+{:title=>"Rs786202353", :revid=>1500459, :orientation=>true, :stabilized=>false, :rsid=>"786202353", :chromosome=>"13", :name=>"BRCA2", :position=>32379792}
+{:title=>"Rs786202385", :revid=>1500224, :orientation=>true, :stabilized=>false, :rsid=>"786202385", :chromosome=>"13", :name=>"BRCA2", :position=>32339708}
+{:title=>"Rs786202421", :revid=>1500151, :orientation=>true, :stabilized=>false, :rsid=>"786202421", :chromosome=>"13", :name=>"BRCA2", :position=>32338601}
+{:title=>"Rs786202439", :revid=>1502760, :orientation=>false, :stabilized=>false, :rsid=>"786202439", :chromosome=>"16", :name=>"PALB2", :position=>23630224}
+{:title=>"Rs786202441", :revid=>1398092, :orientation=>true, :stabilized=>false, :rsid=>"786202441", :chromosome=>"13", :name=>"BRCA2", :position=>32355154}
+{:title=>"Rs786202461", :revid=>1397791, :orientation=>true, :stabilized=>false, :rsid=>"786202461", :chromosome=>"13", :name=>"BRCA2", :position=>32340510}
+{:title=>"Rs786202517", :revid=>1334896, :orientation=>true, :stabilized=>false, :rsid=>"786202517", :chromosome=>"10", :name=>"PTEN", :position=>87894050}
+{:title=>"Rs786202529", :revid=>1496638, :orientation=>true, :stabilized=>false, :rsid=>"786202529", :chromosome=>"10", :name=>"PTEN", :position=>87957924}
+{:title=>"Rs786202534", :revid=>1408081, :orientation=>false, :stabilized=>false, :rsid=>"786202534", :chromosome=>"17", :name=>"BRCA1", :position=>43092521}
+{:title=>"Rs786202543", :revid=>1397495, :orientation=>true, :stabilized=>false, :rsid=>"786202543", :chromosome=>"13", :name=>"BRCA2", :position=>32339555}
+{:title=>"Rs786202600", :revid=>1398052, :orientation=>true, :stabilized=>false, :rsid=>"786202600", :chromosome=>"13", :name=>"BRCA2", :position=>32354950}
+{:title=>"Rs786202631", :revid=>1503863, :orientation=>false, :stabilized=>false, :rsid=>"786202631", :chromosome=>"17", :name=>"BRCA1", :position=>43074483}
+{:title=>"Rs786202684", :revid=>1503999, :orientation=>false, :stabilized=>false, :rsid=>"786202684", :chromosome=>"17", :name=>"BRCA1", :position=>43093130}
+{:title=>"Rs786202700", :revid=>1397705, :orientation=>true, :stabilized=>false, :rsid=>"786202700", :chromosome=>"13", :name=>"BRCA2", :position=>32340217}
+{:title=>"Rs786202733", :revid=>1325565, :orientation=>true, :stabilized=>false, :rsid=>"786202733", :chromosome=>"10", :name=>"PTEN", :position=>87952165}
+{:title=>"Rs786202756", :revid=>1396776, :orientation=>true, :stabilized=>false, :rsid=>"786202756", :chromosome=>"13", :name=>"BRCA2", :position=>32333333}
+{:title=>"Rs786202786", :revid=>1496602, :orientation=>true, :stabilized=>false, :rsid=>"786202786", :chromosome=>"10", :name=>"PTEN", :position=>87864511}
+{:title=>"Rs786202789", :revid=>1499960, :orientation=>true, :stabilized=>false, :rsid=>"786202789", :chromosome=>"13", :name=>"BRCA2", :position=>32332644}
+{:title=>"Rs786202791", :revid=>1407995, :orientation=>false, :stabilized=>false, :rsid=>"786202791", :chromosome=>"17", :name=>"BRCA1", :position=>43092207}
+{:title=>"Rs786202796", :revid=>1518325, :orientation=>true, :stabilized=>false, :rsid=>"786202796", :chromosome=>"13", :name=>"BRCA2", :position=>32332277}
+{:title=>"Rs786202798", :revid=>1126060, :orientation=>true, :stabilized=>false, :rsid=>"786202798", :chromosome=>"13", :name=>"BRCA2", :position=>32339576}
+{:title=>"Rs786202800", :revid=>1498377, :orientation=>true, :stabilized=>false, :rsid=>"786202800", :chromosome=>"11", :name=>"ATM", :position=>108343348}
+{:title=>"Rs786202840", :revid=>1496647, :orientation=>true, :stabilized=>false, :rsid=>"786202840", :chromosome=>"10", :name=>"PTEN", :position=>87960942}
+{:title=>"Rs786202875", :revid=>1500032, :orientation=>true, :stabilized=>false, :rsid=>"786202875", :chromosome=>"13", :name=>"BRCA2", :position=>32336849}
+{:title=>"Rs786202894", :revid=>1388834, :orientation=>true, :stabilized=>false, :rsid=>"786202894", :chromosome=>"10", :name=>"PTEN", :position=>87894079}
+{:title=>"Rs786202918", :revid=>1388949, :orientation=>true, :stabilized=>false, :rsid=>"786202918", :chromosome=>"10", :name=>"PTEN", :position=>87957951}
+{:title=>"Rs786202919", :revid=>1408307, :orientation=>false, :stabilized=>false, :rsid=>"786202919", :chromosome=>"17", :name=>"BRCA1", :position=>43093123}
+{:title=>"Rs786202920", :revid=>1500447, :orientation=>true, :stabilized=>false, :rsid=>"786202920", :chromosome=>"13", :name=>"BRCA2", :position=>32379437}
+{:title=>"Rs786202963", :revid=>1407860, :orientation=>false, :stabilized=>false, :rsid=>"786202963", :chromosome=>"17", :name=>"BRCA1", :position=>43091873}
+{:title=>"Rs786202998", :revid=>1503890, :orientation=>false, :stabilized=>false, :rsid=>"786202998", :chromosome=>"17", :name=>"BRCA1", :position=>43091030}
+{:title=>"Rs786203057", :revid=>1403686, :orientation=>false, :stabilized=>false, :rsid=>"786203057", :chromosome=>"16", :name=>"PALB2", :position=>23635254}
+{:title=>"Rs786203073", :revid=>1382251, :orientation=>false, :stabilized=>false, :rsid=>"786203073", :chromosome=>"7", :name=>"PMS2", :position=>5986891}
+{:title=>"Rs786203103", :revid=>1408689, :orientation=>false, :stabilized=>false, :rsid=>"786203103", :chromosome=>"17", :name=>"BRCA1", :position=>43094274}
+{:title=>"Rs786203149", :revid=>1503872, :orientation=>false, :stabilized=>false, :rsid=>"786203149", :chromosome=>"17", :name=>"BRCA1", :position=>43076593}
+{:title=>"Rs786203244", :revid=>1502761, :orientation=>false, :stabilized=>false, :rsid=>"786203244", :chromosome=>"16", :name=>"PALB2", :position=>23630225}
+{:title=>"Rs786203245", :revid=>1403756, :orientation=>false, :stabilized=>false, :rsid=>"786203245", :chromosome=>"16", :name=>"PALB2", :position=>23638131}
+{:title=>"Rs786203318", :revid=>1398681, :orientation=>true, :stabilized=>false, :rsid=>"786203318", :chromosome=>"13", :name=>"BRCA2", :position=>32394784}
+{:title=>"Rs786203329", :revid=>1500085, :orientation=>true, :stabilized=>false, :rsid=>"786203329", :chromosome=>"13", :name=>"BRCA2", :position=>32337708}
+{:title=>"Rs786203340", :revid=>1500148, :orientation=>true, :stabilized=>false, :rsid=>"786203340", :chromosome=>"13", :name=>"BRCA2", :position=>32338566}
+{:title=>"Rs786203346", :revid=>1502766, :orientation=>false, :stabilized=>false, :rsid=>"786203346", :chromosome=>"16", :name=>"PALB2", :position=>23634928}
+{:title=>"Rs786203382", :revid=>1502747, :orientation=>false, :stabilized=>false, :rsid=>"786203382", :chromosome=>"16", :name=>"PALB2", :position=>23629255}
+{:title=>"Rs786203399", :revid=>1502773, :orientation=>false, :stabilized=>false, :rsid=>"786203399", :chromosome=>"16", :name=>"PALB2", :position=>23635460}
+{:title=>"Rs786203430", :revid=>1397852, :orientation=>true, :stabilized=>false, :rsid=>"786203430", :chromosome=>"13", :name=>"BRCA2", :position=>32340725}
+{:title=>"Rs786203432", :revid=>1504086, :orientation=>false, :stabilized=>false, :rsid=>"786203432", :chromosome=>"17", :name=>"BRCA1", :position=>43104146}
+{:title=>"Rs786203438", :revid=>1407933, :orientation=>false, :stabilized=>false, :rsid=>"786203438", :chromosome=>"17", :name=>"BRCA1", :position=>43092050}
+{:title=>"Rs786203477", :revid=>1496607, :orientation=>true, :stabilized=>false, :rsid=>"786203477", :chromosome=>"10", :name=>"PTEN", :position=>87894026}
+{:title=>"Rs786203488", :revid=>1502734, :orientation=>false, :stabilized=>false, :rsid=>"786203488", :chromosome=>"16", :name=>"PALB2", :position=>23621468}
+{:title=>"Rs786203492", :revid=>1397344, :orientation=>true, :stabilized=>false, :rsid=>"786203492", :chromosome=>"13", :name=>"BRCA2", :position=>32338832}
+{:title=>"Rs786203494", :revid=>1500185, :orientation=>true, :stabilized=>false, :rsid=>"786203494", :chromosome=>"13", :name=>"BRCA2", :position=>32339269}
+{:title=>"Rs786203523", :revid=>1320582, :orientation=>false, :stabilized=>false, :rsid=>"786203523", :chromosome=>"17", :name=>"BRCA1", :position=>43092995}
+{:title=>"Rs786203537", :revid=>1397191, :orientation=>true, :stabilized=>false, :rsid=>"786203537", :chromosome=>"13", :name=>"BRCA2", :position=>32338191}
+{:title=>"Rs786203546", :revid=>1398040, :orientation=>true, :stabilized=>false, :rsid=>"786203546", :chromosome=>"13", :name=>"BRCA2", :position=>32354879}
+{:title=>"Rs786203575", :revid=>1500463, :orientation=>true, :stabilized=>false, :rsid=>"786203575", :chromosome=>"13", :name=>"BRCA2", :position=>32379821}
+{:title=>"Rs786203576", :revid=>1299147, :orientation=>true, :stabilized=>false, :rsid=>"786203576", :chromosome=>"16", :name=>"CDH1", :position=>68738308}
+{:title=>"Rs786203587", :revid=>1320502, :orientation=>false, :stabilized=>false, :rsid=>"786203587", :chromosome=>"17", :name=>"BRCA1", :position=>43092374}
+{:title=>"Rs786203592", :revid=>1503985, :orientation=>false, :stabilized=>false, :rsid=>"786203592", :chromosome=>"17", :name=>"BRCA1", :position=>43092876}
+{:title=>"Rs786203594", :revid=>1408472, :orientation=>false, :stabilized=>false, :rsid=>"786203594", :chromosome=>"17", :name=>"BRCA1", :position=>43093567}
+{:title=>"Rs786203624", :revid=>1518110, :orientation=>true, :stabilized=>false, :rsid=>"786203624", :chromosome=>"19", :name=>"STK11", :position=>1221985}
+{:title=>"Rs786203660", :revid=>1523617, :orientation=>true, :stabilized=>false, :rsid=>"786203660", :chromosome=>"13", :name=>"BRCA2", :position=>32340813}
+{:title=>"Rs786203680", :revid=>1500363, :orientation=>true, :stabilized=>false, :rsid=>"786203680", :chromosome=>"13", :name=>"BRCA2", :position=>32357842}
+{:title=>"Rs786203694", :revid=>1407929, :orientation=>false, :stabilized=>false, :rsid=>"786203694", :chromosome=>"17", :name=>"BRCA1", :position=>43092044}
+{:title=>"Rs786203714", :revid=>1502769, :orientation=>false, :stabilized=>false, :rsid=>"786203714", :chromosome=>"16", :name=>"PALB2", :position=>23635095}
+{:title=>"Rs786203752", :revid=>1503093, :orientation=>true, :stabilized=>false, :rsid=>"786203752", :chromosome=>"16", :name=>"CDH1", :position=>68829788}
+{:title=>"Rs786203754", :revid=>1407439, :orientation=>false, :stabilized=>false, :rsid=>"786203754", :chromosome=>"17", :name=>"BRCA1", :position=>43067655}
+{:title=>"Rs786203775", :revid=>1502736, :orientation=>false, :stabilized=>false, :rsid=>"786203775", :chromosome=>"16", :name=>"PALB2", :position=>23622979}
+{:title=>"Rs786203821", :revid=>1502780, :orientation=>false, :stabilized=>false, :rsid=>"786203821", :chromosome=>"16", :name=>"PALB2", :position=>23635606}
+{:title=>"Rs786203843", :revid=>1500479, :orientation=>true, :stabilized=>false, :rsid=>"786203843", :chromosome=>"13", :name=>"BRCA2", :position=>32394694}
+{:title=>"Rs786203845", :revid=>1500014, :orientation=>true, :stabilized=>false, :rsid=>"786203845", :chromosome=>"13", :name=>"BRCA2", :position=>32336315}
+{:title=>"Rs786203847", :revid=>1496614, :orientation=>true, :stabilized=>false, :rsid=>"786203847", :chromosome=>"10", :name=>"PTEN", :position=>87925512}
+{:title=>"Rs786203853", :revid=>1518332, :orientation=>true, :stabilized=>false, :rsid=>"786203853", :chromosome=>"13", :name=>"BRCA2", :position=>32339851}
+{:title=>"Rs786203884", :revid=>1320440, :orientation=>false, :stabilized=>false, :rsid=>"786203884", :chromosome=>"17", :name=>"BRCA1", :position=>43091905}
+{:title=>"Rs786203892", :revid=>1502741, :orientation=>false, :stabilized=>false, :rsid=>"786203892", :chromosome=>"16", :name=>"PALB2", :position=>23626232}
+{:title=>"Rs786203982", :revid=>1504048, :orientation=>false, :stabilized=>false, :rsid=>"786203982", :chromosome=>"17", :name=>"BRCA1", :position=>43094054}
+{:title=>"Rs786204122", :revid=>1403579, :orientation=>false, :stabilized=>false, :rsid=>"786204122", :chromosome=>"16", :name=>"PALB2", :position=>23623042}
+{:title=>"Rs786204129", :revid=>1502759, :orientation=>false, :stabilized=>false, :rsid=>"786204129", :chromosome=>"16", :name=>"PALB2", :position=>23630187}
+{:title=>"Rs786204156", :revid=>1502745, :orientation=>false, :stabilized=>false, :rsid=>"786204156", :chromosome=>"16", :name=>"PALB2", :position=>23626387}
+{:title=>"Rs786204172", :revid=>1406795, :orientation=>true, :stabilized=>false, :rsid=>"786204172", :chromosome=>"13", :name=>"BRCA2", :position=>32339997}
+{:title=>"Rs786204209", :revid=>1500175, :orientation=>true, :stabilized=>false, :rsid=>"786204209", :chromosome=>"13", :name=>"BRCA2", :position=>32339046}
+{:title=>"Rs786204241", :revid=>1492816, :orientation=>false, :stabilized=>false, :rsid=>"786204241", :chromosome=>"6", :name=>"PKHD1", :position=>51791374}
+{:title=>"Rs786204260", :revid=>1504055, :orientation=>false, :stabilized=>false, :rsid=>"786204260", :chromosome=>"17", :name=>"BRCA1", :position=>43094290}
+{:title=>"Rs786204261", :revid=>1408814, :orientation=>false, :stabilized=>false, :rsid=>"786204261", :chromosome=>"17", :name=>"BRCA1", :position=>43094645}
+{:title=>"Rs786204262", :revid=>1408780, :orientation=>false, :stabilized=>false, :rsid=>"786204262", :chromosome=>"17", :name=>"BRCA1", :position=>43094543}
+{:title=>"Rs786204264", :revid=>1408351, :orientation=>false, :stabilized=>false, :rsid=>"786204264", :chromosome=>"17", :name=>"BRCA1", :position=>43093232}
+{:title=>"Rs786204267", :revid=>1407597, :orientation=>false, :stabilized=>false, :rsid=>"786204267", :chromosome=>"17", :name=>"BRCA1", :position=>43076585}
+{:title=>"Rs786204273", :revid=>1396511, :orientation=>true, :stabilized=>false, :rsid=>"786204273", :chromosome=>"13", :name=>"BRCA2", :position=>32331011}
+{:title=>"Rs786204278", :revid=>1397794, :orientation=>true, :stabilized=>false, :rsid=>"786204278", :chromosome=>"13", :name=>"BRCA2", :position=>32340529}
+{:title=>"Rs786204279", :revid=>1397995, :orientation=>true, :stabilized=>false, :rsid=>"786204279", :chromosome=>"13", :name=>"BRCA2", :position=>32341132}
+{:title=>"Rs786204281", :revid=>1398096, :orientation=>true, :stabilized=>false, :rsid=>"786204281", :chromosome=>"13", :name=>"BRCA2", :position=>32355193}
+{:title=>"Rs786204283", :revid=>1398663, :orientation=>true, :stabilized=>false, :rsid=>"786204283", :chromosome=>"13", :name=>"BRCA2", :position=>32394713}
+{:title=>"Rs786204338", :revid=>1391136, :orientation=>false, :stabilized=>false, :rsid=>"786204338", :chromosome=>"11", :name=>"MYBPC3", :position=>47343021}
+{:title=>"Rs786204442", :revid=>1365221, :orientation=>true, :stabilized=>false, :rsid=>"786204442", :chromosome=>"1", :name=>"ALPL", :position=>21568246}
+{:title=>"Rs786204454", :revid=>1400437, :orientation=>false, :stabilized=>false, :rsid=>"786204454", :chromosome=>"14", :name=>"GALC", :position=>87965583}
+{:title=>"Rs786204457", :revid=>1395284, :orientation=>false, :stabilized=>false, :rsid=>"786204457", :chromosome=>"12", :name=>"PAH", :position=>102912790}
+{:title=>"Rs786204473", :revid=>1365226, :orientation=>true, :stabilized=>false, :rsid=>"786204473", :chromosome=>"1", :name=>"ALPL", :position=>21573673}
+{:title=>"Rs786204491", :revid=>1395904, :orientation=>false, :stabilized=>false, :rsid=>"786204491", :chromosome=>"13", :name=>"GJB2", :position=>20189291}
+{:title=>"Rs786204537", :revid=>1495922, :orientation=>true, :stabilized=>false, :rsid=>"786204537", :chromosome=>"9", :name=>"ASS1", :position=>130494926}
+{:title=>"Rs786204572", :revid=>1404986, :orientation=>true, :stabilized=>false, :rsid=>"786204572", :chromosome=>"17", :name=>"ASPA", :position=>3489249}
+{:title=>"Rs786204585", :revid=>1402196, :orientation=>false, :stabilized=>false, :rsid=>"786204585", :chromosome=>"15", :name=>"HEXA", :position=>72344139}
+{:title=>"Rs786204588", :revid=>1472988, :orientation=>false, :stabilized=>false, :rsid=>"786204588", :chromosome=>"6", :name=>"PKHD1", :position=>52069521}
+{:title=>"Rs786204597", :revid=>1395867, :orientation=>false, :stabilized=>false, :rsid=>"786204597", :chromosome=>"13", :name=>"GJB2", :position=>20188984}
+{:title=>"Rs786204618", :revid=>1400447, :orientation=>false, :stabilized=>false, :rsid=>"786204618", :chromosome=>"14", :name=>"GALC", :position=>87982227}
+{:title=>"Rs786204620", :revid=>1404980, :orientation=>true, :stabilized=>false, :rsid=>"786204620", :chromosome=>"17", :name=>"ASPA", :position=>3481610}
+{:title=>"Rs786204634", :revid=>1365222, :orientation=>true, :stabilized=>false, :rsid=>"786204634", :chromosome=>"1", :name=>"ALPL", :position=>21570321}
+{:title=>"Rs786204688", :revid=>1381178, :orientation=>false, :stabilized=>false, :rsid=>"786204688", :chromosome=>"6", :name=>"PKHD1", :position=>51748297}
+{:title=>"Rs786204690", :revid=>1395889, :orientation=>false, :stabilized=>false, :rsid=>"786204690", :chromosome=>"13", :name=>"GJB2", :position=>20189174}
+{:title=>"Rs786204696", :revid=>1381275, :orientation=>false, :stabilized=>false, :rsid=>"786204696", :chromosome=>"6", :name=>"PKHD1", :position=>52054122}
+{:title=>"Rs786204707", :revid=>1381261, :orientation=>false, :stabilized=>false, :rsid=>"786204707", :chromosome=>"6", :name=>"PKHD1", :position=>52043636}
+{:title=>"Rs786204721", :revid=>1402288, :orientation=>false, :stabilized=>false, :rsid=>"786204721", :chromosome=>"15", :name=>"HEXA", :position=>72375971}
+{:title=>"Rs786204734", :revid=>1395976, :orientation=>false, :stabilized=>false, :rsid=>"786204734", :chromosome=>"13", :name=>"GJB2", :position=>20192783}
+{:title=>"Rs786204749", :revid=>1381283, :orientation=>false, :stabilized=>false, :rsid=>"786204749", :chromosome=>"6", :name=>"PKHD1", :position=>52058377}
+{:title=>"Rs786204752", :revid=>1406768, :orientation=>true, :stabilized=>false, :rsid=>"786204752", :chromosome=>"13", :name=>"BRCA2", :position=>32337098}
+{:title=>"Rs786204770", :revid=>1387462, :orientation=>false, :stabilized=>false, :rsid=>"786204770", :chromosome=>"9", :name=>"COQ4", :position=>128323100}
+{:title=>"Rs786204771", :revid=>1387471, :orientation=>true, :stabilized=>false, :rsid=>"786204771", :chromosome=>"9", :name=>"COQ4", :position=>128332271}
+{:title=>"Rs786204841", :revid=>1414921, :orientation=>false, :stabilized=>false, :rsid=>"786204841", :chromosome=>"21", :name=>"CLDN14", :position=>36461002}
+{:title=>"Rs786204858", :revid=>1388861, :orientation=>true, :stabilized=>false, :rsid=>"786204858", :chromosome=>"10", :name=>"PTEN", :position=>87933079}
+{:title=>"Rs786204859", :revid=>1388891, :orientation=>true, :stabilized=>false, :rsid=>"786204859", :chromosome=>"10", :name=>"PTEN", :position=>87933166}
+{:title=>"Rs786204862", :revid=>1496631, :orientation=>true, :stabilized=>false, :rsid=>"786204862", :chromosome=>"10", :name=>"PTEN", :position=>87952117}
+{:title=>"Rs786204864", :revid=>1388915, :orientation=>true, :stabilized=>false, :rsid=>"786204864", :chromosome=>"10", :name=>"PTEN", :position=>87952136}
+{:title=>"Rs786204873", :revid=>1496644, :orientation=>true, :stabilized=>false, :rsid=>"786204873", :chromosome=>"10", :name=>"PTEN", :position=>87958020}
+{:title=>"Rs786204881", :revid=>1496600, :orientation=>true, :stabilized=>false, :rsid=>"786204881", :chromosome=>"10", :name=>"PTEN", :position=>87864490}
+{:title=>"Rs786204882", :revid=>1388807, :orientation=>true, :stabilized=>false, :rsid=>"786204882", :chromosome=>"10", :name=>"PTEN", :position=>87864490}
+{:title=>"Rs786204883", :revid=>1388815, :orientation=>true, :stabilized=>false, :rsid=>"786204883", :chromosome=>"10", :name=>"PTEN", :position=>87864515}
+{:title=>"Rs786204884", :revid=>1496650, :orientation=>true, :stabilized=>false, :rsid=>"786204884", :chromosome=>"10", :name=>"PTEN", :position=>87960984}
+{:title=>"Rs786204890", :revid=>1496634, :orientation=>true, :stabilized=>false, :rsid=>"786204890", :chromosome=>"10", :name=>"PTEN", :position=>87952172}
+{:title=>"Rs786204892", :revid=>1496652, :orientation=>true, :stabilized=>false, :rsid=>"786204892", :chromosome=>"10", :name=>"PTEN", :position=>87961047}
+{:title=>"Rs786204894", :revid=>1496608, :orientation=>true, :stabilized=>false, :rsid=>"786204894", :chromosome=>"10", :name=>"PTEN", :position=>87894030}
+{:title=>"Rs786204895", :revid=>1496610, :orientation=>true, :stabilized=>false, :rsid=>"786204895", :chromosome=>"10", :name=>"PTEN", :position=>87894062}
+{:title=>"Rs786204898", :revid=>1496616, :orientation=>true, :stabilized=>false, :rsid=>"786204898", :chromosome=>"10", :name=>"PTEN", :position=>87931058}
+{:title=>"Rs786204899", :revid=>1388862, :orientation=>true, :stabilized=>false, :rsid=>"786204899", :chromosome=>"10", :name=>"PTEN", :position=>87933080}
+{:title=>"Rs786204900", :revid=>1496628, :orientation=>true, :stabilized=>false, :rsid=>"786204900", :chromosome=>"10", :name=>"PTEN", :position=>87933250}
+{:title=>"Rs786204901", :revid=>1388926, :orientation=>true, :stabilized=>false, :rsid=>"786204901", :chromosome=>"10", :name=>"PTEN", :position=>87952210}
+{:title=>"Rs786204902", :revid=>1388950, :orientation=>true, :stabilized=>false, :rsid=>"786204902", :chromosome=>"10", :name=>"PTEN", :position=>87957957}
+{:title=>"Rs786204903", :revid=>1388957, :orientation=>true, :stabilized=>false, :rsid=>"786204903", :chromosome=>"10", :name=>"PTEN", :position=>87957976}
+{:title=>"Rs786204904", :revid=>1496641, :orientation=>true, :stabilized=>false, :rsid=>"786204904", :chromosome=>"10", :name=>"PTEN", :position=>87957989}
+{:title=>"Rs786204905", :revid=>1388976, :orientation=>true, :stabilized=>false, :rsid=>"786204905", :chromosome=>"10", :name=>"PTEN", :position=>87960967}
+{:title=>"Rs786204906", :revid=>1496651, :orientation=>true, :stabilized=>false, :rsid=>"786204906", :chromosome=>"10", :name=>"PTEN", :position=>87961020}
+{:title=>"Rs786204910", :revid=>1496603, :orientation=>true, :stabilized=>false, :rsid=>"786204910", :chromosome=>"10", :name=>"PTEN", :position=>87864518}
+{:title=>"Rs786204914", :revid=>1496606, :orientation=>true, :stabilized=>false, :rsid=>"786204914", :chromosome=>"10", :name=>"PTEN", :position=>87894024}
+{:title=>"Rs786204926", :revid=>1496618, :orientation=>true, :stabilized=>false, :rsid=>"786204926", :chromosome=>"10", :name=>"PTEN", :position=>87933011}
+{:title=>"Rs786204928", :revid=>1496620, :orientation=>true, :stabilized=>false, :rsid=>"786204928", :chromosome=>"10", :name=>"PTEN", :position=>87933048}
+{:title=>"Rs786204929", :revid=>1496622, :orientation=>true, :stabilized=>false, :rsid=>"786204929", :chromosome=>"10", :name=>"PTEN", :position=>87933144}
+{:title=>"Rs786204931", :revid=>1388872, :orientation=>true, :stabilized=>false, :rsid=>"786204931", :chromosome=>"10", :name=>"PTEN", :position=>87933126}
+{:title=>"Rs786204933", :revid=>1496625, :orientation=>true, :stabilized=>false, :rsid=>"786204933", :chromosome=>"10", :name=>"PTEN", :position=>87933196}
+{:title=>"Rs786205056", :revid=>1365078, :orientation=>false, :stabilized=>false, :rsid=>"786205056", :chromosome=>"1", :name=>"ATP13A2", :position=>16996381}
+{:title=>"Rs786205061", :revid=>1389359, :orientation=>false, :stabilized=>false, :rsid=>"786205061", :chromosome=>"10", :name=>"CYP17A1", :position=>102835249}
+{:title=>"Rs786205062", :revid=>1389367, :orientation=>false, :stabilized=>false, :rsid=>"786205062", :chromosome=>"10", :name=>"CYP17A1", :position=>102837132}
+{:title=>"Rs786205093", :revid=>1541606, :orientation=>false, :stabilized=>false, :rsid=>"786205093", :chromosome=>"10", :name=>"PRF1", :position=>70600696}
+{:title=>"Rs786205156", :revid=>1370805, :orientation=>true, :stabilized=>false, :rsid=>"786205156", :chromosome=>"2", :name=>"LIPT1", :position=>99162492}
+{:title=>"Rs786205451", :revid=>1518819, :orientation=>false, :stabilized=>false, :rsid=>"786205451", :chromosome=>"1", :name=>"LAMB3", :position=>209624001}
+{:title=>"Rs786205582", :revid=>1492828, :orientation=>false, :stabilized=>false, :rsid=>"786205582", :chromosome=>"6", :name=>"PKHD1", :position=>52042978}
+{:title=>"Rs786205675", :revid=>1365409, :orientation=>true, :stabilized=>false, :rsid=>"786205675", :chromosome=>"1", :name=>"HPCA", :position=>32889123}
+{:title=>"Rs786205864", :revid=>1411233, :orientation=>true, :stabilized=>false, :rsid=>"786205864", :chromosome=>"19", :name=>"STK11", :position=>1221322}
+{:title=>"Rs786205897", :revid=>1503008, :orientation=>true, :stabilized=>false, :rsid=>"786205897", :chromosome=>"16", :name=>"COQ9", :position=>57456647}
+{:title=>"Rs78655421", :revid=>1545350, :orientation=>true, :stabilized=>false, :rsid=>"78655421", :chromosome=>"7", :name=>"CFTR", :position=>117530975}
+{:title=>"Rs78655458", :revid=>1395150, :orientation=>false, :stabilized=>false, :rsid=>"78655458", :chromosome=>"12", :name=>"PAH", :position=>102852828}
+{:title=>"Rs7868992", :revid=>1495767, :orientation=>true, :stabilized=>false, :rsid=>"7868992", :name=>"COL27A1", :chromosome=>"9", :position=>114228791, :gmaf=>0.4582}
+{:title=>"Rs78756941", :revid=>1545351, :orientation=>true, :stabilized=>false, :rsid=>"78756941", :chromosome=>"7", :summary=>"Cystic Fibrosis related", :name=>"CFTR", :position=>117531115}
+{:title=>"Rs78769542", :revid=>1383873, :orientation=>true, :stabilized=>false, :rsid=>"78769542", :chromosome=>"7", :name=>"CFTR", :position=>117611650, :summary=>"Cystic Fibrosis related"}
+{:title=>"Rs78802634", :revid=>1545343, :orientation=>true, :stabilized=>false, :rsid=>"78802634", :chromosome=>"7", :name=>"CFTR", :position=>117611707, :summary=>"Cystic Fibrosis related"}
+{:title=>"Rs7895676", :revid=>1529873, :orientation=>true, :stabilized=>false, :rsid=>"7895676", :name=>"FGFR2", :chromosome=>"10", :position=>121574483, :gmaf=>0.376}
+{:title=>"Rs7900194", :revid=>1529875, :orientation=>true, :stabilized=>false, :rsid=>"7900194", :name=>"CYP2C9", :chromosome=>"10", :position=>94942309, :gmaf=>0.0124}
+{:title=>"Rs79023478", :revid=>1466508, :orientation=>true, :stabilized=>false, :rsid=>"79023478", :chromosome=>"1", :name=>"OBSCN", :position=>228315865}
+{:title=>"Rs79031340", :revid=>1331554, :orientation=>true, :stabilized=>false, :rsid=>"79031340", :chromosome=>"7", :name=>"CFTR", :position=>117540218, :summary=>"Cystic Fibrosis related"}
+{:title=>"Rs7903146", :revid=>1537573, :orientation=>true, :stabilized=>false, :rsid=>"7903146", :name=>"TCF7L2", :chromosome=>"10", :position=>112998590, :gmaf=>0.2181, :summary=>"Associated with T2D."}
+{:title=>"Rs7910977", :revid=>930424, :orientation=>true, :stabilized=>false, :rsid=>"7910977", :name=>"IDE", :chromosome=>"10", :position=>92450119, :gmaf=>0.18}
+{:title=>"Rs7913069", :revid=>1496859, :orientation=>true, :stabilized=>false, :rsid=>"7913069", :chromosome=>"10", :position=>103954641, :gmaf=>0.0831, :summary=>"1.47 odds ratio for uterine fibroids", :name=>"LOC102724351"}
+{:title=>"Rs7923837", :revid=>1496698, :orientation=>true, :stabilized=>false, :rsid=>"7923837", :chromosome=>"10", :position=>92722160, :gmaf=>0.427}
+{:title=>"Rs7927894", :revid=>1529888, :orientation=>true, :stabilized=>false, :rsid=>"7927894", :chromosome=>"11", :position=>76590272, :gmaf=>0.2819}
+{:title=>"Rs79282516", :revid=>1545329, :orientation=>true, :stabilized=>false, :rsid=>"79282516", :chromosome=>"7", :name=>"CFTR", :position=>117559509}
+{:title=>"Rs793862", :revid=>1172604, :orientation=>true, :stabilized=>false, :rsid=>"793862", :name=>"DCDC2", :chromosome=>"6", :position=>24206972, :gmaf=>0.4105}
+{:title=>"Rs793888517", :revid=>1430198, :orientation=>true, :stabilized=>false, :rsid=>"793888517", :chromosome=>"19", :name=>"LDLR", :position=>11102788}
+{:title=>"Rs794726665", :revid=>1518208, :orientation=>true, :stabilized=>false, :rsid=>"794726665", :chromosome=>"4", :name=>"EVC", :position=>5793722}
+{:title=>"Rs794727014", :revid=>1397667, :orientation=>true, :stabilized=>false, :rsid=>"794727014", :chromosome=>"13", :name=>"BRCA2", :position=>32340078}
+{:title=>"Rs794727037", :revid=>1472987, :orientation=>false, :stabilized=>false, :rsid=>"794727037", :chromosome=>"6", :name=>"PKHD1", :position=>52069470}
+{:title=>"Rs794727152", :revid=>1487056, :orientation=>true, :stabilized=>false, :rsid=>"794727152", :chromosome=>"2", :name=>"SCN2A", :position=>165342465}
+{:title=>"Rs794727444", :revid=>1371314, :orientation=>true, :stabilized=>false, :rsid=>"794727444", :chromosome=>"2", :name=>"SCN2A", :position=>165389451}
+{:title=>"Rs794727572", :revid=>1492823, :orientation=>false, :stabilized=>false, :rsid=>"794727572", :chromosome=>"6", :name=>"PKHD1", :position=>52022855}
+{:title=>"Rs794727680", :revid=>1492820, :orientation=>false, :stabilized=>false, :rsid=>"794727680", :chromosome=>"6", :name=>"PKHD1", :position=>51885888}
+{:title=>"Rs794727698", :revid=>1485812, :orientation=>false, :stabilized=>false, :rsid=>"794727698", :chromosome=>"1", :name=>"FH", :position=>241508786}
+{:title=>"Rs794727792", :revid=>1387330, :orientation=>true, :stabilized=>false, :rsid=>"794727792", :chromosome=>"9", :name=>"STXBP1", :position=>127661140}
+{:title=>"Rs794727819", :revid=>1381154, :orientation=>false, :stabilized=>false, :rsid=>"794727819", :chromosome=>"6", :name=>"PKHD1", :position=>51659462}
+{:title=>"Rs794727836", :revid=>1485800, :orientation=>false, :stabilized=>false, :rsid=>"794727836", :chromosome=>"1", :name=>"FH", :position=>241504232}
+{:title=>"Rs794728004", :revid=>1413859, :orientation=>false, :stabilized=>false, :rsid=>"794728004", :chromosome=>"20", :name=>"SLC52A3", :position=>761110}
+{:title=>"Rs794728162", :revid=>1401895, :orientation=>false, :stabilized=>false, :rsid=>"794728162", :chromosome=>"15", :name=>"FBN1", :position=>48537707}
+{:title=>"Rs794728401", :revid=>1384319, :orientation=>false, :stabilized=>false, :rsid=>"794728401", :chromosome=>"7", :name=>"KCNH2", :position=>150947478}
+{:title=>"Rs794728455", :revid=>1384339, :orientation=>false, :stabilized=>false, :rsid=>"794728455", :chromosome=>"7", :name=>"KCNH2", :position=>150947795}
+{:title=>"Rs794728584", :revid=>1412415, :orientation=>true, :stabilized=>false, :rsid=>"794728584", :chromosome=>"19", :name=>"LDLR", :position=>11120162}
+{:title=>"Rs794728585", :revid=>1505100, :orientation=>true, :stabilized=>false, :rsid=>"794728585", :chromosome=>"19", :name=>"LDLR", :position=>11100333}
+{:title=>"Rs794728682", :revid=>1506608, :orientation=>true, :stabilized=>false, :rsid=>"794728682", :chromosome=>"22", :name=>"NF2", :position=>29661340}
+{:title=>"Rs794729649", :revid=>1543338, :orientation=>true, :stabilized=>false, :rsid=>"794729649", :chromosome=>"6", :name=>"STX11", :position=>144187018}
+{:title=>"Rs794729664", :revid=>1388924, :orientation=>true, :stabilized=>false, :rsid=>"794729664", :chromosome=>"10", :name=>"PTEN", :position=>87952170}
+{:title=>"Rs794729669", :revid=>1409186, :orientation=>true, :stabilized=>false, :rsid=>"794729669", :chromosome=>"17", :name=>"GRN", :position=>44350341}
+{:title=>"Rs794729670", :revid=>1504120, :orientation=>true, :stabilized=>false, :rsid=>"794729670", :chromosome=>"17", :name=>"GRN", :position=>44351409}
+{:title=>"Rs794729671", :revid=>1409192, :orientation=>true, :stabilized=>false, :rsid=>"794729671", :chromosome=>"17", :name=>"GRN", :position=>44352081}
+{:title=>"Rs794729672", :revid=>1409183, :orientation=>true, :stabilized=>false, :rsid=>"794729672", :chromosome=>"17", :name=>"GRN", :position=>44349251}
+{:title=>"Rs7951", :revid=>1450470, :orientation=>false, :stabilized=>false, :rsid=>"7951", :name=>"C3", :chromosome=>"19", :position=>6681980, :gmaf=>0.08678}
+{:title=>"Rs795484", :revid=>1312586, :orientation=>false, :stabilized=>false, :rsid=>"795484", :name=>"TAOK3", :chromosome=>"12", :position=>118152057, :summary=>"Linked to morphine dose and postoperative pain in tonsillectomy and adenoidectomy"}
+{:title=>"Rs79556279", :revid=>1330084, :orientation=>true, :stabilized=>false, :rsid=>"79556279", :chromosome=>"6", :position=>31362069, :summary=>"(T) allele has increased risk of Behçet's disease"}
+{:title=>"Rs796051927", :revid=>1493769, :orientation=>true, :stabilized=>false, :rsid=>"796051927", :chromosome=>"7", :name=>"ASL", :position=>66092660}
+{:title=>"Rs796051928", :revid=>1493770, :orientation=>true, :stabilized=>false, :rsid=>"796051928", :chromosome=>"7", :name=>"ASL", :position=>66092814}
+{:title=>"Rs796051930", :revid=>1148994, :orientation=>true, :stabilized=>false, :rsid=>"796051930", :chromosome=>"7", :name=>"ASL", :position=>66092886}
+{:title=>"Rs796051931", :revid=>1493763, :orientation=>true, :stabilized=>false, :rsid=>"796051931", :chromosome=>"7", :name=>"ASL", :position=>66083165}
+{:title=>"Rs796051932", :revid=>1493765, :orientation=>true, :stabilized=>false, :rsid=>"796051932", :chromosome=>"7", :name=>"ASL", :position=>66086776}
+{:title=>"Rs796051933", :revid=>1493768, :orientation=>true, :stabilized=>false, :rsid=>"796051933", :chromosome=>"7", :name=>"ASL", :position=>66089678}
+{:title=>"Rs796052008", :revid=>1492784, :orientation=>false, :stabilized=>false, :rsid=>"796052008", :chromosome=>"6", :name=>"MUT", :position=>49444684}
+{:title=>"Rs796053137", :revid=>1487079, :orientation=>true, :stabilized=>false, :rsid=>"796053137", :chromosome=>"2", :name=>"SCN2A", :position=>165377606}
+{:title=>"Rs796053353", :revid=>1495856, :orientation=>true, :stabilized=>false, :rsid=>"796053353", :chromosome=>"9", :name=>"STXBP1", :position=>127661192}
+{:title=>"Rs796053355", :revid=>1495859, :orientation=>true, :stabilized=>false, :rsid=>"796053355", :chromosome=>"9", :name=>"STXBP1", :position=>127663343}
+{:title=>"Rs796053359", :revid=>1387344, :orientation=>true, :stabilized=>false, :rsid=>"796053359", :chromosome=>"9", :name=>"STXBP1", :position=>127666205}
+{:title=>"Rs796053361", :revid=>1495866, :orientation=>true, :stabilized=>false, :rsid=>"796053361", :chromosome=>"9", :name=>"STXBP1", :position=>127668160}
+{:title=>"Rs796053368", :revid=>1495876, :orientation=>true, :stabilized=>false, :rsid=>"796053368", :chromosome=>"9", :name=>"STXBP1", :position=>127678510}
+{:title=>"Rs796053373", :revid=>1387388, :orientation=>true, :stabilized=>false, :rsid=>"796053373", :chromosome=>"9", :name=>"STXBP1", :position=>127682509}
+{:title=>"Rs796065024", :revid=>1543084, :orientation=>false, :stabilized=>false, :rsid=>"796065024", :chromosome=>"17", :name=>"UNC13D", :position=>75835418}
+{:title=>"Rs796065025", :revid=>1543018, :orientation=>false, :stabilized=>false, :rsid=>"796065025", :chromosome=>"17", :name=>"UNC13D", :position=>75843204}
+{:title=>"Rs796065026", :revid=>1543069, :orientation=>false, :stabilized=>false, :rsid=>"796065026", :chromosome=>"17", :name=>"UNC13D", :position=>75835502}
+{:title=>"Rs796065306", :revid=>1375913, :orientation=>false, :stabilized=>false, :rsid=>"796065306", :chromosome=>"3", :name=>"ADCY5", :position=>123319754}
+{:title=>"Rs7961152", :revid=>1498868, :orientation=>true, :stabilized=>false, :rsid=>"7961152", :name=>"LOC105369699", :chromosome=>"12", :position=>24828677, :gmaf=>0.3242}
+{:title=>"Rs79633941", :revid=>1545341, :orientation=>true, :stabilized=>false, :rsid=>"79633941", :chromosome=>"7", :name=>"CFTR", :position=>117603542, :summary=>"Cystic Fibrosis related"}
+{:title=>"Rs79635528", :revid=>1383878, :orientation=>true, :stabilized=>false, :rsid=>"79635528", :chromosome=>"7", :name=>"CFTR", :position=>117611695}
+{:title=>"Rs796541855", :revid=>1470704, :orientation=>true, :stabilized=>false, :rsid=>"796541855", :chromosome=>"5", :name=>"SMN1", :position=>70942801}
+{:title=>"Rs79660178", :revid=>1494188, :orientation=>true, :stabilized=>false, :rsid=>"79660178", :chromosome=>"7", :summary=>"Cystic Fibrosis related", :name=>"CFTR", :position=>117530991}
+{:title=>"Rs7966230", :revid=>1058284, :orientation=>true, :stabilized=>false, :rsid=>"7966230", :chromosome=>"12", :name=>"VWF", :position=>6126464}
+{:title=>"Rs796856605", :revid=>1357797, :orientation=>true, :stabilized=>false, :rsid=>"796856605", :chromosome=>"17", :position=>43124030, :name=>"BRCA1"}
+{:title=>"Rs797044432", :revid=>1402274, :orientation=>false, :stabilized=>false, :rsid=>"797044432", :chromosome=>"15", :name=>"HEXA", :position=>72356524}
+{:title=>"Rs797044433", :revid=>1402198, :orientation=>false, :stabilized=>false, :rsid=>"797044433", :chromosome=>"15", :name=>"HEXA", :position=>72345462}
+{:title=>"Rs797044434", :revid=>1402230, :orientation=>false, :stabilized=>false, :rsid=>"797044434", :chromosome=>"15", :name=>"HEXA", :position=>72349101}
+{:title=>"Rs797044607", :revid=>1492824, :orientation=>false, :stabilized=>false, :rsid=>"797044607", :chromosome=>"6", :name=>"PKHD1", :position=>52024787}
+{:title=>"Rs797044610", :revid=>1420007, :orientation=>true, :stabilized=>false, :rsid=>"797044610", :chromosome=>"X", :name=>"ABCD1", :position=>153726153}
+{:title=>"Rs797044611", :revid=>1544276, :orientation=>true, :stabilized=>false, :rsid=>"797044611", :chromosome=>"X", :name=>"ABCD1", :position=>153726152}
+{:title=>"Rs797044623", :revid=>1530636, :orientation=>true, :stabilized=>false, :rsid=>"797044623", :chromosome=>"7", :name=>"CCM2", :position=>45000368}
+{:title=>"Rs797044625", :revid=>1544270, :orientation=>true, :stabilized=>false, :rsid=>"797044625", :chromosome=>"X", :name=>"ABCD1", :position=>153743503}
+{:title=>"Rs797044626", :revid=>1544265, :orientation=>true, :stabilized=>false, :rsid=>"797044626", :chromosome=>"X", :name=>"ABCD1", :position=>153743487}
+{:title=>"Rs797044713", :revid=>1492827, :orientation=>false, :stabilized=>false, :rsid=>"797044713", :chromosome=>"6", :name=>"PKHD1", :position=>52028187}
+{:title=>"Rs797044726", :revid=>1420011, :orientation=>true, :stabilized=>false, :rsid=>"797044726", :chromosome=>"X", :name=>"ABCD1", :position=>153736408}
+{:title=>"Rs797044745", :revid=>1492818, :orientation=>false, :stabilized=>false, :rsid=>"797044745", :chromosome=>"6", :name=>"PKHD1", :position=>51867876}
+{:title=>"Rs797044781", :revid=>1507824, :orientation=>true, :stabilized=>false, :rsid=>"797044781", :chromosome=>"X", :name=>"ABCD1", :position=>153742986}
