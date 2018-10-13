@@ -2,15 +2,19 @@ require_relative "./builder"
 
 module Gluttony
   class Harvester
+    attr_reader :response
+    attr_reader :last_response
     def initialize(pedia)
       @pedia = pedia
       @response = nil
+      @last_response = nil
     end
 
     # Returns a list of IDs
     def genotypes
       tries = 0
       begin
+        @last_response = @response
         @response = if @response.nil?
                       @pedia.query.list.title("Category:Is a genotype").prop(:ids).limit(:max).response
                     else
@@ -18,16 +22,10 @@ module Gluttony
                     end
         @response.to_h["categorymembers"].map(&:first).map(&:last)
       rescue JSON::ParserError
-        if tries == 5
-          puts "Limit retries achieved"
-          puts @response.metadata
-          raise
-        end
-
-        tries += 1
-        puts "JSON Parser Error while gathering Genotypes, retrying - ", tries.to_s
-        sleep(5)
-        retry
+        puts "JSON Parser Error while gathering Genotypes"
+        puts @response.metadata
+        @response = @last_response
+        return nil
       end
     end
 
