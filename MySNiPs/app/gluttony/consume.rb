@@ -33,7 +33,7 @@ module Gluttony
 
     def split_list(number)
       # Runs a linux command that counts lines
-      lines = 'wc -l < "ids.txt"'.to_i
+      lines = %x(wc -l < "idlist.txt").to_i
       ids_per_file = (lines / number.to_f).ceil
       file_number = 0
       i = 0
@@ -59,9 +59,15 @@ module Gluttony
     def read_list(file)
       beginning_time = Time.now.utc
       puts "Started reading list at: #{beginning_time}"
-      genoid = @store.read_ids file
+      iterations = 0
+      saved = 0
+
+      genoid = 0
       until genoid.nil?
         begin
+          iterations += 1
+          puts saved.to_s + " saved out of " + iterations.to_s if (iterations % 100).zero?
+          genoid = @store.read_ids file
           geno = @harvest.genotype_info genoid
           # 5th
           next if geno.nil?
@@ -71,6 +77,7 @@ module Gluttony
           if @savedgenes.key? genetitle
             if @savedgenes[genetitle]
               # 4th
+              saved += 1
               @store.save_genotype geno
             else
               # 3rd
@@ -80,6 +87,7 @@ module Gluttony
             gene = @harvest.gene_info genetitle
             unless gene.nil? # !2nd
               # 1st
+              saved += 1
               @store.save_gene gene
               @store.save_genotype geno
               @savedgenes[genetitle] = true
@@ -91,13 +99,10 @@ module Gluttony
           @store.push_ids genoid
           puts "Error in #{genoid}, #{e.message}"
         end
-
-        # Finally reads the next Genotype ID
-        genoid = @store.read_ids file
       end
 
-      @store.close_list genes
-      @store.close_list genotypes
+      @store.close_list :genes
+      @store.close_list :genotypes
       puts "Time elapsed: #{(Time.now.utc - beginning_time)} seconds"
     end
   end

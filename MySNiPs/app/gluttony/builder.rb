@@ -5,18 +5,17 @@ module Gluttony
       # This is a static class
       SHORT = 240
       def genotype(raw)
+        return if raw.empty?
+
         geno = {}
         geno[:pageid] = raw["pageid"]
         geno[:title] = raw["title"]
         geno[:revid] = raw["revid"]
 
         wikitext = raw["wikitext"]["*"].delete("\n").delete("\t")
-        rsendindex = wikitext.index("}}") + 1
-        geno[:page_content] = wikitext[rsendindex..(rsendindex + SHORT)]
-
-        rsendindex -= 2
+        rsendindex = wikitext.index("}}")
         genolen = "{{Genotype".freeze.length + 1
-        table = wikitext[genolen..rsendindex].split("|")
+        table = wikitext[genolen..(rsendindex - 1)].split("|")
 
         # Repute can be neutral by not having any value
         geno[:repute] = 0
@@ -25,6 +24,10 @@ module Gluttony
           info = info.split("=")
           geno = Builder._genotype(info[0], info[1], geno)
         end
+
+        rsendindex += 2
+        geno[:page_content] = wikitext[rsendindex..(rsendindex + SHORT)]
+
         geno if Builder.ok? geno
       end
 

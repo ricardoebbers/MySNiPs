@@ -160,3 +160,7 @@ Style/Semicolon:
 # It was looping with "Unless should be negated if"
 Style/NegatedIf:
   Enabled: false
+
+# It was conflicting with %w cop
+Style/CommandLiteral:
+  Enabled: false
