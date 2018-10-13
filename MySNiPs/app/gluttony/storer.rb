@@ -35,18 +35,14 @@ module Gluttony
       @ids_list.push id
     end
 
-    # TODO
-    # Returns the title of the Gene page
-    def genotype_info(geno)
-      # TODO
-      @genos.push(geno)
-      geno[:title][0..(geno[:title].index("(") - 1)]
+    def save_gene(gene)
+      @genes_file = File.open("genes.txt", "w") if @genes_file.nil?
+      @genes_file.puts gene
     end
 
-    def gene_info(gene)
-      return false if gene.nil?
-
-      @genes.push(gene)
+    def save_genotype(geno)
+      @genotypes_file = File.open("genos.txt", "w") if @genotypes_file.nil?
+      @genotypes_file.puts geno
     end
   end
 end
