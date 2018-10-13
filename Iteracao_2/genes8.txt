@@ -414,6 +414,7 @@
 {:title=>"Rs80357560", :revid=>1407777, :orientation=>false, :stabilized=>false, :rsid=>"80357560", :chromosome=>"17", :name=>"BRCA1", :position=>43091660}
 {:title=>"Rs80357561", :revid=>1503853, :orientation=>false, :stabilized=>false, :rsid=>"80357561", :chromosome=>"17", :position=>43074348, :name=>"BRCA1"}
 {:title=>"Rs80357562", :revid=>1407888, :orientation=>false, :stabilized=>false, :rsid=>"80357562", :chromosome=>"17", :name=>"BRCA1", :position=>43091937}
+#
 {:title=>"Rs80357563", :revid=>1162964, :orientation=>false, :stabilized=>false, :rsid=>"80357563"}
 {:title=>"Rs80357564", :revid=>1407842, :orientation=>false, :stabilized=>false, :rsid=>"80357564", :chromosome=>"17", :position=>43091821, :name=>"BRCA1"}
 {:title=>"Rs80357565", :revid=>1503887, :orientation=>false, :stabilized=>false, :rsid=>"80357565", :chromosome=>"17", :position=>43090967, :name=>"BRCA1"}
