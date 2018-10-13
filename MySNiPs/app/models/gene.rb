@@ -1,3 +1,3 @@
 class Gene < ApplicationRecord
-    belongs_to :genotype
+    has_many :genotypes
 end
