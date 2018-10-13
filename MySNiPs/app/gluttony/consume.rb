@@ -59,7 +59,6 @@ module Gluttony
     def read_list(file)
       beginning_time = Time.now.utc
       puts "Started reading list at: #{beginning_time}"
-
       genoid = @store.read_ids file
       until genoid.nil?
         begin
@@ -79,17 +78,18 @@ module Gluttony
             end
           else
             gene = @harvest.gene_info genetitle
-            if gene.nil? # !2nd
+            unless gene.nil? # !2nd
               # 1st
               @store.save_gene gene
               @store.save_genotype geno
               @savedgenes[genetitle] = true
             end
           end
-        rescue StandardError
+        rescue StandardError => e
           # If there is some error
           # The id will be added to the end of the list to be tried later
           @store.push_ids genoid
+          puts "Error in #{genoid}, #{e.message}"
         end
 
         # Finally reads the next Genotype ID
@@ -102,7 +102,3 @@ module Gluttony
     end
   end
 end
-
-# Anotações
-# No Gather IDs, não precisa de nenhum tratamento além de repetir até funcionar
-# No Gather Genotype

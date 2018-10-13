@@ -11,8 +11,8 @@ module Gluttony
         geno[:revid] = raw["revid"]
 
         wikitext = raw["wikitext"]["*"].delete("\n").delete("\t")
-        rsendindex = text.index("}}") + 1
-        geno[:page_content] = wikitext(rsendindex..(rsendindex + SHORT))
+        rsendindex = wikitext.index("}}") + 1
+        geno[:page_content] = wikitext[rsendindex..(rsendindex + SHORT)]
 
         rsendindex -= 2
         genolen = "{{Genotype".freeze.length + 1
@@ -25,7 +25,6 @@ module Gluttony
           info = info.split("=")
           geno = Builder._genotype(info[0], info[1], geno)
         end
-
         geno if Builder.ok? geno
       end
 
