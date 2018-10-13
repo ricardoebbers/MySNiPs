@@ -10,9 +10,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2018_10_10_043628) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "genes", force: :cascade do |t|
+    t.string "title", limit: 16, null: false
+    t.string "rsid", limit: 13
+    t.string "iid", limit: 13
+    t.integer "chromosome", limit: 2
+    t.string "position", limit: 10
+    t.string "summary", limit: 130
+    t.string "name", limit: 17
+    t.boolean "orientation"
+    t.boolean "stabilized"
+    t.float "gmaf"
+    t.string "geno1a1", limit: 1
+    t.string "geno1a2", limit: 1
+    t.string "geno2a1", limit: 1
+    t.string "geno2a2", limit: 1
+    t.string "geno3a1", limit: 1
+    t.string "geno3a2", limit: 1
+    t.string "revid", limit: 13
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "genotypes", force: :cascade do |t|
+    t.string "title", limit: 16, null: false
+    t.string "allele1", limit: 1
+    t.string "allele2", limit: 1
+    t.string "summary", limit: 130
+    t.integer "repute", limit: 2
+    t.float "magnitude"
+    t.string "revid", limit: 13
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.bigint "identifier", null: false
+    t.bigint "password"
+    t.bigint "report_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
