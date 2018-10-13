@@ -156,3 +156,7 @@ Style/SignalException:
 # It was returning an error sometimes
 Style/Semicolon:
   Enabled: false
+
+# It was looping with "Unless should be negated if"
+Style/NegatedIf:
+  Enabled: false

@@ -3,23 +3,25 @@ module Gluttony
     # Class that will get informations about Genos or Genes from raw text
     class << Builder
       # This is a static class
+      SHORT = 240
       def genotype(raw)
         geno = {}
         geno[:pageid] = raw["pageid"]
         geno[:title] = raw["title"]
         geno[:revid] = raw["revid"]
 
-        text = raw["wikitext"]["*"].delete("\n").delete("\t")
+        wikitext = raw["wikitext"]["*"].delete("\n").delete("\t")
+        rsendindex = text.index("}}") + 1
+        geno[:page_content] = wikitext(rsendindex..(rsendindex + SHORT))
 
+        rsendindex -= 2
         genolen = "{{Genotype".freeze.length + 1
-        endindex = text.index("}}")
-        return nil if endindex.nil?
-
-        text = text[genolen..(endindex - 1)].split("|")
+        table = wikitext[genolen..rsendindex].split("|")
 
         # Repute can be neutral by not having any value
         geno[:repute] = 0
-        text.each do |info|
+        geno[:magnitude] = 0
+        table.each do |info|
           info = info.split("=")
           geno = Builder._genotype(info[0], info[1], geno)
         end
@@ -39,7 +41,7 @@ module Gluttony
       end
 
       def ok?(geno)
-        true if geno.key?(:magnitude) && !geno[:magnitude].zero? && geno.key?(:summary)
+        true if geno.key?(:summary) && (!geno[:magnitude].zero? || geno[:repute] == 2)
       end
 
       def gene(raw, genetitle)
@@ -57,10 +59,10 @@ module Gluttony
                   # At least the {{
                   2
                 end
-        endindex = text.index("}}")
+        endindex = text.index("}}") - 1
         return gene if endindex.nil?
 
-        text = text[rslen..(endindex - 1)].split("|")
+        text = text[rslen..endindex].split("|")
 
         gene[:orientation] = false
         gene[:stabilized] = false
@@ -82,18 +84,6 @@ module Gluttony
         when "GMAF" then gene[:gmaf] = val.to_f
         when "Orientation" then gene[:orientation] = true if val == "plus"
         when "Stabilized" then gene[:stabilized] = true if val == "plus"
-        when "geno1"
-          alles = Builder.geno_to_allele val
-          gene[:geno1a1] = alles[0]
-          gene[:geno1a2] = alles[1]
-        when "geno2"
-          alles = Builder.geno_to_allele val
-          gene[:geno2a1] = alles[0]
-          gene[:geno2a2] = alles[1]
-        when "geno3"
-          alles = Builder.geno_to_allele val
-          gene[:geno3a1] = alles[0]
-          gene[:geno3a2] = alles[1]
         end
         gene
       end
