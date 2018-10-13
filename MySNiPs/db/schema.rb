@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_12_222857) do
+ActiveRecord::Schema.define(version: 2018_10_13_042441) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,12 +26,6 @@ ActiveRecord::Schema.define(version: 2018_10_12_222857) do
     t.boolean "orientation"
     t.boolean "stabilized"
     t.float "gmaf"
-    t.string "geno1a1", limit: 1
-    t.string "geno1a2", limit: 1
-    t.string "geno2a1", limit: 1
-    t.string "geno2a2", limit: 1
-    t.string "geno3a1", limit: 1
-    t.string "geno3a2", limit: 1
     t.string "revid", limit: 13
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
