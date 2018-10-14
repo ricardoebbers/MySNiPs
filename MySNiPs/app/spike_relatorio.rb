@@ -108,7 +108,7 @@ result.each do |rel|
   f.puts "Magnitude: #{rel.genotype[:magnitude]}"
   f.puts "Repute: #{rep}" unless rep.nil?
   f.puts "\n" + rel.genotype[:page_content] unless rel.genotype[:page_content].empty?
-  f.puts "Leia sobre o Gene em http://snpedia.com/index.php/" + rel.gene[:title]
+  f.puts "Read more at http://snpedia.com/index.php/" + rel.genotype[:title]
   f.puts appearance[1] * 60
   f.puts "\n\n\n"
 end
