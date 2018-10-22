@@ -1434,3 +1434,142 @@ Migrating to Dropcolumn (20181013052500)
   ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mUser Create (158.2ms)[0m  [1m[32mINSERT INTO "users" ("identifier", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["identifier", 12345678], ["created_at", "2018-10-13 06:31:03.867555"], ["updated_at", "2018-10-13 06:31:03.867555"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (23.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (20.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mUser Create (104.6ms)[0m  [1m[32mINSERT INTO "users" ("identifier", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["identifier", 12345678], ["created_at", "2018-10-13 16:55:26.117846"], ["updated_at", "2018-10-13 16:55:26.117846"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (29.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mGene Create (39.7ms)[0m  [1m[32mINSERT INTO "genes" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "ola"], ["created_at", "2018-10-13 16:55:26.308089"], ["updated_at", "2018-10-13 16:55:26.308089"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (31.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("identifier", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["identifier", 12345678], ["created_at", "2018-10-13 16:55:40.731607"], ["updated_at", "2018-10-13 16:55:40.731607"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (13.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mGene Create (0.6ms)[0m  [1m[32mINSERT INTO "genes" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "ola"], ["created_at", "2018-10-13 16:55:40.757125"], ["updated_at", "2018-10-13 16:55:40.757125"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."identifier" = $1 LIMIT $2[0m  [["identifier", 12345678], ["LIMIT", 11]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."identifier" = $1[0m  [["identifier", 12345678]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users"."identifier" FROM "users" WHERE "users"."identifier" = $1 LIMIT $2[0m  [["identifier", 12345678], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mGene Create (0.4ms)[0m  [1m[32mINSERT INTO "genes" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "ola"], ["created_at", "2018-10-13 17:16:21.019854"], ["updated_at", "2018-10-13 17:16:21.019854"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (13.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mGene Create (0.4ms)[0m  [1m[32mINSERT INTO "genes" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "ola"], ["created_at", "2018-10-13 17:19:21.334518"], ["updated_at", "2018-10-13 17:19:21.334518"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (18.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to ChangeGenesToGene (20181013172442)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (43.0ms)[0m  [1m[35mALTER TABLE "genes" RENAME COLUMN "genes_id" TO "gene_id"[0m
+  ↳ db/migrate/20181013172442_change_genes_to_gene.rb:3
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+Migrating to ChangeGenesToGene (20181013172442)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (5.5ms)[0m  [1m[35mALTER TABLE "genotypes" RENAME COLUMN "genes_id" TO "gene_id"[0m
+  ↳ db/migrate/20181013172442_change_genes_to_gene.rb:3
+  [1m[35m (18.8ms)[0m  [1m[35mALTER INDEX "index_genotypes_on_genes_id" RENAME TO "index_genotypes_on_gene_id"[0m
+  ↳ db/migrate/20181013172442_change_genes_to_gene.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181013172442"]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (31.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (36.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7160945162738689455)[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mGene Create (0.6ms)[0m  [1m[32mINSERT INTO "genes" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "ola"], ["created_at", "2018-10-13 17:26:43.989207"], ["updated_at", "2018-10-13 17:26:43.989207"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (14.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mGene Create (0.5ms)[0m  [1m[32mINSERT INTO "genes" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "ola"], ["created_at", "2018-10-13 17:28:45.567437"], ["updated_at", "2018-10-13 17:28:45.567437"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (20.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (19.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mGene Create (118.4ms)[0m  [1m[32mINSERT INTO "genes" ("title", "rsid", "chromosome", "position", "name", "orientation", "stabilized", "revid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Rs104894085"], ["rsid", "104894085"], ["chromosome", 8], ["position", "38144359"], ["name", "STAR"], ["orientation", false], ["stabilized", false], ["revid", "1384861"], ["created_at", "2018-10-14 03:36:54.379007"], ["updated_at", "2018-10-14 03:36:54.379007"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (31.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mGene Create (0.5ms)[0m  [1m[32mINSERT INTO "genes" ("title", "rsid", "iid", "summary", "orientation", "stabilized", "revid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "I5011368"], ["rsid", "121909047"], ["iid", "5011368"], ["summary", "Cystic Fibrosis related"], ["orientation", false], ["stabilized", false], ["revid", "986498"], ["created_at", "2018-10-14 03:42:25.186377"], ["updated_at", "2018-10-14 03:42:25.186377"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (18.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8

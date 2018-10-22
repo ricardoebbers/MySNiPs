@@ -1,3 +1,3 @@
 class Gene < ApplicationRecord
-    has_many :genotypes
+    has_many :genotypes, dependent: :destroy
 end
