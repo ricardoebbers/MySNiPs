@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_10_043628) do
+ActiveRecord::Schema.define(version: 2018_10_13_052500) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,15 +26,12 @@ ActiveRecord::Schema.define(version: 2018_10_10_043628) do
     t.boolean "orientation"
     t.boolean "stabilized"
     t.float "gmaf"
-    t.string "geno1a1", limit: 1
-    t.string "geno1a2", limit: 1
-    t.string "geno2a1", limit: 1
-    t.string "geno2a2", limit: 1
-    t.string "geno3a1", limit: 1
-    t.string "geno3a2", limit: 1
     t.string "revid", limit: 13
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["iid"], name: "index_genes_on_iid", unique: true
+    t.index ["rsid"], name: "index_genes_on_rsid", unique: true
+    t.index ["title"], name: "index_genes_on_title", unique: true
   end
 
   create_table "genotypes", force: :cascade do |t|
@@ -47,6 +44,10 @@ ActiveRecord::Schema.define(version: 2018_10_10_043628) do
     t.string "revid", limit: 13
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "page_content"
+    t.bigint "genes_id"
+    t.index ["genes_id"], name: "index_genotypes_on_genes_id"
+    t.index ["title"], name: "index_genotypes_on_title", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -57,4 +58,5 @@ ActiveRecord::Schema.define(version: 2018_10_10_043628) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "genotypes", "genes", column: "genes_id"
 end
