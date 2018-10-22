@@ -1573,3 +1573,69 @@ Migrating to ChangeGenesToGene (20181013172442)
   ↳ db/seeds.rb:8
   [1m[35m (18.1ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:8
+Started GET "/" for 127.0.0.1 at 2018-10-22 16:14:25 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 1707ms (Views: 1691.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-22 16:14:35 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (336.1ms)
+Completed 500 Internal Server Error in 338ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `signup_path' for #<#<Class:0x00007f893411d4c8>:0x00007f8934127c98>):
+    14:             <%= f.submit "Log in", class: "btn btn-primary" %>
+    15:         <% end %>
+    16: 
+    17:         <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+    18:     </div>
+    19: </div>
+  
+app/views/sessions/new.html.erb:17:in `_app_views_sessions_new_html_erb___1872352967784028018_70113630416500'
+Started GET "/login" for 127.0.0.1 at 2018-10-22 16:15:22 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 179ms (Views: 173.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-22 16:15:43 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/joao/MySNiPs/MySNiPs/app/views/sessions/new.html.erb:9: syntax error, unexpected tLABEL, expecting '='
+...ppend=( f.number_field , class: 'form-control' );@output_buf...
+...                         ^~~~~~):
+  
+app/views/sessions/new.html.erb:9: syntax error, unexpected tLABEL, expecting '='
+Started GET "/login" for 127.0.0.1 at 2018-10-22 16:20:50 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 178ms (Views: 172.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-22 16:22:08 -0300
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (20.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/joao/.rvm/gems/ruby-2.5.1@global/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mGene Create (74.5ms)[0m  [1m[32mINSERT INTO "genes" ("title", "rsid", "iid", "chromosome", "position", "orientation", "stabilized", "revid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "I3002455"], ["rsid", "1800386"], ["iid", "3002455"], ["chromosome", 12], ["position", "6127833"], ["orientation", false], ["stabilized", false], ["revid", "1195440"], ["created_at", "2018-10-22 21:45:46.348772"], ["updated_at", "2018-10-22 21:45:46.348772"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (30.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9

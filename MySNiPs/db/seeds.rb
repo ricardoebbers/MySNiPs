@@ -6,3 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# Gene.create(:title=>"I3002455", :revid=>1195440, :orientation=>false, :stabilized=>false, :iid=>"3002455", :rsid=>"1800386", :position=>6127833, :chromosome=>"12")
