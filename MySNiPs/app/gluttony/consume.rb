@@ -5,7 +5,6 @@ require_relative "./storer"
 require_relative "./lifter"
 
 
-module Gluttony
   class Consume
     # Controller for SNaPi
     # Run Gluttony::Consume .snpedia and it will fill the database automatically
@@ -122,4 +121,3 @@ module Gluttony
       end
     end
   end
-end
