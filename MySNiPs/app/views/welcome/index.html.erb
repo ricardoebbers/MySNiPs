@@ -13,7 +13,7 @@
   <div class="container-fluid">
 
     <!-- Início navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-info">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-info fixed-top">
       <a class="navbar-brand" href="#">MySNiPs</a>
 
       <!-- Botão navbar responsivo -->
@@ -24,11 +24,11 @@
       <!-- Itens navbar -->
       <div class="collapse navbar-collapse" id="navbarSite">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Relatos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Vantagens</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Parceiros</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#vantagens">Vantagens</a></li>
+          <li class="nav-item"><a class="nav-link" href="#parceiros">Parceiros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
         </ul>
       </div>
 
@@ -45,7 +45,7 @@
         </ol>
 
       <!-- Corpo carousel -->
-      <div class="carousel-inner">
+      <div class="carousel-inner" id="inicio">
 
         <!-- Celula carousel -->
         <div class="carousel-item active">
@@ -82,7 +82,7 @@
     <!-- Fim carousel -->
 
     <!-- Inicio cards -->
-    <div class="row">
+    <div class="row" id="vantagens">
 
       <!-- Espaço card -->
       <div class="col-sm-6 col-md-4 mb-4">
@@ -134,6 +134,24 @@
 
     </div>
     <!-- Fim do card -->
+
+    <div class="bg-overlay my-4" id="parceiros">
+	    <div class="text-center mt-5">
+		    <h1>Lorem ipsum dolor sit amet</h1>
+        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Curabitur luctus nisi velit. Cras ut vestibulum sapien.</h4>
+        <br><br>
+        <button type="button" class="btn btn-primary btn-lg">Lorem Ipsum</button>
+	    </div>
+    </div>
+
+    <div class="bg-overlay my-4" id="sobre">
+	    <div class="text-center mt-5">
+		    <h1>Lorem ipsum dolor sit amet</h1>
+        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Curabitur luctus nisi velit. Cras ut vestibulum sapien.</h4>
+        <br><br>
+        <button type="button" class="btn btn-primary btn-lg">Lorem Ipsum</button>
+	    </div>
+    </div>
 
     <!-- Footer -->
     <footer class="page-footer font-small unique-color-dark bg-white">
@@ -257,8 +275,15 @@
     <div class="footer-copyright text-center py-3 bg-gradient-info">© 2018 Copyright:
       <a href="#" class="text-white"> MySNiPs</a>
     </div>
+    <!-- Copyright -->    <a href="#" class="text-white"> MySNiPs</a>
+    </div>
     <!-- Copyright -->
 
+  </footer>
+  <!-- Footer -->
+
+  </div>
+  
   </footer>
   <!-- Footer -->
 
