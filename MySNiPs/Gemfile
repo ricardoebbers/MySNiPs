@@ -67,6 +67,8 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+gem 'json_pure'
+
 # Gem that connects to SNPedia's API
 # Only used in the spike snapi-MediawikTory
 # gem 'mediawiktory'
