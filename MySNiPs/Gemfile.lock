@@ -236,7 +236,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord
   addressable
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.1.3)
