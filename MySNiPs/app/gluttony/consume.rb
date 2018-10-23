@@ -2,6 +2,8 @@ require "set"
 require_relative "../snapi/pedia"
 require_relative "./harvester"
 require_relative "./storer"
+require_relative "./lifter"
+
 
 module Gluttony
   class Consume
@@ -104,6 +106,20 @@ module Gluttony
       @store.close_list :genes
       @store.close_list :genotypes
       puts "Time elapsed: #{(Time.now.utc - beginning_time)} seconds"
+    end
+
+    def insert_data(genefile, genofile)
+      lifter = Lifter.new
+      f = File.open(genefile, "r")
+
+      f.each do |line|
+        begin
+          gene = eval(line)
+          lifter.create_gene gene if gene.class == {}.class
+        rescue StandardError => e
+          puts e
+        end
+      end
     end
   end
 end

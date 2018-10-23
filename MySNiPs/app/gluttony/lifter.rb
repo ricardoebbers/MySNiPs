@@ -1,5 +1,5 @@
 module Gluttony
-  class Lifter
+  class Lifter < ApplicationController
     attr_accessor :gene_id
 
     def initialize
@@ -8,7 +8,7 @@ module Gluttony
     end
 
     def create_gene(gene)
-      # TO-DO
+      Gene.new(gene.to_s)
     end
 
     def get_gene_id(title)
