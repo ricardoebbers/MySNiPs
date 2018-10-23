@@ -68,6 +68,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'json_pure'
+gem 'activerecord'
 
 # Gem that connects to SNPedia's API
 # Only used in the spike snapi-MediawikTory
