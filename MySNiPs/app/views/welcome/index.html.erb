@@ -263,5 +263,19 @@
   <!-- Footer -->
 
   </div>
+  
+	<script>
+		$('nav a').click(function(e){
+			e.preventDefault();
+			var id = $(this).attr('href');
+			console.log(id);
+			var distancia_topo = $(id).offset().top;
+			var altura_menu = $("nav").innerHeight();
+
+			$('html, body').animate({
+				scrollTop : distancia_topo - altura_menu - 70
+			}, 500)
+		});
+	</script>
   </body>
 </html>
