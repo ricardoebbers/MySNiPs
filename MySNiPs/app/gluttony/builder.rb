@@ -3,33 +3,36 @@ module Gluttony
     # Class that will get informations about Genos or Genes from raw text
     class << Builder
       # This is a static class
+      SHORT = 240
       def genotype(raw)
+        return if raw.empty?
+
         geno = {}
         geno[:pageid] = raw["pageid"]
         geno[:title] = raw["title"]
         geno[:revid] = raw["revid"]
 
-        text = raw["wikitext"]["*"].delete("\n").delete("\t")
-
+        wikitext = raw["wikitext"]["*"].delete("\n").delete("\t")
+        rsendindex = wikitext.index("}}")
         genolen = "{{Genotype".freeze.length + 1
-        endindex = text.index("}}")
-        return nil if endindex.nil?
-
-        text = text[genolen..(endindex - 1)].split("|")
+        table = wikitext[genolen..(rsendindex - 1)].split("|")
 
         # Repute can be neutral by not having any value
         geno[:repute] = 0
-        text.each do |info|
+        geno[:magnitude] = 0
+        table.each do |info|
           info = info.split("=")
           geno = Builder._genotype(info[0], info[1], geno)
         end
+
+        rsendindex += 2
+        geno[:page_content] = wikitext[rsendindex..(rsendindex + SHORT)]
 
         geno if Builder.ok? geno
       end
 
       def _genotype(key, val, geno)
         case key
-        when "rsid" then geno[:rsid] = val
         when "summary" then geno[:summary] = val
         when "allele1" then geno[:allele1] = val
         when "allele2" then geno[:allele2] = val
@@ -40,7 +43,7 @@ module Gluttony
       end
 
       def ok?(geno)
-        true if !geno[:repute].zero? || (geno.key? :summary)
+        true if geno.key?(:summary) && (!geno[:magnitude].zero? || geno[:repute] == 2)
       end
 
       def gene(raw, genetitle)
@@ -58,10 +61,10 @@ module Gluttony
                   # At least the {{
                   2
                 end
-        endindex = text.index("}}")
+        endindex = text.index("}}") - 1
         return gene if endindex.nil?
 
-        text = text[rslen..(endindex - 1)].split("|")
+        text = text[rslen..endindex].split("|")
 
         gene[:orientation] = false
         gene[:stabilized] = false
@@ -69,12 +72,13 @@ module Gluttony
           info = info.split("=")
           gene = Builder._gene(info[0], info[1], gene)
         end
-        gene
+        gene if Builder.complete? gene
       end
 
       def _gene(key, val, gene)
         case key
         when "rsid" then gene[:rsid] = val
+        when "iid" then gene[:iid] = val
         when "Summary" then gene[:summary] = val
         when "Gene" then gene[:name] = val
         when "Chromosome" then gene[:chromosome] = val
@@ -82,18 +86,6 @@ module Gluttony
         when "GMAF" then gene[:gmaf] = val.to_f
         when "Orientation" then gene[:orientation] = true if val == "plus"
         when "Stabilized" then gene[:stabilized] = true if val == "plus"
-        when "geno1"
-          alles = Builder.geno_to_allele val
-          gene[:geno1a1] = alles[0]
-          gene[:geno1a2] = alles[1]
-        when "geno2"
-          alles = Builder.geno_to_allele val
-          gene[:geno2a1] = alles[0]
-          gene[:geno2a2] = alles[1]
-        when "geno3"
-          alles = Builder.geno_to_allele val
-          gene[:geno3a1] = alles[0]
-          gene[:geno3a2] = alles[1]
         end
         gene
       end
@@ -104,6 +96,10 @@ module Gluttony
 
       def allele_to_geno(allele1, allele2)
         "(" + allele1 + "," + allele2 + ")"
+      end
+
+      def complete?(gene)
+        true if ((gene.key :chromosome) && (gene.key? :position)) || ((gene.key? :rsid) || (gene.key? :iid))
       end
     end
   end
