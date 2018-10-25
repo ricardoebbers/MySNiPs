@@ -33,10 +33,10 @@ ActiveRecord::Schema.define(version: 2018_10_13_052500) do
   end
 
   create_table "genotypes", force: :cascade do |t|
-    t.string "title", limit: 200, null: false
-    t.string "allele1", limit: 80
-    t.string "allele2", limit: 80
-    t.string "summary", limit: 200
+    t.string "title", limit: 160, null: false
+    t.string "allele1", limit: 140
+    t.string "allele2", limit: 140
+    t.string "summary", limit: 280
     t.integer "repute", limit: 2
     t.float "magnitude"
     t.string "revid", limit: 13
