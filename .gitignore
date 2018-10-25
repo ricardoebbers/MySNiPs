@@ -12,8 +12,8 @@ MySNiPs/db/*.sqlite3
 MySNiPs/db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
-MySNiPs/log/
-MySNiPs/tmp/
+MySNiPs/log/*
+MySNiPs/tmp/*
 !MySNiPs/log/.keep
 !MySNiPs/tmp/.keep
 
