@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2018_10_13_052500) do
     t.string "iid", limit: 13
     t.integer "chromosome", limit: 2
     t.string "position", limit: 10
-    t.string "summary", limit: 170
+    t.string "summary", limit: 200
     t.string "name", limit: 17
     t.boolean "orientation"
     t.boolean "stabilized"
@@ -33,18 +33,19 @@ ActiveRecord::Schema.define(version: 2018_10_13_052500) do
   end
 
   create_table "genotypes", force: :cascade do |t|
-    t.string "title", limit: 16, null: false
-    t.string "allele1", limit: 1
-    t.string "allele2", limit: 1
-    t.string "summary", limit: 170
+    t.string "title", limit: 160, null: false
+    t.string "allele1", limit: 140
+    t.string "allele2", limit: 140
+    t.string "summary", limit: 280
     t.integer "repute", limit: 2
     t.float "magnitude"
     t.string "revid", limit: 13
+    t.text "pageid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "page_content"
-    t.bigint "genes_id"
-    t.index ["genes_id"], name: "index_genotypes_on_genes_id"
+    t.bigint "gene_id"
+    t.index ["gene_id"], name: "index_genotypes_on_gene_id"
     t.index ["title"], name: "index_genotypes_on_title", unique: true
   end
 
@@ -56,5 +57,5 @@ ActiveRecord::Schema.define(version: 2018_10_13_052500) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "genotypes", "genes", column: "genes_id"
+  add_foreign_key "genotypes", "genes", column: "gene_id"
 end
