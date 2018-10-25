@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2018_10_13_052500) do
     t.string "iid", limit: 13
     t.integer "chromosome", limit: 2
     t.string "position", limit: 10
-    t.string "summary", limit: 170
+    t.string "summary", limit: 200
     t.string "name", limit: 17
     t.boolean "orientation"
     t.boolean "stabilized"
@@ -33,10 +33,10 @@ ActiveRecord::Schema.define(version: 2018_10_13_052500) do
   end
 
   create_table "genotypes", force: :cascade do |t|
-    t.string "title", limit: 60, null: false
-    t.string "allele1", limit: 16
-    t.string "allele2", limit: 16
-    t.string "summary", limit: 170
+    t.string "title", limit: 200, null: false
+    t.string "allele1", limit: 80
+    t.string "allele2", limit: 80
+    t.string "summary", limit: 200
     t.integer "repute", limit: 2
     t.float "magnitude"
     t.string "revid", limit: 13
