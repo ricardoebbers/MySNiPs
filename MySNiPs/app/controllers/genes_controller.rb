@@ -25,7 +25,13 @@ class GenesController < ApplicationController
     file = File.read(path)
     hash = JSON.parse(file)
     hash.each do |g|
-      Gene.create(g)
+      @gene = Gene.new(g)
+      unless @gene.save(g)
+        puts @gene.inspect
+        puts @gene.errors.message
+      end
     end
+
+    GenotypesController.new.import_from_file
   end
 end
