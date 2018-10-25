@@ -5,8 +5,19 @@ class GenesController < ApplicationController
     @gene = Gene.new
   end
 
-  def def index
+  def index
     # TO-DO
+  end
+
+  def create
+    @gene = Gene.new(params[:gene])
+    if @gene.save
+      flash[:success] = "Object successfully created"
+      redirect_to @gene
+    else
+      flash[:error] = "Something went wrong"
+      render "new"
+    end
   end
 
   def import_from_file
