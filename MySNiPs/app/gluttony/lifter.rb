@@ -1,6 +1,3 @@
-require_relative "../models/application_record"
-require_relative "../models/gene"
-require_relative "../models/genotype"
 class Lifter
   attr_accessor :gene_id
 
@@ -9,7 +6,7 @@ class Lifter
   end
 
   def create_gene(gene)
-    g = Gene.create(gene)
+    # TO-DO
   end
 
   def get_gene_id(title)
