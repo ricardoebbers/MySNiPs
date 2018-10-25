@@ -1,7 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  rsid: MyString
+  title: mytitle
+  allele1: a
+  allele2: c
+  summary: mysummary
+  repute: 1
+  magnitude: 1
+  revid: myrevid
+  page_content: mypagecontent
 
 two:
-  rsid: MyString
+  title: mytitle2
+  allele1: a
+  allele2: c
+  summary: mysummary2
+  repute: 1
+  magnitude: 1
+  revid: myrevid2
+  page_content: mypagecontent
