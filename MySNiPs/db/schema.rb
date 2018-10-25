@@ -40,11 +40,12 @@ ActiveRecord::Schema.define(version: 2018_10_13_052500) do
     t.integer "repute", limit: 2
     t.float "magnitude"
     t.string "revid", limit: 13
+    t.text "pageid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "page_content"
-    t.bigint "genes_id"
-    t.index ["genes_id"], name: "index_genotypes_on_genes_id"
+    t.bigint "gene_id"
+    t.index ["gene_id"], name: "index_genotypes_on_gene_id"
     t.index ["title"], name: "index_genotypes_on_title", unique: true
   end
 
@@ -56,5 +57,5 @@ ActiveRecord::Schema.define(version: 2018_10_13_052500) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "genotypes", "genes", column: "genes_id"
+  add_foreign_key "genotypes", "genes", column: "gene_id"
 end
