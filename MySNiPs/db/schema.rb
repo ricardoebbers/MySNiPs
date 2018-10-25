@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2018_10_13_052500) do
   end
 
   create_table "genotypes", force: :cascade do |t|
-    t.string "title", limit: 16, null: false
+    t.string "title", limit: 32, null: false
     t.string "allele1", limit: 1
     t.string "allele2", limit: 1
     t.string "summary", limit: 170
