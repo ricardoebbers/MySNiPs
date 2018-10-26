@@ -62,5 +62,4 @@ Criar testes para o match genoma vs base SNPedia | Ricardo Ebbers
 * Medir o velociy da equipe para poder planejar melhor as sprints;
 * Trabalhar com estimativas de tempo em cima de intervalos ao invés de datas precisas;
 * Aplicar os conceitos de storypoints;
-* Detalhar melhor as user stories com o cliente;
-* 
+* Detalhar melhor as user stories com o cliente.

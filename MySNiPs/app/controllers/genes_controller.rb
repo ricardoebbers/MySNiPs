@@ -26,9 +26,11 @@ class GenesController < ApplicationController
     hash = JSON.parse(file)
     hash.each do |g|
       @gene = Gene.new(g)
-      unless @gene.save(g)
+      if @gene.valid?
+        @gene.save
+      else
         puts @gene.inspect
-        puts @gene.errors.message
+        puts @gene.errors.messages
       end
     end
 
