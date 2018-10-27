@@ -30,9 +30,11 @@ class GenotypesController < ApplicationController
       break if @gene.nil?
 
       @geno = @gene.genotypes.new(g)
-      unless @geno.save
+      if @geno.valid?
+        @geno.save
+      else
         puts @geno.inspect
-        puts @geno.errors.message
+        puts @geno.errors.messages
       end
     end
 
