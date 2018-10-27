@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'import/from_file'
   get 'genes/import_from_file'
   get 'genotypes/import_from_file'
 

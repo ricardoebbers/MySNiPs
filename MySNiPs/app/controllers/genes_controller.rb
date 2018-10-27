@@ -1,6 +1,4 @@
 class GenesController < ApplicationController
-  include ActiveModel::Serializers::JSON
-
   def new
     @gene = Gene.new
   end
