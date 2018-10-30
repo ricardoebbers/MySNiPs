@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :genes
+  resources :genotypes
   root 'welcome#index'
   get 'welcome/index'
   constraints(:ip => /127.0.0.1/) do

@@ -5,7 +5,7 @@ class GenotypesController < ApplicationController
   end
 
   def index
-    # TO-DO
+    @genos = Genotype.page(params[:page]).per(10)
   end
 
   def create
