@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Genes</h1>
 <div class="container">
+  <h1>Genes</h1>
   <div class="table-responsive">
     <table class="table table-hover">
       <thead>
@@ -48,6 +48,8 @@
     </table>
     <%= paginate @genes %>
     <%= page_entries_info @genes %>
+    <!-- TODO: Implementar criação de genes
     <%= link_to 'New Gene', new_gene_path %>
+    -->
   </div>
 </div>
