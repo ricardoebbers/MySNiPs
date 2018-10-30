@@ -3,7 +3,7 @@
 ## 1. Landing page
 
 ### 1.01. Conteúdo da landing page
-**Como** um usuário final  
+**Como** usuário final  
 **Antes** de fazer a contratação do serviço  
 **Para** entender os benefícios de fazer uma análise genética  
 **Gostaria** de ver uma página simples de ler e que contenha recursos visuais explicando a que tipos de informação terei acesso
@@ -16,7 +16,7 @@
 ## 2. Relatório
 
 ### 2.01. Geração do relatório
-**Como** um usuário final  
+**Como** usuário final  
 **Dado** que eu já fiz a coleta de material genético previamente  
 **Eu** gostaria de ter acesso a um relatório contendo informações relevantes derivadas desse material e pesquisas científicas, que seja possível filtrar e pesquisar e tenha links para recursos extras  
 **Para** que eu possa aprender mais sobre mim mesmo
@@ -67,7 +67,7 @@
 ## 3. GenomikAPI
 
 ### 3.01. Documentação da API
-**Como** membro da equipe técnica  
+**Como** membro da equipe técnica do laboratório  
 **Para** saber como usar a API para envio dos dados genéticos  
 **Gostaria** de ter acesso a uma documentação concisa e com exemplos de uso
 
