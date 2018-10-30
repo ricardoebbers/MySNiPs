@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_13_052500) do
+ActiveRecord::Schema.define(version: 2018_10_28_173730) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,12 +50,13 @@ ActiveRecord::Schema.define(version: 2018_10_13_052500) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.bigint "identifier", null: false
-    t.bigint "password"
-    t.bigint "report_id"
+    t.string "identifier", null: false
+    t.string "password_digest"
+    t.string "report_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["identifier"], name: "index_users_on_identifier", unique: true
   end
 
-  add_foreign_key "genotypes", "genes", column: "gene_id"
+  add_foreign_key "genotypes", "genes"
 end
