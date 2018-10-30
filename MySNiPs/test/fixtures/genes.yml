@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  rsid: MyString
+  title: mygenetitle
 
 two:
-  rsid: MyString
+  title: mygenetitle2
