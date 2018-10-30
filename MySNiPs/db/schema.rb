@@ -10,53 +10,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_13_052500) do
+ActiveRecord::Schema.define(version: 2018_10_28_173730) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "genes", force: :cascade do |t|
-    t.string "title", limit: 16, null: false
-    t.string "rsid", limit: 13
-    t.string "iid", limit: 13
+    t.string "title", limit: 14, null: false
+    t.string "rsid", limit: 11
+    t.string "iid", limit: 11
     t.integer "chromosome", limit: 2
     t.string "position", limit: 10
-    t.string "summary", limit: 130
-    t.string "name", limit: 17
+    t.string "summary", limit: 180
+    t.string "name", limit: 16
     t.boolean "orientation"
     t.boolean "stabilized"
     t.float "gmaf"
-    t.string "revid", limit: 13
+    t.string "revid", limit: 10
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["iid"], name: "index_genes_on_iid", unique: true
-    t.index ["rsid"], name: "index_genes_on_rsid", unique: true
     t.index ["title"], name: "index_genes_on_title", unique: true
   end
 
   create_table "genotypes", force: :cascade do |t|
-    t.string "title", limit: 16, null: false
+    t.string "title", limit: 18, null: false
     t.string "allele1", limit: 1
     t.string "allele2", limit: 1
-    t.string "summary", limit: 130
+    t.string "summary", limit: 280
     t.integer "repute", limit: 2
     t.float "magnitude"
-    t.string "revid", limit: 13
+    t.string "revid", limit: 10
+    t.string "pageid", limit: 7
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "page_content"
-    t.bigint "genes_id"
-    t.index ["genes_id"], name: "index_genotypes_on_genes_id"
+    t.bigint "gene_id"
+    t.index ["gene_id"], name: "index_genotypes_on_gene_id"
     t.index ["title"], name: "index_genotypes_on_title", unique: true
   end
 
   create_table "users", force: :cascade do |t|
-    t.bigint "identifier", null: false
-    t.bigint "password"
-    t.bigint "report_id"
+    t.string "identifier", null: false
+    t.string "password_digest"
+    t.string "report_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["identifier"], name: "index_users_on_identifier", unique: true
   end
 
-  add_foreign_key "genotypes", "genes", column: "genes_id"
+  add_foreign_key "genotypes", "genes"
 end

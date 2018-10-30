@@ -3953,7 +3953,6 @@
 {:title=>"Rs2953145", :revid=>1527693, :orientation=>false, :stabilized=>false, :rsid=>"2953145", :name=>"RNPEPL1", :chromosome=>"2", :position=>240576179, :gmaf=>0.1437}
 {:title=>"Rs2965667", :revid=>1498813, :orientation=>true, :stabilized=>false, :rsid=>"2965667", :chromosome=>"12", :position=>17291799}
 {:title=>"Rs2981578", :revid=>1496966, :orientation=>false, :stabilized=>false, :rsid=>"2981578", :name=>"FGFR2", :chromosome=>"10", :position=>121580797, :gmaf=>0.3779}
-{:title=>"Rs2981578", :revid=>1496966, :orientation=>false, :stabilized=>false, :rsid=>"2981578", :name=>"FGFR2", :chromosome=>"10", :position=>121580797, :gmaf=>0.3779}
 {:title=>"Rs2981579", :revid=>1527710, :orientation=>false, :stabilized=>false, :rsid=>"2981579", :name=>"FGFR2", :chromosome=>"10", :position=>121577821, :gmaf=>0.4853}
 {:title=>"Rs2981582", :revid=>1530936, :orientation=>false, :stabilized=>false, :rsid=>"2981582", :name=>"FGFR2", :chromosome=>"10", :position=>121592803, :gmaf=>0.405, :summary=>"T allele increases risk of breast cancer"}
 {:title=>"Rs2981745", :revid=>1185314, :orientation=>true, :stabilized=>false, :rsid=>"2981745", :name=>"DMBT1", :chromosome=>"10", :position=>122560678, :gmaf=>0.3127}
