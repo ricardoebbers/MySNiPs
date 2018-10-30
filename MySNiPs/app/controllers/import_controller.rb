@@ -1,6 +1,8 @@
 class ImportController < ApplicationController
   require_relative "genes_controller"
   require_relative "genotypes_controller"
+
+  # GET import/from_file
   def from_file
     path_genes = Rails.root.join("data", "genes.json")
     path_genos = Rails.root.join("data", "genos.json")
@@ -41,6 +43,8 @@ class ImportController < ApplicationController
     end
     @logfile.close
   end
+
+  private
 
   def save_genotype(geno_hash, gene)
     geno = gene.genotypes.new(geno_hash)

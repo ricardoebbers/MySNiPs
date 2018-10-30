@@ -37,24 +37,6 @@ class GenesController < ApplicationController
     end
   end
 
-  # GET /genes/import
-  def import
-    path = Rails.root.join("data", "genes.json")
-    file = File.read(path)
-    hash = JSON.parse(file)
-    hash.each do |g|
-      @gene = Gene.new(g)
-      if @gene.valid?
-        @gene.save
-      else
-        puts @gene.inspect
-        puts @gene.errors.messages
-      end
-    end
-
-    GenotypesController.new.import_from_file
-  end
-
   # PATCH/PUT /genes/1
   # PATCH/PUT /genes/1.json
   def update
