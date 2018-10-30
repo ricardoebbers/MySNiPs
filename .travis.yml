@@ -1,26 +1,19 @@
 language: ruby
 rvm:
-  - 2.5.1
-
+- 2.5.1
 before_install:
-  - cd MySNiPs
-
+- cd MySNiPs
 cache:
 - bundler
-
 before_script:
-  - bundle exec rake db:create
-  - bundle exec rake db:schema:load
-  - bundle exec rake db:migrate
-  - bundle exec rake assets:precompile
-
-#before_deploy:
-#  - cd ./MySNiPs
-
+- bundle exec rake db:create
+- bundle exec rake db:schema:load
+- bundle exec rake db:migrate
+- bundle exec rake assets:precompile
 deploy:
   provider: heroku
   api_key:
-    secure: QwOenhNzGWNnaIO7Va857lHYGRCPeSfG64LsS6JlppXpkOYOjTVdz26AhmepsJL2g9eYfvdgegX1AHeJY9LncaI4W/keooSIk77IEuW9LM68hhIR9swPj2gzNw4NXvHx1ax+bmcXDIMjTC5tn7CuwZ4lCeQLyPRH2/oyPngKm9SNtCd9CG4xUhJguY8rXoD5KzBsNGN+y5KsxdqaWcHxEyPX/DuSk3sWR9SIhPFPkRnPnNap0Vc2pxUXvrjdeLG/U6QfsNYW8tns+716uwhqbkP3rgQJK+L5WW/Aw+141ZeVyNvjdiH62j5aDx8dMP9WOQGZgufzZGd9MIWtNz4k5bHeThGCVJ4NRfPWq89U0TtwFcZjUla9bAmBjgMMwD162wKfP4gOshwpBDyKJ7FclAdxRFYN+UyRbV6YWrkEwWuMSB0r5VOtCBthE0s47GPURKSjnX95A2IcOTmIM+LJ74eReTfLs6tRwpcFli6XDdjdDMiUk0E5NdniFgW+j6tJNozvq03GUx2PiHNzDOdU7oqmZakFEM5RkMvrV1QX+acf7XLzJayg1zc9cu9ZhB0RytOJuYwgSqXbxbdBBpdif4NGAH8L59EoObxI2NqQd7OqeZVm35sCV2PqfCVHZpQC5t/Zp7M57mVCLrdzLRezZs4oeVaBFozjXDY3gWmJkKg=
+    secure: LQBOEbLFVBQSrEsIGFMlJqeu9Zc0M4UvgfW5Bu0Y5muvPmghmpyCcZz8TMTPxQad+v4afDCHizQlMElaRSsdkCvJzCM97G8wwodjI1hvP14hsh7oYPDC3tnk0Fg+EtAtKtgmar7HHCKHE1oqaVMr4k6HzIUw0lEb6t2xZSyEDFunBvxsM4lJscbksG6c5CCdlAeWuSK4yB5zXPJPo4eaC7XzaKjA1gidryJ9mtw21Zuuj/HdetEiDXUVP0Ig+Ggdo1Pn+yzKL9ppH78WuxMd5xbIF7qHJBaL01DtyXsA+4/BUD/5q/cabMw/gQW6g7lCXMgUFOALtCJGNUbLDSToy/sQUE/k2FzWlMTk0kwCxYG0D30XHOKOfs1HqVXs1feZ5TEpuxSdkZZS0rT9fRuyujjcMrdkhNqzJ45bbjtog3s/9WaQGBaCKSwi8A2ybXl5ZyyGyo8ITwCCahs5STR+uUbsHKVThVlRrCdcaWj6NN9SZfgm8C5RqQC8vIw9RznD9vlpgVnZReN/hoGqMGq5sUnf0Y9UPz35/bPLula88fmuVaIDbPFLd5A6SAmNlocKpynuO+nWtyjT8KAh81OurGt8l23eZ7oDLrE/7rToMYyiPOftFQuzXYtMhdsDA3PvHl6206TKUzakribRIPDULUg7uz4BGoMZHPzmXUBB4k0=
   app: mysnips
   on:
     repo: ricardoebbers/MySNiPs
