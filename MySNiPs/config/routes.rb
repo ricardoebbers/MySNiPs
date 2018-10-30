@@ -4,8 +4,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   constraints(:ip => /127.0.0.1/) do
     get 'pages/secret'
-    get 'import/genes' => 'genes#import'
-    get 'import/genotypes' => 'genotypes#import'
+    get 'import/from_file' => 'import#from_file'
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # log in page with form:
