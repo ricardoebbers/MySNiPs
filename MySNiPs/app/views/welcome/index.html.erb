@@ -13,7 +13,7 @@
   <div class="container-fluid">
 
     <!-- Início navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-info fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-info">
       <a class="navbar-brand" href="#">MySNiPs</a>
 
       <!-- Botão navbar responsivo -->
@@ -34,6 +34,7 @@
 
     </nav>
     <!-- Fim navbar -->
+
 
     <!-- Início carousel -->
     <div id="carouselSite" class="carousel slide my-4" data-ride="carousel">
@@ -135,21 +136,19 @@
     </div>
     <!-- Fim do card -->
 
-    <div class="bg-overlay my-4" id="parceiros">
-	    <div class="text-center mt-5">
-		    <h1>Lorem ipsum dolor sit amet</h1>
-        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Curabitur luctus nisi velit. Cras ut vestibulum sapien.</h4>
-        <br><br>
-        <button type="button" class="btn btn-primary btn-lg">Lorem Ipsum</button>
+    <div class="bg-overlay-parceiros-genomika my-4" id="parceiros">
+	    <div class="text-center">
+		    <h1>Genomika</h1>
+        <h4>A Genomika Diagnóstico é uma startup com dois anos de existência, com sede no polo médico do Recife. O laboratório realiza testes inovadores de sequenciamento genético no Brasil utilizando tecnologia de segunda geração.</h4>
+        <a class="btn btn-info mt-4" href="https://www.genomika.com.br/" target="_blank">Conheça a Genomika</a>
 	    </div>
     </div>
 
     <div class="bg-overlay my-4" id="sobre">
 	    <div class="text-center mt-5">
-		    <h1>Lorem ipsum dolor sit amet</h1>
-        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Curabitur luctus nisi velit. Cras ut vestibulum sapien.</h4>
-        <br><br>
-        <button type="button" class="btn btn-primary btn-lg">Lorem Ipsum</button>
+		    <h1>MySNiPs</h1>
+        <h4>O MySNiPs é um SaaS que integra mapamentos genéticos com bases de dados públicas e possibilita insights baseados no DNA dos usuários.</h4>
+        <%= link_to 'Acesse nosso relatório', login_path,class: 'btn btn-info mt-4' %>
 	    </div>
     </div>
 
