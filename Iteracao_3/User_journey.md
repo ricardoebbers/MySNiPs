@@ -2,7 +2,7 @@
 
 ## Persona
 ### Infos gerais
-Nome: Emilia
+Nome: Emilia  
 Emilia é arquiteta tem 32 anos, casada, mora em Boa Viagem e tem uma filha de um ano e meio.  
 Ela tem uma mente inquisitiva e cresceu ouvindo o ditado 'a curiosidade matou o gato, menina!', mas isso não impediu a Emilia de buscar aprender coisas novas sempre.  
 Emilia foi diagnosticada há 5 anos com a doença celíaca e desde então busca conhecer mais sobre si própria e seu DNA.  
