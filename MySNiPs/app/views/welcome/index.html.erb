@@ -10,7 +10,7 @@
   </head>
   <body>
 
-  <div class="container">
+  <div class="mw-100">
 
     <!-- Início navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-info fixed-top">
@@ -29,6 +29,10 @@
           <li class="nav-item"><a class="nav-link" href="#vantagens">Vantagens</a></li>
           <li class="nav-item"><a class="nav-link" href="#parceiros">Parceiros</a></li>
           <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <% if current_user %>
+          <% else %>
+          <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+          <% end %>
         </ul>
       </div>
 
@@ -60,7 +64,7 @@
         <div class="card border-0">
           <i class="fas fa-heartbeat fa-5x mx-auto"></i>
           <div class="card-body text-center">
-            <h4 class="cad-title">Predisposição a doenças</h4>
+            <h4 class="cad-title">Predisposição à doenças</h4>
           </div>
         </div>
       
@@ -88,7 +92,7 @@
         <div class="card border-0">
           <i class="fas fa-capsules fa-5x mx-auto"></i>
           <div class="card-body text-center">
-            <h4 class="cad-title">Resistência a medicações</h4>
+            <h4 class="cad-title">Resistência à medicações</h4>
           </div>
         </div>
 
