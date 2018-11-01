@@ -1,0 +1,53 @@
+Ideias para HUs
+    -- Sistema de FAQ;
+    -- Política de manutenção de dados;
+    -- Ser mais descritivo quanto aos objetos que serão exibidos na tela;
+    -- Fazer entrevistas com pessoas conhecidas para escrever os cards de HU;
+    -- ajustar tema da HU relatorio responsivo -> relatório acessível pelo smartphone;
+
+-- Conteudo do termos de uso
+
+-- Persona do analista
+    mapear HU do
+    enviar dados do paciente;
+    visualizar acompanhamento do processamento do mysnips;
+    visualizar login e senha dos pacientes;
+    visualizar um relatorio de pacientes fechados no mes;
+
+
+Landing page
+    -- Alterar fontes
+    -- Melhorar textos
+
+    Retirar "Sobre"
+    Retirar "Parceiros" do menu
+
+    Inserir botão para logar no topo da landing page
+    Inserir botão para visualizar relatório exemplo
+
+    Design:
+    Background full, mas deixar claro que a sessão mudou
+    Retirar margens entre sessões
+    Depoimentos: Relato cinza claro
+    Vantagens: fundo branco, usar adobe cooler*, ver cores complementares ou 'cores proximas', fazer um gradiente de azuis
+
+
+Fluxo de login
+    Clica em login > loga > tela de relatorio
+    Clica em logout > tela inicial
+
+Termos de uso
+    Concorrente: Mendelics
+    
+para próxima reunião:
+
+Revisar HUs -> tornar mais específicas
+Testes -> BDD
+    - fluxo de login
+    - verificar se apenas o usuário consegue acessar seu próprio relatório
+* Estudar testlink
+Estrutura dos cards do relatorio
+Esqueleto do relatório
+Tela de login
+Documentação da API
+Backend do relatório feito
