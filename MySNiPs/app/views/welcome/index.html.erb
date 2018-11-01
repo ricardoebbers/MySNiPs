@@ -10,7 +10,7 @@
   </head>
   <body>
 
-  <div class="container-fluid">
+  <div class="container">
 
     <!-- Início navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-info fixed-top">
@@ -35,65 +35,32 @@
     </nav>
     <!-- Fim navbar -->
 
-    <!-- Início carousel -->
-    <div id="carouselSite" class="carousel slide my-4" data-ride="carousel">
-
-        <!-- Indicadores carousel -->
-        <ol class="carousel-indicators">
-          <li data-target="#carouselSite" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselSite" data-slide-to="1"></li>
-        </ol>
-
-      <!-- Corpo carousel -->
-      <div class="carousel-inner" id="inicio">
-
-        <!-- Celula carousel -->
-        <div class="carousel-item active">
-          <img class="d-block img-fluid" src="http://via.placeholder.com/1920x700" alt="Primeiro Slide">
-          <div class="carousel-caption d-none d-lg-block">
-            <h4>Primeiro Slide</h4>
-            <p>Conteudo do primeiro Slide</p>
-          </div>
-        </div>
-
-        <!-- Celula carousel -->
-        <div class="carousel-item">
-          <img class="d-block img-fluid" src="http://via.placeholder.com/1920x700" alt="Segundo Slide">
-          <div class="carousel-caption d-none d-lg-block">
-            <h4>Segundo Slide</h4>
-            <p>Conteudo do segundo Slide</p>
-          </div>
-        </div>
-
-        <!-- Carousel botões -->
-        <a class="carousel-control-prev" href="#carouselSite" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselSite" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-
-      </div>
-      <!-- Fim corpo carousel -->
-
+    <!-- Início do cabeçalho -->
+   <div class="bg-overlay-inicio my-4" id="inicio">
+	    <div class="text-center mt-5">
+		    <h1>MySNiPs</h1>
+        <h4>Um relatório sobre seu DNA como você nunca viu.</h4>
+	    </div>
     </div>
-    <!-- Fim carousel -->
+    <!-- Fim do cabeçalho -->
+
+    <!-- Inicio cards div -->
+
+    <div id="vantagens">
+    <h1 class="text-center mb-5">Vantagens</h1>
 
     <!-- Inicio cards -->
-    <div class="row" id="vantagens">
+    <div class="row">
+    
 
       <!-- Espaço card -->
-      <div class="col-sm-6 col-md-4 mb-4">
+      <div class="col-sm-3 col-md-3 mb-3">
 
         <!-- Corpo card -->
-        <div class="card">
-          <img class="card-img-top" src="http://via.placeholder.com/286x160" alt="Card image cap">
+        <div class="card border-0">
+          <i class="fas fa-heartbeat fa-5x mx-auto"></i>
           <div class="card-body text-center">
-            <h4 class="cad-title">Título card 1</h4>
-            <p class="card-text">Um pouco de texto para o card</p>
-            <a href="#" class="card-link btn btn-info">Um link</a>
+            <h4 class="cad-title">Predisposição a doenças</h4>
           </div>
         </div>
       
@@ -101,55 +68,65 @@
       <!-- Fim do espaço -->
 
       <!-- Espaço card -->
-      <div class="col-sm-6 col-md-4 mb-4">
+      <div class="col-sm-3 col-md-3 mb-3">
 
       <!-- Corpo card -->
-      <div class="card">
-        <img class="card-img-top" src="http://via.placeholder.com/286x160" alt="Card image cap">
-        <div class="card-body text-center">
-          <h4 class="cad-title">Título card 2</h4>
-          <p class="card-text">Um pouco de texto para o card</p>
-          <a href="#" class="card-link btn btn-info">Um link</a>
+        <div class="card border-0">
+          <i class="fas fa-dna fa-5x mx-auto"></i>
+          <div class="card-body text-center">
+            <h4 class="cad-title">Entender Sistema Hereditário</h4>
+          </div>
         </div>
-      </div>
 
       </div>
       <!-- Fim do espaço -->
 
       <!-- Espaço card -->
-      <div class="col-sm-12 col-md-4 mb-4">
+      <div class="col-sm-3 col-md-3 mb-3">
 
       <!-- Corpo card -->
-      <div class="card">
-        <img class="card-img-top" src="http://via.placeholder.com/286x160" alt="Card image cap">
-        <div class="card-body text-center">
-          <h4 class="cad-title">Título card 3</h4>
-          <p class="card-text">Um pouco de texto para o card</p>
-          <a href="#" class="card-link btn btn-info">Um link</a>
+        <div class="card border-0">
+          <i class="fas fa-capsules fa-5x mx-auto"></i>
+          <div class="card-body text-center">
+            <h4 class="cad-title">Resistência a medicações</h4>
+          </div>
         </div>
+
       </div>
+      <!-- Fim do espaço -->
+
+      <!-- Espaço card -->
+      <div class="col-sm-3 col-md-3 mb-3">
+
+      <!-- Corpo card -->
+        <div class="card border-0">
+          <i class="fas fa-fingerprint fa-5x mx-auto"></i>
+          <div class="card-body text-center">
+            <h4 class="cad-title">Características de um indivíduo</h4>
+          </div>
+        </div>
 
       </div>
       <!-- Fim do espaço -->
 
     </div>
     <!-- Fim do card -->
+    </div>
+    <!-- Fim do card div -->
 
-    <div class="bg-overlay my-4" id="parceiros">
-	    <div class="text-center mt-5">
-		    <h1>Lorem ipsum dolor sit amet</h1>
-        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Curabitur luctus nisi velit. Cras ut vestibulum sapien.</h4>
-        <br><br>
-        <button type="button" class="btn btn-primary btn-lg">Lorem Ipsum</button>
+    <div class="bg-overlay-parceiros-genomika my-4" id="parceiros">
+	    <div class="text-center">
+		    <h1>Genomika</h1>
+        <h4>A Genomika Diagnóstico é uma startup com dois anos de existência, com sede no polo médico do Recife. O laboratório realiza testes inovadores de sequenciamento genético no Brasil utilizando tecnologia de segunda geração.</h4>
+        <a class="btn btn-info mt-4" href="https://www.genomika.com.br/" target="_blank">Conheça a Genomika</a>
 	    </div>
     </div>
 
-    <div class="bg-overlay my-4" id="sobre">
+    <div class="bg-overlay-sobre my-4" id="sobre">
 	    <div class="text-center mt-5">
-		    <h1>Lorem ipsum dolor sit amet</h1>
-        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Curabitur luctus nisi velit. Cras ut vestibulum sapien.</h4>
-        <br><br>
-        <button type="button" class="btn btn-primary btn-lg">Lorem Ipsum</button>
+		    <h1>MySNiPs</h1>
+        <h4>O MySNiPs é um SaaS que integra mapamentos genéticos com bases de dados públicas e possibilita insights baseados no DNA dos usuários.</h4>
+        <%= link_to 'Acesse nosso relatório', login_path,class: 'btn btn-info mt-4' %>
 	    </div>
     </div>
 
