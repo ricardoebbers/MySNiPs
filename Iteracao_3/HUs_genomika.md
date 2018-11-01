@@ -8,6 +8,63 @@
 **Para** entender os benefícios de fazer uma análise genética  
 **Gostaria** de ver uma página simples de ler e que contenha recursos visuais explicando a que tipos de informação terei acesso
 
+#### 1.01.01. Barra de navegação
+**Como** usuário final  
+**Quando** acessar o site  
+**Gostaria** de ter uma barra de navegação no topo com a logo MySNiPs e links para as seções  
+**Para** ir rapidamente à parte do site que me interessa
+
+##### 1.01.01.01. Link no logotipo
+**Dado** que a barra de navegação está visível  
+**Quando** clicar no logotipo MySNiPs  
+**Então** devo ser redirecionado para a página principal
+
+##### 1.01.01.02. Links da barra de navegação
+**Dado** que estou na página inicial  
+**Quando** clicar em um dos atalhos na barra de navegação (inicio, relatos ou vantagens)  
+**Então** meu navegador deve rolar para a seção correspondente
+
+##### 1.01.01.03. Link para tela de login
+**Dado** que estou na página inicial  
+**Quando** clicar no link "login"  
+**Então** devo ser redirecionado para a página de login
+
+##### 1.01.01.04. Link para relatório de exemplo
+**Dado** que estou na página inicial  
+**Quando** clicar no link "amostra"  
+**Então** devo ser redirecionado para o relatório de exemplo
+
+#### 1.01.02. Links a partir do banner
+**Como** usuário final  
+**Quando** carregar a página principal  
+**Para** ter facilidade em navegação  
+**Gostaria** de ver imediatamente o botão para fazer login  
+**E** o botão para testar o relatório de exemplo
+
+##### 1.01.02.01. Botão no banner para a tela de login
+**Dado** que estou na página inicial  
+**E** existe um botão "login" no banner  
+**Quando** eu clicar neste botão  
+**Então** devo ser direcionado para a página de login
+
+##### 1.01.02.02. Botão no banner para a tela de relatório exemplo
+**Dado** que estou na página inicial  
+**E** existe um botão "amostra" no banner  
+**Quando** eu clicar neste botão  
+**Então** devo ser direcionado para o relatório de exemplo
+
+#### 1.01.03. Depoimentos de usuários
+**Como** usuário final
+**Quando** acessar a página principal
+**Gostaria** de ver depoimentos de outros usuários
+**Para** validar a escolha pela aquisição do serviço
+
+#### 1.01.04. Resumo dos benefícios
+**Como** usuário final
+**Quando** acessar o site
+**Gostaria** de ver os benefícios associados ao serviço resumidos em tópicos
+**Para** entender rapidamente os ganhos que terei ao fazer a aquisição
+
 ### 1.02. Disponibilização de relatórios-exemplos
 **Como** usuário final  
 **Para** ter ainda mais certeza do que receberei ao contratar o serviço  
