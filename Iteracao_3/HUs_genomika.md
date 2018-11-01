@@ -54,15 +54,15 @@
 **Então** devo ser direcionado para o relatório de exemplo
 
 #### 1.01.03. Depoimentos de usuários
-**Como** usuário final
-**Quando** acessar a página principal
-**Gostaria** de ver depoimentos de outros usuários
+**Como** usuário final  
+**Quando** acessar a página principal  
+**Gostaria** de ver depoimentos de outros usuários  
 **Para** validar a escolha pela aquisição do serviço
 
 #### 1.01.04. Resumo dos benefícios
-**Como** usuário final
-**Quando** acessar o site
-**Gostaria** de ver os benefícios associados ao serviço resumidos em tópicos
+**Como** usuário final  
+**Quando** acessar o site  
+**Gostaria** de ver os benefícios associados ao serviço resumidos em tópicos  
 **Para** entender rapidamente os ganhos que terei ao fazer a aquisição
 
 ### 1.02. Disponibilização de relatórios-exemplos
