@@ -1,21 +1,22 @@
 class CardsController < ApplicationController
   def make_report
-    @userid = params[:userid] if params.key? :userid
+    @useridentity = params[:identification] if params.key? :identification
 
     # REMOVE
-    @userid = "0010000001"
+    @useridentity = "0010000001"
     # REMOVE
 
-    return if @userid.nil?
+    return if @useridentity.nil?
+
+    user = User.find_by(identifier: @useridentity)
+    return if user.nil?
 
     @cards_list = []
-    read_file Rails.root.join("data", "genomas", @userid + ".gnm")
+    read_file Rails.root.join("data", "genomas", @useridentity + ".gnm")
+    insert_in_db user[:id]
   end
 
   def read_file(path)
-    # REMOVE
-    #i = 0
-    # REMOVE
     File.open(path, "r").each do |line|
       snp = build_snp line.split("\t")
       next if snp.nil?
@@ -27,14 +28,7 @@ class CardsController < ApplicationController
       next if geno.nil?
 
       @cards_list << geno[:id]
-
-      # REMOVE
-      #i += 1
-      #break if i == 20
-      # REMOVE
     end
-
-    insert_in_db
   end
 
   def build_snp(data)
@@ -75,11 +69,12 @@ class CardsController < ApplicationController
     end
   end
 
-  def insert_in_db
-    log = File.open(Rails.root.join("data", "genomas", @userid + " - log.txt"), "w")
-    @cards_list.each do |card|
-      log.puts card
+  def insert_in_db(user_id)
+    @cards_list.each do |geno_id|
+      card = Card.new(user_id: user_id, genotype_id: geno_id)
+      return card.save if card.valid?
+
+      puts card.errors.messages
     end
-    log.close
   end
 end
