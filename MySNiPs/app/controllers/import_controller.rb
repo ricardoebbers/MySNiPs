@@ -2,10 +2,13 @@ class ImportController < ApplicationController
   require_relative "genes_controller"
   require_relative "genotypes_controller"
 
-  # GET import/from_file
+  # GET import?from=folder
   def from_file
-    path_genes = Rails.root.join("data", "genes.json")
-    path_genos = Rails.root.join("data", "genos.json")
+    from = "snpedia"
+    from = params[:from] if params.key? :from
+
+    path_genes = Rails.root.join("data", from, "genes.json")
+    path_genos = Rails.root.join("data", from, "genos.json")
 
     @hash_genes = JSON.parse(File.read(path_genes))
     @hash_genos = JSON.parse(File.read(path_genos))
