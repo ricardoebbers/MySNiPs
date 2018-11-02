@@ -104,6 +104,7 @@
 
 # 2. Relatório
 
+
 ## 2.01. Geração do relatório
 **Como** usuário final  
 **Dado** que eu já fiz a coleta de material genético previamente  
