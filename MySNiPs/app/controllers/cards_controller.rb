@@ -1,18 +1,38 @@
 class CardsController < ApplicationController
   def make_report
-    userid = params[:userid] if params.key? :userid
-    return if userid.nil?
+    @userid = params[:userid] if params.key? :userid
+
+    # REMOVE
+    @userid = "0010000001"
+    # REMOVE
+
+    return if @userid.nil?
 
     @cards_hash = {}
-    read_file Rails.root.join("data", "genomas", userid.to_s + ".gnm")
+    read_file Rails.root.join("data", "genomas", @userid + ".gnm")
   end
 
   def read_file(path)
+    # REMOVE
+    i = 0
+    # REMOVE
     File.open(path, "r").each do |line|
       snp = build_snp line.split("\t")
       next if snp.nil?
 
+      gene = search_for_gene snp[:title], snp[:chromosome], snp[:position]
+      next if gene.nil?
+
+      puts gene.inspect
+
+      geno = search_for_genotype snp[:allele1], snp[:allele2], gene
+
       # TO-DO
+
+      # REMOVE
+      i += 1
+      break if i == 100
+      # REMOVE
     end
   end
 
@@ -20,14 +40,30 @@ class CardsController < ApplicationController
     return nil if data.count != 4
 
     snp = {}
-    snp[:id] = data[0]
+    snp[:title] = data[0].capitalize
     snp[:chromosome] = data [1]
-    snp[:allele1] = data[2][0]
-    snp[:allele2] = data[2][1]
+    snp[:position] = data[2]
+    snp[:allele1] = data[3][0]
+    snp[:allele2] = data[3][1]
     snp
   end
 
-  def insert_db
+  def search_for_gene(title, chromo, posit)
+    gene = Gene.find_by(title: title)
+    return gene unless gene.nil?
+
+    Gene.find_by(chromosome: chromo, position: posit)
+  end
+
+  def search_for_genotype(gene, allele1, allele2)
     # TO-DO
+  end
+
+  def insert_in_db
+    log = File.open(Rails.root.join("data", "genomas", @userid + " - log.txt"), "w")
+    @cards_hash.each do |card|
+      log.puts card.inspect
+    end
+    log.close
   end
 end

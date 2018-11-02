@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   constraints(:ip => /127.0.0.1/) do
     get 'pages/secret'
     get '/import' => 'import#from_file'
+    get '/cards' => 'cards#make_report'
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
