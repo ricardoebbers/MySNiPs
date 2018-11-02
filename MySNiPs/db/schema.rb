@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2018_10_31_235840) do
     t.string "title", limit: 14, null: false
     t.string "rsid", limit: 11
     t.string "iid", limit: 11
-    t.integer "chromosome", limit: 2
+    t.string "chromosome", limit: 2
     t.string "position", limit: 10
     t.string "summary", limit: 180
     t.string "name", limit: 16
