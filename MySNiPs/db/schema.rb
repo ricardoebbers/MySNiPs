@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_02_035348) do
+ActiveRecord::Schema.define(version: 2018_11_02_154551) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2018_11_02_035348) do
   create_table "cards", force: :cascade do |t|
     t.integer "user_id"
     t.integer "genotype_id"
+    t.index ["user_id", "genotype_id"], name: "index_cards_on_user_id_and_genotype_id", unique: true
   end
 
   create_table "genes", force: :cascade do |t|
