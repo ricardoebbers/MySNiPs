@@ -11,9 +11,9 @@ class CardsController < ApplicationController
     user = User.find_by(identifier: @useridentity)
     return if user.nil?
 
-    @cards_list = []
+    @user_id = user[:id]
+
     read_file Rails.root.join("data", "genomas", @useridentity + ".gnm")
-    insert_in_db user[:id]
   end
 
   def read_file(path)
@@ -27,7 +27,7 @@ class CardsController < ApplicationController
       geno = search_for_genotype snp[:allele1], snp[:allele2], gene
       next if geno.nil?
 
-      @cards_list << geno[:id]
+      insert_in_db geno[:id]
     end
   end
 
@@ -69,12 +69,13 @@ class CardsController < ApplicationController
     end
   end
 
-  def insert_in_db(user_id)
-    @cards_list.each do |geno_id|
-      card = Card.new(user_id: user_id, genotype_id: geno_id)
-      return card.save if card.valid?
+  def insert_in_db(geno_id)
+    card = Card.new(user_id: @user_id, genotype_id: geno_id)
+    puts card.inspect
 
-      puts card.errors.messages
-    end
+    return card.save if card.valid?
+
+    puts "ERROR"
+    puts card.errors.messages
   end
 end
