@@ -40,23 +40,23 @@ class ImportController < ApplicationController
       if last_gene_title == gene_title && !gene.nil?
         gene.save unless gene_saved
         save_genotype(go, gene)
+        next
+      end
+
+      gene = Gene.find_by(title: gene_title)
+      gene_saved = !gene.nil?
+      gene = read_gene(gene_title) unless gene_saved
+
+      if gene.nil?
+        @logfile.puts go.inspect
+        @logfile.puts "Parent gene was not found, Genotype was not saved"
+      elsif save_genotype(go, gene)
+        gene.save
+        gene_saved = true
       else
-        gene = Gene.find_by(title: gene_title)
-
-        gene_saved = !gene.nil?
-        gene = read_gene(gene_title) unless gene_saved
-
-        if gene.nil?
-          @logfile.puts go.inspect
-          @logfile.puts "Parent gene was not found, Genotype was not saved"
-        elsif save_genotype(go, gene)
-          gene.save
-          gene_saved = true
-        else
-          gene_saved = false
-          @logfile.puts gene.inspect
-          @logfile.puts "Gene not saved because Genotype was invalid!"
-        end
+        gene_saved = false
+        @logfile.puts gene.inspect
+        @logfile.puts "Gene not saved because Genotype was invalid!"
       end
 
       last_gene_title = gene_title
