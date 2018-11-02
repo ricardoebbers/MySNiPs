@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_02_170558) do
+ActiveRecord::Schema.define(version: 2018_11_02_174928) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2018_11_02_170558) do
     t.string "iid", limit: 11
     t.string "chromosome", limit: 2
     t.string "position", limit: 10
-    t.text "summary"
+    t.string "summary", limit: 180
     t.string "name", limit: 16
     t.boolean "orientation"
     t.boolean "stabilized"
