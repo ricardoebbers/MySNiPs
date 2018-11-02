@@ -15,18 +15,28 @@ class CardsController < ApplicationController
 
     @flips_hash = {"A" => "T", "T" => "A", "C" => "G", "G" => "T"}
 
-    read_file Rails.root.join("data", "genomas", @useridentity + ".gnm")
+    file = File.open(Rails.root.join("data", "genomas", @useridentity + ".gnm"), "r")
+    snps = read_to_hash file
+    file.close
+
+    compare_database_with snps
   end
 
-  def read_file(path)
-    File.open(path, "r").each do |line|
+  def read_to_hash(file)
+    hash_snps = {}
+    file.each do |line|
       snp = build_snp line.split("\t")
-      next if snp.nil?
+      hash_snps[snp[:title].capitalize] = snp
+    end
+    hash_snps
+  end
 
-      gene = search_for_gene snp[:title]
-      next if gene.nil?
+  def compare_database_with snps
+    Gene.find_each do |gene|
+      match = snps[gene[:title]]
+      next if match.nil?
 
-      geno = search_for_genotype snp[:allele1], snp[:allele2], gene
+      geno = search_for_genotype match[:allele1], match[:allele2], gene
       next if geno.nil?
 
       insert_in_db geno[:id]
@@ -43,13 +53,6 @@ class CardsController < ApplicationController
     snp[:allele1] = data[3][0]
     snp[:allele2] = data[3][1]
     snp
-  end
-
-  def search_for_gene(title)
-    gene = Gene.find_by(title: title)
-    return gene unless gene.nil?
-
-    # Gene.find_by(chromosome: chromo, position: posit)
   end
 
   def search_for_genotype(allele1, allele2, gene)
