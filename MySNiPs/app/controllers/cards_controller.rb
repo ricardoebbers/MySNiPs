@@ -13,6 +13,8 @@ class CardsController < ApplicationController
 
     @user_id = user[:id]
 
+    @flips_hash = {"A" => "T", "T" => "A", "C" => "G", "G" => "T"}
+
     read_file Rails.root.join("data", "genomas", @useridentity + ".gnm")
   end
 
@@ -61,12 +63,7 @@ class CardsController < ApplicationController
   end
 
   def flip(allele)
-    case allele
-    when "A" then "T"
-    when "T" then "A"
-    when "C" then "G"
-    when "G" then "C"
-    end
+    @flips_hash[allele] or allele
   end
 
   def insert_in_db(geno_id)
