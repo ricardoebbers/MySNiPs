@@ -14,25 +14,30 @@
 **Gostaria** de ter uma barra de navegação no topo com a logo MySNiPs e links para as seções  
 **Para** ir rapidamente à parte do site que me interessa
 
-##### 1.01.01.01. Link no logotipo
+* __1.01.01.01. Link no logotipo__  
 **Dado** que a barra de navegação está visível  
 **Quando** clicar no logotipo MySNiPs  
 **Então** devo ser redirecionado para a página principal
 
-##### 1.01.01.02. Links da barra de navegação
+* __1.01.01.02. Links da barra de navegação__  
 **Dado** que estou na página inicial  
 **Quando** clicar em um dos atalhos na barra de navegação (inicio, relatos ou vantagens)  
 **Então** meu navegador deve rolar para a seção correspondente
 
-##### 1.01.01.03. Link para tela de login
+* __1.01.01.03. Link para tela de login__  
 **Dado** que estou na página inicial  
 **Quando** clicar no link "login"  
 **Então** devo ser redirecionado para a página de login
 
-##### 1.01.01.04. Link para relatório de exemplo
+* __1.01.01.04. Link para relatório de exemplo__  
 **Dado** que estou na página inicial  
 **Quando** clicar no link "amostra"  
 **Então** devo ser redirecionado para o relatório de exemplo
+
+* __1.01.01.05. Navbar persistente__  
+**Dado** que estou na página inicial  
+**Quando** rolar até o fim da página  
+**Então** a navbar deve permanecer no topo do navegador
 
 ### 1.01.02. Links a partir do banner
 **Como** usuário final  
@@ -41,13 +46,13 @@
 **Gostaria** de ver imediatamente o botão para fazer login  
 **E** o botão para testar o relatório de exemplo
 
-##### 1.01.02.01. Botão no banner para a tela de login
+* __1.01.02.01. Botão no banner para a tela de login__  
 **Dado** que estou na página inicial  
 **E** existe um botão "login" no banner  
 **Quando** eu clicar neste botão  
 **Então** devo ser direcionado para a página de login
 
-##### 1.01.02.02. Botão no banner para a tela de relatório exemplo
+* __1.01.02.02. Botão no banner para a tela de relatório exemplo__  
 **Dado** que estou na página inicial  
 **E** existe um botão "amostra" no banner  
 **Quando** eu clicar neste botão  
@@ -59,18 +64,46 @@
 **Gostaria** de ver depoimentos de outros usuários  
 **Para** validar a escolha pela aquisição do serviço
 
+* __1.01.03.01. Depoimentos de usuários__  
+**Dado** que estou na página inicial  
+**Quando** a página terminar de carregar  
+**Então** devo ver uma seção contendo depoimentos de outros usuários
+
 ### 1.01.04. Resumo dos benefícios
 **Como** usuário final  
-**Quando** acessar o site  
+**Quando** acessar a página principal  
 **Gostaria** de ver os benefícios associados ao serviço resumidos em tópicos  
 **Para** entender rapidamente os ganhos que terei ao fazer a aquisição
+
+* __1.01.04.01. Resumo dos benefícios__  
+**Dado** que estou na página inicial  
+**Quando** a página terminar de carregar  
+**Então** devo ver cards contendo uma imagem e uma frase cada contendo os resumos dos benefícios
+
+### 1.01.05. Conteúdo do footer
+**Como** usuário final  
+**Quando** rolar até o final da página principal  
+**Gostaria** de ver os dados de contato  
+**Para** poder entrar em contato com os desenvolvedores quando necessário
+
+* __1.01.05.01. Conteúdo do footer__  
+**Dado** que estou na página inicial  
+**Quando** rolar a página até o final  
+**Então** devo ver uma div contendo informações de contato
 
 ## 1.02. Disponibilização de relatórios-exemplos
 **Como** usuário final  
 **Para** ter ainda mais certeza do que receberei ao contratar o serviço  
 **Gostaria** de ter acesso a relatórios fictícios de exemplo
 
+* __1.02.01. Relatório-exemplo acessível sem login__  
+**Dado** que estou na página inicial  
+**E** não estou logado  
+**Quando** clicar em um dos links para o relatório-exemplo  
+**Então** devo ser redirecionado para a página do relatório-exemplo
+
 # 2. Relatório
+
 
 ## 2.01. Geração do relatório
 **Como** usuário final  
