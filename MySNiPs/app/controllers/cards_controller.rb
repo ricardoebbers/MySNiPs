@@ -21,7 +21,7 @@ class CardsController < ApplicationController
       snp = build_snp line.split("\t")
       next if snp.nil?
 
-      gene = search_for_gene snp[:title], snp[:chromosome], snp[:position]
+      gene = search_for_gene snp[:title]
       next if gene.nil?
 
       geno = search_for_genotype snp[:allele1], snp[:allele2], gene
@@ -43,15 +43,15 @@ class CardsController < ApplicationController
     snp
   end
 
-  def search_for_gene(title, chromo, posit)
+  def search_for_gene(title)
     gene = Gene.find_by(title: title)
     return gene unless gene.nil?
 
-    Gene.find_by(chromosome: chromo, position: posit)
+    # Gene.find_by(chromosome: chromo, position: posit)
   end
 
   def search_for_genotype(allele1, allele2, gene)
-    # False is minus in SNPedia, thus there's a need to flip
+    # False is minus orientation in SNPedia, thus there's a need to flip the alleles
     if gene[:orientation] == false
       allele1 = flip allele1
       allele2 = flip allele2
