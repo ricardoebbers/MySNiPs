@@ -4,7 +4,7 @@ class GenesController < ApplicationController
   # GET /genes
   # GET /genes.json
   def index
-    @genes = Gene.all
+    @genes = Gene.page(params[:page]).per(10)
   end
 
   # GET /genes/1

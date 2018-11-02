@@ -10,16 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_28_173730) do
+ActiveRecord::Schema.define(version: 2018_11_02_154551) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cards", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "genotype_id"
+    t.index ["user_id", "genotype_id"], name: "index_cards_on_user_id_and_genotype_id", unique: true
+  end
 
   create_table "genes", force: :cascade do |t|
     t.string "title", limit: 14, null: false
     t.string "rsid", limit: 11
     t.string "iid", limit: 11
-    t.integer "chromosome", limit: 2
+    t.string "chromosome", limit: 2
     t.string "position", limit: 10
     t.string "summary", limit: 180
     t.string "name", limit: 16
@@ -52,11 +58,12 @@ ActiveRecord::Schema.define(version: 2018_10_28_173730) do
   create_table "users", force: :cascade do |t|
     t.string "identifier", null: false
     t.string "password_digest"
-    t.string "report_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["identifier"], name: "index_users_on_identifier", unique: true
   end
 
+  add_foreign_key "cards", "genotypes"
+  add_foreign_key "cards", "users"
   add_foreign_key "genotypes", "genes"
 end
