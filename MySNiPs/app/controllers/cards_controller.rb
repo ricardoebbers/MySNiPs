@@ -4,7 +4,7 @@ class CardsController < ApplicationController
   # GET /cards
   # GET /cards.json
   def index
-    @cards = Card.page(params[:page]).per(10)
+    @cards = Card.page(params[:page]).per(50)
   end
 
   # GET /cards/1

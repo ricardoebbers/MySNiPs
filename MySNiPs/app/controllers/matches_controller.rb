@@ -1,21 +1,21 @@
 class MatchesController < ApplicationController
   def make_report
-    @useridentity = params[:identification] if params.key? :identification
+    @useridentifier = params[:identifier] if params.key? :identifier
 
     # REMOVE
-    @useridentity = "0010000001"
+    @useridentifier = "0010000001"
     # REMOVE
 
-    return if @useridentity.nil?
+    return if @useridentifier.nil?
 
-    user = User.find_by(identifier: @useridentity)
+    user = User.find_by(identifier: @useridentifier)
     return if user.nil?
 
     @user_id = user[:id]
 
     @flips_hash = {"A" => "T", "T" => "A", "C" => "G", "G" => "T"}
 
-    file = File.open(Rails.root.join("data", "genomas", @useridentity + ".gnm"), "r")
+    file = File.open(Rails.root.join("data", "genomas", @useridentifier + ".gnm"), "r")
     snps = read_to_hash file
     file.close
 
