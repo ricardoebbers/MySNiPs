@@ -38,7 +38,7 @@
 **Quando** clicar no link "amostra"  
 **Então** devo ser redirecionado para o relatório de exemplo
 
-* __1.01.01.05. Navbar persistente__  
+* __1.01.01.05. Navbar fixa__  
 **Dado** que estou na página inicial  
 **Quando** rolar até o fim da página  
 **Então** a navbar deve permanecer no topo do navegador
@@ -151,7 +151,7 @@
 **Então** devo receber notificação que o login falhou  
 **E** devo permanecer em "/login"
 
-* __2.02.04. Permanece em "/login" quando login ou senha estiver em branco__  
+* __2.02.04. Permanece em "/login" quando login ou senha estiverem em branco__  
 **Dado** que estou na página de login  
 **E** não estou logado  
 **Quando** deixar o campo "login" vazio  
@@ -165,6 +165,12 @@
 **E** não estou logado  
 **Quando** tentar acessar "/relatorio"  
 **Então** devo ser redirecionado para "/login"
+
+* __2.02.06. Redireciona para "/relatorio" quando tentar acessar "/login" estando logado__  
+**Dado** que estou na página inicial  
+**E** estou logado  
+**Quando** tentar acessar "/login"  
+**Então** devo ser redirecionado para "/relatorio"
 
 ## 2.03. Aceite de termos de uso
 **Como** usuário final  
