@@ -1,10 +1,14 @@
 class UsersController < ApplicationController
     def new
-        @user = User.new
+      role = Role.find_by(:role_name => "usuario_final")
+      return if role.nil?
+      @user = role.users.new
       end
     
       def create
-        @user = User.new(user_params)
+        role = Role.find_by(:role_name => "usuario_final")
+        return if role.nil?
+        @user = role.users.new(user_params)
         
         # store all emails in lowercase to avoid duplicates and case-sensitive login errors:
         @user.identifier.downcase!
@@ -25,7 +29,7 @@ class UsersController < ApplicationController
       def user_params
         # strong parameters - whitelist of allowed fields #=> permit(:name, :email, ...)
         # that can be submitted by a form to the user model #=> require(:user)
-        params.require(:user).permit(:identifier, :password, :password_confirmation)
+        params.require(:user).permit(:identifier, :password)
       end
       
 end
