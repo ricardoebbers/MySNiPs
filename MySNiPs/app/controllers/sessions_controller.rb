@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
     
     def new
         if session[:user_id]
-            redirect_to :relatorio_index
+            redirect_to :cards
         end
     end
     
@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
             user.last_login = Time.now
             user.save
             session[:user_id] = user.id.to_s
-            redirect_to :relatorio_index, notice: 'Successfully logged in!'
+            redirect_to :cards, notice: 'Successfully logged in!'
         else
             # if email or password incorrect, re-render login page:
             flash.now.alert = "Incorrect email or password, try again."
