@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_02_174928) do
+ActiveRecord::Schema.define(version: 2018_11_03_143535) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,10 @@ ActiveRecord::Schema.define(version: 2018_11_02_174928) do
     t.string "pageid", limit: 7
     t.index ["gene_id"], name: "index_genotypes_on_gene_id"
     t.index ["title"], name: "index_genotypes_on_title", unique: true
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string "role_name"
   end
 
   create_table "users", force: :cascade do |t|
