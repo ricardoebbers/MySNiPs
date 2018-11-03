@@ -319,8 +319,46 @@
 **Para** saber como usar a API para envio dos dados genéticos  
 **Gostaria** de ter acesso a uma documentação concisa e com exemplos de uso
 
-## 3.02. Disponibilização de API
+## 3.02. Envio de genoma via API
 **Como** membro da equipe técnica do laboratório  
-**Considerando** que eu tenho uma chave de acesso  
-**Gostaria** de poder enviar via API os dados resultantes do sequenciamento genético para serem analisados e gerarem o relatório para o cliente final  
-**Para** que assim eu possa automatizar o processo internamente
+**Considerando** que eu esteja autenticado  
+**Gostaria** de poder enviar o genoma do cliente final  
+**E** indicar o identificador do cliente  
+**Para** facilitar a transmissão de dados
+
+* __3.02.01. Envio de genoma via API__  
+**Dado** que eu possuo uma chave de autenticação  
+**E** ID_LAB é um ID único de três dígitos para o laboratório  
+**E** ID_USER é um ID único de sete dígitos para o usuário  
+**E** ID_GENOMA concatena ID_LAB e ID_USER  
+**Quando** eu fizer um request POST para "/api/v1/genoma/new"  
+**E** no meu request conter ID_USER  
+**E** no meu request conter um arquivo csv bem formatado (colunas: titulo, cromossomo, posição, alelos)  
+**Então** o sistema deve guardar esse arquivo com o nome ID_GENOMA em "/data/genomas/ID_GENOMA.gnm"  
+**E** eu devo receber uma resposta indicando sucesso do processo
+
+## 3.03. Listagem de genomas já enviados
+**Como** membro da equipe técnica do laboratório  
+**Considerando** que eu esteja autenticado  
+**Gostaria** de poder visualizar quais genomas já enviados  
+**E** os status de processamento de cada um  
+**Para** saber facilmente o andamento deles
+
+* __3.03.01. Listagem de genomas__  
+**Dado** que eu possuo uma chave de autenticação  
+**Quando** eu fizer um request GET para "/api/v1/genoma"  
+**Então** devo receber uma resposta contendo todos os genomas que já enviei  
+**E** respectivos status de processamento
+
+## 3.04. Listagem de usuários e senhas
+**Como** membro da equipe técnica do laboratório  
+**Considerando** que eu esteja autenticado  
+**Gostaria** de poder visualizar os identificadores  
+**E** senhas dos usuários ativos  
+**Para** poder repassar os dados de acesso aos clientes
+
+* __3.04.01. Listagem de usuários e senhas__  
+**Dado** que eu possuo uma chave de autenticação  
+**Quando** eu fizer um request GET para "/api/v1/users"  
+**Então** devo receber uma resposta contendo todos os usuários para os genomas que já enviei  
+**E** respectivas senhas
