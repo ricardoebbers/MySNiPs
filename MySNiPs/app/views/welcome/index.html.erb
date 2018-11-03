@@ -24,14 +24,14 @@
       <!-- Itens navbar -->
       <div class="collapse navbar-collapse" id="navbarSite">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Relatos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#vantagens">Vantagens</a></li>
-          <li class="nav-item"><a class="nav-link" href="#parceiros">Parceiros</a></li>
-          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link interno" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link interno" href="#">Relatos</a></li>
+          <li class="nav-item"><a class="nav-link interno" href="#vantagens">Vantagens</a></li>
+          <li class="nav-item"><a class="nav-link interno" href="#parceiros">Parceiros</a></li>
+          <li class="nav-item"><a class="nav-link interno" href="#sobre">Sobre</a></li>
           <% if current_user %>
           <% else %>
-          <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="/login" target="_self">Login</a></li>
           <% end %>
         </ul>
       </div>
@@ -273,15 +273,19 @@
 	<script>
 		$('nav a').click(function(e){
 			e.preventDefault();
-			var id = $(this).attr('href');
-			console.log(id);
+      var id = $(this).attr('href');
+      var modo=$(this).attr('target');
+      console.log(id);
+      var classe = $(this).attr('class');
+      if (classe=='nav-link interno'){
 			var distancia_topo = $(id).offset().top;
 			var altura_menu = $("nav").innerHeight();
 
 			$('html, body').animate({
 				scrollTop : distancia_topo - altura_menu - 70
 			}, 500)
-		});
+    }
+    else{window.open(id,modo);}});
 	</script>
   </body>
 </html>
