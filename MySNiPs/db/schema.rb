@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_02_154551) do
+ActiveRecord::Schema.define(version: 2018_11_02_174928) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,11 +46,11 @@ ActiveRecord::Schema.define(version: 2018_11_02_154551) do
     t.integer "repute", limit: 2
     t.float "magnitude"
     t.string "revid", limit: 10
-    t.string "pageid", limit: 7
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "page_content"
     t.bigint "gene_id"
+    t.string "pageid", limit: 7
     t.index ["gene_id"], name: "index_genotypes_on_gene_id"
     t.index ["title"], name: "index_genotypes_on_title", unique: true
   end
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2018_11_02_154551) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "last_login"
     t.index ["identifier"], name: "index_users_on_identifier", unique: true
   end
 
