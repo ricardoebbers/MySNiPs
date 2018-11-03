@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_02_174928) do
+ActiveRecord::Schema.define(version: 2018_11_03_160710) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,14 @@ ActiveRecord::Schema.define(version: 2018_11_02_174928) do
     t.index ["title"], name: "index_genes_on_title", unique: true
   end
 
+  create_table "genomas", force: :cascade do |t|
+    t.string "status"
+    t.string "log_error"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "genotypes", force: :cascade do |t|
     t.string "title", limit: 18, null: false
     t.string "allele1", limit: 1
@@ -55,16 +63,23 @@ ActiveRecord::Schema.define(version: 2018_11_02_174928) do
     t.index ["title"], name: "index_genotypes_on_title", unique: true
   end
 
+  create_table "roles", force: :cascade do |t|
+    t.string "role_name"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "identifier", null: false
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "last_login"
+    t.integer "role_id"
     t.index ["identifier"], name: "index_users_on_identifier", unique: true
   end
 
   add_foreign_key "cards", "genotypes"
   add_foreign_key "cards", "users"
+  add_foreign_key "genomas", "users"
   add_foreign_key "genotypes", "genes"
+  add_foreign_key "users", "roles"
 end

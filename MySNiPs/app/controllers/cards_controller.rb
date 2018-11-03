@@ -4,6 +4,7 @@ class CardsController < ApplicationController
   # GET /cards
   # GET /cards.json
   def index
+    redirect_to :login unless session[:user_id]
     @cards = Card.page(params[:page]).per(50)
   end
 
