@@ -12,7 +12,6 @@ class MatchesController < ApplicationController
     return if user.nil?
 
     @user_id = user[:id]
-
     @flips_hash = {"A" => "T", "T" => "A", "C" => "G", "G" => "T"}
 
     file = File.open(Rails.root.join("data", "genomas", @useridentifier + ".gnm"), "r")
@@ -22,6 +21,8 @@ class MatchesController < ApplicationController
     compare_database_with snps
   end
 
+  # Hash format
+  # {title: {:title, :chromosome, :position, :allele1, :allele2}}
   def read_to_hash(file)
     hash_snps = {}
     file.each do |line|
@@ -31,6 +32,9 @@ class MatchesController < ApplicationController
     hash_snps
   end
 
+  # Iterates through the Genes in the database
+  # Comparing them with the snp hash
+  # Then searching for the Genotype in the database
   def compare_database_with snps
     Gene.find_each do |gene|
       match = snps[gene[:title]]
@@ -43,6 +47,7 @@ class MatchesController < ApplicationController
     end
   end
 
+  # Interprets the lines from the genome file into a simple hash
   def build_snp(data)
     return nil if data.count != 4
 
@@ -58,15 +63,11 @@ class MatchesController < ApplicationController
   def search_for_genotype(allele1, allele2, gene)
     # False is minus orientation in SNPedia, thus there's a need to flip the alleles
     if gene[:orientation] == false
-      allele1 = flip allele1
-      allele2 = flip allele2
+      allele1 = @flips_hash[allele1] or allele1
+      allele2 = @flips_hash[allele2] or allele2
     end
 
     Genotype.find_by(gene_id: gene[:id], allele1: allele1, allele2: allele2)
-  end
-
-  def flip(allele)
-    @flips_hash[allele] or allele
   end
 
   def insert_in_db(geno_id)
@@ -78,5 +79,4 @@ class MatchesController < ApplicationController
     puts "ERROR"
     puts card.errors.messages
   end
-
 end
