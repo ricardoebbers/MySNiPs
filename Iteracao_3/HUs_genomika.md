@@ -38,7 +38,7 @@
 **Quando** clicar no link "amostra"  
 **Então** devo ser redirecionado para o relatório de exemplo
 
-* __1.01.01.05. Navbar persistente__  
+* __1.01.01.05. Navbar fixa__  
 **Dado** que estou na página inicial  
 **Quando** rolar até o fim da página  
 **Então** a navbar deve permanecer no topo do navegador
@@ -151,7 +151,7 @@
 **Então** devo receber notificação que o login falhou  
 **E** devo permanecer em "/login"
 
-* __2.02.04. Permanece em "/login" quando login ou senha estiver em branco__  
+* __2.02.04. Permanece em "/login" quando login ou senha estiverem em branco__  
 **Dado** que estou na página de login  
 **E** não estou logado  
 **Quando** deixar o campo "login" vazio  
@@ -165,6 +165,12 @@
 **E** não estou logado  
 **Quando** tentar acessar "/relatorio"  
 **Então** devo ser redirecionado para "/login"
+
+* __2.02.06. Redireciona para "/relatorio" quando tentar acessar "/login" estando logado__  
+**Dado** que estou na página inicial  
+**E** estou logado  
+**Quando** tentar acessar "/login"  
+**Então** devo ser redirecionado para "/relatorio"
 
 ## 2.03. Aceite de termos de uso
 **Como** usuário final  
@@ -313,8 +319,46 @@
 **Para** saber como usar a API para envio dos dados genéticos  
 **Gostaria** de ter acesso a uma documentação concisa e com exemplos de uso
 
-## 3.02. Disponibilização de API
+## 3.02. Envio de genoma via API
 **Como** membro da equipe técnica do laboratório  
-**Considerando** que eu tenho uma chave de acesso  
-**Gostaria** de poder enviar via API os dados resultantes do sequenciamento genético para serem analisados e gerarem o relatório para o cliente final  
-**Para** que assim eu possa automatizar o processo internamente
+**Considerando** que eu esteja autenticado  
+**Gostaria** de poder enviar o genoma do cliente final  
+**E** indicar o identificador do cliente  
+**Para** facilitar a transmissão de dados
+
+* __3.02.01. Envio de genoma via API__  
+**Dado** que eu possuo uma chave de autenticação  
+**E** ID_LAB é um ID único de três dígitos para o laboratório  
+**E** ID_USER é um ID único de sete dígitos para o usuário  
+**E** ID_GENOMA concatena ID_LAB e ID_USER  
+**Quando** eu fizer um request POST para "/api/v1/genoma/new"  
+**E** no meu request conter ID_USER  
+**E** no meu request conter um arquivo csv bem formatado (colunas: titulo, cromossomo, posição, alelos)  
+**Então** o sistema deve guardar esse arquivo com o nome ID_GENOMA em "/data/genomas/ID_GENOMA.gnm"  
+**E** eu devo receber uma resposta indicando sucesso do processo
+
+## 3.03. Listagem de genomas já enviados
+**Como** membro da equipe técnica do laboratório  
+**Considerando** que eu esteja autenticado  
+**Gostaria** de poder visualizar quais genomas já enviados  
+**E** os status de processamento de cada um  
+**Para** saber facilmente o andamento deles
+
+* __3.03.01. Listagem de genomas__  
+**Dado** que eu possuo uma chave de autenticação  
+**Quando** eu fizer um request GET para "/api/v1/genoma"  
+**Então** devo receber uma resposta contendo todos os genomas que já enviei  
+**E** respectivos status de processamento
+
+## 3.04. Listagem de usuários e senhas
+**Como** membro da equipe técnica do laboratório  
+**Considerando** que eu esteja autenticado  
+**Gostaria** de poder visualizar os identificadores  
+**E** senhas dos usuários ativos  
+**Para** poder repassar os dados de acesso aos clientes
+
+* __3.04.01. Listagem de usuários e senhas__  
+**Dado** que eu possuo uma chave de autenticação  
+**Quando** eu fizer um request GET para "/api/v1/users"  
+**Então** devo receber uma resposta contendo todos os usuários para os genomas que já enviei  
+**E** respectivas senhas
