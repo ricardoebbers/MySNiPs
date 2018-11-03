@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :genes
   resources :genotypes
   resources :cards
+  resources :report
   root 'welcome#index'
   get 'welcome/index'
 
