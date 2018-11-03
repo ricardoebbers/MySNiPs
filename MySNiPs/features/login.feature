@@ -12,7 +12,7 @@ Funcionalidade: Acesso ao relatório por login
     Quando inserir "login_valido" no campo login
     E inserir "senha_valida" no campo senha
     E clicar no botão "Log In"
-    Então devo ser redirecionado para "/relatorio"
+    Então devo ser redirecionado para "/report"
     E "login_valido" deve ser exibido na página
   
   Cenário: Permanece em "/login" quando senha inserida for incorreta
