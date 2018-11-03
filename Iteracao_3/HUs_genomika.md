@@ -2,11 +2,15 @@
 
 # 1. Landing page
 
+<span style="color:green">
+
 ## 1.01. Conteúdo da landing page
 **Como** usuário final  
 **Antes** de fazer a contratação do serviço  
 **Para** entender os benefícios de fazer uma análise genética  
 **Gostaria** de ver uma página simples de ler e que contenha recursos visuais explicando a que tipos de informação terei acesso
+
+</span>
 
 ### 1.01.01. Barra de navegação
 **Como** usuário final  
@@ -34,7 +38,7 @@
 **Quando** clicar no link "amostra"  
 **Então** devo ser redirecionado para o relatório de exemplo
 
-* __1.01.01.05. Navbar persistente__  
+* __1.01.01.05. Navbar fixa__  
 **Dado** que estou na página inicial  
 **Quando** rolar até o fim da página  
 **Então** a navbar deve permanecer no topo do navegador
@@ -104,6 +108,7 @@
 
 # 2. Relatório
 
+<span style="color:green">
 
 ## 2.01. Geração do relatório
 **Como** usuário final  
@@ -111,16 +116,89 @@
 **Eu** gostaria de ter acesso a um relatório contendo informações relevantes derivadas desse material e pesquisas científicas, que seja possível filtrar e pesquisar e tenha links para recursos extras  
 **Para** que eu possa aprender mais sobre mim mesmo
 
+</span>
+
+
 ## 2.02. Acesso ao relatório por login
 **Como** usuário final  
 **Para** ter garantia que só eu acessarei meu relatório  
 **Gostaria** de poder acessar o sistema através de meu login e senha
+
+* __2.02.01. Redireciona para relatório quando login e senha são válidos__  
+**Dado** que estou na página de login  
+**E** não estou logado  
+**Quando** inserir um login válido  
+**E** inserir uma senha válida  
+**E** clicar em logar  
+**Então** devo ser redirecionado para o relatório  
+**E** meu Id único deve ser exibido no relatório
+
+* __2.02.02. Permanece em "/login" quando senha inserida for incorreta__  
+**Dado** que estou na página de login  
+**E** não estou logado  
+**Quando** inserir um login válido  
+**E** inserir uma senha inválida  
+**E** clicar em logar  
+**Então** devo receber notificação que o login falhou  
+**E** devo permanecer em "/login"
+
+* __2.02.03. Permanece em "/login" quando login inserido for inválido__  
+**Dado** que estou na página de login  
+**E** não estou logado  
+**Quando** inserir um login inválido  
+**E** inserir uma senha qualquer  
+**E** clicar em logar  
+**Então** devo receber notificação que o login falhou  
+**E** devo permanecer em "/login"
+
+* __2.02.04. Permanece em "/login" quando login ou senha estiverem em branco__  
+**Dado** que estou na página de login  
+**E** não estou logado  
+**Quando** deixar o campo "login" vazio  
+**OU** deixar o campo "senha" vazio  
+**E** clicar em logar  
+**Então** devo receber notificação que o login falhou  
+**E** devo permanecer em "/login"
+
+* __2.02.05. Não é possível acessar "/relatorio" sem estar logado__  
+**Dado** que estou na página inicial  
+**E** não estou logado  
+**Quando** tentar acessar "/relatorio"  
+**Então** devo ser redirecionado para "/login"
+
+* __2.02.06. Redireciona para "/relatorio" quando tentar acessar "/login" estando logado__  
+**Dado** que estou na página inicial  
+**E** estou logado  
+**Quando** tentar acessar "/login"  
+**Então** devo ser redirecionado para "/relatorio"
 
 ## 2.03. Aceite de termos de uso
 **Como** usuário final  
 **Assim** que eu fizer login pela primeira vez  
 **Gostaria** de ler os termos e condições de uso do relatório  
 **Para** que eu possa confirmar que estou satisfeito em aceitá-los
+
+* __2.03.01. Exibe termos de uso no primeiro aceso ao relatório__  
+**Dado** que estou na página de login  
+**E** não estou logado  
+**E** nunca loguei anteriormente  
+**Quando** inserir um login válido  
+**E** inserir uma senha válida  
+**E** clicar em logar  
+**Então** devo ser redirecionado para o relatório  
+**E** Os termos de uso devem ser exibidos em um modal
+
+* __2.03.02. Não exibe os termos de uso em acessos subsequentes__  
+**Dado** que estou na página de login  
+**E** não estou logado  
+**E** já loguei ao menos uma vez anteriormente  
+**Quando** inserir um login válido  
+**E** inserir uma senha válida  
+**E** clicar em logar  
+**Então** devo ser redirecionado para o relatório  
+**E** Os termos de uso não devem ser exibidos
+
+<span style="color:red">
 
 ## 2.04. Guia explicativo do relatório
 **Como** usuário final  
@@ -129,30 +207,110 @@
 **E** as ações que posso tomar  
 **Para** que eu possa usar o sistema com maior facilidade
 
+</span>
+
+<span style="color:red">
+
 ## 2.05. Filtros no relatório
 **Como** usuário final  
 **Para** que eu consiga encontrar com maior facilidade as informações mais relevantes para mim  
 **Gostaria** de poder filtrar os dados exibidos na tela
+
+</span>
 
 ## 2.06. Buscas no relatório
 **Como** usuário final  
 **Gostaria** de poder realizar buscas com base no conteúdo do relatório  
 **Para** que eu tenha acesso facilitado às informações que mais me interessam
 
+* __2.06.01. Busca por strings__  
+**Dado** que estou na página relatório  
+**E** estou logado  
+**E** tiver um campo de buscas visível  
+**Quando** eu procurar por STRING  
+**E** clicar no botão de procurar  
+**Então** apenas os cards contendo a string STRING devem permanecer na tela
+
+* __2.06.02. Opção de limpar busca__  
+**Dado** que estou na página relatório  
+**E** estou logado  
+**E** tiver um campo de buscas visível  
+**E** eu tiver feito uma busca previamente  
+**Quando** eu clicar no botão "Limpar busca"  
+**Então** o filtro aplicado anteriormente deve ser removido  
+**E** todos os cards devem voltar a serem exibidos
+
+* __2.06.03. Feedback quando resultado da busca for vazio__  
+**Dado** que estou na página relatório  
+**E** estou logado  
+**E** tiver um campo de buscas visível  
+**Quando** eu procurar por STRING  
+**E** nenhum card conter STRING  
+**Então** nenhum card deve ser exibido  
+**E** o texto contendo "Não encontramos resultado para STRING" deve ser exibido
+
+<span style="color:red">
+
 ## 2.07. Relatório com categorias
 **Como** usuário final  
 **Ao** ler meu relatório  
 **Gostaria** de poder agrupar as informações por categorias
 
-## 2.08. Paginação do relatório
+</span>
+
+## 2.08. Navegação em páginas no relatório
 **Como** usuário final  
 **Para** que eu tenha acesso rápido às informações  
-**Gostaria** que o relatório só carregasse uma parcela das informações por vez
+**Gostaria** que o relatório só carregasse uma parcela das informações por vez  
+**E** que eu possa mudar de página quando preciso
+
+* __2.08.01. Possibilidade de ir até uma página específica__  
+**Dado** que estou na página relatório  
+**E** estou logado  
+**E** existe botões de paginação visíveis  
+**Quando** eu clicar na página "5"  
+**Então** a página "5" deve carregar  
+
+* __2.08.02. Possibilidade de ir até a primeira página__  
+**Dado** que estou na página relatório  
+**E** estou logado  
+**E** existe botões de paginação visíveis  
+**E** eu não estou na primeira página
+**Quando** eu clicar no botão "first"  
+**Então** a primeira página deve carregar  
+
+* __2.08.03. Possibilidade de ir até a próxima página__  
+**Dado** que estou na página relatório  
+**E** estou logado  
+**E** existe botões de paginação visíveis  
+**E** eu estou na primeira página
+**Quando** eu clicar no botão "next"  
+**Então** a página "2" deve carregar  
+
+* __2.08.04. Possibilidade de ir até a última página__  
+**Dado** que estou na página relatório  
+**E** estou logado  
+**E** existe botões de paginação visíveis  
+**E** eu não estou na última página
+**Quando** eu clicar no botão "last"  
+**Então** a última página deve carregar  
+
+* __2.08.05. Possibilidade de ir até a página anterior__  
+**Dado** que estou na página relatório  
+**E** estou logado  
+**E** existe botões de paginação visíveis  
+**E** eu estou na página "5"
+**Quando** eu clicar no botão "previous"  
+**Então** a página "4" deve carregar  
+
+<span style="color:red">
 
 ## 2.09. Relatório responsivo
 **Como** usuário final  
 **Gostaria** de poder navegar no relatório a partir do navegador do meu smartphone  
 **Para** que eu possa usufruir do sistema em qualquer lugar
+
+</span>
 
 # 3. GenomikAPI
 
@@ -161,8 +319,46 @@
 **Para** saber como usar a API para envio dos dados genéticos  
 **Gostaria** de ter acesso a uma documentação concisa e com exemplos de uso
 
-## 3.02. Disponibilização de API
+## 3.02. Envio de genoma via API
 **Como** membro da equipe técnica do laboratório  
-**Considerando** que eu tenho uma chave de acesso  
-**Gostaria** de poder enviar via API os dados resultantes do sequenciamento genético para serem analisados e gerarem o relatório para o cliente final  
-**Para** que assim eu possa automatizar o processo internamente
+**Considerando** que eu esteja autenticado  
+**Gostaria** de poder enviar o genoma do cliente final  
+**E** indicar o identificador do cliente  
+**Para** facilitar a transmissão de dados
+
+* __3.02.01. Envio de genoma via API__  
+**Dado** que eu possuo uma chave de autenticação  
+**E** ID_LAB é um ID único de três dígitos para o laboratório  
+**E** ID_USER é um ID único de sete dígitos para o usuário  
+**E** ID_GENOMA concatena ID_LAB e ID_USER  
+**Quando** eu fizer um request POST para "/api/v1/genoma/new"  
+**E** no meu request conter ID_USER  
+**E** no meu request conter um arquivo csv bem formatado (colunas: titulo, cromossomo, posição, alelos)  
+**Então** o sistema deve guardar esse arquivo com o nome ID_GENOMA em "/data/genomas/ID_GENOMA.gnm"  
+**E** eu devo receber uma resposta indicando sucesso do processo
+
+## 3.03. Listagem de genomas já enviados
+**Como** membro da equipe técnica do laboratório  
+**Considerando** que eu esteja autenticado  
+**Gostaria** de poder visualizar quais genomas já enviados  
+**E** os status de processamento de cada um  
+**Para** saber facilmente o andamento deles
+
+* __3.03.01. Listagem de genomas__  
+**Dado** que eu possuo uma chave de autenticação  
+**Quando** eu fizer um request GET para "/api/v1/genoma"  
+**Então** devo receber uma resposta contendo todos os genomas que já enviei  
+**E** respectivos status de processamento
+
+## 3.04. Listagem de usuários e senhas
+**Como** membro da equipe técnica do laboratório  
+**Considerando** que eu esteja autenticado  
+**Gostaria** de poder visualizar os identificadores  
+**E** senhas dos usuários ativos  
+**Para** poder repassar os dados de acesso aos clientes
+
+* __3.04.01. Listagem de usuários e senhas__  
+**Dado** que eu possuo uma chave de autenticação  
+**Quando** eu fizer um request GET para "/api/v1/users"  
+**Então** devo receber uma resposta contendo todos os usuários para os genomas que já enviei  
+**E** respectivas senhas
