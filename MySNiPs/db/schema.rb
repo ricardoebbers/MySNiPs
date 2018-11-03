@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_03_145244) do
+ActiveRecord::Schema.define(version: 2018_11_03_154700) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,14 @@ ActiveRecord::Schema.define(version: 2018_11_03_145244) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["title"], name: "index_genes_on_title", unique: true
+  end
+
+  create_table "genomas", force: :cascade do |t|
+    t.string "status"
+    t.string "log_error"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "genotypes", force: :cascade do |t|
