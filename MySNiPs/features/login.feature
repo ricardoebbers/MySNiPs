@@ -6,8 +6,7 @@ Funcionalidade: Acesso ao relatório por login
   Eu quero acessar o sistema através de meu login e senha
 
   Cenário: Redireciona para relatório quando login e senha são válidos
-    Dado que existe um usuário com login "login_valido"
-    E senha "senha_valida"
+    Dado que existe um usuário login:"login_valido", senha:"senha_valida"
     E que estou na página "/login"
     Quando inserir "login_valido" no campo login
     E inserir "senha_valida" no campo senha

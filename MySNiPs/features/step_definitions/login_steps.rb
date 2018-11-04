@@ -1,12 +1,26 @@
-Dado("que existe um usuário com login {string}") do |string|
-  visit "/users/new"
-  fill_in("user_identifier", :with => string)
+Dado("que existe um usuário login:{string}, senha:{string}") do |string, string2|
+  visit '/users/new'
+  fill_in('user_identifier', :with => string)
+  fill_in('user_password', :with => string2)
+  fill_in('user_password_confirmation', :with => string2)
+  click_button 'Sign up!'
 end
 
-Dado("senha {string}") do |string|
-  fill_in("user_password", :with => string)
-  fill_in("user_password_confirmation", :with => string)
-  click_button "Sign up!"
+Dado("que o usuário {string} não está logado") do |string|
+  visit '/logout'
+end
+
+Dado("que o usuário login: {string}, senha: {string} já logou ao menos uma vez") do |string, string2|
+  visit "/login"
+  fill_in("login_identifier", :with => string)
+  fill_in("login_password", :with => string)
+  click_button("Log In")
+  visit "/logout"
+end
+
+Dado("que é a primeira vez que {string} loga") do |string|
+  user = User.where(["identifier = ?", string]).last
+  assert_nil user.last_login
 end
 
 Dado("que estou na página {string}") do |string|
