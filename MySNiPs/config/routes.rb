@@ -34,5 +34,7 @@ Rails.application.routes.draw do
 
   get '/api/v1/users' => 'users#index'
   get '/api/v1/users/:id' => 'users#show'
+  get '/api/v1/genomas/' => 'genomas#index'
+  get '/api/v1/genomas/:id' => 'genomas#show'
 
 end
