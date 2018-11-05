@@ -1,4 +1,7 @@
 class ApplicationController < ActionController::Base
+    include Response
+    include ExceptionHandler
+
     # Make the current_user method available to views also, not just controllers:
     helper_method :current_user
 
