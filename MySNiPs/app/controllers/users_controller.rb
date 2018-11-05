@@ -47,6 +47,7 @@ class UsersController < ApplicationController
     common_role_id = Role.find_by(role_name: "usuario_final").id
     @users = User .where("identifier LIKE (?) AND role_id = (?)", "#{@current_user.identifier}%", common_role_id.to_s)
                   .select("id, identifier, password, created_at, last_login")
+
     json_response(@users)
   end
 
@@ -56,12 +57,9 @@ class UsersController < ApplicationController
     return json_response(message: "Invalid credentials") unless authorization_valid?
 
     # Labs can only see their own users
-    @user = User.select("id, identifier, password, created_at, last_login").find(params[:id])
-    unless @user.nil?
-      if @role.role_name == "laboratorio"
-        return json_response(message: "No access") unless @user.identifier.start_with? @current_user.identifier
-      end
-    end
+    params[:id] = @current_user.identifier + params[:id] unless @role.role_name == "admin"
+    @user = User.select("id, identifier, password, created_at, last_login")
+                .find_by(identifier: params[:id])
     json_response(@user)
   end
 
