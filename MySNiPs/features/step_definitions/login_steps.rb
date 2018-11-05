@@ -13,7 +13,7 @@ end
 Dado("que o usuário login: {string}, senha: {string} já logou ao menos uma vez") do |string, string2|
   visit "/login"
   fill_in("login_identifier", :with => string)
-  fill_in("login_password", :with => string)
+  fill_in("login_password", :with => string2)
   click_button("Log In")
   visit "/logout"
 end
@@ -39,10 +39,6 @@ Quando("clicar no botão {string}") do |string|
   click_button(string)
 end
 
-Então("devo ser redirecionado para {string}") do |string|
-  assert current_path.eql? string
-end
-
 Então("{string} deve ser exibido na página") do |string|
   assert page.has_text? string
 end
@@ -51,6 +47,23 @@ Então("devo receber notificação que o login falhou") do
   assert page.has_text? "Incorrect email or password"
 end
 
+Então("devo ser redirecionado para {string}") do |string|
+  assertion = current_path.eql? string
+  assert(assertion, "#{current_path} should be equal to #{string}")
+end
+
 Então("devo permanecer em {string}") do |string|
-  assert current_path.eql? string
+  assertion = current_path.eql? string
+  assert(assertion, "#{current_path} should be equal to #{string}")
+end
+
+Quando("acessar {string}") do |string|
+  visit string # Write code here that turns the phrase above into concrete actions
+end
+
+Dado("que o usuário login:{string}, senha:{string} está logado") do |string, string2|
+  visit "/login"
+  fill_in("login_identifier", :with => string)
+  fill_in("login_password", :with => string2)
+  click_button("Log In")
 end
