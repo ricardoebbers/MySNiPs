@@ -7,9 +7,17 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   constraints(:ip => /127.0.0.1/) do
-    get 'pages/secret'
+    # Reads a file that will fill the Gene and Genoma table from a file
     get '/import' => 'import#from_file'
+
+    # Test-purpose only signup page that adds a user to the database
+    get 'users/new' => 'users#new', as: :new_user
+    # create (post) action for when sign up form is submitted:
+    post 'users' => 'users#create'
+
+    # Reads a file that will fill the Cards table from a file, using Gene and Genoma
     get '/match' => 'matches#make_report'
+
     get '/logout' => 'sessions#destroy'
   end
 
@@ -23,9 +31,5 @@ Rails.application.routes.draw do
 
   # delete action to log out:
   delete '/logout' => 'sessions#destroy'
-  get 'users/new' => 'users#new', as: :new_user
-
-  # create (post) action for when sign up form is submitted:
-  post 'users' => 'users#create'
 
 end
