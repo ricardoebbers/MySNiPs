@@ -36,5 +36,6 @@ Rails.application.routes.draw do
   get '/api/v1/users/:id' => 'users#show'
   get '/api/v1/genomas/' => 'genomas#index'
   get '/api/v1/genomas/:id' => 'genomas#show'
+  post '/api/v1/upload' => 'genomas#create'
 
 end
