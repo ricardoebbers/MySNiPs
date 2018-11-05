@@ -1,0 +1,3 @@
+class GenomasController < ApplicationController
+
+end
