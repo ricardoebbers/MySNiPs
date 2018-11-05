@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   resources :genotypes
   resources :cards
   resources :report
-  resources :users
   root 'welcome#index'
   get 'welcome/index'
 
@@ -12,9 +11,9 @@ Rails.application.routes.draw do
     get '/import' => 'import#from_file'
 
     # Test-purpose only signup page that adds a user to the database
-    #get 'users/new' => 'users#new', as: :new_user
+    get 'users/new' => 'users#new', as: :new_user
     # create (post) action for when sign up form is submitted:
-    #post 'users' => 'users#create_debug'
+    post 'users' => 'users#create'
 
     # Reads a file that will fill the Cards table from a file, using Gene and Genoma
     get '/match' => 'matches#make_report'
@@ -32,5 +31,8 @@ Rails.application.routes.draw do
 
   # delete action to log out:
   delete '/logout' => 'sessions#destroy'
+
+  get '/api/v1/users' => 'users#index'
+  get '/api/v1/users/:id' => 'users#show'
 
 end
