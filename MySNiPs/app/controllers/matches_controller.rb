@@ -15,7 +15,7 @@ class MatchesController < ApplicationController
     file.close
 
     compare_database_with snps
-    redirect_to cards_path
+    redirect_to cards_path identifier: @useridentifier
   end
 
   # Hash format
