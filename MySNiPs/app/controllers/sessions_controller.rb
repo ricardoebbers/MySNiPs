@@ -1,17 +1,18 @@
 class SessionsController < ApplicationController
-    
+    skip_before_action :verify_authenticity_token
+
     def new
         if session[:user_id]
             redirect_to :report_index
         end
     end
-    
+
     def create
         user = User.find_by(identifier: params[:login][:identifier].downcase)
-        
-        # Verify user exists in db and run has_secure_password's .authenticate() 
-        # method to see if the password submitted on the login form was correct: 
-        if user && user.authenticate(params[:login][:password]) 
+
+        # Verify user exists in db and run has_secure_password's .authenticate()
+        # method to see if the password submitted on the login form was correct:
+        if user && user.authenticate(params[:login][:password])
             # Save the user.id in that user's session cookie:
             if  !user.last_login
                 #Colocar a lógica dos termos de uso
@@ -26,7 +27,7 @@ class SessionsController < ApplicationController
             render :new
         end
     end
-    
+
     def destroy
         # delete the saved user_id key/value from the cookie:
         session.delete(:user_id)

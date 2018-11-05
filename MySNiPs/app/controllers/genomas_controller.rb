@@ -1,4 +1,6 @@
 class GenomasController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   def new
     @genoma = Genoma.new
   end
@@ -7,7 +9,7 @@ class GenomasController < ApplicationController
     # Only labs and admins can post genomas
     return json_response(message: "Invalid credentials") unless authorization_valid?
 
-    return json_response(message: "Invalid parameters") unless params.has_key? id
+    return json_response(message: "Invalid parameters") unless params.has_key? :id
 
     Role.create(role_name: "usuario_final")
     role = Role.find_by(role_name: "usuario_final")
@@ -83,8 +85,6 @@ class GenomasController < ApplicationController
   private
 
   def genoma_params
-    # strong parameters - whitelist of allowed fields #=> permit(:name, :email, ...)
-    # that can be submitted by a form to the genoma model #=> require(:user)
-    # params.require(:user).permit(:identifier, :password)
+    params.require(:id, :csv)
   end
 end
