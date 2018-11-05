@@ -4,13 +4,26 @@ class CardsController < ApplicationController
   # GET /cards
   # GET /cards.json
   def index
-    redirect_to :login unless session[:user_id]
-    @cards = Card.page(params[:page]).per(50)
+    if params.key? :identifier
+      user = User.find_by(identifier: params[:identifier])
+      # If the user isn't found, the search will be empty
+      user_id = if user.nil?
+                  0
+                else
+                  user.id
+                end
+      # But if there's a user, only their cards will be displayed
+      @cards = Card.where(user_id: user_id).page(params[:page]).per(50)
+    else
+      # If there is no search, all cards will be displayed
+      @cards = Card.page(params[:page]).per(50)
+    end
   end
 
   # GET /cards/1
   # GET /cards/1.json
   def show
+    # ...
   end
 
   # GET /cards/new
@@ -20,6 +33,7 @@ class CardsController < ApplicationController
 
   # GET /cards/1/edit
   def edit
+    # ...
   end
 
   # POST /cards
@@ -29,7 +43,7 @@ class CardsController < ApplicationController
 
     respond_to do |format|
       if @card.save
-        format.html { redirect_to @card, notice: 'Card was successfully created.' }
+        format.html { redirect_to @card, notice: "Card was successfully created." }
         format.json { render :show, status: :created, location: @card }
       else
         format.html { render :new }
@@ -43,7 +57,7 @@ class CardsController < ApplicationController
   def update
     respond_to do |format|
       if @card.update(card_params)
-        format.html { redirect_to @card, notice: 'Card was successfully updated.' }
+        format.html { redirect_to @card, notice: "Card was successfully updated." }
         format.json { render :show, status: :ok, location: @card }
       else
         format.html { render :edit }
@@ -57,19 +71,20 @@ class CardsController < ApplicationController
   def destroy
     @card.destroy
     respond_to do |format|
-      format.html { redirect_to card_url, notice: 'Card was successfully destroyed.' }
+      format.html { redirect_to card_url, notice: "Card was successfully destroyed." }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_card
-      @card = Card.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def card_params
-      params.fetch(:card, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_card
+    @card = Card.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def card_params
+    params.fetch(:card, {})
+  end
 end
