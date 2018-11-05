@@ -21,12 +21,14 @@ class UsersController < ApplicationController
 
   def authorization_valid?
     return false unless session[:user_id]
-    current = User.find(session[:user_id])
-    return false if current.nil?
-    role = Role.find(current.role_id)
-    return false if role.nil?
 
-    case role.role_name
+    @current_user = User.find(session[:user_id])
+    return false if @current_user.nil?
+
+    @role = Role.find(@current_user.role_id)
+    return false if @role.nil?
+
+    case @role.role_name
     when "admin" then true
     when "laboratorio" then true
     else false
@@ -35,22 +37,31 @@ class UsersController < ApplicationController
 
   # GET /users/
   def index
-    if authorization_valid?
-      @users = User.all
-      json_response(@users)
-    else
-      redirect_to root_path
-    end
+    # Common or unlloged users can't see other users
+    return json_response(error: "Invalid credentials") unless authorization_valid?
+
+    # Admins can see all users
+    return json_response(User.all) if @role.role_name == "admin"
+
+    # While labs can only see their users
+    common_role_id = Role.find_by(role_name: "usuario_final").id
+    @users = User.where("identifier LIKE (?) AND role_id = (?)", "#{@current_user.identifier}%", common_role_id.to_s)
+    json_response(@users)
   end
 
   # GET /users/:id
   def show
-    if authorization_valid?
-      @user = User.find(params[:id])
-      json_response(@user)
-    else
-      redirect_to root_path
+    # Common or unlloged users can't see other users
+    return json_response(error: "Invalid credentials") unless authorization_valid?
+
+    # Labs can only see their own users
+    @user = User.find(params[:id])
+    unless @user.nil?
+      if @role.role_name == "laboratorio"
+        @user = nil unless @user.identifier.start_with? @current_user.identifier
+      end
     end
+    json_response(@user)
   end
 
   private
