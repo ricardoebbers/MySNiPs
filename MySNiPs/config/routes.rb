@@ -11,9 +11,9 @@ Rails.application.routes.draw do
     get '/import' => 'import#from_file'
 
     # Test-purpose only signup page that adds a user to the database
-    get 'users/new' => 'users#new', as: :new_user
+    get 'signup' => 'signup#new', as: :new_signup
     # create (post) action for when sign up form is submitted:
-    post 'users' => 'users#create'
+    post 'signup' => 'signup#create'
 
     # Reads a file that will fill the Cards table from a file, using Gene and Genoma
     get '/match' => 'matches#make_report'
