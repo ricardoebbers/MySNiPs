@@ -28,7 +28,7 @@ class GenomasController < ApiController
     return json_response(error: @user.errors.message) unless @genoma.valid?
 
     @genoma.save
-    return json_response(message: "Success", user: @user.inspect, genoma: @genoma.inspect)
+    json_response(message: "Success", user: @user.to_json_view, genoma: @genoma.to_json_view)
   end
 
   def generate_password
