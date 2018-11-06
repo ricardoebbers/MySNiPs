@@ -19,22 +19,6 @@ class UsersController < ApiController
     end
   end
 
-  def authorization_valid?
-    return false unless session[:user_id]
-
-    @current_api_user = User.find(session[:user_id])
-    return false if @current_api_user.nil?
-
-    @role = Role.find(@current_api_user.role_id)
-    return false if @role.nil?
-
-    case @role.role_name
-    when "admin" then true
-    when "laboratorio" then true
-    else false
-    end
-  end
-
   # GET /users/
   def index
     # Common or unlloged users can't see other users
@@ -54,12 +38,12 @@ class UsersController < ApiController
   # GET /users/:id
   def show
     # Common or unlloged users can't see other users
-    return json_response(message: "Invalid credentials") unless authorization_valid?
+    return json_response(error: "Invalid credentials") unless authority_valid?
 
     # Labs can only see their own users
-    params[:id] = @current_api_user.identifier + params[:id] unless @role.role_name == "admin"
+    params[:identifier] = @current_api_user.identifier + params[:identifier] unless @role.role_name == "admin"
     @user = User.select("id, identifier, password, created_at, last_login")
-                .find_by(identifier: params[:id])
+                .find_by(identifier: params[:identifier])
     json_response(@user)
   end
 

@@ -33,14 +33,15 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
 
   get '/api/v1/users' => 'users#index'
-  get '/api/v1/users/:id' => 'users#show'
+  get '/api/v1/users/:identifier' => 'users#show'
   get '/api/v1/genomas/' => 'genomas#index'
-  get '/api/v1/genomas/:id' => 'genomas#show'
+  get '/api/v1/genomas/:identifier' => 'genomas#show'
   post '/api/v1/upload' => 'genomas#create'
   post '/api/v1/authenticate', to: 'authentication#authenticate'
 
   # app.post '/api/v1/authenticate', params: {"identifier":"001","password":"654654"}
   # app.response.body
-  # app.get '/api/v1/genomas/', { params:{}, headers: {"Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NDE3Mzg4NjJ9.U2jt_orUTmM2WfP6epgrPk2OhIsAfTxNNnm37kIb4k0"}}
+  # app.get '/api/v1/genomas/', { params:{}, headers: {"Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NDE3NDA3OTl9.a_7Ps81wwMv5bsHQndlHLhnWbIiUSNvfVBRxSwi502M"}}
+  # app.post '/api/v1/upload', { params:{identifier: "0000002"}, headers: {"Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NDE3NDA3OTl9.a_7Ps81wwMv5bsHQndlHLhnWbIiUSNvfVBRxSwi502M"}}
 
 end
