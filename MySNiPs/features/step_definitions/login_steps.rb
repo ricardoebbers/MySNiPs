@@ -1,5 +1,5 @@
 Dado("que existe um usuário login:{string}, senha:{string}") do |string, string2|
-  visit '/users/new'
+  visit '/signup'
   fill_in('user_identifier', :with => string)
   fill_in('user_password', :with => string2)
   fill_in('user_password_confirmation', :with => string2)
