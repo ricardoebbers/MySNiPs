@@ -1,6 +1,4 @@
-class UsersController < ApplicationController
-  skip_before_action :verify_authenticity_token
-
+class UsersController < ApiController
   def new
     @user = User.new
   end
@@ -24,10 +22,10 @@ class UsersController < ApplicationController
   def authorization_valid?
     return false unless session[:user_id]
 
-    @current_user = User.find(session[:user_id])
-    return false if @current_user.nil?
+    @current_api_user = User.find(session[:user_id])
+    return false if @current_api_user.nil?
 
-    @role = Role.find(@current_user.role_id)
+    @role = Role.find(@current_api_user.role_id)
     return false if @role.nil?
 
     case @role.role_name
@@ -40,14 +38,14 @@ class UsersController < ApplicationController
   # GET /users/
   def index
     # Common or unlloged users can't see other users
-    return json_response(error: "Invalid credentials") unless authorization_valid?
+    return json_response(error: "Invalid credentials") unless authority_valid?
 
     # Admins can see all users
     return json_response(User.all) if @role.role_name == "admin"
 
     # While labs can only see their users
     common_role_id = Role.find_by(role_name: "usuario_final").id
-    @users = User .where("identifier LIKE (?) AND role_id = (?)", "#{@current_user.identifier}%", common_role_id.to_s)
+    @users = User .where("identifier LIKE (?) AND role_id = (?)", "#{@current_api_user.identifier}%", common_role_id.to_s)
                   .select("id, identifier, password, created_at, last_login")
 
     json_response(@users)
@@ -59,7 +57,7 @@ class UsersController < ApplicationController
     return json_response(message: "Invalid credentials") unless authorization_valid?
 
     # Labs can only see their own users
-    params[:id] = @current_user.identifier + params[:id] unless @role.role_name == "admin"
+    params[:id] = @current_api_user.identifier + params[:id] unless @role.role_name == "admin"
     @user = User.select("id, identifier, password, created_at, last_login")
                 .find_by(identifier: params[:id])
     json_response(@user)

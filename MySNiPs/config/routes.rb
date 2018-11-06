@@ -39,8 +39,8 @@ Rails.application.routes.draw do
   post '/api/v1/upload' => 'genomas#create'
   post '/api/v1/authenticate', to: 'authentication#authenticate'
 
-  # app.post '/authenticate', params: {"email":"example@mail.com","password":"123123123"}
+  # app.post '/api/v1/authenticate', params: {"identifier":"001","password":"654654"}
   # app.response.body
-  # app.get '/items', { params:{}, headers: {"Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NDQwNjQ2NzB9.XrBdfItP9KIejiAUtl4rE1tPjWbB3yva1zNdtGq6iUM"}}
+  # app.get '/api/v1/genomas/', { params:{}, headers: {"Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NDE3Mzg4NjJ9.U2jt_orUTmM2WfP6epgrPk2OhIsAfTxNNnm37kIb4k0"}}
 
 end
