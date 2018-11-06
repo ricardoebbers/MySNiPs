@@ -37,5 +37,10 @@ Rails.application.routes.draw do
   get '/api/v1/genomas/' => 'genomas#index'
   get '/api/v1/genomas/:id' => 'genomas#show'
   post '/api/v1/upload' => 'genomas#create'
+  post '/api/v1/authenticate', to: 'authentication#authenticate'
+
+  # app.post '/authenticate', params: {"email":"example@mail.com","password":"123123123"}
+  # app.response.body
+  # app.get '/items', { params:{}, headers: {"Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NDQwNjQ2NzB9.XrBdfItP9KIejiAUtl4rE1tPjWbB3yva1zNdtGq6iUM"}}
 
 end
