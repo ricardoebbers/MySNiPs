@@ -15,10 +15,10 @@ class GenomasController < ApiController
 
     # TO-DO
     password = generate_password
-
     # Labs can't create users on other labs' numbers
     params[:identifier] = @current_api_user.identifier + params[:identifier] unless @role.role_name == "admin"
     @user = User.new(identifier: params[:identifier], password: password, role_id: role.id)
+    @user.pass = password
     return json_response(error: @user.errors.messages) unless @user.valid?
 
     @user.save
@@ -48,7 +48,6 @@ class GenomasController < ApiController
     @genomas = Genoma .joins(:user)
                       .where("identifier LIKE (?) AND role_id = (?)", "#{@current_api_user.identifier}%", common_role_id.to_s)
                       .select("identifier, status, genomas.created_at, genomas.updated_at")
-
     json_response(@genomas)
   end
 
