@@ -1,0 +1,17 @@
+$('#cards').append('<% @cards.each do |card| %>
+        <tr>
+            <td><%= card.user.identifier%></td>
+            <td><%= card.genotype.title%></td>
+            <td><%= card.genotype.summary%></td>
+            <td><%= card.genotype.repute%></td>
+            <td><%= card.genotype.magnitude%></td>
+            <td><%= card.genotype.gene.summary%></td>
+            <td><%= card.genotype.gene.chromosome%></td>
+            <td><%= card.genotype.gene.position%></td>
+        </tr>
+        <% end %>');
+<% if @cards.next_page %>
+    $('.pagination').replaceWith('<%= j will_paginate(@cards)%>');x
+<% else %>
+    $('.pagination').remove();
+<% end %>
