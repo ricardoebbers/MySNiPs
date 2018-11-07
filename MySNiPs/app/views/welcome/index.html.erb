@@ -30,6 +30,7 @@
           <li class="nav-item"><a class="nav-link interno text-white" href="#parceiros">Parceiros</a></li>
           <li class="nav-item"><a class="nav-link interno text-white" href="#sobre">Sobre</a></li>
           <% if current_user %>
+          <li class="nav-item"><a class="nav-link btn btn-sm btn-primary text-white" href="/logout" target="_self">Logout</a></li>
           <% else %>
           <li class="nav-item"><a class="nav-link btn btn-sm btn-primary text-white" href="/login" target="_self">Login</a></li>
           <% end %>
