@@ -1,5 +1,8 @@
 class ReportController < ApplicationController
-    def index
-        redirect_to :login unless session[:user_id]
-        end
+  # GET /cards
+  # GET /cards.json
+  def index
+    # Only their cards will be displayed
+    @cards = Card.where(user_id: @current_user.id).page(params[:page]).per(50) if authorize
+  end
 end
