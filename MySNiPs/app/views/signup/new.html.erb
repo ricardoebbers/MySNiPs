@@ -1,0 +1,20 @@
+<h1>Sign Up</h1>
+
+<%= form_for @signup, :url => signup_path do |f| %>
+  <div>
+    <%= f.label :identifier %>
+    <%= f.text_field :identifier %>
+  </div>
+
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+  <div>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <div>
+    <%= f.submit "Sign up!" %>
+  </div>
+<% end %>

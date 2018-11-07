@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <h1>cards</h1>
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Usuário</th>
+          <th>Genótipo</th>
+          <th>Sumário do Genótipo</th>
+          <th>Rep</th>
+          <th>Magnt</th>
+          <th>Sumário do Gene</th>
+          <th>Cromo</th>
+          <th>Posição</th>
+          <!-- TODO: ARRUMAR
+          <th colspan="3"></th>
+          -->
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @cards.each do |card| %>
+          <tr>
+            <td><%= card.user.identifier%></td>
+            <td><%= card.genotype.title%></td>
+            <td><%= card.genotype.summary%></td>
+            <td><%= card.genotype.repute%></td>
+            <td><%= card.genotype.magnitude%></td>
+            <td><%= card.genotype.gene.summary%></td>
+            <td><%= card.genotype.gene.chromosome%></td>
+            <td><%= card.genotype.gene.position%></td>
+            <!--
+            <td><%= link_to 'Show', card %></td>
+            <td><%= link_to 'Edit', edit_card_path(card) %></td>
+            <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            -->
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= paginate @cards %>
+    <%= page_entries_info @cards %>
+    <!-- TODO: Implementar criação de cards
+    <%= link_to 'New card', new_card_path %>
+    -->
+  </div>
+</div>

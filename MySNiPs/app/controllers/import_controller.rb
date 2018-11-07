@@ -1,17 +1,36 @@
 class ImportController < ApplicationController
-  require_relative "genes_controller"
-  require_relative "genotypes_controller"
-
-  # GET import/from_file
+  # GET import?from=folder
   def from_file
-    path_genes = Rails.root.join("data", "genes.json")
-    path_genos = Rails.root.join("data", "genos.json")
+    from = "snpedia"
+    from = params[:from] if params.key? :from
+
+    path_genes = Rails.root.join("data", from, "genes.json")
+    path_genos = Rails.root.join("data", from, "genos.json")
 
     @hash_genes = JSON.parse(File.read(path_genes))
     @hash_genos = JSON.parse(File.read(path_genos))
 
     @logfile = File.open(Rails.root.join("data", "logfile.txt"), "w")
 
+    do_import
+
+    @logfile.close
+  end
+
+  private
+
+  # Flow of import
+  # 1. Get a Genotype
+  # 2. Search its Gene using its title
+  # 3.a. If the Gene is in the database, load it
+  # 3.b. If the Gene isn't in the database, get from the file
+  # 3.c. If the Gene isn't found anywhere, go for the next Genotype
+  # 4. Checks if the Genotype is valid
+  # 5.a. If its invalid and the Gene is in the database, discard the Genotype
+  # 5.b. If its invalid and the Gene was loaded from file, discard both
+  # 5.c. If its valid and the Gene is in the database, save the Genotype
+  # 5.d. If its valid and the Gene was loaded from file, save both
+  def do_import
     last_gene_title = nil
     gene = nil
     gene_saved = false
@@ -21,30 +40,28 @@ class ImportController < ApplicationController
       if last_gene_title == gene_title && !gene.nil?
         gene.save unless gene_saved
         save_genotype(go, gene)
-      else
-        gene = Gene.find_by(title: gene_title)
-
-        if gene.nil?
-          gene_saved = false
-          gene = read_gene(gene_title)
-        end
-
-        genotype_saved = save_genotype(go, gene) unless gene.nil?
-        if genotype_saved
-          gene.save
-          gene_saved = true
-        else
-          gene_saved = false
-          @logfile.puts gene.inspect
-          @logfile.puts "Gene not saved because Genotype was invalid!"
-        end
+        next
       end
+
+      gene = Gene.find_by(title: gene_title)
+      gene_saved = !gene.nil?
+      gene = read_gene(gene_title) unless gene_saved
+
+      if gene.nil?
+        @logfile.puts go.inspect
+        @logfile.puts "Parent gene was not found, Genotype was not saved"
+      elsif save_genotype(go, gene)
+        gene.save
+        gene_saved = true
+      else
+        gene_saved = false
+        @logfile.puts gene.inspect
+        @logfile.puts "Gene not saved because Genotype was invalid!"
+      end
+
       last_gene_title = gene_title
     end
-    @logfile.close
   end
-
-  private
 
   def save_genotype(geno_hash, gene)
     geno = gene.genotypes.new(geno_hash)
