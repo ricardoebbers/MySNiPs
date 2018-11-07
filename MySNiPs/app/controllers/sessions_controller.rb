@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
       user.last_login = Time.now
       user.save
       session[:user_id] = user.id.to_s
-      redirect_to :cards, notice: "Successfully logged in!"
+      redirect_to :report_index
     else
       # if email or password incorrect, re-render login page:
       flash.now.alert = "Incorrect email or password, try again."
