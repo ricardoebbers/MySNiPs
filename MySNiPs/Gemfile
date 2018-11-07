@@ -85,6 +85,8 @@ gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 5.3.1'
 gem 'kaminari'
 
-gem 'bcrypt', '~> 3.1.7'
 gem 'jwt'
 gem 'simple_command'
+
+# Temporary infinite scrolling gem
+gem 'will_paginate'

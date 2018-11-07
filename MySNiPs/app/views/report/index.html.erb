@@ -1,69 +1,11 @@
-<p id="notice"><%= notice %></p>
-<!--
-<section>
-  <div class="container">
-    <div class="card">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card-img-bottom">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card-block">
-            <h4 class="card-title">Curabitur gravida vestibulum imperdiet.</h4>
-            <p class="card-text">Cras convallis ut turpis vitae facilisis. Morbi eu augue vel quam efficitur rhoncus vitae eget lectus. Cras augue ligula, aliquam ut enim ut, feugiat imperdiet sem. Integer sed mi quis nisl eleifend interdum.</p>
-            <p class="card-text">Cras convallis ut turpis vitae facilisis. Morbi eu augue vel quam efficitur rhoncus vitae eget lectus. Cras augue ligula, aliquam ut enim ut, feugiat imperdiet sem.</p>
-            <a href="#" class="btn btn-primary">Read More</a>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-</section>
--->
-<div class="container">
+<div class="page-header">
+  <h1>Report</h1>
+</div>
 
-  <% @cards.each do |card| %>
-    <section>
-      <div class="container my-2">
-        <div class="card px-3" style="width: 50rem;">
-          <div class="row">
-            <div class="col-md-3 my-auto mx-auto text-center">
-              <i class="fas fa-dna fa-5x"></i>
-            </div>
-            <div class="col-md-9 my-auto mx-auto p">
-              <div class="card-block py-2">
-                <div class="row">
-                  <p>Tittle: <%= card.genotype.title %></p>
-                </div>
-                <div class="row">
-                  <p>Genotype Summary: <%= card.genotype.summary%></p>
-                </div>
-                <% if card.genotype.gene.summary%>
-                  <div class="row">
-                    <p>Gene Summary: <%= card.genotype.gene.summary%></p>
-                  </div>
-                <% end %>
-                <% if card.genotype.page_content%>
-                  <div class="row">
-                    <p>Content: <%= card.genotype.page_content%></p>
-                  </div>
-                <% end %>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </section>
+<div id="cards">
+  <%= render @cards %>
+</div>
 
-  <% end %>
-
-    <%= paginate @cards %>
-    <%= page_entries_info @cards %>
-    <!-- TODO: Implementar criação de cards
-    <%= link_to 'New card', new_card_path %>
-    -->
-  </div>
+<div id="infinite-scrolling">
+  <%= will_paginate @cards %>
 </div>
