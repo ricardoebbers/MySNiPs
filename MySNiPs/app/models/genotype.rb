@@ -36,11 +36,20 @@ class Genotype < ApplicationRecord
         result.gsub!(l, make_link(l))
       end
     end
-    result = result + "..." + make_link("Read more", title)
+    result = result + read_more
+    result.html_safe
   end
 
   def make_link(text, page=nil)
     page = text.tr " ", "_" if page.nil?
-    '<a href="' + "http://snpedia.com/index.php/#{page}" + '"' + ">#{text}</a>"
+    '<a href="' + "http://snpedia.com/index.php/#{page}" + '" target="_blank"' + ">#{text}</a>"
+  end
+
+  def read_more
+    if page_content.empty?
+      make_link("Read about the Gene", gene.title)
+    else
+      "..." + make_link(" Read more", title)
+    end
   end
 end
