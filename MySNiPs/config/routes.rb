@@ -41,7 +41,10 @@ Rails.application.routes.draw do
 
   # app.post '/api/v1/authenticate', params: {"identifier":"001","password":"654654"}
   # app.response.body
-  # app.get '/api/v1/genomas/', { params:{}, headers: {"Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NDE3NDA3OTl9.a_7Ps81wwMv5bsHQndlHLhnWbIiUSNvfVBRxSwi502M"}}
-  # app.post '/api/v1/upload', { params:{identifier: "0000002"}, headers: {"Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NDE3NDA3OTl9.a_7Ps81wwMv5bsHQndlHLhnWbIiUSNvfVBRxSwi502M"}}
+  # app.get '/api/v1/genomas/', { params:{}, headers: {"Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NDE4MjAzMzZ9.GN79Z6B_Uyzfrq4mUD-w1NUvhe5P8b0Wb1GyOaJ84Uc"}}
+  # app.post '/api/v1/upload', { params:{identifier: "0000002"}, headers: {"Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NDE4MjAzMzZ9.GN79Z6B_Uyzfrq4mUD-w1NUvhe5P8b0Wb1GyOaJ84Uc"}}
+
+  # curl -H "Content-Type: application/json" -X POST -d '{"identifier":"001", "password":"654654"}' http://localhost:3000/api/v1/authenticate
+  # curl -H "Content-Type: application/json" -H "Authorization: eyJhbGciOiJIUzI1/genomas1c2VyX2lkIjoyLCJleHAiOjE1NDE4MTg2MzZ9.JkPxB0zeMtw75oSTE8hbYVtid_utB6ogWV08woQ9Hms" http://localhost:3000/api/v1/genomas
 
 end
