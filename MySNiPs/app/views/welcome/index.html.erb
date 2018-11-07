@@ -14,7 +14,7 @@
 
     <!-- Início navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-info fixed-top">
-      <a class="navbar-brand" href="#" target="_self"><%= image_tag("logo.png", :style=>'height:25px;', :class=>'d-inline-block') %></a>
+      <a class="navbar-brand" href="#" target="_self"><%= image_tag("logo-branca.png", :style=>'height:25px;', :class=>'d-inline-block align-bottom') %></a>
 
       <!-- Botão navbar responsivo -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
@@ -24,14 +24,14 @@
       <!-- Itens navbar -->
       <div class="collapse navbar-collapse" id="navbarSite">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link interno" href="#inicio">Início</a></li>
-          <li class="nav-item"><a class="nav-link interno" href="#relatos">Relatos</a></li>
-          <li class="nav-item"><a class="nav-link interno" href="#vantagens">Vantagens</a></li>
-          <li class="nav-item"><a class="nav-link interno" href="#parceiros">Parceiros</a></li>
-          <li class="nav-item"><a class="nav-link interno" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link interno text-white" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link interno text-white" href="#relatos">Relatos</a></li>
+          <li class="nav-item"><a class="nav-link interno text-white" href="#vantagens">Vantagens</a></li>
+          <li class="nav-item"><a class="nav-link interno text-white" href="#parceiros">Parceiros</a></li>
+          <li class="nav-item"><a class="nav-link interno text-white" href="#sobre">Sobre</a></li>
           <% if current_user %>
           <% else %>
-          <li class="nav-item"><a class="nav-link btn btn-sm btn-success" href="/login" target="_self">Login</a></li>
+          <li class="nav-item"><a class="nav-link btn btn-sm btn-success text-white" href="/login" target="_self">Login</a></li>
           <% end %>
         </ul>
       </div>
