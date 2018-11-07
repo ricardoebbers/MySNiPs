@@ -1,5 +1,5 @@
 #language:pt
-@javascript
+
 Funcionalidade: Acesso ao relatório por login
   Como usuário final
   Para ter garantia que só eu acessarei meu relatório
