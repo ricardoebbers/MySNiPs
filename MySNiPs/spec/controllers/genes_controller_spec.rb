@@ -22,7 +22,6 @@ describe GenesController do
 
   it "should return 'Gene title' when we check the 'Gene title' Gene" do
     gene = Gene.new(title: "Gene title")
-    puts gene.inspect
     puts "\n" * 10
     expect(gene.title).to eq "Gene title"
   end
