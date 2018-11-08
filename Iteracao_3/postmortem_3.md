@@ -28,6 +28,8 @@ Validar, corrigir e refinar UI da landing page com o cliente | José Reginaldo +
 Criar login para usuario | João Lira
 Implementar o backend do relatório | João Rafael + João Lira
 Criar testes para o login | Ricardo Ebbers
+Criar testes para o match genoma vs base SNPedia | Ricardo Ebbers + João Rafael
+Implementar a GenomikAPI no Rails | João Rafael
 
 ## O que não foi entregue
 
@@ -35,9 +37,9 @@ Planejado | Responsável | Impedimentos
 --------- | ----------- | ------------
 Modelar o layout do Relatorio | José Reginaldo | Dificuldades com incompatibilidades entre templates
 Criar ferramentas para manipular dados no banco | João Lira | Despriorizado frente a outras demandas levantadas pelo cliente nas reuniões
-Implementar a GenomikAPI no Rails | João Rafael | Pendente apenas o upload via API
+Implementar upload via API | João Rafael | Dificuldades com o framework
 Criar testes para a GenomikAPI | Ricardo Ebbers | A API foi despriorizada frente à entrega do relatório
-Criar testes para o match genoma vs base SNPedia | Ricardo Ebbers | Foco em entregas solicitadas pelo cliente e apoio aos demais membros da equipe
+
 
 ## Foi feito algo que não estava planejado?
 
@@ -56,7 +58,7 @@ Elaboração de logo | José Reginaldo | Sugestão do cliente
 Planejado | Responsável
 --------- | -----------
 Modelar e implementar o layout do Relatorio | José Reginaldo
-Implementar upload de arquivo no GenomikAPI | João Rafael
+Implementar upload via API | João Rafael
 Criar testes para a GenomikAPI | Ricardo Ebbers
 Criar testes para o match genoma vs base SNPedia | Ricardo Ebbers
 Implementar buscas no relatório | João Lira
