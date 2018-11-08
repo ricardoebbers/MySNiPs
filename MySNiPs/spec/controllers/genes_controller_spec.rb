@@ -12,17 +12,13 @@ describe GenesController do
   end
 
   it "should not accept duplicate Genes" do
-    gene1 = Gene.new(title: "Same title")
-    gene1.save
+    gene1 = Gene.create(title: "Same title")
     gene2 = Gene.new(title: "Same title")
-    notvalid = gene2.valid?
-    gene1.destroy
-    expect(notvalid).to eq false
+    expect(gene2.valid?).to eq false
   end
 
   it "should return 'Gene title' when we check the 'Gene title' Gene" do
     gene = Gene.new(title: "Gene title")
-    puts "\n" * 10
     expect(gene.title).to eq "Gene title"
   end
 end

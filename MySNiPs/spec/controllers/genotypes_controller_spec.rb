@@ -7,8 +7,7 @@ describe GenotypesController do
   end
 
   it "should accept a valid Genotype" do
-    gene = Gene.new(title: "Test gene")
-    gene.save
+    gene = Gene.create(title: "Test gene")
     genotype = Genotype.new(title: "Valid title", allele1: "A", allele2: "B", gene_id: gene.id)
     expect(genotype.valid?).to eq true
   end
