@@ -6,13 +6,12 @@ Funcionalidade: Acesso ao relatório por login
   Eu quero acessar o sistema através de meu login e senha
 
   Cenário: Redireciona para relatório quando login e senha são válidos
-    Dado que existe um usuário com login "login_valido"
-    E senha "senha_valida"
+    Dado que existe um usuário login:"login_valido", senha:"senha_valida"
     E que estou na página "/login"
     Quando inserir "login_valido" no campo login
     E inserir "senha_valida" no campo senha
     E clicar no botão "Log In"
-    Então devo ser redirecionado para "/relatorio"
+    Então devo ser redirecionado para "/report"
     E "login_valido" deve ser exibido na página
   
   Cenário: Permanece em "/login" quando senha inserida for incorreta
@@ -46,3 +45,16 @@ Funcionalidade: Acesso ao relatório por login
     E clicar no botão "Log In"
     Então devo receber notificação que o login falhou
     E devo permanecer em "/login"
+
+  Cenário: Não é possível acessar "/report" sem estar logado
+    Dado que estou na página "/"
+    E que o usuário "login_valido" não está logado
+    Quando acessar "/report"
+    Então devo ser redirecionado para "/login"
+
+  Cenário: Redireciona para "/report" quando tentar acessar "/login" estando logado
+    Dado que estou na página "/"
+    E que existe um usuário login:"login_valido", senha:"senha_valida"
+    E que o usuário login:"login_valido", senha:"senha_valida" está logado
+    Quando acessar "/login"
+    Então devo ser redirecionado para "/report"

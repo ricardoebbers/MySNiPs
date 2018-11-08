@@ -2,11 +2,7 @@ class MatchesController < ApplicationController
   def make_report
     @useridentifier = params[:identifier] if params.key? :identifier
 
-    # REMOVE
-    @useridentifier = "0010000001"
-    # REMOVE
-
-    return if @useridentifier.nil?
+    redirect_to root_path if @useridentifier.nil?
 
     user = User.find_by(identifier: @useridentifier)
     return if user.nil?
@@ -19,6 +15,7 @@ class MatchesController < ApplicationController
     file.close
 
     compare_database_with snps
+    redirect_to cards_path identifier: @useridentifier
   end
 
   # Hash format

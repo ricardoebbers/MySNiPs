@@ -1,14 +1,26 @@
-<h1>Log In</h1>
+<%= stylesheet_link_tag "bootlogin" %>
 <%= form_for :login do |f| %>
-    <div>
-        <%= f.label :identifier %>
-        <%= f.text_field :identifier, autofocus: true %>
-    </div>
-    <div>
-        <%= f.label :password %>
-        <%= f.password_field :password %>
-    </div>
-    <div>
-        <%= f.submit "Log In" %>
-    </div>
+<div class="text-center">
+    <form class="form-signin">
+
+    <%= image_tag("logo.png", :style=>'height:75px;', :class=>'d-inline-block') %>
+    
+    <%= f.text_field :identifier, autofocus: true, :class=>'form-control', :placeholder=>'Identificador' %>
+    
+    <%= f.password_field :password, :class=>'form-control mb-3', :placeholder=>'Password',:style=>'width:300px;' %>
+	
+	<% if alert %>
+      <p class="text-danger"><%= alert %></h1>
+	<% end %>
+
+    <% if current_user %>
+    <%= link_to 'Log Out', logout_path, method: :delete %>
+    <% end %>
+
+    <%= f.submit 'Log In',:class=>'btn btn-lg btn-primary btn-block mt-3' %>
+    
+        
+    </form>
+
+</div>
 <% end %>

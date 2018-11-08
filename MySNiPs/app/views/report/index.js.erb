@@ -1,0 +1,6 @@
+$('#cards').append('<%= j render(@cards) %>');
+<% if @cards.next_page %>
+  $('.pagination').replaceWith('<%= j will_paginate(@cards) %>');
+<% else %>
+  $('.pagination').remove();
+<% end %>

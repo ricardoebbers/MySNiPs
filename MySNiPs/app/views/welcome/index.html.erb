@@ -10,11 +10,11 @@
   </head>
   <body>
 
-  <div class="container">
+  <div class="mw-100">
 
     <!-- Início navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-info fixed-top">
-      <a class="navbar-brand" href="#">MySNiPs</a>
+      <a class="navbar-brand" href="#" target="_self"><%= image_tag("logo-branca.png", :style=>'height:25px;', :class=>'d-inline-block align-bottom') %></a>
 
       <!-- Botão navbar responsivo -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
@@ -24,11 +24,15 @@
       <!-- Itens navbar -->
       <div class="collapse navbar-collapse" id="navbarSite">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Relatos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#vantagens">Vantagens</a></li>
-          <li class="nav-item"><a class="nav-link" href="#parceiros">Parceiros</a></li>
-          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link interno text-white" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link interno text-white" href="#relatos">Relatos</a></li>
+          <li class="nav-item"><a class="nav-link interno text-white" href="#vantagens">Vantagens</a></li>
+          <li class="nav-item"><a class="nav-link interno text-white" href="#parceiros">Parceiros</a></li>
+          <li class="nav-item"><a class="nav-link interno text-white" href="#sobre">Sobre</a></li>
+          <% if current_user %>
+          <% else %>
+          <li class="nav-item"><a class="nav-link btn btn-sm btn-primary text-white" href="/login" target="_self">Login</a></li>
+          <% end %>
         </ul>
       </div>
 
@@ -36,18 +40,32 @@
     <!-- Fim navbar -->
 
     <!-- Início do cabeçalho -->
-   <div class="bg-overlay-inicio my-4" id="inicio">
+   <div class="bg-overlay-inicio" id="inicio">
 	    <div class="text-center mt-5">
 		    <h1>MySNiPs</h1>
         <h4>Um relatório sobre seu DNA como você nunca viu.</h4>
 	    </div>
     </div>
     <!-- Fim do cabeçalho -->
+<div id="relatos" style="background:rgba(211,211,211,.4)" class="pb-3">
+ <h1 class="text-center mb-1">Relatos</h1>
+
+<div class="row">
+<div class="col-sm-4 col-md-4">
+<img class="img-fluid px-3"src="https://www.architectsjournal.co.uk/pictures/2000x2000fit/8/3/8/1363838_Julia_King_0206_BW2.jpg">
+</div>
+<div class="col-sm-8 col-md-8 px-5 pb-5 text-center">
+<h1 class="text-left">Emilia Leão, 32 anos</h1>
+<p class="text-justify">Emilia é arquiteta e tem 32 anos, casada, mora em Boa Viagem e tem uma filha de um ano e meio. Sempre foi movida pela curiosidade e cresceu ouvindo o ditado: "curiosidade matou o gato". Há 5 anos Emilía foi diagnósticada com doença celíaca e desde então busca conhecer mais sobre si própria e seu DNA, encontrando no MySNiPs o que estava procurando.
+</p>
+</div>
+</div>
+</div>
 
     <!-- Inicio cards div -->
 
     <div id="vantagens">
-    <h1 class="text-center mb-5">Vantagens</h1>
+    <h1 class="text-center mb-5" style="color:#381900">Vantagens</h1>
 
     <!-- Inicio cards -->
     <div class="row">
@@ -57,10 +75,10 @@
       <div class="col-sm-3 col-md-3 mb-3">
 
         <!-- Corpo card -->
-        <div class="card border-0">
-          <i class="fas fa-heartbeat fa-5x mx-auto"></i>
+        <div class="card border-0" style="color:#381900">
+          <i class="fas fa-heartbeat fa-5x mx-auto" ></i>
           <div class="card-body text-center">
-            <h4 class="cad-title">Predisposição a doenças</h4>
+            <h4 class="cad-title">Predisposição à doenças</h4>
           </div>
         </div>
       
@@ -71,8 +89,8 @@
       <div class="col-sm-3 col-md-3 mb-3">
 
       <!-- Corpo card -->
-        <div class="card border-0">
-          <i class="fas fa-dna fa-5x mx-auto"></i>
+        <div class="card border-0" style="color:#6B3000">
+          <i class="fas fa-dna fa-5x mx-auto" ></i>
           <div class="card-body text-center">
             <h4 class="cad-title">Entender Sistema Hereditário</h4>
           </div>
@@ -85,10 +103,10 @@
       <div class="col-sm-3 col-md-3 mb-3">
 
       <!-- Corpo card -->
-        <div class="card border-0">
-          <i class="fas fa-capsules fa-5x mx-auto"></i>
+        <div class="card border-0" style="color:#845127">
+          <i class="fas fa-capsules fa-5x mx-auto" ></i>
           <div class="card-body text-center">
-            <h4 class="cad-title">Resistência a medicações</h4>
+            <h4 class="cad-title">Resistência à medicações</h4>
           </div>
         </div>
 
@@ -99,8 +117,8 @@
       <div class="col-sm-3 col-md-3 mb-3">
 
       <!-- Corpo card -->
-        <div class="card border-0">
-          <i class="fas fa-fingerprint fa-5x mx-auto"></i>
+        <div class="card border-0" style="color:#B77137">
+          <i class="fas fa-fingerprint fa-5x mx-auto" ></i>
           <div class="card-body text-center">
             <h4 class="cad-title">Características de um indivíduo</h4>
           </div>
@@ -114,19 +132,19 @@
     </div>
     <!-- Fim do card div -->
 
-    <div class="bg-overlay-parceiros-genomika my-4" id="parceiros">
+    <div class="bg-overlay-parceiros-genomika" id="parceiros">
 	    <div class="text-center">
 		    <h1>Genomika</h1>
         <h4>A Genomika Diagnóstico é uma startup com dois anos de existência, com sede no polo médico do Recife. O laboratório realiza testes inovadores de sequenciamento genético no Brasil utilizando tecnologia de segunda geração.</h4>
-        <a class="btn btn-info mt-4" href="https://www.genomika.com.br/" target="_blank">Conheça a Genomika</a>
+        <a class="btn btn-info btn-lg mt-4" href="https://www.genomika.com.br/" target="_blank">Conheça a Genomika</a>
 	    </div>
     </div>
 
-    <div class="bg-overlay-sobre my-4" id="sobre">
+    <div class="bg-overlay-sobre" id="sobre">
 	    <div class="text-center mt-5">
 		    <h1>MySNiPs</h1>
         <h4>O MySNiPs é um SaaS que integra mapamentos genéticos com bases de dados públicas e possibilita insights baseados no DNA dos usuários.</h4>
-        <%= link_to 'Acesse nosso relatório', login_path,class: 'btn btn-info mt-4' %>
+        <%= link_to 'Acesse nosso relatório', login_path,class: 'btn btn-info mt-4 btn-lg' %>
 	    </div>
     </div>
 
@@ -205,7 +223,7 @@
           <h6 class="text-uppercase font-weight-bold">Produtos</h6>
           <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
           <p>
-            <a href="#">Diagnóstico</a>
+            <a href="/login" target="_self">Diagnóstico</a>
           </p>
           
 
@@ -219,7 +237,7 @@
           <h6 class="text-uppercase font-weight-bold">Parceiros</h6>
           <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
           <p>
-            <a href="#">Genomika</a>
+            <a href="https://www.genomika.com.br/" target="_blank">Genomika</a>
           </p>
           
 
@@ -269,15 +287,19 @@
 	<script>
 		$('nav a').click(function(e){
 			e.preventDefault();
-			var id = $(this).attr('href');
-			console.log(id);
+      var id = $(this).attr('href');
+      var modo=$(this).attr('target');
+      console.log(id);
+      var classe = $(this).attr('class');
+      if (classe=='nav-link interno'){
 			var distancia_topo = $(id).offset().top;
 			var altura_menu = $("nav").innerHeight();
 
 			$('html, body').animate({
 				scrollTop : distancia_topo - altura_menu - 70
 			}, 500)
-		});
+    }
+    else{window.open(id,modo);}});
 	</script>
   </body>
 </html>

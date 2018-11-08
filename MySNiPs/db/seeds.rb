@@ -6,21 +6,26 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 # x = Gene.create({:title=>"I3002455", :revid=>1195440, :orientation=>false, :stabilized=>false, :iid=>"3002455", :rsid=>"1800386", :position=>6127833, :chromosome=>"12"})
-role = Role.new({:role_name => "admin"})
-role.save if role.valid?
-role = Role.create({:role_name => "laboratorio"})
-role.save if role.valid?
-role = Role.create({:role_name => "usuario_final"})
-if role.valid?
-    role.save
-else
-    role = Role.find_by(:role_name => "usuario_final")
-end
-user = role.users.create({:identifier=>"0010000001", :password_digest=>"$2a$10$tUJcvKA.QbKuBSKfno2CtuTjmgLo89/6zdWO3mFMB4LaHBG0Qmz3m"})
-if user.valid?
-    user.save
-else
-    user = User.find_by(:identifier => "0010000001")
-end
-genoma = user.genomas.create({:status => 1})
+Role.create(role_name: "admin")
+role = Role.find_by(role_name: "admin")
+User.create(identifier: "admin",
+            password: "987987",
+            password_digest: "$2a$10$KmZcwIwf6nHRR2iPv78lZOl1e5Q.oJ0NkmmWRqg7F5GS2dKi6puTy",
+            role_id: role.id)
 
+
+Role.create(role_name: "laboratorio")
+role = Role.find_by(role_name: "laboratorio")
+User.create(identifier: "001",
+            password: "654654",
+            password_digest: "$2a$10$LGdxSgGp2el3DMDBZPb5E.XzuD4D783wJUn4I5uDrQmxEASquHCjS",
+            role_id: role.id)
+
+Role.create(role_name: "usuario_final")
+role = Role.find_by(role_name: "usuario_final")
+User.create(identifier: "0010000001",
+            password: "123",
+            password_digest: "$2a$10$tUJcvKA.QbKuBSKfno2CtuTjmgLo89/6zdWO3mFMB4LaHBG0Qmz3m",
+            role_id: role.id)
+user = User.find_by(identifier: "0010000001")
+Genoma.create(status: 1, user_id: user.id)

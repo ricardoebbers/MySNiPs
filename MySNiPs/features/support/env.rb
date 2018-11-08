@@ -57,13 +57,13 @@ end
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
 # Clean the database before and after each scenario
-Before do
-  DatabaseCleaner.start
-end
+# Before do
+#   DatabaseCleaner.start
+# end
 
-After do |scenario|
-  DatabaseCleaner.clean
-end
+# After do |scenario|
+#   DatabaseCleaner.clean
+# end
 
 # Register Chrome as the default driver
 Capybara.register_driver :chrome do |app|
