@@ -58,12 +58,9 @@ class Genotype < ApplicationRecord
     end
   end
 
-  scope :min_mag, -> (min) { where('magnitude > ?', min) }
-  scope :max_mag, -> (max) { where('magnitude > ?', max) }
-  scope :repute, -> (repute) { where repute: repute }
-  scope :title_contains, -> (title) { where('title LIKE ?', "%#{title}%")}
-  scope :allele1_contains, -> (allele1) { where('allele1 LIKE ?', "%#{allele1}%")}
-  scope :allele2_contains, -> (allele2) { where('allele2 LIKE ?', "%#{allele2}%")}
-  scope :summary_contains, -> (summary) { where('summary LIKE ?', "%#{summary}%")}
-  scope :page_content_contains, -> (pContent) { where('page_content LIKE ?', "%#{pContent}%")}
+  scope :min_mag, ->(min) { where('magnitude > ?', min) }
+  scope :max_mag, ->(max) { where('magnitude > ?', max) }
+  scope :reputeIs, ->(repute) { where repute: repute }
+  scope :title_contains, ->(title) { where('title LIKE ?', "%#{title}%")}
+  scope :summary_contains, ->(summary) { where('summary LIKE ?', "%#{summary}%")}
 end
