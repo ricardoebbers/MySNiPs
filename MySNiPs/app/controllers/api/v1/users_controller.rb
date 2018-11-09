@@ -22,7 +22,7 @@ module Api
       end
 
       # GET /users/
-      def index
+      def index(last=false)
         # Common or unlloged users can't see other users
         return json_response(error: "Invalid credentials") unless authority_valid?
 
@@ -33,6 +33,10 @@ module Api
         common_role_id = Role.find_by(role_name: "usuario_final").id
         @users = User .where("identifier LIKE (?) AND role_id = (?)", "#{@current_api_user.identifier}%", common_role_id.to_s)
                       .select("id, identifier, pass, created_at, last_login")
+                      .order("created_at ASC")
+
+        # Called by show_latest with /users/last
+        @users = @users.last if last
         json_response(@users || {message: "Nothing found"})
       end
 
@@ -46,6 +50,12 @@ module Api
         @user = User.select("id, identifier, pass, created_at, last_login")
                     .find_by(identifier: params[:identifier])
         json_response(@user || {message: "Nothing found"})
+      end
+
+      # GET /users/last
+      def show_latest
+        # Orders the index by Created_At and returns the last
+        index true
       end
 
       private

@@ -34,12 +34,17 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      get '/users' => 'users#index'
-      get '/users/:identifier' => 'users#show'
-      get '/genomas/' => 'genomas#index'
-      get '/genomas/:identifier' => 'genomas#show'
-      post '/upload' => 'genomas#create'
       post '/authenticate', to: 'authentication#authenticate'
+
+      get '/users' => 'users#index'
+      get '/users/last' => 'users#show_latest'
+      get '/user/:identifier' => 'users#show'
+
+      get '/genomas' => 'genomas#index'
+      get '/genomas/last' => 'genomas#show_latest'
+      get '/genoma/:identifier' => 'genomas#show'
+
+      post '/upload' => 'genomas#create'
     end
   end
 end

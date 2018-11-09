@@ -38,7 +38,7 @@ module Api
       end
 
       # GET /genomas/
-      def index
+      def index(last=false)
         # Common or unlloged users can't see genomas
         return json_response(error: "Invalid credentials") unless authority_valid?
 
@@ -50,10 +50,14 @@ module Api
         @genomas = Genoma .joins(:user)
                           .where("identifier LIKE (?) AND role_id = (?)", "#{@current_api_user.identifier}%", common_role_id.to_s)
                           .select("identifier, status, genomas.created_at, genomas.updated_at")
+                          .order("created_at ASC")
+
+        # Called by show_latest with /genomas/last
+        @genomas = @genomas.last if last
         json_response(@genomas || {message: "Nothing found"})
       end
 
-      # GET /genomas/:id
+      # GET /genoma/:id
       def show
         # Common or unlloged users can't see genomas
         return json_response(error: "Invalid credentials") unless authority_valid?
@@ -64,6 +68,12 @@ module Api
                       .select("identifier, status, genomas.created_at, genomas.updated_at")
                       .find_by(identifier: params[:identifier])
         json_response(@genoma || {message: "Nothing found"})
+      end
+
+      # GET /genoma/last
+      def show_latest
+        # Orders the index by Created_At and returns the last
+        index true
       end
 
       private
