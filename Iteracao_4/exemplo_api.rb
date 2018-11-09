@@ -29,6 +29,7 @@ def post action, params_hash, auth_token
   request.body = JSON.dump(params_hash)
 
   response = get_response_from uri, request
+  puts response.code
   response.body
 end
 
@@ -40,6 +41,7 @@ def get action, auth_token
   request["Authorization"] = auth_token
 
   response = get_response_from uri, request
+  puts response.code
   response.body
 end
 

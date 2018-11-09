@@ -26,7 +26,7 @@ module Api
       def authenticate_request
         @current_api_user = AuthorizeApiRequest.call(request.headers).result
         puts @current_api_user.inspect
-        render json: { error: 'Not Authorized' }, status: 401 unless @current_api_user
+        render json: {error: "Not Authorized"}, status: :unauthorized unless @current_api_user
       end
     end
   end

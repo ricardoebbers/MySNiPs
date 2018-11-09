@@ -24,7 +24,7 @@ module Api
       # GET /users/
       def index(last=false)
         # Common or unlloged users can't see other users
-        return json_response(error: "Invalid credentials") unless authority_valid?
+        return json_response({error: "Invalid credentials"}, 401) unless authority_valid?
 
         # Admins can see all users
         return json_response(User.all) if @role.role_name == "admin"
@@ -37,19 +37,25 @@ module Api
 
         # Called by show_latest with /users/last
         @users = @users.last if last
-        json_response(@users || {message: "Nothing found"})
+
+        return json_response({message: "Nothing found"}, 404) if @users.nil?
+
+        json_response(@users)
       end
 
       # GET /users/:id
       def show
         # Common or unlloged users can't see other users
-        return json_response(error: "Invalid credentials") unless authority_valid?
+        return json_response({error: "Invalid credentials"}, 401) unless authority_valid?
 
         # Labs can only see their own users
         params[:identifier] = @current_api_user.identifier + params[:identifier] unless @role.role_name == "admin"
         @user = User.select("id, identifier, pass, created_at, last_login")
                     .find_by(identifier: params[:identifier])
-        json_response(@user || {message: "Nothing found"})
+
+        return json_response({message: "Nothing found"}, 404) if @user.nil?
+
+        json_response(@user)
       end
 
       # GET /users/last
