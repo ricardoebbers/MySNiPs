@@ -33,8 +33,7 @@ module Api
         common_role_id = Role.find_by(role_name: "usuario_final").id
         @users = User .where("identifier LIKE (?) AND role_id = (?)", "#{@current_api_user.identifier}%", common_role_id.to_s)
                       .select("id, identifier, pass, created_at, last_login")
-
-        json_response(@users)
+        json_response(@users || {message: "Nothing found"})
       end
 
       # GET /users/:id
@@ -46,7 +45,7 @@ module Api
         params[:identifier] = @current_api_user.identifier + params[:identifier] unless @role.role_name == "admin"
         @user = User.select("id, identifier, pass, created_at, last_login")
                     .find_by(identifier: params[:identifier])
-        json_response(@user)
+        json_response(@user || {message: "Nothing found"})
       end
 
       private

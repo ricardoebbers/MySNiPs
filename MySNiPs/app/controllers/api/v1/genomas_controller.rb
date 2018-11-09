@@ -50,7 +50,7 @@ module Api
         @genomas = Genoma .joins(:user)
                           .where("identifier LIKE (?) AND role_id = (?)", "#{@current_api_user.identifier}%", common_role_id.to_s)
                           .select("identifier, status, genomas.created_at, genomas.updated_at")
-        json_response(@genomas)
+        json_response(@genomas || {message: "Nothing found"})
       end
 
       # GET /genomas/:id
@@ -63,7 +63,7 @@ module Api
         @genoma = User.joins(:genoma)
                       .select("identifier, status, genomas.created_at, genomas.updated_at")
                       .find_by(identifier: params[:identifier])
-        json_response(@genoma)
+        json_response(@genoma || {message: "Nothing found"})
       end
 
       private
