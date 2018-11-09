@@ -8,7 +8,6 @@ class Genotype < ApplicationRecord
   validates :title, presence: true, uniqueness: true
   paginates_per 50
 
-  
   def repute_gradient
     case repute
     when 1 then ["rgb(255,76,76)", "rgb(255,64,62)", "rgb(255,49,46)", "rgb(255,32,28)", "rgb(255,0,0)"]
@@ -16,7 +15,6 @@ class Genotype < ApplicationRecord
     end
   end
 
-  
   def color
     case magnitude
     when 0 then repute_gradient[0]
@@ -27,7 +25,6 @@ class Genotype < ApplicationRecord
     end
   end
 
-  
   def page_text
     result = page_content
     link_format = /(?<=\[\[)(.*?)(?=\]\])/
@@ -43,13 +40,11 @@ class Genotype < ApplicationRecord
     result.html_safe
   end
 
-  
   def make_link(text, page=nil)
     page = text.tr " ", "_" if page.nil?
     '<a href="' + "http://snpedia.com/index.php/#{page}" + '" target="_blank"' + ">#{text}</a>"
   end
 
-  
   def read_more
     if page_content.empty?
       make_link("Read about the Gene", gene.title)
