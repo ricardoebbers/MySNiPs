@@ -2,6 +2,9 @@ require "net/http"
 require "uri"
 require "json"
 
+# Documentação da API
+# https://github.com/ricardoebbers/MySNiPs/wiki/Documentação-da-API
+
 def get_response_from uri, request
   Net::HTTP.start(uri.hostname, uri.port) do |http|
     http.request(request)
