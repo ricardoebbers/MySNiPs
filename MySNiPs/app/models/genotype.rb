@@ -56,6 +56,6 @@ class Genotype < ApplicationRecord
   scope :min_mag, ->(min) { where('magnitude > ?', min) }
   scope :max_mag, ->(max) { where('magnitude > ?', max) }
   scope :reputeIs, ->(repute) { where repute: repute }
-  scope :title_contains, ->(title) { where('title LIKE ?', "%#{title}%")}
-  scope :summary_contains, ->(summary) { where('summary LIKE ?', "%#{summary}%")}
+  scope :title_contains, ->(title) { where('title ILIKE ?', "%#{title}%")}
+  scope :summary_contains, ->(summary) { where('summary ILIKE ?', "%#{summary}%")}
 end
