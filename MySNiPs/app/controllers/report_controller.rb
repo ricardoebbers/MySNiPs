@@ -3,7 +3,7 @@ class ReportController < ApplicationController
   # GET /cards.json
   def index
     # Only a logged in user's cards will be displayed
-    return redirect_to login unless authorize
+    return login_url unless authorize
 
     all_cards = Card.from_user(@current_user.id)
 
