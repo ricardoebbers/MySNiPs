@@ -64,7 +64,7 @@ group :test do
   gem 'chromedriver-helper'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
-
+  gem 'minitest'
   gem 'rspec'
   gem 'rspec-rails'
 end
