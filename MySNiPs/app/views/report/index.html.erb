@@ -9,7 +9,7 @@
   <div class="row">
     <div class="col-2"><a class="navbar-brand" href="#menu-toggle" id="menu-toggle"><span class="navbar-toggler-icon"></span></a></div>
     <div class="col-10">
-      <%= form_tag(report_index_url, method: :get) do %>
+      <%= form_tag(report_index_url, method: :get, remote: true) do %>
         <div class="row">
         <input id="search" name="search" class="form-control col-10" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
         <button class="btn btn-primary fas fa-search col-2" type="submit"></button>
@@ -43,7 +43,6 @@
                 <div id="cards">
                   <%= render @cards %>
                 </div>
-
                 <div id="infinite-scrolling">
                   <%= will_paginate @cards %>
                 </div>            

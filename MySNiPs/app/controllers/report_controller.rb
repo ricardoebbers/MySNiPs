@@ -21,9 +21,13 @@ class ReportController < ApplicationController
     @cards = @cards.min_mag(params[:min]) if params.has_key? :min
     @cards = @cards.max_mag(params[:max]) if params.has_key? :max
     @cards = @cards.repute_is(params[:rep]) if params.has_key? :rep
+    respond_to do |format|
+      format.js { render @cards}
   end
 
   def execute_search
     @cards = @cards.search_for(params[:search])
+    respond_to do |format|
+      format.js { render partial: 'search-results'}
   end
 end
