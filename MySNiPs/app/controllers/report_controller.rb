@@ -2,30 +2,28 @@ class ReportController < ApplicationController
   # GET /cards
   # GET /cards.json
   def index
-    # Only their cards will be displayed
-    # @cards = Card.where(user_id: @current_user.id).page(params[:page]).per(50) if authorize
+    # Only a logged in user's cards will be displayed
     return redirect_to login unless authorize
 
-    @cardsfull = Card.from_user(@current_user.id)
+    all_cards = Card.from_user(@current_user.id)
 
-    # filters
-    @cards = @cardsfull
+    @cards = all_cards
+    @cards = @cards.get_genotypes_and_genes unless params.empty?
 
-    if params.has_key? :search
-      find_all
-    end
+    apply_filters
+    execute_search if params.has_key? :search
+
+    #@count = @cards.size
     @cards = @cards.paginate(page: params[:page], per_page: 50)
   end
 
-  def find_repute
-    @cards = Card.Genotype.reputeIs(params[:reputeIs]) if params[:reputeIs].present?
+  def apply_filters
+    @cards = @cards.min_mag(params[:min]) if params.has_key? :min
+    @cards = @cards.max_mag(params[:max]) if params.has_key? :max
+    @cards = @cards.repute_is(params[:rep]) if params.has_key? :rep
   end
 
-  def find_mag
-    @cards = Card.Genotype.min_mag(params[:min_mag]).max_mag(params[:max_mag])
-  end
-
-  def find_all
+  def execute_search
     @cards = @cards.search_for(params[:search])
   end
 end

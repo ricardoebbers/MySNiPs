@@ -10,8 +10,4 @@ class Gene < ApplicationRecord
       gmaf.to_s + "% common"
     end
   end
-
-  scope :chromosome_contains, ->(chromosome) { where('chromosome ILIKE ?', "%#{chromosome}%")}
-  scope :summary_contains, ->(summary) { where('summary ILIKE ?', "%#{summary}%")}
-  scope :position_contains, ->(position) { where('position ILIKE ?', "%#{position}%")}
 end
