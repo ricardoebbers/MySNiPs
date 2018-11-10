@@ -32,3 +32,5 @@ MySNiPs/config/master.key
 .vscode
 
 *.log
+MySNiPs/data/logfile.txt
+MySNiPs/app/controllers/api/*/example.txt
