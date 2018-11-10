@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :genes
-  resources :genotypes
-  resources :cards
-  resources :report
+  resources :genes, only: [:index]
+  resources :genotypes, only: [:index]
+  resources :cards, only: [:index]
+  resources :report, only: [:index]
   root 'welcome#index'
   get 'welcome/index'
 
