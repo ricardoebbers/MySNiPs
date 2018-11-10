@@ -85,7 +85,7 @@ module Api
       private
 
       def genoma_params
-        params.require(:id, :csv)
+        params.require(:identifier, :raw_file)
       end
     end
   end

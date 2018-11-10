@@ -93,3 +93,6 @@ gem 'simple_command'
 
 # Temporary infinite scrolling gem
 gem 'will_paginate'
+
+# Gem for Base64 upload
+gem 'paperclip'
