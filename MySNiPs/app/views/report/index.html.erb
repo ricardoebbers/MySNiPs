@@ -5,7 +5,13 @@
   <small>#<%= current_user.identifier %></small>
 </div>
 -->
-
+<nav class="navbar navbar-light bg-info">
+  <a class="navbar-brand" href="#menu-toggle" id="menu-toggle">Navbar</a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+  </form>
+</nav>
 <div id="wrapper">
 
         <!-- Sidebar -->
@@ -47,7 +53,6 @@
                 <h1>Simple Sidebar</h1>
                 <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
                 <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
                 <div id="cards">
                   <%= render @cards %>
                 </div>
@@ -64,10 +69,5 @@
 
 
 
-<script>
-$("#menu-toggle").click(function(e) {
-    e.preventDefault();
-    $("#wrapper").toggleClass("toggled");
-});
-</script>
+<%= javascript_include_tag 'sidebar'%>
 </body>
