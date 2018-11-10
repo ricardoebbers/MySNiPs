@@ -13,7 +13,7 @@ class ReportController < ApplicationController
     apply_filters
     execute_search if params.has_key? :search
 
-    #@count = @cards.size
+    @count = @cards.size
     @cards = @cards.paginate(page: params[:page], per_page: 50)
   end
 
