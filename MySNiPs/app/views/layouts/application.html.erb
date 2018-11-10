@@ -30,5 +30,8 @@
 	<% end %>
 -->
     <%= yield %>
+    <% if Rails.env.test? %>
+        <h1> <%= request.path %> </h1>
+    <% end%>
   </body>
 </html>

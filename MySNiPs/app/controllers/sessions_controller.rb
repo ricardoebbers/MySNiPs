@@ -15,9 +15,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:login][:password])
       # Save the user.id in that user's session cookie:
       if !user.last_login
-        # TO-DO
-        # Terms of service logic
-
+        flash[:notice] = "Termos de Uso"
       end
       user.last_login = Time.now
       user.save
