@@ -4,7 +4,13 @@ class ReportController < ApplicationController
   def index
     # Only their cards will be displayed
     # @cards = Card.where(user_id: @current_user.id).page(params[:page]).per(50) if authorize
-    @cards = Card.where(user_id: @current_user.id).paginate(page: params[:page], per_page: 50) if authorize
+    return redirect_to login unless authorize
+
+    if params.has_key? :search
+      find_summary
+    else
+      @cards = Card.from_user(@current_user.id).paginate(page: params[:page], per_page: 50)
+    end
   end
 #temporary place for filters?
   def find_repute
@@ -15,11 +21,21 @@ class ReportController < ApplicationController
     @cards = Card.Genotype.min_mag(params[:min_mag]).max_mag(params[:max_mag])
   end
 
+  def find_summary
+    @cards = Card .from_user(@current_user.id)
+                  .eager_load(:genotype)
+                  .merge(Genotype.summary_contains(params[:search]))
+                  .paginate(page: params[:page], per_page: 50)
+  end
+
   def find_all
-    @cards = Card.Genotype.title_contains(params[:title_contains])
-    .or(Card.Genotype.summary_contains(params[:summary_contains])
-    .or(Card.Genotype.Gene.summary_contains(params[:summary_contains])
-    .or(Card.Genotype.Gene.position_contains(params[:position_contains])
-    .or(Card.Genotype.Gene.chromosome_contains(params[:chromosome_contains])))))
+    @cards = Card .from_user(@current_user.id)
+                  .eager_load(:genotype)
+                  .eager_load(:gene)
+                  .merge(Genotype.title_contains(params[:search]))
+                  .or(merge(Genotype.summary_contains(params[:search]))
+                  .or(merge(Gene.summary_contains(params[:search]))
+                  .or(merge(Gene.chromosome_contains(params[:search])))))
+                  .paginate(page: params[:page], per_page: 50)
   end
 end
