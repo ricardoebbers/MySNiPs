@@ -7,13 +7,12 @@ Funcionalidade: Aceite de termos de uso
 
   Cenário: Exibe termos de uso no primeiro aceso ao relatório
     Dado que existe um usuário login:"novo_login_valido", senha:"senha_valida"
+    E que o usuário "novo_login_valido" nunca logou
     E que estou na página "/login"
-    E que é a primeira vez que "novo_login_valido" loga
     Quando inserir "novo_login_valido" no campo login
     E inserir "senha_valida" no campo senha
     E clicar no botão "Log In"
-    Então devo ser redirecionado para "/report" 
-    E os termos de uso devem ser exibidos em um modal na tela
+    Então os termos de uso devem ser exibidos em um modal na tela
 
   Cenário: Não exibe os termos de uso em acessos subsequentes
     Dado que existe um usuário login:"login_valido", senha:"senha_valida"
@@ -23,5 +22,4 @@ Funcionalidade: Aceite de termos de uso
     Quando inserir "login_valido" no campo login
     E inserir "senha_valida" no campo senha
     E clicar no botão "Log In"
-    Então devo ser redirecionado para "/report" 
-    E os termos de uso não devem ser exibidos na tela
+    Então os termos de uso não devem ser exibidos na tela

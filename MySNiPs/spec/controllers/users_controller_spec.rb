@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe UsersController do
+describe API::V1::UsersController do
   it "should validate a new User" do
     role = Role.create(role_name: "test")
 
