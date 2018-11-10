@@ -35,7 +35,8 @@ class ReportController < ApplicationController
                   .merge(Genotype.title_contains(params[:search]))
                   .or(merge(Genotype.summary_contains(params[:search]))
                   .or(merge(Gene.summary_contains(params[:search]))
-                  .or(merge(Gene.chromosome_contains(params[:search])))))
+                  .or(merge(Gene.chromosome_contains(params[:search]))
+                  .or(Genotype.page_content_contains(params[:page_content])))))
                   .paginate(page: params[:page], per_page: 50)
   end
 end

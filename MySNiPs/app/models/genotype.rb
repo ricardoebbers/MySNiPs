@@ -58,4 +58,5 @@ class Genotype < ApplicationRecord
   scope :reputeIs, ->(repute) { where repute: repute }
   scope :title_contains, ->(title) { where('title ILIKE ?', "%#{title}%")}
   scope :summary_contains, ->(summary) { where('summary ILIKE ?', "%#{summary}%")}
+  scope :page_content_contains, ->(page_content) {where('page_content ILIKE ?', "%#{page_content}%")}
 end
