@@ -3,6 +3,12 @@
   <small>#<%= current_user.identifier %></small>
 </div>
 
+<%= form_tag(report_index_url, method: :get) do %>
+  <%= text_field_tag :search %>
+  <%= submit_tag 'Search' %>
+<% end %>
+
+
 <div id="cards">
   <%= render @cards %>
 </div>
