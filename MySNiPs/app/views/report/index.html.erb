@@ -5,14 +5,21 @@
   <small>#<%= current_user.identifier %></small>
 </div>
 -->
-<nav class="navbar navbar-light bg-info">
-  <a class="navbar-brand" href="#menu-toggle" id="menu-toggle"><span class="navbar-toggler-icon"></span></a>
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-  </form>
+<nav class="navbar navbar-light bg-info fixed-top">
+  <div class="row">
+    <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 "><a class="navbar-brand" href="#menu-toggle" id="menu-toggle"><span class="navbar-toggler-icon"></span></a></div>
+    <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+      <form>
+        <div class="row">
+        <input class="form-control col-6" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+        <button class="btn btn-outline-success col-6" type="submit">Pesquisar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
 </nav>
-<div id="wrapper">
+<div id="wrapper" class="pt-5">
 
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
@@ -23,25 +30,10 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">Dashboard</a>
+                    <a href="#">Termos de Uso</a>
                 </li>
                 <li>
-                    <a href="#">Shortcuts</a>
-                </li>
-                <li>
-                    <a href="#">Overview</a>
-                </li>
-                <li>
-                    <a href="#">Events</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
+                    <a href="/logout">Logout</a>
                 </li>
             </ul>
         </div>
@@ -53,6 +45,7 @@
                 <h1>Simple Sidebar</h1>
                 <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
                 <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                
                 <div id="cards">
                   <%= render @cards %>
                 </div>
