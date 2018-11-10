@@ -4,6 +4,7 @@ Dado("que existe um usuário login:{string}, senha:{string}") do |string, string
   fill_in('user_password', :with => string2)
   fill_in('user_password_confirmation', :with => string2)
   click_button 'Sign up!'
+  assert_not_nil User.where(['identifier = ?', string])
 end
 
 Dado("que o usuário {string} não está logado") do |string|
