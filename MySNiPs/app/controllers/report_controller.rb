@@ -19,7 +19,6 @@ class ReportController < ApplicationController
     @cards = Card.Genotype.title_contains(params[:title_contains])
     .or(Card.Genotype.summary_contains(params[:summary_contains])
     .or(Card.Genotype.Gene.summary_contains(params[:summary_contains])
-    .or(Card.Genotype.Gene.position_contains(params[:position_contains])
-    .or(Card.Genotype.Gene.chromosome_contains(params[:chromosome_contains])))))
+    .or(Card.Genotype.Gene.chromosome_contains(params[:chromosome_contains]))))
   end
 end

@@ -13,5 +13,4 @@ class Gene < ApplicationRecord
 
   scope :chromosome_contains, ->(chromosome) { where('chromosome LIKE ?', "%#{chromosome}%")}
   scope :summary_contains, ->(summary) { where('summary LIKE ?', "%#{summary}%")}
-  scope :position_contains, ->(position) { where('position LIKE ?', "%#{position}%")}
 end
