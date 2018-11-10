@@ -1,10 +1,26 @@
-<div>
-  <%= card.user.identifier%>
-  <%= card.genotype.title%>
-  <%= card.genotype.summary%>
-  <%= card.genotype.repute%>
-  <%= card.genotype.magnitude%>
-  <%= card.genotype.gene.summary%>
-  <%= card.genotype.gene.chromosome%>
-  <%= card.genotype.gene.position%>
+<div class="card mx-5 border border-info my-3">
+
+  <div class="row">
+    <div class="col-md-2 mx-auto my-auto text-center pt-3 pb-3">
+        <i class="fas fa-dna fa-5x" style="color:<%= card.genotype.color%>; background-size:cover;"></i>
+    </div>
+    <div class="col-md-10 py-3">
+      <div class="row px-4">
+        <h5 class="text-info">Title: &nbsp</h5><%= card.genotype.title%>
+      </div>
+      <div class="row px-4">
+        <h5 class="text-info">Summary Genotype: &nbsp</h5><%= card.genotype.summary%>
+      </div>
+      <% if card.genotype.gene.summary %>
+      <div class="row px-4">
+        <h5 class="text-info">Summary Gene: &nbsp</h5><%= card.genotype.gene.summary%>
+      </div>
+      <% end %>
+      <% if card.genotype.page_content %>
+      <div class="row px-4">
+        <h5 class="text-info">Page Content: &nbsp</h5><%= card.genotype.page_content%>
+      </div>
+      <% end %>
+    </div>
+  </div>
 </div>
