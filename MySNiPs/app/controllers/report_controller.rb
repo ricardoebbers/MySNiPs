@@ -9,11 +9,14 @@ class ReportController < ApplicationController
 
     @cards = all_cards
     @cards = @cards.get_genotypes_and_genes unless params.empty?
-
-    execute_search if params.has_key? :search
+    
+    if params[:search]
+      execute_search 
+    else
+      @cards = @cards.paginate(page: params[:page], per_page: 20)
+    end
 
     @count = @cards.size
-    @cards = @cards.paginate(page: params[:page], per_page: 20)
   end
 
   def apply_filters
@@ -22,11 +25,11 @@ class ReportController < ApplicationController
     end
     @cards = @cards.min_mag(params[:min]) if params.has_key? :min
     @cards = @cards.max_mag(params[:max]) if params.has_key? :max
-    @cards = @cards.repute_is(params[:rep]) if params.has_key? :rep
+    @cards = @cards.repute_is(params[:rep]).paginate(page: params[:page], per_page: 20) if params.has_key? :rep
     
   end
 
   def execute_search
-    @cards = @cards.search_for(params[:search])
+    @cards = @cards.search_for(params[:search]).paginate(page: params[:page], per_page: 20)
   end
 end
