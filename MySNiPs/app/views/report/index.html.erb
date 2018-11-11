@@ -20,38 +20,38 @@
 
 </nav>
 <div id="wrapper" class="pt-5">
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        Start Bootstrap
-                    </a>
-                </li>
-                <li>
-                    <a href="#">Termos de Uso</a>
-                </li>
-                <li>
-                    <a href="/logout">Logout</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div id="cards">
-                  <%= render @cards %>
-                </div>
-                <div id="infinite-scrolling">
-                  <%= will_paginate @cards %>
-                </div>
-            </div>
-        </div>
-        <!-- /#page-content-wrapper -->
-
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a href="#">
+            Start Bootstrap
+          </a>
+        </li>
+        <li>
+          <a href="#">Termos de Uso</a>
+        </li>
+        <li>
+          <a href="/logout">Logout</a>
+        </li>
+      </ul>
     </div>
-    <!-- /#wrapper -->
+    <!-- /#sidebar-wrapper -->
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <div id="cards">
+          <%= render @cards %>
+        </div>
+        <div id="infinite-scrolling">
+          <%= will_paginate @cards %>
+        </div>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
 
 
 
