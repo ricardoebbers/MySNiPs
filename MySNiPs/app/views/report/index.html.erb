@@ -12,12 +12,12 @@
       <%= form_tag(report_index_url, method: :get, remote: true) do %>
         <div class="row">
         <input id="search" name="search" class="form-control col-10" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-        <button class="btn btn-primary fas fa-search col-2" type="submit"></button>
+        <button onclick="topFunction()" class="btn btn-primary fas fa-search col-2" type="submit"></button>
         </div>
       <% end %>
     </div>
   </div>
-  
+
 </nav>
 <div id="wrapper" class="pt-5">
         <!-- Sidebar -->
@@ -39,13 +39,13 @@
         <!-- /#sidebar-wrapper -->
         <!-- Page Content -->
         <div id="page-content-wrapper">
-            <div class="container-fluid">                
+            <div class="container-fluid">
                 <div id="cards">
                   <%= render @cards %>
                 </div>
                 <div id="infinite-scrolling">
                   <%= will_paginate @cards %>
-                </div>            
+                </div>
             </div>
         </div>
         <!-- /#page-content-wrapper -->
