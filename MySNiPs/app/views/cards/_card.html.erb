@@ -1,6 +1,8 @@
+<% @cards.each do |card| %>
 <div class="card mx-5 border border-info my-3">
 
   <div class="row">
+
     <div class="col-md-2 mx-auto my-auto text-center pt-3 pb-3">
         <i class="fas fa-dna fa-5x" style="color:<%= card.genotype.color%>; background-size:cover;"></i>
     </div>
@@ -24,3 +26,4 @@
     </div>
   </div>
 </div>
+<% end %>

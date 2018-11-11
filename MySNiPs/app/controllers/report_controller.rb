@@ -13,7 +13,7 @@ class ReportController < ApplicationController
     execute_search if params.has_key? :search
 
     @count = @cards.size
-    @cards = @cards.paginate(page: params[:page], per_page: 50)
+    @cards = @cards.paginate(page: params[:page], per_page: 20)
   end
 
   def apply_filters
@@ -28,9 +28,5 @@ class ReportController < ApplicationController
 
   def execute_search
     @cards = @cards.search_for(params[:search])
-    respond_to do |format|
-      format.html
-      format.js { render partial: @cards}
-    end
   end
 end
