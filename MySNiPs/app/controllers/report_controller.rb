@@ -5,16 +5,19 @@ class ReportController < ApplicationController
     # Only a logged in user's cards will be displayed
     return login_url unless authorize
 
-    @all_cards = Card.from_user(@current_user.id)
-
+    @all_cards = Card.from_user(@current_user.id).get_genotypes_and_genes
     @cards = @all_cards
-    @cards = @cards.get_genotypes_and_genes unless params.empty?
 
-    execute_search
     apply_filters
+    execute_search
 
     @count = @cards.size
     @cards = @cards.paginate(page: params[:page], per_page: 10)
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def apply_filters
