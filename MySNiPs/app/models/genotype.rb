@@ -30,26 +30,26 @@ class Genotype < ApplicationRecord
     link_format = /(?<=\[\[)(.*?)(?=\]\])/
     links = result.match(link_format) { |m| m.captures }
     unless links.nil?
-      result.gsub! "[[", ""
-      result.gsub! "]]", ""
       links.each do |l|
         result.gsub!(l, make_link(l))
       end
+      result.gsub! "[[", "&nbsp"
+      result.gsub! "]]", "&nbsp"
     end
-    result = result + read_more
+    result += "&nbsp" + read_more
     result.html_safe
   end
 
   def make_link(text, page=nil)
-    page = text.tr " ", "_" if page.nil?
-    '<a href="' + "http://snpedia.com/index.php/#{page}" + '" target="_blank"' + ">#{text}</a>"
+    page = text.gsub " ", "_" if page.nil?
+    ' <a href="' + "http://snpedia.com/index.php/#{page}" + '" target="_blank"' + "> #{" " + text + " "} </a> "
   end
 
   def read_more
     if page_content.empty?
       make_link("Read about the Gene", gene.title)
     else
-      "..." + make_link(" Read more", title)
+      make_link(" Read more", title)
     end
   end
 end
