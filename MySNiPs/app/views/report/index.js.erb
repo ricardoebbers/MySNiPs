@@ -1,5 +1,7 @@
 $("#cards").append('<%= j render(@cards) %>');
-<% if @cards.next_page %>
+<% if @search %>
+  $("#cards").html("<%= escape_javascript(render(@cards)) %>");
+<% elsif @cards.next_page %>
   $('.pagination').replaceWith('<%= j will_paginate(@cards) %>');
 <% else %>
   $(window).off('scroll');
