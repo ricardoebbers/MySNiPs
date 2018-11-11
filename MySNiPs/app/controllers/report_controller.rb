@@ -18,7 +18,6 @@ class ReportController < ApplicationController
       format.html
       format.js
     end
-    @search = false
   end
 
   def apply_filters
@@ -29,10 +28,5 @@ class ReportController < ApplicationController
 
   def execute_search
     @cards = @cards.search_for(params[:search]) if params.has_key? :search
-  end
-
-  def reset_page
-    puts "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n\n"*10
-    @search = true
   end
 end
