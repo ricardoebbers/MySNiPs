@@ -1,21 +1,29 @@
 class Genoma < ApplicationRecord
+  mount_base64_uploader :genomafile, GenomaFileUploader
   before_validation :parse_file
   belongs_to :user
-  has_attached_file :file
+  validates :file, presence: true, uniqueness: true
   attr_accessor :raw_file
 
   def to_json_view
     {
-      status: status,
+      status:     status,
       updated_at: updated_at
     }
   end
 
-  private
-
   def parse_file
-    endfile = Paperclip.io_adapters.for(image_base)
-    endfile.original_filename = identifier + ".gnm"
-    self.file = endfile
+    puts "PARSING FILE FOR " + user.identifier
+    path = make_path
+    decoded_file = Base64.decode64(@raw_file) unless @raw_file.nil?
+    return false if decoded_file.nil?
+
+    File.open(path, "w") {|f| f.write(decoded_file) }
+    update_attribute(:file, path)
+  end
+
+  def make_path
+    # Separate in folders by laboratory later
+    Rails.root.join("data", "genomas", user.identifier + ".gnm")
   end
 end

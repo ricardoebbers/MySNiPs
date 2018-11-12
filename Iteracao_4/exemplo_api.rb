@@ -1,6 +1,7 @@
 require "net/http"
 require "uri"
 require "json"
+require "base64"
 
 # Documentação da API
 # https://github.com/ricardoebbers/MySNiPs/wiki/Documentação-da-API
@@ -48,6 +49,11 @@ def get action, auth_token
   response.body
 end
 
+def upload_data path
+  file = File.read path
+  Base64.encode64 file unless file.nil?
+end
+
 def run
   puts "\n\n\nAUTHENTICATION - Um token de autenticação é retornado caso as credenciais sejam válidas.\n\n"
   puts "POST http://localhost:3000/api/v1/authenticate data:{identifier:'001', password:'654654'}\n\n"
@@ -75,4 +81,16 @@ def run
   puts get "genomas/last", auth_token
 end
 
+def test_upload
+  puts "\n\n\nAUTHENTICATION - Um token de autenticação é retornado caso as credenciais sejam válidas.\n\n"
+  puts "POST http://localhost:3000/api/v1/authenticate data:{identifier:'001', password:'654654'}\n\n"
+  auth_token = authenticate("001", "654654")
+  puts auth_token
+
+  puts "\n\n\nUPLOAD - No momento não há upload de arquivos, mas este comando cria um novo usuário e genoma, que entrará na fila para processo.\n\n"
+  puts "POST http://localhost:3000/api/v1/upload data:{identifier:'0000005'} header:{Authorization:[auth_token]}\n\n"
+  puts post "upload", {identifier: "0000026", raw_file: upload_data("test_file.csv")}, auth_token
+end
+
 run
+test_upload

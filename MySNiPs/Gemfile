@@ -95,4 +95,5 @@ gem 'simple_command'
 gem 'will_paginate'
 
 # Gem for Base64 upload
-gem 'paperclip'
+gem 'carrierwave'
+gem 'carrierwave-base64'
