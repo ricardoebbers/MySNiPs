@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  resources :genes, only: [:index]
-  resources :genotypes, only: [:index]
-  resources :cards, only: [:index]
-  resources :report, only: [:index]
   root 'welcome#index'
   get 'welcome/index'
 
@@ -20,6 +16,12 @@ Rails.application.routes.draw do
 
     get '/logout' => 'sessions#destroy'
   end
+
+  resources :genes, only: [:index]
+  resources :genotypes, only: [:index]
+  resources :cards, only: [:index]
+  resources :report, only: [:index]
+  get '/example' => 'report#example'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
