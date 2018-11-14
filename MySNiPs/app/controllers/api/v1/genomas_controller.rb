@@ -26,8 +26,12 @@ module Api
         @user.save
 
         # Genomas always start with Status 1: queue
-        @genoma = Genoma.new(user_id: @user.id, status: 1)
-        return json_response({error: @user.errors.message}, 400) unless @genoma.valid?
+        @genoma = Genoma.new(user_id: @user.id, status: 1, raw_file: params[:raw_file])
+
+        unless @genoma.valid?
+          @user.destroy
+          return json_response({error: @user.errors.message}, 400)
+        end
 
         @genoma.save
         json_response(message: "Success", user: @user.to_json_view, genoma: @genoma.to_json_view)
@@ -85,7 +89,7 @@ module Api
       private
 
       def genoma_params
-        params.require(:id, :csv)
+        params.require(:identifier, :raw_file)
       end
     end
   end
