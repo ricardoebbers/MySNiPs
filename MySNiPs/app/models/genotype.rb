@@ -37,7 +37,7 @@ class Genotype < ApplicationRecord
       result.gsub! "]]", "&nbsp"
     end
     result += "&nbsp" + read_more
-    result.html_safe
+    result.strip.delete("\t\r\n").html_safe
   end
 
   def make_link(text, page=nil)
@@ -49,7 +49,7 @@ class Genotype < ApplicationRecord
     if page_content.empty?
       make_link("Read about the Gene", gene.title)
     else
-      make_link(" Read more", title)
+      make_link(" ...read more", title)
     end
   end
 end
