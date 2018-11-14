@@ -24,10 +24,29 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#">
-                        Start Bootstrap
-                    </a>
+                    <a href="#"><%= image_tag("logo-branca.png", :style=>'height:25px;', :class=>'d-inline-block align-bottom') %></a>
                 </li>
+                <%= form_tag(report_index_url, method: :get) do %>
+                    <li class="text-light">Filtros</li>
+                    <li>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="rep" value="1">
+                    <label class="form-check-label text-success" for="exampleRadios1">
+                        Good Repute
+                    </label>
+                    </div></li>
+                    <li>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="rep" value="2">
+                    <label class="form-check-label text-danger" for="exampleRadios2">
+                        Bad Repute
+                    </label>
+                    </div>
+                    </li>
+                    <li>
+                    <button class="btn btn-primary fas fa-search col-2" type="submit"></button>
+                    </li>
+                <% end %>
                 <li>
                     <a href="#">Termos de Uso</a>
                 </li>
@@ -57,4 +76,23 @@
 
 
 <%= javascript_include_tag 'sidebar'%>
+<script>
+        $(document).ready(function(){
+
+        $("input[type='submit']").click(function(){
+
+            var radioValue = $("input[name='rep']:checked").val();
+
+            if(radioValue){
+
+                return radioValue;
+
+            }
+
+        });
+
+        
+
+    });
+</script>
 </body>
