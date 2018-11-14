@@ -17,6 +17,7 @@ class SessionsController < ApplicationController
       if !user.last_login
         flash[:notice] = "Termos de Uso"
       end
+      @current_identifier = user.identifier
       user.last_login = Time.now
       user.save
       session[:user_id] = user.id.to_s
@@ -30,6 +31,7 @@ class SessionsController < ApplicationController
 
   def destroy
     # delete the saved user_id key/value from the cookie:
+    @current_identifier = nil
     session.delete(:user_id)
     redirect_to root_path, notice: "Logged out!"
   end
