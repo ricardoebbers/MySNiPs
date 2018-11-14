@@ -9,10 +9,10 @@
   <div class="row">
     <div class="col-2"><a class="navbar-brand" href="#menu-toggle" id="menu-toggle"><span class="navbar-toggler-icon"></span></a></div>
     <div class="col-10">
-      <%= form_tag(report_index_url, method: :get, remote: true, :id => 'search_card') do %>
+      <%= form_tag(report_index_url, method: :get, :id => 'search_card') do %>
         <div class="row">
         <input id="search" name="search" class="form-control col-10" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-        <button onclick="topFunction()" class="btn btn-primary fas fa-search col-2" type="submit"></button>
+        <button class="btn btn-primary fas fa-search col-2" type="submit"></button>
         </div>
       <% end %>
     </div>
