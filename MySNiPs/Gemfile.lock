@@ -69,6 +69,13 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.2)
       xpath (~> 3.2)
+    carrierwave (1.2.3)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
+    carrierwave-base64 (2.7.0)
+      carrierwave (>= 0.8.0)
+      mime-types (~> 3.0)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
     chromedriver-helper (2.1.0)
@@ -311,6 +318,8 @@ DEPENDENCIES
   bootstrap (~> 4.1.3)
   byebug
   capybara (>= 2.15)
+  carrierwave
+  carrierwave-base64
   chromedriver-helper
   coffee-rails (~> 4.2)
   cucumber-rails

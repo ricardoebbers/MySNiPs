@@ -13,10 +13,10 @@ class CardsController < ApplicationController
                   user.id
                 end
       # But if there's a user, only their cards will be displayed
-      @cards = Card.where(user_id: user_id).page(params[:page]).per(50)
+      @cards = Card.where(user_id: user_id).page(params[:page])
     else
       # If there is no search, all cards will be displayed
-      @cards = Card.page(params[:page]).per(50)
+      @cards = Card.page(params[:page])
     end
   end
 

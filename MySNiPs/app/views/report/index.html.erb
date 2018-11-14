@@ -2,22 +2,25 @@
 <!--
 <div class="page-header">
   <h1>Report</h1>
-  <small>#<%= current_user.identifier %></small>
+  <small>#<%= @current_identifier || "Example" %></small>
 </div>
 -->
 <nav class="navbar navbar-light bg-info fixed-top">
   <div class="row">
     <div class="col-2"><a class="navbar-brand" href="#menu-toggle" id="menu-toggle"><span class="navbar-toggler-icon"></span></a></div>
     <div class="col-10">
-      <%= form_tag(report_index_url, method: :get) do %>
+      <%= form_tag(report_index_url, method: :get, :id => 'search_card') do %>
         <div class="row">
-        <input id="search" name="search" class="form-control col-10" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+        <% if @search == "" %>
+          <input id="search" name="search" class="form-control col-10" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+            <% else %>
+          <input id="search" name="search" class="form-control col-10" type ="search" value = <%= @search.to_s %>>
+        <% end %>
         <button class="btn btn-primary fas fa-search col-2" type="submit"></button>
         </div>
-      <% end %>
     </div>
   </div>
-  
+
 </nav>
 <div id="wrapper" class="pt-5">
         <!-- Sidebar -->
@@ -26,7 +29,6 @@
                 <li class="sidebar-brand">
                     <a href="#"><%= image_tag("logo.png", :style=>'height:25px;', :class=>'d-inline-block align-bottom') %></a>
                 </li>
-                <%= form_tag(report_index_url, method: :get) do %>
                     <li class="text-info">Filtros</li>
                     <li>Repute</li>
                     <li>
@@ -83,24 +85,23 @@
                     <a href="/logout">Logout</a>
                 </li>
             </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">                
-                <div id="cards">
-                  <%= render @cards %>
-                </div>
-
-                <div id="infinite-scrolling">
-                  <%= will_paginate @cards %>
-                </div>            
-            </div>
-        </div>
-        <!-- /#page-content-wrapper -->
-
     </div>
-    <!-- /#wrapper -->
+    <!-- /#sidebar-wrapper -->
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <div id="cards">
+          <%= render @cards %>
+        </div>
+        <div id="infinite-scrolling">
+          <%= will_paginate @cards %>
+        </div>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
 
 
 
