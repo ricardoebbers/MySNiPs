@@ -7,7 +7,6 @@ class ReportController < ApplicationController
 
     all_cards = Card.from_user(@current_user.id)
     @cards = all_cards
-    @search = ""
     @cards = @cards.get_genotypes_and_genes unless params.empty?
 
     if params.has_key? :search
