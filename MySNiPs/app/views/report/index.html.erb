@@ -11,7 +11,11 @@
     <div class="col-10">
       <%= form_tag(report_index_url, method: :get) do %>
         <div class="row">
-        <input id="search" name="search" class="form-control col-10" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+        <% if @search == "" %>
+          <input id="search" name="search" class="form-control col-10" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+            <% else %>
+          <input id="search" name="search" class="form-control col-10" type ="search" value = <%= @search.to_s %>>
+        <% end %>
         <button class="btn btn-primary fas fa-search col-2" type="submit"></button>
         </div>
       <% end %>
@@ -43,7 +47,6 @@
                 <div id="cards">
                   <%= render @cards %>
                 </div>
-
                 <div id="infinite-scrolling">
                   <%= will_paginate @cards %>
                 </div>            
