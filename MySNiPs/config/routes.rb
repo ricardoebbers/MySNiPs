@@ -21,7 +21,6 @@ Rails.application.routes.draw do
   resources :genotypes, only: [:index]
   resources :cards, only: [:index]
   resources :report, only: [:index]
-  get '/example' => 'report#example'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
