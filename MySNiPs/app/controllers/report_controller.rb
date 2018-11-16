@@ -52,7 +52,7 @@ class ReportController < ApplicationController
   def execute_search
     if params.has_key? :search
       @search = params[:search]
-      @cards = @cards.search_for(params[:search])
+      @cards = @cards.search_for(params[:search].gsub("'", "''"))
     else
       @search = ""
     end
