@@ -18,7 +18,7 @@ module Api
         # TO-DO
         password = generate_random_password
         # Labs can't create users on other labs' numbers
-        params[:identifier] = @current_api_user.identifier + params[:identifier] unless @role.role_name == "admin"
+        params[:identifier] = @current_api_user.identifier + params[:identifier]
         @user = User.new(identifier: params[:identifier], password: password, role_id: role.id)
         @user.pass = password
         return json_response({error: @user.errors.messages}, 400) unless @user.valid?
