@@ -2,10 +2,11 @@ class ReportController < ApplicationController
   # GET /cards
   # GET /cards.json
   def index
-    @cards = define_user
+    @cards = Card.from_user(example_or_logged_in)
+    @total_cards = @cards.size
 
     # Applies an eager_join so the other tables' columns can be used
-    @cards = @cards.get_genotypes_and_genes
+    @cards = @cards.eager_join_tables
 
     apply_order
 
@@ -13,6 +14,7 @@ class ReportController < ApplicationController
     apply_filters
     execute_search
 
+    @found_cards = @cards.size
     @cards = @cards.paginate(page: params[:page], per_page: 20)
 
     respond_to do |format|
@@ -21,12 +23,12 @@ class ReportController < ApplicationController
     end
   end
 
-  def define_user
+  def example_or_logged_in
     # If there isn't a logged in user, an example report will be shown
     if @current_user.nil?
-      Card.from_user(User.find_by(identifier: "0010000001").id)
+      User.find_by(identifier: "0010000001").id
     else
-      Card.from_user(@current_user.id)
+      @current_user.id
     end
   end
 

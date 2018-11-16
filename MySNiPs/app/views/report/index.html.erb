@@ -91,6 +91,7 @@
     <div id="page-content-wrapper">
       <div class="container-fluid">
         <div id="cards">
+          <%= text_for_total_or_found @total_cards, @found_cards %>
           <%= render @cards %>
         </div>
         <div id="infinite-scrolling">
