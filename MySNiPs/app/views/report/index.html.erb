@@ -14,7 +14,7 @@
         <% if @search == "" %>
           <input id="search" name="search" class="form-control col-10" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
             <% else %>
-          <input id="search" name="search" class="form-control col-10" type ="search" value = <%= @search.gsub(" ", " ") %>>
+          <input id="search" name="search" class="form-control col-10" type ="search" value = <%= @search.gsub(' ', '&nbsp;').html_safe %>>
         <% end %>
         <button class="btn btn-primary fas fa-search col-2" type="submit"></button>
         </div>
