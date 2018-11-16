@@ -16,7 +16,7 @@ module Api
         return json_response(error: "Internal role error") if role.nil?
 
         # TO-DO
-        password = generate_password
+        password = generate_random_password
         # Labs can't create users on other labs' numbers
         params[:identifier] = @current_api_user.identifier + params[:identifier] unless @role.role_name == "admin"
         @user = User.new(identifier: params[:identifier], password: password, role_id: role.id)
@@ -37,8 +37,19 @@ module Api
         json_response(message: "Success", user: @user.to_json_view, genoma: @genoma.to_json_view)
       end
 
-      def generate_password
-        "123"
+      # STILL NOT BEING USED
+      # MUST FIRST VALIDATE WITH CLIENT
+      def generate_identifier_for lab_identifier, id_number
+        # Transforms the user id into a 7 digits string justified to the right with zeros
+        # Then merges it with the lab identifier
+        # Example: 001, 123 -> "0010000123"
+        lab_identifier + id_number.to_s.rjust(7, "0")
+      end
+
+      def generate_random_password
+        # Generates a random string with 6 characters with numbers and lowcase letters
+        # The underscores are just a Style suggested by RuboCop for big numbers
+        rand(1_234_567_890).to_s(36)
       end
 
       # GET /genomas/
