@@ -47,9 +47,10 @@ module Api
       end
 
       def generate_random_password
-        # Generates a random string with 6 characters with numbers and lowcase letters
-        # The underscores are just a Style suggested by RuboCop for big numbers
-        rand(1_234_567_890).to_s(36)
+        # Generates a random string of 6 characters with numbers and lowcase letters
+        length_of_password = 6
+        numbers_and_letters = ("a".."z").to_a.size + (0..9).size # 36
+        rand(numbers_and_letters**length_of_password - 1).to_s(numbers_and_letters)
       end
 
       # GET /genomas/
