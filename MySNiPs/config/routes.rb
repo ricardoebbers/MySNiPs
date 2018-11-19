@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'welcome/index'
 
-  constraints(:ip => /127.0.0.1/) do
+  constraints(ip: /127.0.0.1/) do
+    resources :genes, only: [:index]
+    resources :genotypes, only: [:index]
+    resources :cards, only: [:index]
+
     # Reads a file that will fill the Gene and Genoma table from a file
     get '/import' => 'import#from_file'
 
@@ -17,9 +21,6 @@ Rails.application.routes.draw do
     get '/logout' => 'sessions#destroy'
   end
 
-  resources :genes, only: [:index]
-  resources :genotypes, only: [:index]
-  resources :cards, only: [:index]
   resources :report, only: [:index]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
