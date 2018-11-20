@@ -52,10 +52,6 @@ Quando("acessar {string}") do |string|
   visit string
 end
 
-Então("{string} deve ser exibido na página") do |string|
-  assert_text string
-end
-
 Então("devo receber notificação que o login falhou") do
   assert_text "try again"
 end
