@@ -58,10 +58,20 @@ class ReportController < ApplicationController
 
   def execute_search
     if params.has_key? :search
-      @search = params[:search].delete('"')
-      @cards = @cards.search_for(@search.gsub("'", "''"))
-    else
-      @search = ""
+      @search = params[:search]
+      tokens = tokenize(@search)
+      @cards = @cards.search_for_many(tokens)
     end
+  end
+
+  def tokenize(text)
+    # It breakes if there is an odd number of quotes, so the last one is deleted
+    text = text.gsub(/(.*)"/, '\1') if text.scan(/"/).count.odd?
+    # A split that ignores text inside double quotes, "like this"
+    arr = text.split(/\s(?=(?:[^"]|"[^"]*")*$)/)
+    # Ignores whitespaces
+    arr = arr.reject(&:empty?)
+    # And removes the double quotes
+    arr.map { |s| "%#{s.gsub(/(^ +)|( +$)|(^["]+)|(["]+$)/, '')}%" }
   end
 end
