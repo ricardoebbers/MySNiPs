@@ -57,36 +57,17 @@ class ReportController < ApplicationController
   end
 
   def execute_search
+    #debugger
     if params.has_key? :search
       @search = params[:search]
-
-      # Executes searches for every word, then mixes the results
-      final = nil
-      tokenize(params[:search]).each do |word|
-        final = if final.nil?
-                  @cards.search_for(word.gsub("'", "''"))
-                else
-                  final.or(@cards.search_for(word.gsub("'", "''")))
-                end
-      end
-
-      @cards = final
+      word = tokenize(@search)
+      @cards = @cards.search_for(word)
     else
       @search = ""
     end
   end
 
   def tokenize(text)
-    # It breakes if there is an odd number of quotes, so the last one is deleted
-    text = text.gsub(/(.*)"/, '\1') if text.scan(/"/).count.odd?
-
-    # A split that ignores text inside double quotes, "like this"
-    arr = text.split(/\s(?=(?:[^"]|"[^"]*")*$)/)
-
-    # Ignores whitespaces
-    arr = arr.reject(&:empty?)
-
-    # And removes the double quotes
-    arr.map {|s| s.gsub(/(^ +)|( +$)|(^["]+)|(["]+$)/, "") }
+    text.gsub(/\s/,'%')
   end
 end
