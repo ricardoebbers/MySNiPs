@@ -57,17 +57,15 @@ class ReportController < ApplicationController
   end
 
   def execute_search
-    #debugger
     if params.has_key? :search
       @search = params[:search]
-      word = tokenize(@search)
-      @cards = @cards.search_for(word)
-    else
-      @search = ""
+      tokens = tokenize(@search)
+      @cards = @cards.search_for_many(tokens)
     end
   end
 
   def tokenize(text)
-    text.gsub(/\s/,'%')
+    tokens = text.gsub(/\s+/m, ' ').strip.split(' ')
+    tokens.map { |word| "%#{word}%" }
   end
 end
