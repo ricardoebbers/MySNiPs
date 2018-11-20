@@ -8,7 +8,7 @@
 # x = Gene.create({:title=>"I3002455", :revid=>1195440, :orientation=>false, :stabilized=>false, :iid=>"3002455", :rsid=>"1800386", :position=>6127833, :chromosome=>"12"})
 Role.create(role_name: "admin")
 role = Role.find_by(role_name: "admin")
-User.create(identifier: "admin",
+User.create(identifier: "000",
             password: "987987",
             password_digest: "$2a$10$KmZcwIwf6nHRR2iPv78lZOl1e5Q.oJ0NkmmWRqg7F5GS2dKi6puTy",
             role_id: role.id)

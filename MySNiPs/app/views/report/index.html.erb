@@ -1,27 +1,83 @@
 <%= stylesheet_link_tag "sidebar" %>
+<!--
+<div class="page-header">
+  <h1>Report</h1>
+  <small>#<%= @current_identifier || "Example" %></small>
+</div>
+-->
 <nav class="navbar navbar-light bg-info fixed-top">
   <div class="row">
     <div class="col-2"><a class="navbar-brand" href="#menu-toggle" id="menu-toggle"><span class="navbar-toggler-icon"></span></a></div>
     <div class="col-10">
-      <%= form_tag(report_index_url, method: :get) do %>
+      <%= form_tag(report_index_url, method: :get, :id => 'search_card') do %>
         <div class="row">
-        <input id="search" name="search" class="form-control col-10" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+        <% if @search == "" %>
+          <input id="search" name="search" class="form-control col-10" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+            <% else %>
+          <input id="search" name="search" class="form-control col-10" type ="search" value = <%= @search.gsub(' ', '&nbsp;').html_safe %>>
+        <% end %>
         <button class="btn btn-primary fas fa-search col-2" type="submit"></button>
         </div>
-      <% end %>
     </div>
   </div>
-  
+
 </nav>
 <div id="wrapper" class="pt-5">
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#">
-                        Start Bootstrap
-                    </a>
+                    <a href="#"><%= image_tag("logo.png", :style=>'height:25px;', :class=>'d-inline-block align-bottom') %></a>
                 </li>
+                    <li class="text-info">Filtros</li>
+                    <li>Repute</li>
+                    <li>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="rep" value="1">
+                    <label class="form-check-label text-success" for="exampleRadios1">
+                        Good Repute
+                    </label>
+                    </div></li>
+                    <li>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="rep" value="2">
+                    <label class="form-check-label text-danger" for="exampleRadios2">
+                        Bad Repute
+                    </label>
+                    </div>
+                    </li>
+                    <li>Magnitude</li>
+                    <li><select class="form-control" id="exampleFormControlSelect1" name="min">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    </select></li>
+                    <li><select class="form-control" id="exampleFormControlSelect2" name="max">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    </select></li>
+
+                    <li style="text-align:center;">
+                    <button class="btn btn-primary fas fa-search col-2" type="submit"></button>
+                    </li>
+                <% end %>
                 <li>
                     <a href="#">Termos de Uso</a>
                 </li>
@@ -29,7 +85,16 @@
                     <a href="/logout">Logout</a>
                 </li>
             </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <div id="cards">
+          <%= render @cards rescue "Ocorreu um erro :(" %>
+          <%= text_for_total_or_found @total_cards, @found_cards %>
         </div>
+<<<<<<< HEAD
         <!-- /#sidebar-wrapper -->
         <!-- Page Content -->
         <div id="page-content-wrapper">
@@ -43,13 +108,20 @@
                   <%= will_paginate @cards %>
                 </div>            
             </div>
+=======
+        <div id="infinite-scrolling">
+          <%= will_paginate @cards rescue nil %>
+>>>>>>> development
         </div>
-        <!-- /#page-content-wrapper -->
-
+      </div>
     </div>
-    <!-- /#wrapper -->
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
 
 
 
 <%= javascript_include_tag 'sidebar'%>
+
 </body>

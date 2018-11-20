@@ -1,6 +1,7 @@
-<div class="card mx-5 border border-info my-3">
+<div class="card border border-info my-3">
 
   <div class="row">
+
     <div class="col-md-2 mx-auto my-auto text-center pt-3 pb-3">
         <i class="fas fa-dna fa-5x" style="color:<%= card.genotype.color%>; background-size:cover;"></i>
     </div>
@@ -16,9 +17,9 @@
         <h5 class="text-info">Summary Gene: &nbsp</h5><%= card.genotype.gene.summary%>
       </div>
       <% end %>
-      <% if card.genotype.page_content %>
+      <% if card.genotype.page_text %>
       <div class="row px-4">
-        <h5 class="text-info">Page Content: &nbsp</h5><%= card.genotype.page_content%>
+        <h5 class="text-info">Page Text: &nbsp</h5><%= card.genotype.page_text%>
       </div>
       <% end %>
     </div>
