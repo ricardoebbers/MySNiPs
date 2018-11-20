@@ -16,9 +16,9 @@ module Api
         return json_response(error: "Internal role error") if role.nil?
 
         # TO-DO
-        password = generate_password
+        password = generate_random_password
         # Labs can't create users on other labs' numbers
-        params[:identifier] = @current_api_user.identifier + params[:identifier] unless @role.role_name == "admin"
+        params[:identifier] = @current_api_user.identifier + params[:identifier]
         @user = User.new(identifier: params[:identifier], password: password, role_id: role.id)
         @user.pass = password
         return json_response({error: @user.errors.messages}, 400) unless @user.valid?
@@ -26,15 +26,31 @@ module Api
         @user.save
 
         # Genomas always start with Status 1: queue
-        @genoma = Genoma.new(user_id: @user.id, status: 1)
-        return json_response({error: @user.errors.message}, 400) unless @genoma.valid?
+        @genoma = Genoma.new(user_id: @user.id, status: 1, raw_file: params[:raw_file])
+
+        unless @genoma.valid?
+          @user.destroy
+          return json_response({error: @user.errors.message}, 400)
+        end
 
         @genoma.save
         json_response(message: "Success", user: @user.to_json_view, genoma: @genoma.to_json_view)
       end
 
-      def generate_password
-        "123"
+      # STILL NOT BEING USED
+      # MUST FIRST VALIDATE WITH CLIENT
+      def generate_identifier_for lab_identifier, id_number
+        # Transforms the user id into a 7 digits string justified to the right with zeros
+        # Then merges it with the lab identifier
+        # Example: 001, 123 -> "0010000123"
+        lab_identifier + id_number.to_s.rjust(7, "0")
+      end
+
+      def generate_random_password
+        # Generates a random string of 6 characters with numbers and lowcase letters
+        length_of_password = 6
+        numbers_and_letters = ("a".."z").to_a.size + (0..9).size # 36
+        rand(numbers_and_letters**length_of_password - 1).to_s(numbers_and_letters)
       end
 
       # GET /genomas/
@@ -85,7 +101,7 @@ module Api
       private
 
       def genoma_params
-        params.require(:id, :csv)
+        params.require(:identifier, :raw_file)
       end
     end
   end
