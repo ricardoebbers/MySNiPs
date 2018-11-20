@@ -1,6 +1,9 @@
 module Api
   module V1
     class GenomasController < ApiController
+      PASSWORD_LENGTH = 6
+      IDENTIFIER_LENGTH = 7
+
       def new
         @genoma = Genoma.new
       end
@@ -8,18 +11,21 @@ module Api
       def create
         # Only labs and admins can post genomas
         return json_response({error: "Invalid credentials"}, 401) unless authority_valid?
-
         return json_response({error: "Invalid parameters"}, 400) unless params.has_key? :identifier
 
-        Role.create(role_name: "usuario_final")
+        # Every user created is a final user
         role = Role.find_by(role_name: "usuario_final")
         return json_response(error: "Internal role error") if role.nil?
 
-        # TO-DO
+        # Checks if the idenfifier is valid
+        return json_response(error: "Identifier should be integer") unless just_numbers? params[:identifier]
+        return json_response(error: "Identifier must be < #{IDENTIFIER_LENGTH}") unless right_size? params[:identifier]
+
+        identifier = generate_identifier_for @current_api_user.identifier, params[:identifier]
         password = generate_random_password
+
         # Labs can't create users on other labs' numbers
-        params[:identifier] = @current_api_user.identifier + params[:identifier]
-        @user = User.new(identifier: params[:identifier], password: password, role_id: role.id)
+        @user = User.new(identifier: identifier, password: password, role_id: role.id)
         @user.pass = password
         return json_response({error: @user.errors.messages}, 400) unless @user.valid?
 
@@ -27,7 +33,6 @@ module Api
 
         # Genomas always start with Status 1: queue
         @genoma = Genoma.new(user_id: @user.id, status: 1, raw_file: params[:raw_file])
-
         unless @genoma.valid?
           @user.destroy
           return json_response({error: @user.errors.message}, 400)
@@ -37,20 +42,25 @@ module Api
         json_response(message: "Success", user: @user.to_json_view, genoma: @genoma.to_json_view)
       end
 
-      # STILL NOT BEING USED
-      # MUST FIRST VALIDATE WITH CLIENT
+      def just_numbers?(ident)
+        ident !~ /\D/
+      end
+
+      def right_size?(ident)
+        ident.to_s.length <= IDENTIFIER_LENGTH
+      end
+
       def generate_identifier_for lab_identifier, id_number
         # Transforms the user id into a 7 digits string justified to the right with zeros
         # Then merges it with the lab identifier
         # Example: 001, 123 -> "0010000123"
-        lab_identifier + id_number.to_s.rjust(7, "0")
+        lab_identifier + id_number.to_s.rjust(IDENTIFIER_LENGTH, "0")
       end
 
       def generate_random_password
         # Generates a random string of 6 characters with numbers and lowcase letters
-        length_of_password = 6
         numbers_and_letters = ("a".."z").to_a.size + (0..9).size # 36
-        rand(numbers_and_letters**length_of_password - 1).to_s(numbers_and_letters)
+        rand(numbers_and_letters**PASSWORD_LENGTH - 1).to_s(numbers_and_letters)
       end
 
       # GET /genomas/
