@@ -24,11 +24,9 @@ class Card < ApplicationRecord
     OR (genotypes.page_content ILIKE ?)
     OR (genes.summary ILIKE ?))"
     words.each do |word|
-      sanitized_word = sanitize_sql_for_conditions(word)
-      final.push(block.gsub('?', "'#{sanitized_word}'"))
+      final.push(sanitize_sql_for_conditions([block, word, word, word, word]))
     end
     sql = final.join(' OR ')
     where(sql)
   }
-
 end
