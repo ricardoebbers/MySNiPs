@@ -15,11 +15,11 @@ module Api
 
         # Every user created is a final user
         role = Role.find_by(role_name: "usuario_final")
-        return json_response(error: "Internal role error") if role.nil?
+        return json_response({error: "Internal role error"}, 500) if role.nil?
 
         # Checks if the idenfifier is valid
-        return json_response(error: "Identifier should be integer") unless just_numbers? params[:identifier]
-        return json_response(error: "Identifier must be < #{IDENTIFIER_LENGTH}") unless right_size? params[:identifier]
+        return json_response({error: "Identifier should be integer"}, 401) unless just_numbers? params[:identifier]
+        return json_response({error: "Max Idenfitifier length is #{IDENTIFIER_LENGTH}"}, 401) unless right_size? params[:identifier]
 
         identifier = generate_identifier_for @current_api_user.identifier, params[:identifier]
         password = generate_random_password
