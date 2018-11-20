@@ -46,12 +46,6 @@ Funcionalidade: Acesso ao relatório por login
     Então devo receber notificação que o login falhou
     E devo permanecer em "/login"
 
-  Cenário: Não é possível acessar "/report" sem estar logado
-    Dado que estou na página "/"
-    E que o usuário "login_valido" não está logado
-    Quando acessar "/report"
-    Então devo ser redirecionado para "/login"
-
   Cenário: Redireciona para "/report" quando tentar acessar "/login" estando logado
     Dado que estou na página "/"
     E que existe um usuário login:"login_valido", senha:"senha_valida"
