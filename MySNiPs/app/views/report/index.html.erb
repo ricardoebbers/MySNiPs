@@ -91,8 +91,8 @@
     <div id="page-content-wrapper">
       <div class="container-fluid">
         <div id="cards">
-          <%= render @cards rescue "Ocorreu um erro :(" %>
           <%= text_for_total_or_found @total_cards, @found_cards %>
+          <%= render @cards rescue "Ocorreu um erro :(" %>
         </div>
         <div id="infinite-scrolling">
           <%= will_paginate @cards rescue nil %>
