@@ -21,6 +21,16 @@ module Api
         end
       end
 
+      IDENTIFIER_LENGTH = 7
+      # Transforms the id_number into a 7 digits string justified to the right with zeros
+      # Then merges it with the lab identifier
+      # Example: 001, 123 -> "0010000123"
+      def format_identifier_for lab_identifier, id_number
+        return id_number if lab_identifier == "admin"
+
+        lab_identifier + id_number.to_s.rjust(IDENTIFIER_LENGTH, "0")
+      end
+
       private
 
       def authenticate_request

@@ -2,7 +2,6 @@ module Api
   module V1
     class GenomasController < ApiController
       PASSWORD_LENGTH = 6
-      IDENTIFIER_LENGTH = 7
 
       def new
         @genoma = Genoma.new
@@ -21,7 +20,7 @@ module Api
         return json_response({error: "Identifier should be integer"}, 401) unless just_numbers? params[:identifier]
         return json_response({error: "Max Idenfitifier length is #{IDENTIFIER_LENGTH}"}, 401) unless right_size? params[:identifier]
 
-        identifier = generate_identifier_for @current_api_user.identifier, params[:identifier]
+        identifier = format_identifier_for @current_api_user.identifier, params[:identifier]
         password = generate_random_password
 
         # Labs can't create users on other labs' numbers
@@ -50,13 +49,6 @@ module Api
         ident.to_s.length <= IDENTIFIER_LENGTH
       end
 
-      def generate_identifier_for lab_identifier, id_number
-        # Transforms the user id into a 7 digits string justified to the right with zeros
-        # Then merges it with the lab identifier
-        # Example: 001, 123 -> "0010000123"
-        lab_identifier + id_number.to_s.rjust(IDENTIFIER_LENGTH, "0")
-      end
-
       def generate_random_password
         # Generates a random string of 6 characters with numbers and lowcase letters
         numbers_and_letters = ("a".."z").to_a.size + (0..9).size # 36
@@ -65,7 +57,7 @@ module Api
 
       # GET /genomas/
       def index(last=false)
-        # Common or unlloged users can't see genomas
+        # Common or not logged in users can't see genomas
         return json_response({error: "Invalid credentials"}, 401) unless authority_valid?
 
         # Admins can see all genomas
@@ -88,14 +80,16 @@ module Api
 
       # GET /genoma/:id
       def show
-        # Common or unlloged users can't see genomas
+        # Common or not logged in users can't see genomas
         return json_response({error: "Invalid credentials"}, 401) unless authority_valid?
 
-        # Labs can only see their own users' genomas
-        params[:identifier] = @current_api_user.identifier + params[:identifier] unless @role.role_name == "admin"
+        # Labs can only see their own users
+        # Admin can see all genomas, but must type the entire identifier
+        identifier = format_identifier_for @current_api_user.identifier, params[:identifier]
+
         @genoma = User.joins(:genoma)
                       .select("identifier, status, genomas.created_at, genomas.updated_at")
-                      .find_by(identifier: params[:identifier])
+                      .find_by(identifier: identifier)
 
         return json_response({message: "Nothing found"}, 404) if @genoma.nil?
 

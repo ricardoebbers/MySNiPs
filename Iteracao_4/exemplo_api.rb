@@ -73,8 +73,8 @@ def run
   puts post "upload", {identifier: "003", raw_file: upload_data("test_file.csv")}, auth_token
 
   puts "\n\n\nUSER/:identifier - Devolve as informações do usuário com o identifier pedido. GENOMA/:identifier funciona da mesma forma.\n\n"
-  puts "GET http://localhost:3000/api/v1/user/0000003 header:{Authorization:[auth_token]}\n\n"
-  puts get "user/0000003", auth_token
+  puts "GET http://localhost:3000/api/v1/user/3 header:{Authorization:[auth_token]}\n\n"
+  puts get "user/3", auth_token
 
   puts "\n\n\nGENOMAS/LAST - Devolve as informações do último genoma adicionado. USERS/LAST funciona da mesma forma.\n\n"
   puts "GET http://localhost:3000/api/v1/genomas/last header:{Authorization:[auth_token]}\n\n"

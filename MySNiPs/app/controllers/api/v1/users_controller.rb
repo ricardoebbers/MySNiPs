@@ -49,9 +49,11 @@ module Api
         return json_response({error: "Invalid credentials"}, 401) unless authority_valid?
 
         # Labs can only see their own users
-        params[:identifier] = @current_api_user.identifier + params[:identifier] unless @role.role_name == "admin"
+        # Admin can see all users, but must type the entire identifier
+        identifier = format_identifier_for @current_api_user.identifier, params[:identifier]
+
         @user = User.select("id, identifier, pass, created_at, last_login")
-                    .find_by(identifier: params[:identifier])
+                    .find_by(identifier: identifier)
 
         return json_response({message: "Nothing found"}, 404) if @user.nil?
 
