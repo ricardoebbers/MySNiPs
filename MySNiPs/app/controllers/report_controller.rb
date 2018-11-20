@@ -26,7 +26,12 @@ class ReportController < ApplicationController
   def example_or_logged_in
     # If there isn't a logged in user, an example report will be shown
     if @current_user.nil?
-      User.find_by(identifier: "0010000001").id
+      user = User.find_by(identifier: "0010000001")
+      if user.nil?
+        0
+      else
+        user.id
+      end
     else
       @current_user.id
     end
