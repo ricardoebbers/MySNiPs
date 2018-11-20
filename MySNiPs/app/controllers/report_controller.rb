@@ -64,4 +64,18 @@ class ReportController < ApplicationController
       @search = ""
     end
   end
+
+  def tokenize(text)
+    # It breakes if there is an odd number of quotes, so the last one is deleted
+    text = text.gsub(/(.*)"/, '\1') if text.scan(/"/).count.odd?
+
+    # A split that ignores text inside double quotes, "like this"
+    arr = text.split(/\s(?=(?:[^"]|"[^"]*")*$)/)
+
+    # Ignores whitespaces
+    arr = arr.reject(&:empty?)
+
+    # And removes the double quotes
+    arr.map {|s| s.gsub(/(^ +)|( +$)|(^["]+)|(["]+$)/, "") }
+  end
 end
