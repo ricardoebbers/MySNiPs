@@ -293,9 +293,8 @@
 			e.preventDefault();
       var id = $(this).attr('href');
       var modo=$(this).attr('target');
-      console.log(id);
       var classe = $(this).attr('class');
-      if (classe=='nav-link interno text-white'){
+      if (classe.split(" ").includes("interno")){
 			var distancia_topo = $(id).offset().top;
 			var altura_menu = $("nav").innerHeight();
 
