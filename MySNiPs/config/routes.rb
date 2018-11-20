@@ -18,21 +18,21 @@ Rails.application.routes.draw do
     # Reads a file that will fill the Cards table from a file, using Gene and Genoma
     get '/match' => 'matches#make_report'
 
-    get '/logout' => 'sessions#destroy'
   end
-
+  
   resources :report, only: [:index]
-
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
+  
   # log in page with form:
   get '/login'     => 'sessions#new'
-
+  
   # create (post) action for when log in form is submitted:
   post '/login'    => 'sessions#create'
-
+  
   # delete action to log out:
   delete '/logout' => 'sessions#destroy'
+  get '/logout' => 'sessions#destroy'
 
   namespace :api do
     namespace :v1 do
