@@ -1,8 +1,6 @@
 class Genoma < ApplicationRecord
-  mount_base64_uploader :genomafile, GenomaFileUploader
   before_validation :parse_file
   belongs_to :user
-  validates :file, presence: true, uniqueness: true
   attr_accessor :raw_file
 
   def to_json_view
@@ -13,17 +11,19 @@ class Genoma < ApplicationRecord
   end
 
   def parse_file
-    puts "PARSING FILE FOR " + user.identifier
-    path = make_path
     decoded_file = Base64.decode64(@raw_file) unless @raw_file.nil?
     return false if decoded_file.nil?
 
-    File.open(path, "w") {|f| f.write(decoded_file) }
-    update_attribute(:file, path)
+    update_attribute(:file, decoded_file)
   end
 
-  def make_path
-    # Separate in folders by laboratory later
-    Rails.root.join("data", "genomas", user.identifier + ".gnm")
+  def delete_file_from_db
+    update_attribute(:status, 0)
+    update_attribute(:file, nil)
+  end
+
+  def mark_error
+    update_attribute(:status, -1)
+    update_attribute(:file, nil)
   end
 end
