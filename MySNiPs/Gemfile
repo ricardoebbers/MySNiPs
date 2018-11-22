@@ -99,4 +99,3 @@ gem 'carrierwave'
 gem 'carrierwave-base64'
 
 gem 'json_web_token'
-gem 'jwt'
