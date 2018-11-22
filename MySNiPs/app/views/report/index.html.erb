@@ -33,16 +33,27 @@
                     <li class="text-info">Filtros</li>
                     <li>Repute</li>
                     <li>
+                    checked
                     <div class="form-check">
-                    <input id="exampleRadios1" class="form-check-input" type="radio" name="rep" value="1">
-                    <label class="form-check-label text-success" for="exampleRadios1">
+                    <% if @repute_is == true %>
+                      <input id="exampleRadios1" class="form-check-input" type="radio" name="rep" value="1" checked>
+                      <label class="form-check-label text-success" for="exampleRadios1">
+                    <% else %>
+                      <input id="exampleRadios1" class="form-check-input" type="radio" name="rep" value="1">
+                      <label class="form-check-label text-success" for="exampleRadios1">
+                    <% end %>
                         Good Repute
                     </label>
                     </div></li>
                     <li>
                     <div class="form-check">
-                    <input id="exampleRadios2" class="form-check-input" type="radio" name="rep" value="2">
-                    <label class="form-check-label text-danger" for="exampleRadios2">
+                    <% if @repute_is == false %>
+                      <input id="exampleRadios2" class="form-check-input" type="radio" name="rep" value="2" checked>
+                      <label class="form-check-label text-danger" for="exampleRadios2">
+                    <% else %>
+                      <input id="exampleRadios2" class="form-check-input" type="radio" name="rep" value="2">
+                      <label class="form-check-label text-danger" for="exampleRadios2">
+                    <%end%>
                         Bad Repute
                     </label>
                     </div>
