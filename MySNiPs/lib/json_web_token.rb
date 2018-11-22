@@ -1,4 +1,3 @@
-require "jwt"
 class JsonWebToken
   class << self
     def encode(payload, exp = 72.hours.from_now)
