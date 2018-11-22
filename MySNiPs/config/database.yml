@@ -26,7 +26,7 @@ test: &test
 
 production:
   <<: *default
-  database: db_development
+  database: db_production
 
 
 cucumber:
