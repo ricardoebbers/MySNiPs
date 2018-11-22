@@ -59,21 +59,8 @@
                     </div>
                     </li>
                     <li>Magnitude</li>
-                    <li><select class="form-control" id="min" name="min">
-                    </select></li>
-                    <li><select class="form-control" id="exampleFormControlSelect2" name="max">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-                    </select></li>
+                    <li><select class="form-control" id="min" name="min"></select></li>
+                    <li><select class="form-control" id="max" name="max"></select></li>
                     <li><div id="slider" class="noUiSlider"></div></li>
                     <li style="text-align:center;">
                     <button class="btn btn-primary fas fa-search col-2" type="submit"></button>
@@ -113,14 +100,15 @@
 var slider = document.getElementById('slider');
 
 noUiSlider.create(slider, {
-    start: [3, 6],
+    start: [0, 10],
     connect: true,
     range: {
         'min': 0,
         'max': 10
     },step:1
 });
-var select = document.getElementById('min');
+var selectmin = document.getElementById('min');
+var selectmax = document.getElementById('max');
 
 // Append the option elements
 for (var i = 0; i <= 10; i++) {
@@ -129,27 +117,42 @@ for (var i = 0; i <= 10; i++) {
     option.text = i;
     option.value = i;
 
-    select.appendChild(option);
+    selectmin.appendChild(option);
+}
+for (var i = 0; i <= 10; i++) {
+
+    var option = document.createElement("option");
+    option.text = i;
+    option.value = i;
+
+    selectmax.appendChild(option);
 }
 
 
-var inputNumber = document.getElementById('min');
+var inputNumbermin = document.getElementById('min');
+var inputNumbermax = document.getElementById('max');
 
 slider.noUiSlider.on('update', function (values, handle) {
 
     var value = values[handle];
 
     if (handle) {
-        inputNumber.value = value;
     } else {
-        select.value = Math.round(value);
+        selectmin.value = Math.round(value);
+        
+        
 
     }
 });
 
-select.addEventListener('change', function () {
+
+
+
+selectmin.addEventListener('change', function () {
   slider.noUiSlider.set([this.value,null]);
-  console.log(this.value)
+});
+selectmax.addEventListener('change', function () {
+  slider.noUiSlider.set([null,this.value]);
 });
 </script>
 
