@@ -43,7 +43,18 @@ class ReportController < ApplicationController
   end
 
   def apply_filters
-    execute_search
+    # @min = params[:min]
+    # @max = params[:max]
+    # if params[:min] = "0" and params[:max] == "0"
+    #     params[:max] = "10"
+    if params.has_key? :rep
+      if params[:rep] == "1"
+        @repute_is = true
+      else params[:rep] == "2"
+        @repute_is = false
+      end
+    end
+   # end
     @cards = @cards.min_mag(params[:min]) if params.has_key? :min
     @cards = @cards.max_mag(params[:max]) if params.has_key? :max
     @cards = @cards.repute_is(params[:rep]) if params.has_key? :rep
