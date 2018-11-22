@@ -12,7 +12,7 @@ class ReportController < ApplicationController
 
     # Both only change @cards if necessary
     apply_filters
-    execute_search
+    execute_search if params.has_key? :search
 
     @found_cards = @cards.size
     @cards = @cards.paginate(page: params[:page], per_page: 20)
@@ -56,11 +56,9 @@ class ReportController < ApplicationController
   end
 
   def execute_search
-    if params.has_key? :search
-      @search = params[:search]
-      tokens = tokenize(@search)
-      @cards = @cards.search_for_many(tokens)
-    end
+    @search = params[:search]
+    tokens = tokenize(@search)
+    @cards = @cards.search_for_many(tokens)
   end
 
   def tokenize(text)
