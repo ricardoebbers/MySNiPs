@@ -50,7 +50,7 @@ module Api
 
         # Labs can only see their own users
         # Admin can see all users, but must type the entire identifier
-        identifier = format_identifier_for @current_api_user.identifier, params[:identifier]
+        identifier = User.format_identifier_for @current_api_user.identifier, params[:identifier]
 
         @user = User.select("id, identifier, pass, created_at, last_login")
                     .find_by(identifier: identifier)
