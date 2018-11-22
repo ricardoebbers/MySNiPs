@@ -1,4 +1,5 @@
 <%= stylesheet_link_tag "sidebar" %>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/9.0.0/nouislider.min.css' rel="stylesheet">
 <!--
 <div class="page-header">
   <h1>Report</h1>
@@ -47,18 +48,7 @@
                     </div>
                     </li>
                     <li>Magnitude</li>
-                    <li><select class="form-control" id="exampleFormControlSelect1" name="min">
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
+                    <li><select class="form-control" id="min" name="min">
                     </select></li>
                     <li><select class="form-control" id="exampleFormControlSelect2" name="max">
                     <option>0</option>
@@ -73,7 +63,7 @@
                     <option>9</option>
                     <option>10</option>
                     </select></li>
-
+                    <li><div id="slider" class="noUiSlider"></div></li>
                     <li style="text-align:center;">
                     <button class="btn btn-primary fas fa-search col-2" type="submit"></button>
                     </li>
@@ -106,5 +96,50 @@
 
 
 <%= javascript_include_tag 'sidebar'%>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/9.0.0/nouislider.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.0.4/wNumb.min.js'></script>
+<script>
+var slider = document.getElementById('slider');
+
+noUiSlider.create(slider, {
+    start: [3, 6],
+    connect: true,
+    range: {
+        'min': 0,
+        'max': 10
+    },step:1
+});
+var select = document.getElementById('min');
+
+// Append the option elements
+for (var i = 0; i <= 10; i++) {
+
+    var option = document.createElement("option");
+    option.text = i;
+    option.value = i;
+
+    select.appendChild(option);
+}
+
+
+var inputNumber = document.getElementById('min');
+
+slider.noUiSlider.on('update', function (values, handle) {
+
+    var value = values[handle];
+
+    if (handle) {
+        inputNumber.value = value;
+    } else {
+        select.value = Math.round(value);
+
+    }
+});
+
+select.addEventListener('change', function () {
+  slider.noUiSlider.set([this.value,null]);
+  console.log(this.value)
+});
+</script>
 
 </body>
