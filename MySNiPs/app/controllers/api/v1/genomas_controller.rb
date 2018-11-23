@@ -19,14 +19,21 @@ module Api
         @genoma = Genoma.new(user_id: @user.id, status: 1, raw_file: params[:raw_file])
         unless @genoma.valid?
           @user.destroy
-          return json_response({error: @genoma.errors.messages}, 400)
+          errors = @genoma.errors.messages
+          @genoma = nil
+          @users = nil
+          return json_response({error: errors}, 400)
         end
 
         @genoma.save
 
         Thread.new { MatchMaker.new(@user).make_matches_from_database }
+        user_view = @user.to_json_view
+        genoma_view = @genoma.to_json_view
+        @user = nil
+        @genoma = nil
 
-        json_response(message: "Success, the genoma is being read", user: @user.to_json_view, genoma: @genoma.to_json_view)
+        json_response(message: "Success, the genoma is being read", user: user_view, genoma: genoma_view)
       end
 
       def prepare_user_for identifier
