@@ -58,13 +58,12 @@
                     </label>
                     </div>
                     </li>
-                    <li>Magnitude</li>
-                    <li><select class="form-control" id="min" name="min"></select></li>
-                    <li><select class="form-control" id="max" name="max"></select></li>
-                    <li><div id="slider" class="noUiSlider"></div></li>
-                    <li style="text-align:center;">
-                    <button class="btn btn-primary fas fa-search col-2" type="submit"></button>
-                    </li>
+                    <li class="text-center">Magnitude</li>
+                    <li><div id="slider" class="noUiSlider" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"></div></li>
+                    <li style="text-align:center;"><button class="btn btn-primary fas fa-search col-2" type="submit"></button></li>
+                    <li><select class="form-control" id="min" name="min" style="visibility:hidden;"></select></li>
+                    <li><select class="form-control" id="max" name="max" style="visibility:hidden;"></select></li>
+                    
                 <% end %>
                 <li class="text-center">
                     <a href="#" class=" text-muted">Termos de Uso</a>
