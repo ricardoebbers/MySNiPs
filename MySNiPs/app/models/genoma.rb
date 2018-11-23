@@ -1,7 +1,7 @@
 class Genoma < ApplicationRecord
-  before_validation :parse_file
+  #before_validation :parse_file
   belongs_to :user
-  attr_accessor :raw_file
+  #attr_accessor :raw_file
 
   def to_json_view
     {
@@ -20,12 +20,12 @@ class Genoma < ApplicationRecord
   end
 
   def match_complete
-    update_attribute(:status, 0)
     update_attribute(:file, nil)
+    update_attribute(:status, 0)
   end
 
   def match_error
-    update_attribute(:status, 2)
     update_attribute(:file, nil)
+    update_attribute(:status, 2)
   end
 end

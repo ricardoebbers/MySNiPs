@@ -1,34 +1,30 @@
 module Api
   class MatchMaker
-    def initialize user
-      @user = user
+    def initialize genoma, file_content
+      make_matches genoma, file_content
     end
 
-    def make_matches_from_database
-      return if @user.nil?
-      user = @user
-      @user = nil
+    def make_matches genoma, file_content
+      return if genoma.nil?
 
-      @useridentifier = user[:identifier]
+      @user_id = genoma[:user_id]
+      return genoma.match_error if file_content.nil?
 
-      file_content = user.genoma[:file]
-      return user.genoma.match_error if file_content.nil?
-
-      user_id = user[:id]
       @flips_hash = {"A" => "T", "T" => "A", "C" => "G", "G" => "T"}
 
       snps = read_to_hash file_content
       file_content = nil
-      return user.genoma.match_error if snps.nil?
+      return genoma.match_error if snps.nil?
 
       inserts = compare_database_with snps
+
       snps = nil
       if inserts > 0
-        user.genoma.match_complete
+        genoma.match_complete
       else
-        user.genoma.match_error
+        genoma.match_error
       end
-      user = nil
+      genoma = nil
     end
 
     # Hash format
@@ -48,12 +44,11 @@ module Api
     # Comparing them with the snp hash
     # Then searching for the Genotype in the database
     def compare_database_with snps
-      puts @useridentifier
       progress = 0
       inserts = 0
       Gene.find_each do |gene|
         progress += 1
-        puts progress.to_s + "/" + snps.size.to_s + "\n" + inserts.to_s + " CARDS"
+        #puts progress.to_s + "/" + snps.size.to_s + "\n" + inserts.to_s + " CARDS"
         match = snps[gene[:title]]
         next if match.nil?
 
@@ -95,9 +90,12 @@ module Api
 
     def insert_in_db(geno_id)
       card = Card.new(user_id: @user_id, genotype_id: geno_id)
-      puts card.inspect
 
-      return card.save if card.valid?
+      if card.valid?
+        card.save
+        card = nil
+        return
+      end
 
       puts "ERROR"
       puts card.errors.messages
