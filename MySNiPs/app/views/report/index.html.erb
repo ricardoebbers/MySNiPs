@@ -136,12 +136,11 @@ slider.noUiSlider.on('update', function (values, handle) {
 
     var value = values[handle];
 
-    if (handle) {
-    } else {
-        selectmin.value = Math.round(value);
-        
-        
-
+    if (handle==0) {
+      selectmin.value = Math.round(value);
+    }
+    else if(handle==1){
+      selectmax.value = Math.round(value);
     }
 });
 
