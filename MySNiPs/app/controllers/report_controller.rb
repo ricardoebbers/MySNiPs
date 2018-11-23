@@ -50,18 +50,17 @@ class ReportController < ApplicationController
   end
 
   def apply_filters
-    execute_search
     @cards = @cards.min_mag(params[:min]) if params.has_key? :min
     @cards = @cards.max_mag(params[:max]) if params.has_key? :max
     @cards = @cards.repute_is(params[:rep]) if params.has_key? :rep
   end
 
   def execute_search
-    if params.has_key? :search
-      @search = params[:search]
-      tokens = tokenize(@search)
-      @cards = @cards.search_for_many(tokens)
-    end
+    return unless params.has_key? :search
+
+    @search = params[:search]
+    tokens = tokenize(@search)
+    @cards = @cards.search_for_many(tokens)
   end
 
   def tokenize(text)
@@ -72,6 +71,6 @@ class ReportController < ApplicationController
     # Ignores whitespaces
     arr = arr.reject(&:empty?)
     # And removes the double quotes
-    arr.map { |s| "%#{s.gsub(/(^ +)|( +$)|(^["]+)|(["]+$)/, '')}%" }
+    arr.map {|s| "%#{s.gsub(/(^ +)|( +$)|(^["]+)|(["]+$)/, '')}%" }
   end
 end
