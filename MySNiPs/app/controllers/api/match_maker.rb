@@ -15,7 +15,7 @@ module Api
       @user_id = @user[:id]
       @flips_hash = {"A" => "T", "T" => "A", "C" => "G", "G" => "T"}
 
-      snps = read_to_hash StringIO.new(file_content)
+      snps = read_to_hash file_content
       return @user.genoma.match_error if snps.nil?
 
       inserts = compare_database_with snps
@@ -30,9 +30,10 @@ module Api
     # {title: {:title, :chromosome, :position, :allele1, :allele2}}
     def read_to_hash(file)
       hash_snps = {}
+      file = file.split("\n")
       file.each do |line|
-        snp = build_snp line.split("\t")
-        hash_snps[snp[:title].capitalize] = snp if snp.present?
+        snp = build_snp line.split("\t") unless line.start_with? "#"
+        hash_snps[snp[:title].capitalize] = snp if !snp.nil? && snp.present?
       end
       hash_snps
     end
@@ -46,6 +47,7 @@ module Api
       inserts = 0
       Gene.find_each do |gene|
         progress += 1
+        puts progress.to_s + "/" + snps.size.to_s + "\n" + inserts.to_s + " CARDS"
         match = snps[gene[:title]]
         next if match.nil?
 
@@ -54,21 +56,24 @@ module Api
 
         insert_in_db geno[:id]
         inserts += 1
-        puts progress.to_s + "/" + snps.size.to_s + "\n" + inserts.to_s + " CARDS"
       end
       inserts
     end
 
     # Interprets the lines from the genome file into a simple hash
     def build_snp(data)
-      return nil if data.count != 4
+      return nil unless data.count.between? 4, 5
 
       snp = {}
       snp[:title] = data[0].capitalize
-      snp[:chromosome] = data [1]
+      snp[:chromosome] = data[1].downcase
       snp[:position] = data[2]
-      snp[:allele1] = data[3][0]
-      snp[:allele2] = data[3][1]
+      snp[:allele1] = data[3][0].capitalize
+      snp[:allele2] = if data.count == 5
+                        data[4][0].capitalize
+                      else
+                        data[3][1].capitalize
+                      end
       snp
     end
 
