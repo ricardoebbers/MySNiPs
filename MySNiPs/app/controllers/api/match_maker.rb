@@ -1,40 +1,55 @@
 module Api
   class MatchMaker
-    def initialize genoma, file_content
-      make_matches genoma, file_content
+    def initialize
+      GC.start(full_mark: true, immediate_sweep: true)
     end
 
-    def make_matches genoma, file_content
-      return if genoma.nil?
+    def make_matches_for genoma, file_content
+      puts "\nStarted match making\n"
+      return genoma.match_error if genoma.nil?
 
+      puts "Genoma not nil"
       @user_id = genoma[:user_id]
       return genoma.match_error if file_content.nil?
 
       @flips_hash = {"A" => "T", "T" => "A", "C" => "G", "G" => "T"}
 
+      puts "SNPs not nil"
       snps = read_to_hash file_content
       file_content = nil
       return genoma.match_error if snps.nil?
 
+      GC.start(full_mark: true, immediate_sweep: true)
+
       inserts = compare_database_with snps
 
       snps = nil
+      puts "Finished match making with #{inserts} inserts"
       if inserts > 0
         genoma.match_complete
       else
         genoma.match_error
       end
       genoma = nil
+      GC.start(full_mark: true, immediate_sweep: true)
     end
 
     # Hash format
-    # {title: {:title, :chromosome, :position, :allele1, :allele2}}
+    # {title: {:chromosome, :position, :allele1, :allele2}}
     def read_to_hash(file)
       hash_snps = {}
-      file = file.split("\n")
-      file.each do |line|
-        snp = build_snp line.split("\t") unless line.start_with? "#"
-        hash_snps[snp[:title].capitalize] = snp if !snp.nil? && snp.present?
+      file = file.split("\n").map {|line| line.split("\t") }
+      line = file.shift
+      until line.nil?
+        while line.blank? || line[0].start_with?("#") || !line.size.between?(4, 5)
+          line = file.shift
+          break if line.nil?
+        end
+
+        break if line.nil?
+
+        hash_snps[line[0].capitalize] = build_snp line.slice(1, line.size)
+        line = file.shift
       end
       file = nil
       hash_snps
@@ -63,18 +78,16 @@ module Api
 
     # Interprets the lines from the genome file into a simple hash
     def build_snp(data)
-      return nil unless data.count.between? 4, 5
-
       snp = {}
-      snp[:title] = data[0].capitalize
-      snp[:chromosome] = data[1].downcase
-      snp[:position] = data[2]
-      snp[:allele1] = data[3][0].capitalize
-      snp[:allele2] = if data.count == 5
-                        data[4][0].capitalize
+      snp[:chromosome] = data[0].downcase
+      snp[:position] = data[1]
+      snp[:allele1] = data[2][0].capitalize
+      snp[:allele2] = if data.count == 4
+                        data[3][0].capitalize
                       else
-                        data[3][1].capitalize
+                        data[2][1].capitalize
                       end
+      data = nil
       snp
     end
 

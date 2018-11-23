@@ -10,9 +10,10 @@ module Api
         return json_response({error: "Invalid credentials"}, 401) unless authority_valid?
         return json_response({error: "Invalid parameters"}, 400) unless params.has_key? :identifier
 
-        raw = Base64.decode64(params[:raw_file]) if params.has_key? :raw_file
+        raw = Base64.decode64(params[:raw_file]).freeze if params.has_key?(:raw_file) && params[:raw_file].is_a?(String)
         params[:raw_file] = nil
         return json_response({error: "No file"}, 400) if raw.nil?
+
 
         user_error = prepare_user_for params[:identifier]
         return user_error unless user_error.nil?
@@ -35,10 +36,13 @@ module Api
         genoma_view = genoma.to_json_view
         user_view = @user.to_json_view
         @user = nil
-        # genoma = nil
 
-        MatchMaker.new(genoma, raw)
-        raw = nil
+        GC.start(full_mark: true, immediate_sweep: true)
+
+        Thread.new do
+          m = MatchMaker.new
+          m.make_matches_for(genoma, raw)
+        end
 
         json_response(message: "Success, the genoma is being read", user: user_view, genoma: genoma_view)
       end
