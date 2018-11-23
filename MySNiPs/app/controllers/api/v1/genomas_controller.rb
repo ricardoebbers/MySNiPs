@@ -1,8 +1,6 @@
 module Api
   module V1
     class GenomasController < ApiController
-      PASSWORD_LENGTH = 6
-
       def new
         @genoma = Genoma.new
       end
@@ -12,47 +10,39 @@ module Api
         return json_response({error: "Invalid credentials"}, 401) unless authority_valid?
         return json_response({error: "Invalid parameters"}, 400) unless params.has_key? :identifier
 
-        # Every user created is a final user
-        role = Role.find_by(role_name: "usuario_final")
-        return json_response({error: "Internal role error"}, 500) if role.nil?
+        user_error = prepare_user_for params[:identifier]
+        return user_error unless user_error.nil?
 
-        # Checks if the idenfifier is valid
-        return json_response({error: "Identifier should be integer"}, 401) unless just_numbers? params[:identifier]
-        return json_response({error: "Max Idenfitifier length is #{IDENTIFIER_LENGTH}"}, 401) unless right_size? params[:identifier]
-
-        identifier = format_identifier_for @current_api_user.identifier, params[:identifier]
-        password = generate_random_password
-
-        # Labs can't create users on other labs' numbers
-        @user = User.new(identifier: identifier, password: password, role_id: role.id)
-        @user.pass = password
-        return json_response({error: @user.errors.messages}, 400) unless @user.valid?
-
-        @user.save
+        return json_response({error: "Error while creating User"}, 500) if @user.nil?
 
         # Genomas always start with Status 1: queue
         @genoma = Genoma.new(user_id: @user.id, status: 1, raw_file: params[:raw_file])
         unless @genoma.valid?
           @user.destroy
-          return json_response({error: @user.errors.message}, 400)
+          return json_response({error: @genoma.errors.messages}, 400)
         end
 
         @genoma.save
-        json_response(message: "Success", user: @user.to_json_view, genoma: @genoma.to_json_view)
+
+        Thread.new { MatchMaker.new(@user).make_matches_from_database }
+
+        json_response(message: "Success, the genoma is being read", user: @user.to_json_view, genoma: @genoma.to_json_view)
       end
 
-      def just_numbers?(ident)
-        ident !~ /\D/
-      end
+      def prepare_user_for identifier
+        # Every user created is a final user
+        role = Role.find_by(role_name: "usuario_final")
+        return json_response({error: "Internal role error"}, 500) if role.nil?
 
-      def right_size?(ident)
-        ident.to_s.length <= IDENTIFIER_LENGTH
-      end
+        identifier = User.format_identifier_for @current_api_user.identifier, identifier
+        password = User.generate_random_password
 
-      def generate_random_password
-        # Generates a random string of 6 characters with numbers and lowcase letters
-        numbers_and_letters = ("a".."z").to_a.size + (0..9).size # 36
-        rand(numbers_and_letters**PASSWORD_LENGTH - 1).to_s(numbers_and_letters)
+        # Labs can't create users on other labs' numbers
+        @user = User.new(identifier: identifier, password: password, pass: password, role_id: role.id)
+        return json_response({error: @user.errors.messages}, 400) unless @user.valid?
+
+        @user.save
+        nil
       end
 
       # GET /genomas/
@@ -85,7 +75,7 @@ module Api
 
         # Labs can only see their own users
         # Admin can see all genomas, but must type the entire identifier
-        identifier = format_identifier_for @current_api_user.identifier, params[:identifier]
+        identifier = User.format_identifier_for @current_api_user.identifier, params[:identifier]
 
         @genoma = User.joins(:genoma)
                       .select("identifier, status, genomas.created_at, genomas.updated_at")

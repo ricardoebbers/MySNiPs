@@ -17,13 +17,13 @@ class Genoma < ApplicationRecord
     update_attribute(:file, decoded_file)
   end
 
-  def delete_file_from_db
+  def match_complete
     update_attribute(:status, 0)
     update_attribute(:file, nil)
   end
 
-  def mark_error
-    update_attribute(:status, -1)
+  def match_error
+    update_attribute(:status, 2)
     update_attribute(:file, nil)
   end
 end
