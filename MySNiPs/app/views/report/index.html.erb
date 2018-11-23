@@ -29,8 +29,8 @@
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#"><%= image_tag("logo.png", :style=>'height:25px;', :class=>'d-inline-block align-bottom') %></a>
-                </li>
-                    <li class="text-info">Filtros</li>
+                </li><%if current_user%><li>Identificador: <%=current_user.identifier%></li><%end%>
+                    <li class="text-center pt-3">Filtros</li>
                     <li>Repute</li>
                     <li>
                     checked
@@ -58,19 +58,23 @@
                     </label>
                     </div>
                     </li>
-                    <li class="text-center">Magnitude</li>
+                    <li class="text-center pt-3">Magnitude</li>
                     <li><div id="slider" class="noUiSlider" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"></div></li>
-                    <li style="text-align:center;"><button class="btn btn-primary fas fa-search col-2" type="submit"></button></li>
+                    <li style="text-align:center;"><button class="btn btn-primary fas fa-search col-2 mt-3" type="submit"></button></li>
                     <li><select class="form-control" id="min" name="min" style="visibility:hidden;"></select></li>
                     <li><select class="form-control" id="max" name="max" style="visibility:hidden;"></select></li>
                     
                 <% end %>
                 <li class="text-center">
                     <a href="#" class=" text-muted">Termos de Uso</a>
-                </li>
+                </li><%if current_user%>
                 <li class="text-center">
                     <a href="/logout" class=" text-muted">Logout</a>
                 </li>
+                <%else%><li class="text-center">
+                    <a href="/" class=" text-muted">Página Inicial</a>
+                </li>
+                <%end%>
             </ul>
     </div>
     <!-- /#sidebar-wrapper -->
