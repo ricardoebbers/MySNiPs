@@ -16,9 +16,11 @@ module Api
       @flips_hash = {"A" => "T", "T" => "A", "C" => "G", "G" => "T"}
 
       snps = read_to_hash file_content
+      file_content = nil
       return @user.genoma.match_error if snps.nil?
 
       inserts = compare_database_with snps
+      snps = nil
       if inserts > 0
         @user.genoma.match_complete
       else
@@ -35,6 +37,7 @@ module Api
         snp = build_snp line.split("\t") unless line.start_with? "#"
         hash_snps[snp[:title].capitalize] = snp if !snp.nil? && snp.present?
       end
+      file = nil
       hash_snps
     end
 
