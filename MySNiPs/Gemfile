@@ -49,11 +49,16 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
-  #
-  #
-  #
   gem 'rubocop'
   gem 'rubocop-require_tools'
+
+  # For memory profiling
+  gem 'rack-mini-profiler', require: false
+  gem 'memory_profiler'
+
+  # For call-stack profiling flamegraphs
+  gem 'flamegraph'
+  gem 'stackprof'
 end
 
 group :test do
