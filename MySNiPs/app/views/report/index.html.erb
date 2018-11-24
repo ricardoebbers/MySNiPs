@@ -77,6 +77,10 @@
 <%= javascript_include_tag 'sidebar'%>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/9.0.0/nouislider.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.0.4/wNumb.min.js'></script>
+<script> 
+var min = <%= @min %>;
+var max = <%= @max %>;
+</script>
 <%= javascript_include_tag 'rangeslider'%>
 <script>
 
