@@ -84,14 +84,14 @@ module Api
       end
 
       # Interprets the lines from the genome file into a simple hash
-      def build_snp(data) # [:chromossome, :position, :alleles] or [:chromossome, :position, :allele1, :allele2]
+      # [:chromossome, :position, :alleles] or [:chromossome, :position, :allele1, :allele2]
+      def build_snp(data)
         snp = {}
+        snp[:allele1] = data[2][0].capitalize
         if data.length == 3
-          snp[:allele1] = data[2][0].capitalize
           snp[:allele2] = !data[2][1].nil? ? data[2][1].capitalize : data[2][0].capitalize
         else
-          snp[:allele1] = data[2].capitalize
-          snp[:allele2] = data[3].capitalize
+          snp[:allele2] = data[3][0].capitalize
         end
         data = nil
         snp
