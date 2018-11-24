@@ -9,9 +9,9 @@ require "base64"
 local = "http://localhost:3000/"
 remote = "https://mysnips.herokuapp.com/"
 MYSNIPS_URI = local
-#DONT_POST = true
-CSV_TEST_FILE = "0010000001.csv"
-TEST_IDENTIFIER_1 = 2
+DONT_POST = false
+CSV_TEST_FILE = "7977.23andme.6323"
+TEST_IDENTIFIER_1 = 211
 TEST_IDENTIFIER_2 = "003"
 
 def get_response_from uri, request
@@ -71,9 +71,7 @@ end
 
 def upload_data path
   file = File.read path
-  file = Base64.encode64 file unless file.nil?
-  # Para testar sem base64
-  Base64.decode64 file unless file.nil?
+  Base64.encode64 file unless file.nil?
 end
 
 def run
