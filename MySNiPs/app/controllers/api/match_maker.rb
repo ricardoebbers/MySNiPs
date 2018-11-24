@@ -1,44 +1,55 @@
 module Api
   class MatchMaker
-    def initialize user
-      @user = user
+    def initialize
+      GC.start(full_mark: true, immediate_sweep: true)
     end
 
-    def make_matches_from_database
-      return if @user.nil?
-      user = @user
-      @user = nil
+    def make_matches_for genoma, file_content
+      puts "\nStarted match making\n"
+      return genoma.match_error if genoma.nil?
 
-      @useridentifier = user[:identifier]
+      puts "Genoma not nil"
+      @user_id = genoma[:user_id]
+      return genoma.match_error if file_content.nil?
 
-      file_content = user.genoma[:file]
-      return user.genoma.match_error if file_content.nil?
-
-      user_id = user[:id]
       @flips_hash = {"A" => "T", "T" => "A", "C" => "G", "G" => "T"}
 
+      puts "SNPs not nil"
       snps = read_to_hash file_content
       file_content = nil
-      return user.genoma.match_error if snps.nil?
+      return genoma.match_error if snps.nil?
+
+      GC.start(full_mark: true, immediate_sweep: true)
 
       inserts = compare_database_with snps
+
       snps = nil
+      puts "Finished match making with #{inserts} inserts"
       if inserts > 0
-        user.genoma.match_complete
+        genoma.match_complete
       else
-        user.genoma.match_error
+        genoma.match_error
       end
-      user = nil
+      genoma = nil
+      GC.start(full_mark: true, immediate_sweep: true)
     end
 
     # Hash format
-    # {title: {:title, :chromosome, :position, :allele1, :allele2}}
+    # {title: {:chromosome, :position, :allele1, :allele2}}
     def read_to_hash(file)
       hash_snps = {}
-      file = file.split("\n")
-      file.each do |line|
-        snp = build_snp line.split("\t") unless line.start_with? "#"
-        hash_snps[snp[:title].capitalize] = snp if !snp.nil? && snp.present?
+      file = file.split("\n").map {|line| line.split("\t") }
+      line = ["#"]
+      until line.nil?
+        while line.blank? || line[0].start_with?("#") || !line.size.between?(4, 5)
+          line = file.shift
+          break if line.nil?
+        end
+
+        break if line.nil?
+
+        hash_snps[line[0].capitalize] = build_snp line.slice(3, line.size)
+        line = file.shift
       end
       file = nil
       hash_snps
@@ -48,12 +59,11 @@ module Api
     # Comparing them with the snp hash
     # Then searching for the Genotype in the database
     def compare_database_with snps
-      puts @useridentifier
       progress = 0
       inserts = 0
       Gene.find_each do |gene|
         progress += 1
-        puts progress.to_s + "/" + snps.size.to_s + "\n" + inserts.to_s + " CARDS"
+        #puts progress.to_s + "/" + snps.size.to_s + "\n" + inserts.to_s + " CARDS"
         match = snps[gene[:title]]
         next if match.nil?
 
@@ -68,18 +78,14 @@ module Api
 
     # Interprets the lines from the genome file into a simple hash
     def build_snp(data)
-      return nil unless data.count.between? 4, 5
-
       snp = {}
-      snp[:title] = data[0].capitalize
-      snp[:chromosome] = data[1].downcase
-      snp[:position] = data[2]
-      snp[:allele1] = data[3][0].capitalize
-      snp[:allele2] = if data.count == 5
-                        data[4][0].capitalize
+      snp[:allele1] = data[0][0].capitalize
+      snp[:allele2] = if data.count == 2
+                        data[1][0].capitalize
                       else
-                        data[3][1].capitalize
+                        data[0][1].capitalize
                       end
+      data = nil
       snp
     end
 
@@ -95,12 +101,9 @@ module Api
 
     def insert_in_db(geno_id)
       card = Card.new(user_id: @user_id, genotype_id: geno_id)
-      puts card.inspect
 
-      return card.save if card.valid?
-
-      puts "ERROR"
-      puts card.errors.messages
+      card.save if card.valid?
+      card = nil
     end
   end
 end

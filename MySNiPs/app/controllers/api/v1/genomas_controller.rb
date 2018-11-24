@@ -10,28 +10,39 @@ module Api
         return json_response({error: "Invalid credentials"}, 401) unless authority_valid?
         return json_response({error: "Invalid parameters"}, 400) unless params.has_key? :identifier
 
+        raw = params[:raw_file].freeze if params.has_key?(:raw_file) && params[:raw_file].is_a?(String)
+        params[:raw_file] = nil
+        return json_response({error: "No file"}, 400) if raw.nil?
+
         user_error = prepare_user_for params[:identifier]
         return user_error unless user_error.nil?
 
         return json_response({error: "Error while creating User"}, 500) if @user.nil?
 
         # Genomas always start with Status 1: queue
-        @genoma = Genoma.new(user_id: @user.id, status: 1, raw_file: params[:raw_file])
-        unless @genoma.valid?
+        genoma = Genoma.new(user_id: @user.id, status: 1)
+        unless genoma.valid?
+          raw = nil
+          params = nil
           @user.destroy
-          errors = @genoma.errors.messages
-          @genoma = nil
+          errors = genoma.errors.messages
+          genoma = nil
           @users = nil
           return json_response({error: errors}, 400)
         end
 
-        @genoma.save
+        genoma.save
 
-        Thread.new { MatchMaker.new(@user).make_matches_from_database }
+        genoma_view = genoma.to_json_view
         user_view = @user.to_json_view
-        genoma_view = @genoma.to_json_view
         @user = nil
-        @genoma = nil
+
+        GC.start(full_mark: true, immediate_sweep: true)
+
+        Thread.new do
+          m = MatchMaker.new
+          m.make_matches_for(genoma, raw)
+        end
 
         json_response(message: "Success, the genoma is being read", user: user_view, genoma: genoma_view)
       end
