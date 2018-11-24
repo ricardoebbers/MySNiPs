@@ -27,7 +27,7 @@ module Api
         return json_response({error: "Invalid credentials"}, 401) unless authority_valid?
 
         # Admins can see all users
-        return json_response(User.all) if @role.role_name == "admin"
+        return json_response(User.all) if @current_api_user.identifier = "000"
 
         # While labs can only see their users
         common_role_id = Role.find_by(role_name: "usuario_final").id

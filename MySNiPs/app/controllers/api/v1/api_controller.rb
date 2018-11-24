@@ -11,10 +11,10 @@ module Api
       def authority_valid?
         return false if @current_api_user.nil?
 
-        @role = Role.find(@current_api_user.role_id)
-        return false if @role.nil?
+        role = Role.find(@current_api_user.role_id)
+        return false if role.nil?
 
-        case @role.role_name
+        case role.role_name
         when "admin" then true
         when "laboratorio" then true
         else false
