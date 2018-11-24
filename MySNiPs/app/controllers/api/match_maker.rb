@@ -90,8 +90,8 @@ module Api
           snp[:allele1] = data[2][0].capitalize
           snp[:allele2] = !data[2][1].nil? ? data[2][1].capitalize : data[2][0].capitalize
         else
-          snp[:allele1] = data[2].capitalize
-          snp[:allele2] = data[3].capitalize
+          snp[:allele1] = data[2][0].capitalize
+          snp[:allele2] = data[3][0].capitalize
         end
         data = nil
         snp
