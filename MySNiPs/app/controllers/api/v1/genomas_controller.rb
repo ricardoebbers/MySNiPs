@@ -1,15 +1,11 @@
 module Api
   module V1
     class GenomasController < ApiController
-      def new
-        genoma = Genoma.new
-      end
 
       def create
         # Only labs and admins can post genomas
         return json_response({error: "Invalid credentials"}, 401) unless authority_valid?
         return json_response({error: "Invalid parameters"}, 400) unless params.has_key? :identifier
-
         raw = Base64.decode64(params[:raw_file]).freeze if params.has_key?(:raw_file) && params[:raw_file].is_a?(String)
         params[:raw_file] = nil
         return json_response({error: "No file"}, 400) if raw.nil?
@@ -21,7 +17,7 @@ module Api
         role_id = role.id
         role = nil
 
-        identifier = User.format_identifier_for @current_api_user.identifier, params[:identifier]
+        identifier = User.format_identifier_for current_api_user.identifier, params[:identifier]
         password = User.generate_random_password
 
         # Labs can't create users on other labs' numbers
@@ -51,29 +47,27 @@ module Api
         user_view = user.to_json_view
         user = nil
 
-        GC.start(full_mark: true, immediate_sweep: true)
-
-        Thread.new do
-          Rails.application.executor.wrap do
+        #Thread.new do
+        #  Rails.application.executor.wrap do
             MatchMaker.make_matches_for(genoma, raw)
-          end
-        end
+            debugger
+        #  end
+        #end
 
         json_response(message: "Success, the genoma is being read", user: user_view, genoma: genoma_view)
       end
-      
       # GET /genomas/
       def index(last=false)
         # Common or not logged in users can't see genomas
         return json_response({error: "Invalid credentials"}, 401) unless authority_valid?
 
         # Admins can see all genomas
-        return json_response(User.all) if @current_api_user.identifier == "000"
+        return json_response(User.all) if current_api_user.identifier == "000"
 
         # While labs can only see their users' genomas
         common_role_id = Role.find_by(role_name: "usuario_final").id
         genomas = Genoma .joins(:user)
-                          .where("identifier LIKE (?) AND role_id = (?)", "#{@current_api_user.identifier}%", common_role_id.to_s)
+                          .where("identifier LIKE (?) AND role_id = (?)", "#{current_api_user.identifier}%", common_role_id.to_s)
                           .select("identifier, status, genomas.updated_at")
                           .order("genomas.created_at ASC")
 
@@ -92,7 +86,7 @@ module Api
 
         # Labs can only see their own users
         # Admin can see all genomas, but must type the entire identifier
-        identifier = User.format_identifier_for @current_api_user.identifier, params[:identifier]
+        identifier = User.format_identifier_for current_api_user.identifier, params[:identifier]
 
         genoma = User.joins(:genoma)
                       .select("identifier, status, genomas.created_at, genomas.updated_at")
