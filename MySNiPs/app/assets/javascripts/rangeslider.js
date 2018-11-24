@@ -1,4 +1,5 @@
 if(slider!=null){
+  document.getElementById(slider).innerHTML = "";
 }
 var slider = document.getElementById('slider');
 noUiSlider.create(slider, {

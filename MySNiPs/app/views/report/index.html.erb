@@ -23,8 +23,8 @@
 
                 <!--<li>#<%=current_identifier%></li>-->
                     <li class="text-muted pt-3"><h5>Filtrar por</h5></li>
-                    <li class="pt-2">Reputação</li>
-                    <li>
+                    <li class=" text-center pt-2">Reputação</li>
+                    <li style="display:inline-block;">
                     <div class="form-check">
                     <% if @repute_is == true %>
                       <input id="exampleRadios1" class="form-check-input" type="radio" name="rep" value="1" checked>
@@ -36,7 +36,7 @@
                         <i class="fas fa-dna fa"></i>
                     </label>
                     </div></li>
-                    <li>
+                    <li style="display:inline-block;">
                     <div class="form-check">
                     <% if @repute_is == false %>
                       <input id="exampleRadios2" class="form-check-input" type="radio" name="rep" value="2" checked>
@@ -49,7 +49,7 @@
                     </label>
                     </div>
                     </li>
-                    <li class="text-center pt-3">Magnitude</li>
+                    <li class="text-center pt-2">Magnitude</li>
                     
                     <li><div id="slider" class="noUiSlider" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"></div></li>
                     <li><select class="form-control" id="min" name="min" style="visibility:hidden;width:0px;height:0px;"></select></li>
