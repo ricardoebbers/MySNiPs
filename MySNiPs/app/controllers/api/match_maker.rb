@@ -40,7 +40,7 @@ module Api
       hash_snps = {}
       file = file.split("\n").map {|line| line.split("\t") }
       line = ["#"]
-      until line.nil?
+      loop do
         while line.blank? || line[0].start_with?("#") || !line.size.between?(4, 5)
           line = file.shift
           break if line.nil?
@@ -61,16 +61,20 @@ module Api
     def compare_database_with snps
       progress = 0
       inserts = 0
-      Gene.find_each do |gene|
+      genes = Gene.pluck(:id, :title, :orientation)
+      loop do
+        gene = genes.shift
+        break if gene.nil?
+
         progress += 1
         #puts progress.to_s + "/" + snps.size.to_s + "\n" + inserts.to_s + " CARDS"
-        match = snps[gene[:title]]
+        match = snps[gene[1]]
         next if match.nil?
 
-        geno = search_for_genotype match[:allele1], match[:allele2], gene
-        next if geno.nil?
+        geno_id = search_for_genotype match[:allele1], match[:allele2], gene
+        next if geno_id.nil?
 
-        insert_in_db geno[:id]
+        insert_in_db geno_id
         inserts += 1
       end
       inserts
@@ -91,12 +95,12 @@ module Api
 
     def search_for_genotype(allele1, allele2, gene)
       # False is minus orientation in SNPedia, thus there's a need to flip the alleles
-      if gene[:orientation] == false
+      if gene[2] == false
         allele1 = @flips_hash[allele1] or allele1
         allele2 = @flips_hash[allele2] or allele2
       end
-
-      Genotype.find_by(gene_id: gene[:id], allele1: allele1, allele2: allele2)
+      geno = Genotype.select(:id, :gene_id, :allele1, :allele2).find_by(gene_id: gene[0], allele1: allele1, allele2: allele2)
+      geno.id unless geno.nil?
     end
 
     def insert_in_db(geno_id)

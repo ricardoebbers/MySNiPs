@@ -10,7 +10,7 @@ module Api
         return json_response({error: "Invalid credentials"}, 401) unless authority_valid?
         return json_response({error: "Invalid parameters"}, 400) unless params.has_key? :identifier
 
-        raw = params[:raw_file].freeze if params.has_key?(:raw_file) && params[:raw_file].is_a?(String)
+        raw = Base64.decode64(params[:raw_file]).freeze if params.has_key?(:raw_file) && params[:raw_file].is_a?(String)
         params[:raw_file] = nil
         return json_response({error: "No file"}, 400) if raw.nil?
 
