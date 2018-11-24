@@ -27,12 +27,12 @@
                     <li style="display:inline-block;">
                     <div class="form-check">
                       <%= radio_button_tag :rep, "1", @repute_1, type: "radio", class: "form-check-input",style:"visibility:hidden;width:0px;height:0px;" %>
-                      <%=label_tag('rep_1' , '', class: 'form-check-label fas fa-dna fa btn btn-outline-success') %>
+                      <%=label_tag('rep_1' , '', class: 'form-check-label fas fa-dna fa btn btn-outline-success',id:'rep1') %>
                     </div></li>
                     <li style="display:inline-block;">
                     <div class="form-check">
                       <%= radio_button_tag :rep, "2", @repute_2, type: "radio", class: "form-check-input",style:"visibility:hidden;width:0px;height:0px;" %> 
-                      <%=label_tag('rep_2' , '', class: 'form-check-label fas fa-dna fa btn btn-outline-danger') %>
+                      <%=label_tag('rep_2' , '', class: 'form-check-label fas fa-dna fa btn btn-outline-danger',id:'rep2') %>
                     </div>
                     </li>
                     <li class="text-center pt-2">Magnitude</li>
@@ -79,6 +79,20 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.0.4/wNumb.min.js'></script>
 <%= javascript_include_tag 'rangeslider'%>
 <script>
+var rep1= '<%=@repute_1%>'
+var rep2= '<%=@repute_2%>'
+if(rep1=='true'){
+
+var rep1b = ($('#rep1').attr('class').split(" "));
+rep1b.push('active');
+rep1b.join(" ");
+document.getElementById("rep1").className = rep1b.join(" ");}
+else if(rep2=='true'){
+
+var rep2b = ($('#rep2').attr('class').split(" "));
+rep2b.push('active');
+rep2b.join(" ");
+document.getElementById("rep2").className = rep2b.join(" ");}
 
 $('button.repBut').click(function() { 
     var id = $(this).attr('id');
