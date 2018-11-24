@@ -26,12 +26,12 @@
                     <li class=" text-center pt-2">Reputação</li>
                     <li style="display:inline-block;">
                     <div class="form-check">
-                      <%= radio_button_tag :rep, "1", @repute_1, type: "radio", class: "form-check-input",style:"visibility:hidden;width:0px;height:0px;" %>
+                      <%= radio_button_tag :rep, "1", @repute_1, type: "radio", class: "form-check-input",style:"visibility:hidden;width:0px;height:0px;",id:"rb1" %>
                       <%=label_tag('rep_1' , '', class: 'form-check-label fas fa-dna fa btn btn-outline-success',id:'rep1') %>
                     </div></li>
                     <li style="display:inline-block;">
                     <div class="form-check">
-                      <%= radio_button_tag :rep, "2", @repute_2, type: "radio", class: "form-check-input",style:"visibility:hidden;width:0px;height:0px;" %> 
+                      <%= radio_button_tag :rep, "2", @repute_2, type: "radio", class: "form-check-input",style:"visibility:hidden;width:0px;height:0px;",id:"rb2" %> 
                       <%=label_tag('rep_2' , '', class: 'form-check-label fas fa-dna fa btn btn-outline-danger',id:'rep2') %>
                     </div>
                     </li>
@@ -79,8 +79,10 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.0.4/wNumb.min.js'></script>
 <%= javascript_include_tag 'rangeslider'%>
 <script>
-var rep1= '<%=@repute_1%>'
-var rep2= '<%=@repute_2%>'
+var rep1= '<%=@repute_1%>';
+var rep2= '<%=@repute_2%>';
+var rep1b = ($('#rep1').attr('class').split(" "));
+var rep2b = ($('#rep2').attr('class').split(" "));
 if(rep1=='true'){
 
 var rep1b = ($('#rep1').attr('class').split(" "));
@@ -99,6 +101,32 @@ $('button.repBut').click(function() {
     if(id=='goodBut'){$("#radioGood").prop("checked", true);}
     else if(id=='badBut'){$("#radioBad").prop("checked", true);}
 });
+
+$('label#rep2').click(function(e){
+      e.preventDefault();
+      $("#rb2").prop("checked", true);
+      $("#rb1").prop("checked", false);
+      if(rep1b.length==7){
+        rep2b.push('active');
+        rep2b.join(" ");
+        document.getElementById("rep2").className = rep2b.join(" ");
+        rep1b.splice(-1,1);
+        rep1b.join(" ");
+        document.getElementById("rep1").className = rep1b.join(" ");
+      }});
+
+$('label#rep1').click(function(e){
+      e.preventDefault();
+      $("#rb1").prop("checked", true);
+      $("#rb2").prop("checked", false);
+      if(rep2b.length==7){
+        rep1b.push('active');
+        rep1b.join(" ");
+        document.getElementById("rep1").className = rep1b.join(" ");
+        rep2b.splice(-1,1);
+        rep2b.join(" ");
+        document.getElementById("rep2").className = rep2b.join(" ");
+      }});
 
 </script>
 </body>
