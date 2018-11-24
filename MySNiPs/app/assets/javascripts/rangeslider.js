@@ -1,6 +1,8 @@
-
+if(slider!=null){
+  console.log(slider.noUiSlider.get()[0]);
+  document.getElementById("slider").innerHTML = "";
+}
 var slider = document.getElementById('slider');
-
 noUiSlider.create(slider, {
     start: [0, 10],
     connect: true,
@@ -51,6 +53,7 @@ slider.noUiSlider.on('update', function (values, handle) {
 
 selectmin.addEventListener('change', function () {
   slider.noUiSlider.set([this.value,null]);
+  
 });
 selectmax.addEventListener('change', function () {
   slider.noUiSlider.set([null,this.value]);
