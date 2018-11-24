@@ -27,14 +27,12 @@
                     <li style="display:inline-block;">
                     <div class="form-check">
                       <%= radio_button_tag :rep, "1", @repute_1, type: "radio", class: "form-check-input" %>
-                      <%=label_tag(:rep , nil, class: 'form-check-label text-success') %>
-                        <i class="fas fa-dna fa"></i>
+                      <%=label_tag('rep_1' , '', class: 'form-check-label text-success fas fa-dna fa') %>
                     </div></li>
                     <li style="display:inline-block;">
                     <div class="form-check">
                       <%= radio_button_tag :rep, "2", @repute_2, type: "radio", class: "form-check-input" %> 
-                      <%=label_tag(:rep , nil, class: 'form-check-label text-danger') %>
-                        <i class="fas fa-dna fa"></i>
+                      <%=label_tag('rep_2' , '', class: 'form-check-label text-danger fas fa-dna fa') %>
                     </div>
                     </li>
                     <li class="text-center pt-2">Magnitude</li>
