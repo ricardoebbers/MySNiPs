@@ -12,7 +12,6 @@ Funcionalidade: Acesso ao relatório por login
     E inserir "senha_valida" no campo senha
     E clicar no botão "Log In"
     Então devo ser redirecionado para "/report"
-    E "login_valido" deve ser exibido na página
   
   Cenário: Permanece em "/login" quando senha inserida for incorreta
     Dado que estou na página "/login"
@@ -45,12 +44,6 @@ Funcionalidade: Acesso ao relatório por login
     E clicar no botão "Log In"
     Então devo receber notificação que o login falhou
     E devo permanecer em "/login"
-
-  Cenário: Não é possível acessar "/report" sem estar logado
-    Dado que estou na página "/"
-    E que o usuário "login_valido" não está logado
-    Quando acessar "/report"
-    Então devo ser redirecionado para "/login"
 
   Cenário: Redireciona para "/report" quando tentar acessar "/login" estando logado
     Dado que estou na página "/"

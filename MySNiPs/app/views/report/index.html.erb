@@ -3,20 +3,16 @@
 <!--
 <div class="page-header">
   <h1>Report</h1>
-  <small>#<%= @current_identifier || "Example" %></small>
+  <small>#<%= @user_identifier %></small>
 </div>
--->
+
 <nav class="navbar navbar-light bg-info fixed-top">
   <div class="row">
     <div class="col-2"><a class="navbar-brand" href="#menu-toggle" id="menu-toggle"><span class="navbar-toggler-icon"></span></a></div>
     <div class="col-10">
-      <%= form_tag(report_index_url, method: :get, :id => 'search_card') do %>
+      <%= form_tag(report_index_url, method: :get) do %>
         <div class="row">
-        <% if @search == "" %>
-          <input id="search" name="search" class="form-control col-10" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-            <% else %>
-          <input id="search" name="search" class="form-control col-10" type ="search" value = <%= @search.gsub(" ", " ") %>>
-        <% end %>
+          <%= text_field_tag :search, params[:search], type: "search", class:"form-control col-10", placeholder: "Pesquisar", "aria-label": "Pesquisar" %>
         <button class="btn btn-primary fas fa-search col-2" type="submit"></button>
         </div>
     </div>
@@ -82,10 +78,11 @@
     <div id="page-content-wrapper">
       <div class="container-fluid">
         <div id="cards">
-          <%= render @cards %>
+          <%= text_for_total_or_found @total_cards, @found_cards %>
+          <%= render @cards rescue "Ocorreu um erro :(" %>
         </div>
         <div id="infinite-scrolling">
-          <%= will_paginate @cards %>
+          <%= will_paginate @cards rescue nil %>
         </div>
       </div>
     </div>
