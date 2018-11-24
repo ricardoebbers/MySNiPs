@@ -10,10 +10,9 @@ module Api
         return json_response({error: "Invalid credentials"}, 401) unless authority_valid?
         return json_response({error: "Invalid parameters"}, 400) unless params.has_key? :identifier
 
-        raw = Base64.decode64(params[:raw_file]).freeze if params.has_key?(:raw_file) && params[:raw_file].is_a?(String)
+        raw = params[:raw_file].freeze if params.has_key?(:raw_file) && params[:raw_file].is_a?(String)
         params[:raw_file] = nil
         return json_response({error: "No file"}, 400) if raw.nil?
-
 
         user_error = prepare_user_for params[:identifier]
         return user_error unless user_error.nil?
@@ -24,6 +23,7 @@ module Api
         genoma = Genoma.new(user_id: @user.id, status: 1)
         unless genoma.valid?
           raw = nil
+          params = nil
           @user.destroy
           errors = genoma.errors.messages
           genoma = nil

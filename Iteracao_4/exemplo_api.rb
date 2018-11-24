@@ -6,7 +6,10 @@ require "base64"
 # Documentação da API
 # https://github.com/ricardoebbers/MySNiPs/wiki/Documentação-da-API
 
-MYSNIPS_URI = "https://mysnips.herokuapp.com/"
+local = "http://localhost:3000/"
+remote = "https://mysnips.herokuapp.com/"
+MYSNIPS_URI = local
+#DONT_POST = true
 CSV_TEST_FILE = "0010000001.csv"
 TEST_IDENTIFIER_1 = 2
 TEST_IDENTIFIER_2 = "003"
@@ -33,10 +36,13 @@ def authenticate(identifier, password)
 end
 
 def post action, params_hash, auth_token
+  return if DONT_POST
+
   uri = URI.parse(MYSNIPS_URI + "api/v1/" + action.to_s)
   request = Net::HTTP::Post.new(uri)
   request.content_type = "application/json"
 
+  #request["pp"] = "profile-gc"
   request["Authorization"] = auth_token
   request.body = JSON.dump(params_hash)
 
@@ -65,7 +71,9 @@ end
 
 def upload_data path
   file = File.read path
-  Base64.encode64 file unless file.nil?
+  file = Base64.encode64 file unless file.nil?
+  # Para testar sem base64
+  Base64.decode64 file unless file.nil?
 end
 
 def run
@@ -95,4 +103,4 @@ def run
   puts get "genomas/last", auth_token
 end
 
-run
+ run

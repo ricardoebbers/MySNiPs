@@ -39,7 +39,7 @@ module Api
     def read_to_hash(file)
       hash_snps = {}
       file = file.split("\n").map {|line| line.split("\t") }
-      line = file.shift
+      line = ["#"]
       until line.nil?
         while line.blank? || line[0].start_with?("#") || !line.size.between?(4, 5)
           line = file.shift
@@ -48,7 +48,7 @@ module Api
 
         break if line.nil?
 
-        hash_snps[line[0].capitalize] = build_snp line.slice(1, line.size)
+        hash_snps[line[0].capitalize] = build_snp line.slice(3, line.size)
         line = file.shift
       end
       file = nil
@@ -79,13 +79,11 @@ module Api
     # Interprets the lines from the genome file into a simple hash
     def build_snp(data)
       snp = {}
-      snp[:chromosome] = data[0].downcase
-      snp[:position] = data[1]
-      snp[:allele1] = data[2][0].capitalize
-      snp[:allele2] = if data.count == 4
-                        data[3][0].capitalize
+      snp[:allele1] = data[0][0].capitalize
+      snp[:allele2] = if data.count == 2
+                        data[1][0].capitalize
                       else
-                        data[2][1].capitalize
+                        data[0][1].capitalize
                       end
       data = nil
       snp
@@ -104,14 +102,8 @@ module Api
     def insert_in_db(geno_id)
       card = Card.new(user_id: @user_id, genotype_id: geno_id)
 
-      if card.valid?
-        card.save
-        card = nil
-        return
-      end
-
-      puts "ERROR"
-      puts card.errors.messages
+      card.save if card.valid?
+      card = nil
     end
   end
 end
