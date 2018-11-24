@@ -1,6 +1,4 @@
 if(slider!=null){
-  console.log(slider.noUiSlider.get()[0]);
-  document.getElementById("slider").innerHTML = "";
 }
 var slider = document.getElementById('slider');
 noUiSlider.create(slider, {
