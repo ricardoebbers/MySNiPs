@@ -40,8 +40,10 @@ module Api
         file.each do |line|
           #puts line
           next if line.blank? || line.start_with?("#")
+
           line = line.split(/\s+/)
           next if !line.size.between?(4, 5)
+
           hash_snps[line.shift.capitalize] = build_snp line
         end
         hash_snps
@@ -88,11 +90,11 @@ module Api
       def build_snp(data)
         snp = {}
         snp[:allele1] = data[2][0].capitalize
-        if data.length == 3
-          snp[:allele2] = !data[2][1].nil? ? data[2][1].capitalize : data[2][0].capitalize
-        else
-          snp[:allele2] = data[3][0].capitalize
-        end
+        snp[:allele2] = if data.length == 3
+                          !data[2][1].nil? ? data[2][1].capitalize : data[2][0].capitalize
+                        else
+                          snp[:allele2] = data[3][0].capitalize
+                        end
         data = nil
         snp
       end
