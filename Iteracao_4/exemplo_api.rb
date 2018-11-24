@@ -6,9 +6,9 @@ require "base64"
 # Documentação da API
 # https://github.com/ricardoebbers/MySNiPs/wiki/Documentação-da-API
 
-MYSNIPS_URI = "https://mysnips.herokuapp.com/"
-CSV_TEST_FILE = "0010000001.csv"
-TEST_IDENTIFIER_1 = 2
+MYSNIPS_URI = "http://localhost:3000/"
+CSV_TEST_FILE = "7977.23andme.6323"
+TEST_IDENTIFIER_1 = 212341
 TEST_IDENTIFIER_2 = "003"
 
 def get_response_from uri, request
