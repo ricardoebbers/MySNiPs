@@ -40,8 +40,7 @@ module Api
         GC.start(full_mark: true, immediate_sweep: true)
 
         Thread.new do
-          m = MatchMaker.new
-          m.make_matches_for(genoma, raw)
+          MatchMaker.make_matches_for(genoma, raw)
         end
 
         json_response(message: "Success, the genoma is being read", user: user_view, genoma: genoma_view)
