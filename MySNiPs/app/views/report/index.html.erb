@@ -1,10 +1,5 @@
 <%= stylesheet_link_tag "sidebar" %>
 <link href='https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/9.0.0/nouislider.min.css' rel="stylesheet">
-<!--
-<div class="page-header">
-  <h1>Report</h1>
-  <small>#<%= @user_identifier %></small>
-</div>
 
 <nav class="navbar navbar-light bg-info fixed-top">
   <div class="row">
@@ -25,7 +20,7 @@
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#"><%= image_tag("logo.png", :style=>'height:25px;', :class=>'d-inline-block align-bottom') %></a>
-                </li><%if current_user%><li>Identificador: <%=current_user.identifier%></li><%end%>
+                </li><%if current_user%><li>Usuário: <%=current_user.identifier%></li><%end%>
                     <li class="text-center pt-3">Filtros</li>
                     <li>Repute</li>
                     <li>
