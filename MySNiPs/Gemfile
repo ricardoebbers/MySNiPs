@@ -102,3 +102,5 @@ gem 'will_paginate'
 # Gem for Base64 upload
 gem 'carrierwave'
 gem 'carrierwave-base64'
+
+gem 'scout_apm'
