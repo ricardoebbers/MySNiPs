@@ -27,25 +27,25 @@
                     <li style="display:inline-block;">
                     <div class="form-check">
                     <% if @repute_is == true %>
-                      <input id="exampleRadios1" class="form-check-input" type="radio" name="rep" value="1" checked>
-                      <label class="form-check-label text-success" for="exampleRadios1">
+                      <input id="radioGood" class="form-check-input" type="radio" name="rep" value="1" checked>
+                      <label class="form-check-label text-success" for="radioGood">
                     <% else %>
-                      <input id="exampleRadios1" class="form-check-input" type="radio" name="rep" value="1">
-                      <label class="form-check-label text-success" for="exampleRadios1">
+                      <input id="radioGood" class="form-check-input" type="radio" name="rep" value="1">
+                      <label class="form-check-label text-success" for="radioGood">
                     <% end %>
-                        <i class="fas fa-dna fa"></i>
+                        <button type="button" class="repBut" id="goodBut"><i class="fas fa-dna fa"></i></button>
                     </label>
                     </div></li>
                     <li style="display:inline-block;">
                     <div class="form-check">
                     <% if @repute_is == false %>
-                      <input id="exampleRadios2" class="form-check-input" type="radio" name="rep" value="2" checked>
-                      <label class="form-check-label text-danger" for="exampleRadios2">
+                      <input id="radioBad class="form-check-input" type="radio" name="rep" value="2" checked>
+                      <label class="form-check-label text-danger" for="radioBad">
                     <% else %>
-                      <input id="exampleRadios2" class="form-check-input" type="radio" name="rep" value="2">
-                      <label class="form-check-label text-danger" for="exampleRadios2">
+                      <input id="radioBad" class="form-check-input" type="radio" name="rep" value="2">
+                      <label class="form-check-label text-danger" for="radioBad">
                     <%end%>
-                        <i class="fas fa-dna fa"></i>
+                        <button type="button" class="repBut" id="badBut"><i class="fas fa-dna fa"></i></button>
                     </label>
                     </div>
                     </li>
@@ -92,4 +92,13 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/9.0.0/nouislider.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.0.4/wNumb.min.js'></script>
 <%= javascript_include_tag 'rangeslider'%>
+<script>
+
+$('button.repBut').click(function() { 
+    var id = $(this).attr('id');
+    if(id=='goodBut'){$("#radioGood").prop("checked", true);}
+    else if(id=='badBut'){$("#radioBad").prop("checked", true);}
+});
+
+</script>
 </body>
