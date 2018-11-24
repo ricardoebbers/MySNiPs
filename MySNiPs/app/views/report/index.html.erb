@@ -26,13 +26,13 @@
                     <li class=" text-center pt-2">Reputação</li>
                     <li style="display:inline-block;">
                     <div class="form-check">
-                      <%= radio_button_tag :rep, "1", @repute_1, type: "radio", class: "form-check-input" %>
-                      <%=label_tag('rep_1' , '', class: 'form-check-label text-success fas fa-dna fa') %>
+                      <%= radio_button_tag :rep, "1", @repute_1, type: "radio", class: "form-check-input",style:"visibility:hidden;width:0px;height:0px;" %>
+                      <%=label_tag('rep_1' , '', class: 'form-check-label fas fa-dna fa btn btn-outline-success') %>
                     </div></li>
                     <li style="display:inline-block;">
                     <div class="form-check">
-                      <%= radio_button_tag :rep, "2", @repute_2, type: "radio", class: "form-check-input" %> 
-                      <%=label_tag('rep_2' , '', class: 'form-check-label text-danger fas fa-dna fa') %>
+                      <%= radio_button_tag :rep, "2", @repute_2, type: "radio", class: "form-check-input",style:"visibility:hidden;width:0px;height:0px;" %> 
+                      <%=label_tag('rep_2' , '', class: 'form-check-label fas fa-dna fa btn btn-outline-danger') %>
                     </div>
                     </li>
                     <li class="text-center pt-2">Magnitude</li>

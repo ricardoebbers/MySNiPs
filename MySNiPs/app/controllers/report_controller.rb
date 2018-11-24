@@ -27,7 +27,9 @@ class ReportController < ApplicationController
     if params.has_key? :rep
       if params[:rep] == "1"
         @repute_1 = true
+        @repute_2 = false
       else params[:rep] == "2"
+        @repute_1 = false
         @repute_2 = true
       end
     end
