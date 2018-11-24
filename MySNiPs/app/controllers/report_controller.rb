@@ -53,9 +53,9 @@ class ReportController < ApplicationController
   end
 
   def apply_filters
-    @cards = @cards.min_mag(params[:min]) if params.has_key? :min
-    @cards = @cards.max_mag(params[:max]) if params.has_key? :max
-    @cards = @cards.repute_is(params[:rep]) if params.has_key? :rep
+    @cards = @cards.min_mag(params[:min]) if params.has_key?(:min) && !params[:min].nil?
+    @cards = @cards.max_mag(params[:max]) if params.has_key?(:max) && !params[:max].nil?
+    @cards = @cards.repute_is(params[:rep]) if params.has_key?(:rep) && !params[:rep].nil?
   end
 
   def execute_search
