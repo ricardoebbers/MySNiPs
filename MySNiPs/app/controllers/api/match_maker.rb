@@ -36,20 +36,14 @@ module Api
       # {title: {:chromosome, :position, :allele1, :allele2}}
       def read_to_hash(file)
         hash_snps = {}
-        file = file.split("\n").map {|line| line.split("\t") }
-        line = ["#"]
-        loop do
-          while line.blank? || line[0].start_with?("#") || !line.size.between?(4, 5)
-            line = file.shift
-            break if line.nil?
-          end
-
-          break if line.nil?
-
-          hash_snps[line[0].capitalize] = build_snp line.slice(3, line.size)
-          line = file.shift
+        file = file.split("\n")
+        file.each do |line|
+          #puts line
+          next if line.blank? || line.start_with?("#")
+          line = line.split(/\s+/)
+          next if !line.size.between?(4, 5)
+          hash_snps[line.shift.capitalize] = build_snp line
         end
-        file = nil
         hash_snps
       end
 
@@ -90,14 +84,15 @@ module Api
       end
 
       # Interprets the lines from the genome file into a simple hash
-      def build_snp(data)
+      def build_snp(data) # [:chromossome, :position, :alleles] or [:chromossome, :position, :allele1, :allele2]
         snp = {}
-        snp[:allele1] = data[0][0].capitalize
-        snp[:allele2] = if data.count == 2
-                          data[1][0].capitalize
-                        else
-                          data[0][1].capitalize
-                        end
+        if data.length == 3
+          snp[:allele1] = data[2][0].capitalize
+          snp[:allele2] = !data[2][1].nil? ? data[2][1].capitalize : data[2][0].capitalize
+        else
+          snp[:allele1] = data[2].capitalize
+          snp[:allele2] = data[3].capitalize
+        end
         data = nil
         snp
       end

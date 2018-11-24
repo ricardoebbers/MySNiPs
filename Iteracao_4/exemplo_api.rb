@@ -10,8 +10,8 @@ local = "http://localhost:3000/"
 remote = "https://mysnips.herokuapp.com/"
 MYSNIPS_URI = local
 DONT_POST = false
-CSV_TEST_FILE = "7977.23andme.6323"
-TEST_IDENTIFIER_1 = 211
+CSV_TEST_FILE = "0010000001.gnm"
+TEST_IDENTIFIER_1 = 332218
 TEST_IDENTIFIER_2 = "003"
 
 def get_response_from uri, request
@@ -88,9 +88,9 @@ def run
   puts "GET http://localhost:3000/api/v1/genomas header:{Authorization:[auth_token]}\n\n"
   puts get "genomas", auth_token
 
-  puts "\n\n\nUPLOAD - Identifier só aceita números, mas podem estar como strings também.\n\n"
-  puts "POST http://localhost:3000/api/v1/upload data:{identifier:#{TEST_IDENTIFIER_2}, upload_data:'...'} header:{Authorization:[auth_token]}\n\n"
-  puts post "upload", {identifier: TEST_IDENTIFIER_2, raw_file: upload_data(CSV_TEST_FILE)}, auth_token
+  #puts "\n\n\nUPLOAD - Identifier só aceita números, mas podem estar como strings também.\n\n"
+  #puts "POST http://localhost:3000/api/v1/upload data:{identifier:#{TEST_IDENTIFIER_2}, upload_data:'...'} header:{Authorization:[auth_token]}\n\n"
+  #puts post "upload", {identifier: TEST_IDENTIFIER_2, raw_file: upload_data(CSV_TEST_FILE)}, auth_token
 
   puts "\n\n\nUSER/:identifier - Devolve as informações do usuário com o identifier pedido. GENOMA/:identifier funciona da mesma forma.\n\n"
   puts "GET http://localhost:3000/api/v1/user/#{TEST_IDENTIFIER_1} header:{Authorization:[auth_token]}\n\n"
