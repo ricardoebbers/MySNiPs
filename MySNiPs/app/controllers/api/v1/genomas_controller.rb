@@ -47,12 +47,11 @@ module Api
         user_view = user.to_json_view
         user = nil
 
-        #Thread.new do
-        #  Rails.application.executor.wrap do
+        Thread.new do
+          Rails.application.executor.wrap do
             MatchMaker.make_matches_for(genoma, raw)
-            debugger
-        #  end
-        #end
+          end
+        end
 
         json_response(message: "Success, the genoma is being read", user: user_view, genoma: genoma_view)
       end

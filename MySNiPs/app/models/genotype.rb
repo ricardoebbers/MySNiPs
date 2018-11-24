@@ -6,7 +6,6 @@ class Genotype < ApplicationRecord
   validates :allele2, length: {is: 1}
   validates :allele1, :allele2, presence: true
   validates :title, presence: true, uniqueness: true
-  serialize :preferences
 
   def repute_gradient
     case repute

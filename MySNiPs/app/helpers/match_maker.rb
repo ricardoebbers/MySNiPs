@@ -15,6 +15,7 @@ module MatchMaker
     inserts = compare_database_with user_id
 
     @hash_snps = nil
+    GC.start(full_mark: true, immediate_sweep: true)
     puts "Finished match making with #{inserts} inserts"
     if inserts > 0
       genoma.match_complete

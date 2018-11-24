@@ -1,7 +1,6 @@
 class Genoma < ApplicationRecord
   #before_validation :parse_file
   belongs_to :user
-  serialize :preferences
   #attr_accessor :raw_file
 
   def to_json_view
