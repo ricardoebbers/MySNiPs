@@ -29,7 +29,8 @@
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#"><%= image_tag("logo.png", :style=>'height:25px;', :class=>'d-inline-block align-bottom') %></a>
-                </li><%if current_user%><li>Identificador: <%=current_user.identifier%></li><%end%>
+                </li>
+                <li>Identificador: <%=current_identifier%></li>
                     <li class="text-center pt-3">Filtros</li>
                     <li>Repute</li>
                     <li>
