@@ -18,14 +18,15 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#"><%= image_tag("logo.png", :style=>'height:25px;', :class=>'d-inline-block align-bottom') %></a>
+                <li class="sidebar-brand px-1">
+                    <a href="/"><%= image_tag("logo.png", :style=>'height:35px;', :class=>'d-inline-block align-bottom px-5') %></a>
                 </li>
-                <li>Identificador: <%=current_identifier%></li>
-                    <li class="text-center pt-3">Filtros</li>
-                    <li>Repute</li>
+                <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
+
+                <!--<li>#<%=current_identifier%></li>-->
+                    <li class="text-muted pt-3"><h5>Filtrar por</h5></li>
+                    <li class="pt-2">Reputação</li>
                     <li>
-                    checked
                     <div class="form-check">
                     <% if @repute_is == true %>
                       <input id="exampleRadios1" class="form-check-input" type="radio" name="rep" value="1" checked>
@@ -34,7 +35,7 @@
                       <input id="exampleRadios1" class="form-check-input" type="radio" name="rep" value="1">
                       <label class="form-check-label text-success" for="exampleRadios1">
                     <% end %>
-                        Good Repute
+                        <i class="fas fa-dna fa"></i>
                     </label>
                     </div></li>
                     <li>
@@ -46,16 +47,17 @@
                       <input id="exampleRadios2" class="form-check-input" type="radio" name="rep" value="2">
                       <label class="form-check-label text-danger" for="exampleRadios2">
                     <%end%>
-                        Bad Repute
+                        <i class="fas fa-dna fa"></i>
                     </label>
                     </div>
                     </li>
                     <li class="text-center pt-3">Magnitude</li>
+                    
                     <li><div id="slider" class="noUiSlider" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"></div></li>
-                    <li style="text-align:center;"><button class="btn btn-primary fas fa-search col-2 mt-3" type="submit"></button></li>
                     <li><select class="form-control" id="min" name="min" style="visibility:hidden;width:0px;height:0px;"></select></li>
                     <li><select class="form-control" id="max" name="max" style="visibility:hidden;width:0px;height:0px;"></select></li>
-                    
+                    <li style="text-align:center;"><button class="btn btn-primary fas fa-search col-2 mt-3" type="submit"></button></li>
+
                 <% end %>
                 <li class="text-center">
                     <a href="#" class=" text-muted">Termos de Uso</a>
