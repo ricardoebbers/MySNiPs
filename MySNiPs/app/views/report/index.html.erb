@@ -26,27 +26,15 @@
                     <li class=" text-center pt-2">Reputação</li>
                     <li style="display:inline-block;">
                     <div class="form-check">
-                    <% if @repute_is == true %>
-                      <input id="radioGood" class="form-check-input" type="radio" name="rep" value="1" checked>
-                      <label class="form-check-label text-success" for="radioGood">
-                    <% else %>
-                      <input id="radioGood" class="form-check-input" type="radio" name="rep" value="1">
-                      <label class="form-check-label text-success" for="radioGood">
-                    <% end %>
-                        <button type="button" class="repBut btn btn-success" id="goodBut"><i class="fas fa-dna fa"></i></button>
-                    </label>
+                      <%= radio_button_tag :rep, "1", @repute_1, type: "radio", class: "form-check-input" %>
+                      <%=label_tag(:rep , nil, class: 'form-check-label text-success') %>
+                        <i class="fas fa-dna fa"></i>
                     </div></li>
                     <li style="display:inline-block;">
                     <div class="form-check">
-                    <% if @repute_is == false %>
-                      <input id="radioBad" class="form-check-input" type="radio" name="rep" value="2" checked>
-                      <label class="form-check-label text-danger" for="radioBad">
-                    <% else %>
-                      <input id="radioBad" class="form-check-input" type="radio" name="rep" value="2">
-                      <label class="form-check-label text-danger" for="radioBad">
-                    <%end%>
-                        <button type="button" class="repBut btn btn-danger" id="badBut"><i class="fas fa-dna fa"></i></button>
-                    </label>
+                      <%= radio_button_tag :rep, "2", @repute_2, type: "radio", class: "form-check-input" %> 
+                      <%=label_tag(:rep , nil, class: 'form-check-label text-danger') %>
+                        <i class="fas fa-dna fa"></i>
                     </div>
                     </li>
                     <li class="text-center pt-2">Magnitude</li>

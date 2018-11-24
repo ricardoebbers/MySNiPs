@@ -9,7 +9,7 @@ class ReportController < ApplicationController
     @cards = @cards.eager_join_tables
 
     apply_order
-
+    persistent_repute
     # Both only change @cards if necessary
     apply_filters
     execute_search
@@ -23,6 +23,15 @@ class ReportController < ApplicationController
     end
   end
 
+  def persistent_repute
+    if params.has_key? :rep
+      if params[:rep] == "1"
+        @repute_1 = true
+      else params[:rep] == "2"
+        @repute_2 = true
+      end
+    end
+  end
   def example_or_logged_in
     # If there isn't a logged in user, an example report will be shown
     if current_user.nil?
