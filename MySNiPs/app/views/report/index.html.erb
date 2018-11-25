@@ -26,17 +26,17 @@
                     <li class=" text-center pt-2">Reputação</li>
                     <li style="display:inline-block;">
                     <div class="form-check">
-                      <%= radio_button_tag :rep, "1", @repute_1, type: "radio", class: "form-check-input",style:"visibility:hidden;width:0px;height:0px;",id:"rb1" %>
+                      <%= radio_button_tag :rep, "1", @repute1, type: "radio", class: "form-check-input",style:"visibility:hidden;width:0px;height:0px;",id:"rb1" %>
                       <%=label_tag('rep_1' , '', class: 'form-check-label fas fa-dna fa btn btn-outline-success',id:'rep1') %>
                     </div></li>
                     <li style="display:inline-block;">
                     <div class="form-check">
-                      <%= radio_button_tag :rep, "2", @repute_2, type: "radio", class: "form-check-input",style:"visibility:hidden;width:0px;height:0px;",id:"rb2" %> 
+                      <%= radio_button_tag :rep, "2", @repute2, type: "radio", class: "form-check-input",style:"visibility:hidden;width:0px;height:0px;",id:"rb2" %>
                       <%=label_tag('rep_2' , '', class: 'form-check-label fas fa-dna fa btn btn-outline-danger',id:'rep2') %>
                     </div>
                     </li>
                     <li class="text-center pt-2">Magnitude</li>
-                    
+
                     <li><div id="slider" class="noUiSlider" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"></div></li>
                     <li><select class="form-control" id="min" name="min" style="visibility:hidden;width:0px;height:0px;"></select></li>
                     <li><select class="form-control" id="max" name="max" style="visibility:hidden;width:0px;height:0px;"></select></li>
@@ -77,14 +77,14 @@
 <%= javascript_include_tag 'sidebar'%>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/9.0.0/nouislider.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.0.4/wNumb.min.js'></script>
-<script> 
+<script>
 var min = <%= @min %>;
 var max = <%= @max %>;
 </script>
 <%= javascript_include_tag 'rangeslider'%>
 <script>
-var rep1= '<%=@repute_1%>';
-var rep2= '<%=@repute_2%>';
+var rep1= '<%=@repute1%>';
+var rep2= '<%=@repute2%>';
 var rep1b = ($('#rep1').attr('class').split(" "));
 var rep2b = ($('#rep2').attr('class').split(" "));
 if(rep1=='true'){
@@ -100,7 +100,7 @@ rep2b.push('active');
 rep2b.join(" ");
 document.getElementById("rep2").className = rep2b.join(" ");}
 
-$('button.repBut').click(function() { 
+$('button.repBut').click(function() {
     var id = $(this).attr('id');
     if(id=='goodBut'){$("#radioGood").prop("checked", true);}
     else if(id=='badBut'){$("#radioBad").prop("checked", true);}

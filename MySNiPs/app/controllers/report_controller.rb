@@ -21,29 +21,29 @@ class ReportController < ApplicationController
       format.js
     end
   end
+
   def persistent_repute
-    if params.has_key? :rep
-      if params[:rep] == "1"
-        @repute_1 = true
-        @repute_2 = false
-      else params[:rep] == "2"
-        @repute_1 = false
-        @repute_2 = true
-      end
+    case params[:rep]
+    when "1"
+      @repute1 = true
+      @repute2 = false
+    when "2"
+      @repute1 = false
+      @repute2 = true
+    else
+      @repute1 = false
+      @repute2 = false
     end
   end
+
   def persistent_magnitude
-    if params.has_key? :min
-      @min =  params[:min]
-    else
-      @min = 0
-    end
-    if params.has_key? :max
-      @max =  params[:max]
-    else
-      @max = 0
-    end
+    @min = 0
+    @max = 10
+
+    @min = params[:min] if params.has_key? :min
+    @max = params[:max] if params.has_key? :max
   end
+
   def example_or_logged_in
     # If there isn't a logged in user, an example report will be shown
     if current_user.nil?
