@@ -14,7 +14,7 @@
   <div class="mw-100">
 
     <!-- Início navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-info fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary fixed-top">
       <a class="navbar-brand" href="#" target="_self"><%= image_tag("logo-branca.png", :style=>'height:25px;', :class=>'d-inline-block align-bottom') %></a>
 
       <!-- Botão navbar responsivo -->
@@ -25,17 +25,17 @@
       <!-- Itens navbar -->
       <div class="collapse navbar-collapse" id="navbarSite">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link interno text-white" href="#inicio">Início</a></li>
-          <li class="nav-item"><a class="nav-link interno text-white" href="#relatos">Relatos</a></li>
-          <li class="nav-item"><a class="nav-link interno text-white" href="#vantagens">Vantagens</a></li>
-          <li class="nav-item"><a class="nav-link interno text-white" href="#parceiros">Parceiros</a></li>
-          <li class="nav-item"><a class="nav-link interno text-white" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link interno" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link interno" href="#relatos">Relatos</a></li>
+          <li class="nav-item"><a class="nav-link interno" href="#vantagens">Vantagens</a></li>
+          <li class="nav-item"><a class="nav-link interno" href="#parceiros">Parceiros</a></li>
+          <li class="nav-item"><a class="nav-link interno" href="#sobre">Sobre</a></li>
           <% if current_user %>
-          <li class="nav-item ml-3"><a class="nav-link btn btn-sm btn-info text-white" href="/logout" target="_self">Logout</a></li>
-          <li class="nav-item ml-3"><a class="nav-link btn btn-sm btn-primary text-white" href="/report" target="_self">Relatório</a></li>
+          <li class="nav-item ml-3"><a class="nav-link btn btn-sm btn-success text-white" href="/report" target="_self">Relatório</a></li>
+          <li class="nav-item ml-3"><a class="nav-link btn btn-sm btn-outline-danger text-white" href="/logout" target="_self">Logout</a></li>
           <% else %>
           <li class="nav-item ml-3"><a class="nav-link btn btn-sm btn-info text-white" href="/report" target="_self">Ver exemplo</a></li>
-          <li class="nav-item ml-3"><a class="nav-link btn btn-sm btn-primary text-white" href="/login" target="_self">Login</a></li>
+          <li class="nav-item ml-3"><a class="nav-link btn btn-sm btn-success text-white" href="/login" target="_self">Login</a></li>
           <% end %>
         </ul>
       </div>
@@ -143,7 +143,7 @@
 	    <div class="text-center p-5 m-5">
 		    <h1>Nosso parceiro</h1>
         <h4>A Genomika Diagnóstico é uma startup com dois anos de existência, com sede no polo médico do Recife. O laboratório realiza testes inovadores de sequenciamento genético no Brasil utilizando tecnologia de segunda geração.</h4>
-        <a class="btn btn-info btn-lg mt-4" href="https://www.genomika.com.br/" target="_blank">Conheça a Genomika</a>
+        <a class="btn btn-primary btn-lg mt-4" href="https://www.genomika.com.br/" target="_blank">Conheça a Genomika</a>
 	    </div>
     </div>
 
@@ -152,7 +152,7 @@
 		    <h1>O que fazemos</h1>
         <br>
         <h4>Nós analisamos o que há de mais atual em dados genéticos públicas e entregamos insights baseados no DNA dos usuários.</h4>
-        <%= link_to 'Acesse nosso relatório', login_path, class: 'btn btn-info mt-4 btn-lg' %>
+        <%= link_to 'Acesse nosso relatório', login_path, class: 'btn btn-primary mt-4 btn-lg' %>
 	    </div>
     </div>
 
@@ -160,7 +160,7 @@
     <footer class="page-footer font-small unique-color-dark bg-white">
 
     <!-- Cabeçalho -->
-    <div class="bg-gradient-info">
+    <div class="bg-gradient-primary">
 
       <div class="container">
 
@@ -242,7 +242,7 @@
     <!-- Footer Links -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3 bg-gradient-info">© 2018 Copyright:
+    <div class="footer-copyright text-center py-3 bg-gradient-primary">© 2018 Copyright:
       <a href="#" class="text-white"> MySNiPs</a>
     </div>
     <!-- Copyright -->    <a href="#" class="text-white"> MySNiPs</a>

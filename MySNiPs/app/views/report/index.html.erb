@@ -1,13 +1,13 @@
 <%= stylesheet_link_tag "sidebar" %>
 <link href='https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/9.0.0/nouislider.min.css' rel="stylesheet">
 <%= form_tag(report_index_url, method: :get) do %>
-<nav class="navbar navbar-light bg-info fixed-top">
+<nav class="navbar navbar-light bg-gradient-primary fixed-top">
   <div class="row">
     <div class="col-2"><a class="navbar-brand" href="#menu-toggle" id="menu-toggle"><span class="navbar-toggler-icon"></span></a></div>
     <div class="col-10">
         <div class="row">
           <%= text_field_tag :search, params[:search], type: "search", class:"form-control col-10", placeholder: "Pesquisar", "aria-label": "Pesquisar" %>
-        <button class="btn btn-primary fas fa-search col-2" type="submit"></button>
+        <button class="btn btn-dark fas fa-search col-2" type="submit"></button>
         </div>
     </div>
   </div>
@@ -20,27 +20,26 @@
                     <a href="/"><%= image_tag("logo.png", :style=>'height:35px;', :class=>'d-inline-block align-bottom px-5') %></a>
                 </li>
                 <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
-
-                <!--<li>#<%=current_identifier%></li>-->
-                    <li class="text-muted pt-3"><h5>Filtrar por</h5></li>
-                    <li class=" text-center pt-2">Reputação</li>
-                    <li style="display:inline-block;">
-                    <div class="form-check">
-                      <%= radio_button_tag :rep, "1", @repute_1, type: "radio", class: "form-check-input",style:"visibility:hidden;width:0px;height:0px;",id:"rb1" %>
-                      <%=label_tag('rep_1' , '', class: 'form-check-label fas fa-dna fa btn btn-outline-success',id:'rep1') %>
-                    </div></li>
-                    <li style="display:inline-block;">
-                    <div class="form-check">
-                      <%= radio_button_tag :rep, "2", @repute_2, type: "radio", class: "form-check-input",style:"visibility:hidden;width:0px;height:0px;",id:"rb2" %> 
-                      <%=label_tag('rep_2' , '', class: 'form-check-label fas fa-dna fa btn btn-outline-danger',id:'rep2') %>
-                    </div>
-                    </li>
-                    <li class="text-center pt-2">Magnitude</li>
-                    
-                    <li><div id="slider" class="noUiSlider" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"></div></li>
-                    <li><select class="form-control" id="min" name="min" style="visibility:hidden;width:0px;height:0px;"></select></li>
-                    <li><select class="form-control" id="max" name="max" style="visibility:hidden;width:0px;height:0px;"></select></li>
-                    <li style="text-align:center;"><button class="btn btn-primary fas fa-search col-2 mt-3" type="submit"></button></li>
+                <li class="text-center text-primary"><%=current_identifier%></li>
+                <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
+                <li style="display:inline-block;">
+                <div class="form-check">
+                  <%= radio_button_tag :rep, "1", @repute_1, type: "radio", class: "form-check-input",style:"visibility:hidden;width:0px;height:0px;",id:"rb1" %>
+                  <%=label_tag('rep_1' , '', class: 'form-check-label fas fa-dna fa btn btn-outline-success',id:'rep1') %>
+                </div></li>
+                <li style="display:inline-block;">
+                <div class="form-check">
+                  <%= radio_button_tag :rep, "2", @repute_2, type: "radio", class: "form-check-input",style:"visibility:hidden;width:0px;height:0px;",id:"rb2" %> 
+                  <%=label_tag('rep_2' , '', class: 'form-check-label fas fa-dna fa btn btn-outline-danger',id:'rep2') %>
+                </div>
+                </li>
+                <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
+                <li><div id="slider" class="noUiSlider" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"></div></li>
+                <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
+                <li style="text-align:center;"><button class="btn btn-primary fas fa-search col-2 mt-3" type="submit"></button></li>
+                <li><select class="form-control" id="min" name="min" style="visibility:hidden;width:0px;height:0px;"></select></li>
+                <li><select class="form-control" id="max" name="max" style="visibility:hidden;width:0px;height:0px;"></select></li>
+                <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
                 <li class="text-center">
                     <a href="#" class=" text-muted">Termos de Uso</a>
                 </li><%if current_user%>
