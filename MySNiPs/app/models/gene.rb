@@ -7,7 +7,7 @@ class Gene < ApplicationRecord
     if gmaf.nil?
       ""
     else
-      ((gmaf * 200).to_i).to_s + "% common"
+      ((gmaf * 200).to_i).to_s + "% common, "
     end
   end
 end
