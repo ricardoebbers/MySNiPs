@@ -27,9 +27,9 @@ class Genotype < ApplicationRecord
 
   def rep_text
     case repute
-    when 1 then "Good"
-    when 2 then "Bad"
-    when 0 then "Neutral"
+    when 1 then "+"
+    when 2 then "-"
+    when 0 then "~"
     end
   end
 
