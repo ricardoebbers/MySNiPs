@@ -8,7 +8,7 @@ noUiSlider.create(slider, {
     range: {
         'min': 0,
         'max': 10
-    },step:1
+    },step:1,tooltips:[true,true]
 });
 var selectmin = document.getElementById('min');
 var selectmax = document.getElementById('max');
