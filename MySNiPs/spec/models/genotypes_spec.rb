@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe GenotypesController do
+describe Genotype do
   it "should not validate a blank Genotype" do
     genotype = Genotype.new
     expect(genotype.valid?).to eq false

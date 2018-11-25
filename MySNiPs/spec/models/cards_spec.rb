@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe CardsController do
+describe Card do
   it "should validate a new Match" do
     role = Role.create(role_name: "test")
     user = User.create(identifier: "1234567", password: "12345", role_id: role.id)

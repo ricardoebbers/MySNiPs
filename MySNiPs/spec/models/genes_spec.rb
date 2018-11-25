@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe GenesController do
+describe Gene do
   it "should validate a new Gene" do
     gene = Gene.new(title: "Valid Gene Title")
     expect(gene.valid?).to eq true
