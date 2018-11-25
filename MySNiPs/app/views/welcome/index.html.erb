@@ -30,9 +30,11 @@
           <li class="nav-item"><a class="nav-link interno text-white" href="#parceiros">Parceiros</a></li>
           <li class="nav-item"><a class="nav-link interno text-white" href="#sobre">Sobre</a></li>
           <% if current_user %>
-          <li class="nav-item"><a class="nav-link btn btn-sm btn-primary text-white" href="/logout" target="_self">Logout</a></li>
+          <li class="nav-item ml-3"><a class="nav-link btn btn-sm btn-info text-white" href="/logout" target="_self">Logout</a></li>
+          <li class="nav-item ml-3"><a class="nav-link btn btn-sm btn-primary text-white" href="/report" target="_self">Relatório</a></li>
           <% else %>
-          <li class="nav-item"><a class="nav-link btn btn-sm btn-primary text-white" href="/login" target="_self">Login</a></li>
+          <li class="nav-item ml-3"><a class="nav-link btn btn-sm btn-info text-white" href="/report" target="_self">Ver exemplo</a></li>
+          <li class="nav-item ml-3"><a class="nav-link btn btn-sm btn-primary text-white" href="/login" target="_self">Login</a></li>
           <% end %>
         </ul>
       </div>
@@ -41,22 +43,26 @@
     <!-- Fim navbar -->
 
     <!-- Início do cabeçalho -->
-   <div class="bg-overlay-inicio mt-5" id="inicio">
-	    <div class="text-center mt-5">
-		    <h1>MySNiPs</h1>
-        <h4>Um relatório sobre seu DNA como você nunca viu.</h4>
+   <div class="bg-overlay-inicio mt-5 p-5" id="inicio">
+	    <div class="text-center mt-5 p-5">
+        <%= image_tag("logo-branca.png", :style=>'height:25vh;', :class=>'img-fluid') %>
+        <h3>Um relatório sobre seu DNA como você nunca viu.</h3>
 	    </div>
     </div>
     <!-- Fim do cabeçalho -->
-<div id="relatos" style="background:rgba(211,211,211,.4)">
+<div id="relatos" class="p-5 ml-5 mr-5">
 
 <div class="row">
-<div class="col-sm-4 col-md-5 col-xl-5">
-<img class="img-fluid"src="https://www.architectsjournal.co.uk/pictures/2000x2000fit/8/3/8/1363838_Julia_King_0206_BW2.jpg">
+<div class="col-2">
+<%= image_tag("relato01.jpg", :class=>'img-fluid rounded-circle') %>
 </div>
-<div class="col-sm-8 col-md-7  col-xl-7 px-5 text-center my-auto">
-<h1 class="text-left text-info">Emilia Leão, 32 anos</h1>
-<h4 class="text-justify">Emilia é arquiteta e tem 32 anos, casada, mora em Boa Viagem e tem uma filha de um ano e meio. Sempre foi movida pela curiosidade e cresceu ouvindo o ditado: "curiosidade matou o gato". Há 5 anos Emilía foi diagnósticada com doença celíaca e desde então busca conhecer mais sobre si própria e seu DNA, encontrando no MySNiPs o que estava procurando.
+<div class="col-10 px-5 text-center my-auto">
+<h1 class="text-left text-muted">Emilia Silva, 32 anos</h1>
+<h4 class="text-justify">Emilia é arquiteta e tem 32 anos, casada, mora em Boa Viagem e 
+  tem uma filha de um ano e meio. Sempre foi movida pela curiosidade e cresceu ouvindo o 
+  ditado: "curiosidade matou o gato". Há 5 anos Emilía foi diagnósticada com doença 
+  celíaca e desde então busca conhecer mais sobre si própria e seu DNA, encontrando no 
+  MySNiPs o que estava procurando.
 </h4>
 </div>
 </div>
@@ -64,18 +70,18 @@
 
     <!-- Inicio cards div -->
 
-    <div id="vantagens">
-    <h1 class="text-center mb-5" style="color:#381900">Vantagens</h1>
+    <div id="vantagens" class="border-top">
+    <h1 class="text-center mt-3" style="color:#381900">O que você pode aprender conosco?</h1>
 
     <!-- Inicio cards -->
-    <div class="row">
+    <div class="row px-3 pt-3">
     
 
       <!-- Espaço card -->
-      <div class="col-sm-3 col-md-3 mb-3">
+      <div class="col-sm-3 col-md-3 pb-3">
 
         <!-- Corpo card -->
-        <div class="card border-0" style="color:#381900">
+        <div class="card border-0 pt-3" style="color:#381900">
           <i class="fas fa-heartbeat fa-5x mx-auto" ></i>
           <div class="card-body text-center">
             <h4 class="cad-title">Predisposição à doenças</h4>
@@ -86,10 +92,10 @@
       <!-- Fim do espaço -->
 
       <!-- Espaço card -->
-      <div class="col-sm-3 col-md-3 mb-3">
+      <div class="col-sm-3 col-md-3 pb-3">
 
       <!-- Corpo card -->
-        <div class="card border-0" style="color:#6B3000">
+        <div class="card border-0 pt-3" style="color:#6B3000">
           <i class="fas fa-dna fa-5x mx-auto" ></i>
           <div class="card-body text-center">
             <h4 class="cad-title">Entender Sistema Hereditário</h4>
@@ -100,10 +106,10 @@
       <!-- Fim do espaço -->
 
       <!-- Espaço card -->
-      <div class="col-sm-3 col-md-3 mb-3">
+      <div class="col-sm-3 col-md-3 pb-3">
 
       <!-- Corpo card -->
-        <div class="card border-0" style="color:#845127">
+        <div class="card border-0 pt-3" style="color:#845127">
           <i class="fas fa-capsules fa-5x mx-auto" ></i>
           <div class="card-body text-center">
             <h4 class="cad-title">Resistência à medicações</h4>
@@ -114,10 +120,10 @@
       <!-- Fim do espaço -->
 
       <!-- Espaço card -->
-      <div class="col-sm-3 col-md-3 mb-3">
+      <div class="col-sm-3 col-md-3 pb-3">
 
       <!-- Corpo card -->
-        <div class="card border-0" style="color:#B77137">
+        <div class="card border-0 pt-3" style="color:#B77137">
           <i class="fas fa-fingerprint fa-5x mx-auto" ></i>
           <div class="card-body text-center">
             <h4 class="cad-title">Características de um indivíduo</h4>
@@ -132,9 +138,9 @@
     </div>
     <!-- Fim do card div -->
 
-    <div class="bg-overlay-parceiros-genomika" id="parceiros">
-	    <div class="text-center">
-		    <h1>Genomika</h1>
+    <div class="bg-overlay-parceiros-genomika p-5" id="parceiros">
+	    <div class="text-center p-5 m-5">
+		    <h1>Nosso parceiro</h1>
         <h4>A Genomika Diagnóstico é uma startup com dois anos de existência, com sede no polo médico do Recife. O laboratório realiza testes inovadores de sequenciamento genético no Brasil utilizando tecnologia de segunda geração.</h4>
         <a class="btn btn-info btn-lg mt-4" href="https://www.genomika.com.br/" target="_blank">Conheça a Genomika</a>
 	    </div>
@@ -142,9 +148,10 @@
 
     <div class="bg-overlay-sobre" id="sobre">
 	    <div class="text-center mt-5">
-		    <h1>MySNiPs</h1>
-        <h4>O MySNiPs é um SaaS que integra mapamentos genéticos com bases de dados públicas e possibilita insights baseados no DNA dos usuários.</h4>
-        <%= link_to 'Acesse nosso relatório', login_path,class: 'btn btn-info mt-4 btn-lg' %>
+		    <h1>O que fazemos</h1>
+        <br>
+        <h4>Nós analisamos o que há de mais atual em dados genéticos públicas e entregamos insights baseados no DNA dos usuários.</h4>
+        <%= link_to 'Acesse nosso relatório', login_path, class: 'btn btn-info mt-4 btn-lg' %>
 	    </div>
     </div>
 
@@ -158,39 +165,6 @@
 
         <!-- Linha -->
         <div class="row py-4 d-flex align-items-center">
-
-          <!-- Coluna mensagem -->
-          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-            <h6 class="mb-0 text-white">Nos siga nas redes sociais</h6>
-          </div>
-          <!-- Coluna mensagem fim -->
-
-          <!-- Coluna links -->
-          <div class="col-md-6 col-lg-7 text-center text-md-right">
-
-            <!-- Facebook -->
-            <a href="#" target="_blank">
-              <i class="fab fa-facebook text-white mr-4"></i>
-            </a>
-            <!-- Twitter -->
-            <a href="#" target="_blank">
-              <i class="fab fa-twitter text-white mr-4"></i>
-            </a>
-            <!-- Google +-->
-            <a href="#" target="_blank">
-              <i class="fab fa-google-plus text-white mr-4"></i>
-            </a>
-            <!--Linkedin -->
-            <a href="#" target="_blank">
-              <i class="fab fa-linkedin text-white mr-4"> </i>
-            </a>
-            <!--Instagram-->
-            <a href="#" target="_blank">
-              <i class="fab fa-instagram text-white mr-4"> </i>
-            </a>
-
-          </div>
-          <!-- Coluna links fim -->
 
         </div>
         <!-- Linha fim-->
@@ -289,9 +263,8 @@
 			e.preventDefault();
       var id = $(this).attr('href');
       var modo=$(this).attr('target');
-      console.log(id);
       var classe = $(this).attr('class');
-      if (classe=='nav-link interno'){
+      if (classe.split(" ").includes("interno")){
 			var distancia_topo = $(id).offset().top;
 			var altura_menu = $("nav").innerHeight();
 

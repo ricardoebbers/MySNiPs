@@ -10,15 +10,6 @@ class Genoma < ApplicationRecord
     }
   end
 
-  def parse_file
-    decoded_file = Base64.decode64(@raw_file) unless @raw_file.nil?
-    @raw_file = nil
-    return false if decoded_file.nil?
-
-    update_attribute(:file, decoded_file)
-    decoded_file = nil
-  end
-
   def match_complete
     update_attribute(:file, nil)
     update_attribute(:status, 0)

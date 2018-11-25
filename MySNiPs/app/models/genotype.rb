@@ -6,12 +6,11 @@ class Genotype < ApplicationRecord
   validates :allele2, length: {is: 1}
   validates :allele1, :allele2, presence: true
   validates :title, presence: true, uniqueness: true
-  paginates_per 50
 
   def repute_gradient
     case repute
-    when 1 then ["rgb(76,255,76)", "rgb(62,255,65)", "rgb(52,255,51)", "rgb(35,255,34)", "rgb(0,255,0)"]
-    when 2 then ["rgb(255,76,76)", "rgb(255,64,62)", "rgb(255,49,46)", "rgb(255,32,28)", "rgb(255,0,0)"]
+    when 1 then ["rgb(235,255,235)", "rgb(180,255,180)", "rgb(140,255,140)", "rgb(80,225,80)", "rgb(0,200,0)"]
+    when 2 then ["rgb(255,235,235)", "rgb(255,180,180)", "rgb(255,140,140)", "rgb(225,80,80)", "rgb(200,0,0)"]
     end
   end
 
@@ -22,6 +21,14 @@ class Genotype < ApplicationRecord
     when 1.6..3.5 then repute_gradient[2]
     when 3.6..5.9 then repute_gradient[3]
     else repute_gradient[4]
+    end
+  end
+
+  def rep_text
+    case repute
+    when 1 then "+"
+    when 2 then "-"
+    when 0 then "~"
     end
   end
 

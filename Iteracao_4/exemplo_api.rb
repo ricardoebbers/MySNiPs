@@ -11,7 +11,7 @@ remote = "https://mysnips.herokuapp.com/"
 MYSNIPS_URI = local
 DONT_POST = false
 CSV_TEST_FILE = "0010000001.gnm"
-TEST_IDENTIFIER_1 = 332218
+TEST_IDENTIFIER_1 = ARGV[0]
 TEST_IDENTIFIER_2 = "003"
 
 def get_response_from uri, request
