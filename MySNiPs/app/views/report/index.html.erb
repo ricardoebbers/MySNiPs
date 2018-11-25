@@ -110,6 +110,7 @@ $('label#rep2').click(function(e){
       e.preventDefault();
       $("#rb2").prop("checked", true);
       $("#rb1").prop("checked", false);
+      if(rep2b.length!=7){
       if(rep1b.length==7){
         rep2b.push('active');
         rep2b.join(" ");
@@ -122,12 +123,14 @@ $('label#rep2').click(function(e){
         rep2b.push('active');
         rep2b.join(" ");
         document.getElementById("rep2").className = rep2b.join(" ");
-      }});
+      }}});
 
 $('label#rep1').click(function(e){
       e.preventDefault();
       $("#rb1").prop("checked", true);
       $("#rb2").prop("checked", false);
+      if(rep1b.length!=7){
+
       if(rep2b.length==7){
         rep1b.push('active');
         rep1b.join(" ");
@@ -136,11 +139,13 @@ $('label#rep1').click(function(e){
         rep2b.join(" ");
         document.getElementById("rep2").className = rep2b.join(" ");
       }
+
       else{
         rep1b.push('active');
         rep1b.join(" ");
         document.getElementById("rep1").className = rep1b.join(" ");
       }
+}
       });
 
 </script>
