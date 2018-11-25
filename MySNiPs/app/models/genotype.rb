@@ -25,6 +25,14 @@ class Genotype < ApplicationRecord
     end
   end
 
+  def rep_text
+    case repute
+    when 1 then "Good"
+    when 2 then "Bad"
+    when 0 then "Neutral"
+    end
+  end
+
   def page_text
     result = page_content
     link_format = /(?<=\[\[)(.*?)(?=\]\])/
