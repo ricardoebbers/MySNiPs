@@ -15,7 +15,11 @@
         <h5 class="text-left text-muted font-weight-bold"><%= card.genotype.title%></h5>
         </div>
         <div class="col-4">
-        <p class="text-right font-weight-bold"><%= card.genotype.rep_text%> <%= card.genotype.magnitude%></p>
+        <%if card.genotype.repute==1%>
+        <p class="text-right font-weight-bold text-success"><%= card.genotype.rep_text%> <%= card.genotype.magnitude%></p>
+        <%else%>
+        <p class="text-right font-weight-bold text-danger"><%= card.genotype.rep_text%> <%= card.genotype.magnitude%></p>
+        <%end%>
         </div>
       </div>
       <div class="row px-4 pt-3">
