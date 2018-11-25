@@ -1,6 +1,9 @@
 class ReportController < ApplicationController
   # GET /cards
   # GET /cards.json
+  def reset_filters
+    redirect_to :report_index
+  end
   def index
     @cards = Card.from_user(example_or_logged_in)
     @total_cards = @cards.size
@@ -41,7 +44,7 @@ class ReportController < ApplicationController
     if params.has_key? :max
       @max =  params[:max]
     else
-      @max = 0
+      @max = 10
     end
   end
   def example_or_logged_in
