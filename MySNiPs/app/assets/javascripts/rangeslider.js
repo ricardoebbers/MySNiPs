@@ -1,6 +1,7 @@
-
+if(slider!=null){
+  document.getElementById('slider').innerHTML = "";
+}
 var slider = document.getElementById('slider');
-
 noUiSlider.create(slider, {
     start: [0, 10],
     connect: true,
@@ -45,12 +46,18 @@ slider.noUiSlider.on('update', function (values, handle) {
       selectmax.value = Math.round(value);
     }
 });
-
-
-
+if (min){
+  selectmin.value = Math.round(min);
+  slider.noUiSlider.set([min,null]);
+}
+if (max){
+  selectmax.value = Math.round(max);
+  slider.noUiSlider.set([null,max]);
+}
 
 selectmin.addEventListener('change', function () {
   slider.noUiSlider.set([this.value,null]);
+  
 });
 selectmax.addEventListener('change', function () {
   slider.noUiSlider.set([null,this.value]);
