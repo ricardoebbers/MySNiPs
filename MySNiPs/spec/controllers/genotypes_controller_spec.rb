@@ -24,6 +24,6 @@ describe GenotypesController do
 
   it "should return the right repute and magnitude color" do
     genotype = Genotype.new(title: "Valid title", allele1: "A", allele2: "B", magnitude: 6, repute: 1)
-    expect(genotype.color).to eq "rgb(0,255,0)"
+    expect(genotype.color).to eq "rgb(0,200,0)"
   end
 end
