@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   def current_identifier
     user = current_user
     if user.nil?
-      "Exemplo"
+      "Relatório Exemplo"
     else
       user.identifier
     end
