@@ -1,5 +1,9 @@
-<div class="card border border-info my-3">
 
+<%if card.genotype.repute==1%>
+<div class="card border border-success my-3">
+<%else%>
+<div class="card border border-danger my-3">
+<%end%>
   <div class="row">
 
     <div class="col-md-2 mx-auto my-auto text-center pt-3 pb-3">
@@ -7,19 +11,19 @@
     </div>
     <div class="col-md-10 py-3">
       <div class="row px-4">
-        <h5 class="text-info">Title: &nbsp</h5><%= card.genotype.title%>
+        <h5 class="text-info font-weight-bold"><%= card.genotype.title%></h5>
       </div>
-      <div class="row px-4">
-        <h5 class="text-info">Summary Genotype: &nbsp</h5><%= card.genotype.summary%>
+      <div class="row px-4 pt-3">
+        <p class="font-weight-bold"><%= card.genotype.summary%></p>
       </div>
       <% if card.genotype.gene.summary %>
       <div class="row px-4">
-        <h5 class="text-info">Summary Gene: &nbsp</h5><%= card.genotype.gene.summary%>
+        <p><%= card.genotype.gene.summary%></p>
       </div>
       <% end %>
       <% if card.genotype.page_text %>
       <div class="row px-4">
-        <h5 class="text-info">Page Text: &nbsp</h5><%= card.genotype.page_text%>
+        <p><%= card.genotype.page_text%></p>
       </div>
       <% end %>
     </div>
