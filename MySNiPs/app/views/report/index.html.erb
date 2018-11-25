@@ -113,6 +113,11 @@ $('label#rep2').click(function(e){
         rep1b.splice(-1,1);
         rep1b.join(" ");
         document.getElementById("rep1").className = rep1b.join(" ");
+      }
+      else{
+        rep2b.push('active');
+        rep2b.join(" ");
+        document.getElementById("rep2").className = rep2b.join(" ");
       }});
 
 $('label#rep1').click(function(e){
@@ -126,7 +131,13 @@ $('label#rep1').click(function(e){
         rep2b.splice(-1,1);
         rep2b.join(" ");
         document.getElementById("rep2").className = rep2b.join(" ");
-      }});
+      }
+      else{
+        rep1b.push('active');
+        rep1b.join(" ");
+        document.getElementById("rep1").className = rep1b.join(" ");
+      }
+      });
 
 </script>
 </body>
