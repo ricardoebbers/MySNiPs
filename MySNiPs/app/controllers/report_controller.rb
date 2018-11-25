@@ -9,7 +9,6 @@ class ReportController < ApplicationController
     @cards = @cards.eager_join_tables
 
     apply_order
-    persistent_repute
     # Both only change @cards if necessary
     apply_filters
     execute_search
@@ -22,7 +21,6 @@ class ReportController < ApplicationController
       format.js
     end
   end
-
   def persistent_repute
     if params.has_key? :rep
       if params[:rep] == "1"
@@ -32,6 +30,18 @@ class ReportController < ApplicationController
         @repute_1 = false
         @repute_2 = true
       end
+    end
+  end
+  def persistent_magnitude
+    if params.has_key? :min
+      @min =  params[:min]
+    else
+      @min = 0
+    end
+    if params.has_key? :max
+      @max =  params[:max]
+    else
+      @max = 0
     end
   end
   def example_or_logged_in
@@ -64,6 +74,8 @@ class ReportController < ApplicationController
   end
 
   def apply_filters
+    persistent_repute
+    persistent_magnitude
     @cards = @cards.min_mag(params[:min]) if params.has_key? :min
     @cards = @cards.max_mag(params[:max]) if params.has_key? :max
     @cards = @cards.repute_is(params[:rep]) if params.has_key? :rep
