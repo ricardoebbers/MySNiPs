@@ -8,8 +8,8 @@
     <%= f.text_field :identifier, autofocus: true, :class=>'form-control', :placeholder=>'Identificador' %>
     
     <%= f.password_field :password, :class=>'form-control mb-3', :placeholder=>'Password',:style=>'width:300px;' %>
-	
-	<% if alert %>
+	<small class="text-muted">Ao clicar em login, você aceita nossos </small><small class="text-info"><u>termos de uso</u></small>
+    <% if alert %>
       <p class="text-danger"><%= alert %></h1>
 	<% end %>
 
