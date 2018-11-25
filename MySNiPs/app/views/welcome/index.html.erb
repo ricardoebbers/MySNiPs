@@ -30,9 +30,11 @@
           <li class="nav-item"><a class="nav-link interno text-white" href="#parceiros">Parceiros</a></li>
           <li class="nav-item"><a class="nav-link interno text-white" href="#sobre">Sobre</a></li>
           <% if current_user %>
-          <li class="nav-item"><a class="nav-link btn btn-sm btn-primary text-white" href="/logout" target="_self">Logout</a></li>
+          <li class="nav-item ml-3"><a class="nav-link btn btn-sm btn-info text-white" href="/logout" target="_self">Logout</a></li>
+          <li class="nav-item ml-3"><a class="nav-link btn btn-sm btn-primary text-white" href="/report" target="_self">Relatório</a></li>
           <% else %>
-          <li class="nav-item"><a class="nav-link btn btn-sm btn-primary text-white" href="/login" target="_self">Login</a></li>
+          <li class="nav-item ml-3"><a class="nav-link btn btn-sm btn-info text-white" href="/report" target="_self">Ver exemplo</a></li>
+          <li class="nav-item ml-3"><a class="nav-link btn btn-sm btn-primary text-white" href="/login" target="_self">Login</a></li>
           <% end %>
         </ul>
       </div>
@@ -69,7 +71,7 @@
     <!-- Inicio cards div -->
 
     <div id="vantagens" class="border-top">
-    <h1 class="text-center mt-3" style="color:#381900">Vantagens</h1>
+    <h1 class="text-center mt-3" style="color:#381900">O que você pode aprender?</h1>
 
     <!-- Inicio cards -->
     <div class="row px-3 pt-3">
