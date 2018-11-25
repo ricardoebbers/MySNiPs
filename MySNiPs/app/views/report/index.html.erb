@@ -36,11 +36,16 @@
                 <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
                 <li><div id="slider" class="noUiSlider" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"></div></li>
                 <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
-                <li style="text-align:center;"><button class="btn btn-primary fas fa-search col-2 mt-3" type="submit"></button></li>
                 <li><select class="form-control" id="min" name="min" style="visibility:hidden;width:0px;height:0px;"></select></li>
                 <li><select class="form-control" id="max" name="max" style="visibility:hidden;width:0px;height:0px;"></select></li>
+                <li style="display:inline-block;" class="ml-5"><button class="btn btn-primary fas fa-search" type="submit"></button></li>
                 <% end %>
-                <%= button_to 'Reset filter', :report_index, method: :get %>
+                <li style="display:inline-block" class=ml-2>
+                  <form class="button_to" method="get" action="/report">
+                    <button class="btn btn-primary fas fa-undo" type="submit"></button>
+                  </form>
+                </li>
+                <!--<%= button_to 'Reset filter', :report_index, method: :get %>-->
                 <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
                 <li class="text-center">          
                     <a href="#" class=" text-muted">Termos de Uso</a>
