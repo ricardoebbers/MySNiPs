@@ -1,8 +1,8 @@
 require "rails_helper"
 
 describe Genotype, type: :model  do
-  let(:gene) { Gene.create(title: "Test") }
-  let(:geno) { described_class.new(title: "Test", allele1: "G", allele2: "G", gene_id: gene.id) }
+  let(:gene) { create(:gene) }
+  let(:geno) { create(:genotype) }
 
   it "is valid with valid attributes" do
     expect(geno).to be_valid

@@ -1,9 +1,9 @@
 require "rails_helper"
 
 describe Genoma, type: :model do
-  let(:role) { Role.create(role_name: "Test") }
-  let(:user) { User.create(identifier: "0000000000", password: "000000", role_id: role.id) }
-  let(:genoma) { described_class.new(user_id: user.id) }
+  let(:role) { create(:role) }
+  let(:user) { create(:user) }
+  let(:genoma) { create(:genoma) }
 
   it "is valid with valid attributes" do
     expect(genoma).to be_valid

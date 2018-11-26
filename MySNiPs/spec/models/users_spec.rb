@@ -1,8 +1,8 @@
 require "rails_helper"
 
 describe User, type: :model do
-  let(:role) { Role.create(role_name: "Test") }
-  let(:user) { described_class.new(identifier: "0000000000", password: "000000", role_id: role.id) }
+  let(:role) { create(:role) }
+  let(:user) { create(:user) }
 
   it "is valid with valid attributes" do
     expect(user).to be_valid
