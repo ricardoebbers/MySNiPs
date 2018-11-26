@@ -1,5 +1,5 @@
 
-const url = "http://localhost:3000"
+const url = "https://mysnips.herokuapp.com"
 var authToken;
 var uploadResponse;
 var elem = document.querySelector('.collapsible.expandable');
@@ -69,8 +69,6 @@ function getAuthToken(id, pass) {
       authToken = data.auth_token;
       $(".r1").show();
       $("#api-key").text(JSON.stringify(data, null, 2));
-      $("#auth-token-textarea").val(authToken);
-      M.textareaAutoResize($('#auth-token-textarea'));
     });
 }
 
