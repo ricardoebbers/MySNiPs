@@ -31,14 +31,4 @@ FactoryBot.define do
     user
     genotype
   end
-
-  factory :card_other do
-    user
-    association :genotype, factory: :genotype, title: "Test other", magnitude: 0
-  end
-
-  factory :card_another do
-    user
-    association :genotype, factory: :genotype, title: "Test another", magnitude: 10
-  end
 end

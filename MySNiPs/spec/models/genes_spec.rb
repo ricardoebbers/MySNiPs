@@ -1,7 +1,7 @@
 require "rails_helper"
 
 describe Gene, type: :model do
-  let(:gene) { create(:gene) }
+  let(:gene) { build(:gene) }
 
   it "is valid with valid attributes" do
     expect(gene).to be_valid

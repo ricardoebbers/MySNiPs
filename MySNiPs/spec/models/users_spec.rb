@@ -1,8 +1,8 @@
 require "rails_helper"
 
 describe User, type: :model do
-  let(:role) { create(:role) }
-  let(:user) { create(:user) }
+  let(:role) { build_stubbed(:role) }
+  let(:user) { build(:user) }
 
   it "is valid with valid attributes" do
     expect(user).to be_valid
