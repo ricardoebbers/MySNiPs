@@ -15,195 +15,221 @@
     <h1>Cliente API MySNiPs</h1>
     <p class="flow-text">Este é um arquivo de exemplo para os laboratórios parceiros da MySNiPs entenderem como usar a
       API de envio de genomas para serem processados e transformados em relatórios.</p>
-    <div class="z-depth-2 padding">
-      <div class="section">
-        <h2>Autenticação na API</h2>
-        <p class="flow-text">Deve ser feita para poder adquirir um token de autenticação para as demais requisições.</p>
-        <blockquote>
-          $ curl -X POST <span class="url"></span> -H "Content-Type:
-          application/json" -d
-          "identifier=...&password=..."
-        </blockquote>
-        <div class="row">
-          <form action="#" class="col s4">
+      <ul class="collapsible expandable">
+        <li>
+          <div class="collapsible-header">
+            <h4>Autenticação na API</h4>
+          </div>
+          <div class="collapsible-body">
+            <p class="flow-text">Deve ser feita para poder adquirir um token de autenticação para as demais
+              requisições.</p>
+            <blockquote>
+              $ curl -X POST <span class="url"></span> -H "Content-Type:
+              application/json" -d
+              "identifier=...&password=..."
+            </blockquote>
             <div class="row">
-              <div class="input-field col s12">
-                <input id="lab-id" type="text" min="1" max="999" class="validate" maxlength="3">
-                <label for="lab-id" class="active">Id do laboratório</label>
+              <form action="#" class="col s4">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="lab-id" type="text" min="1" max="999" class="validate" maxlength="3">
+                    <label for="lab-id" class="active">Id do laboratório</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="lab-pass" type="password" class="validate" name="password">
+                    <label for="lab-pass">Senha</label>
+                  </div>
+                </div>
+                <button class="btn waves-effect waves-light" type="submit" name="action" id="btn-auth">Enviar</button>
+              </form>
+              <div class="col s8">
+                <div class="return-block r1">
+                  <h5>Resposta do servidor</h5>
+                  <blockquote class="pre" id="api-key"></blockquote>
+                </div>
               </div>
             </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <h4>Upload de genoma</h4>
+          </div>
+          <div class="collapsible-body">
+            <p class="flow-text">É necessário informar um identificador de até 7 dígitos e enviar o arquivo de genoma
+              no
+              padrão abaixo (separado por tabs):</p>
             <div class="row">
-              <div class="input-field col s12">
-                <input id="lab-pass" type="password" class="validate" name="password">
-                <label for="lab-pass">Senha</label>
-              </div>
-            </div>
-            <button class="btn waves-effect waves-light" type="submit" name="action" id="btn-auth">Enviar</button>
-          </form>
-          <div class="col s8">
-            <div class="return-block r1">
-              <h5>Resposta do servidor</h5>
-              <blockquote class="pre" id="api-key"></blockquote>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="divider"></div>
-      <div class="section">
-        <h2>Upload de genoma</h2>
-        <p class="flow-text">É necessário informar um identificador de até 7 dígitos e enviar o arquivo de genoma no
-          padrão abaixo (separado por tabs):</p>
-        <blockquote class="monospace pre">rs12564807 1 734462 AA
-          rs3131972 1 752721 GG
-          rs148828841 1 760998 CC
-          rs12124819 1 776546 AA
-          (...)
-        </blockquote>
-        <div class="row">
-          <form action="#" class="col s4">
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="user-id" type="number" min="1" max="9999999" class="validate" maxlength="7">
-                <label for="user-id">Id do usuário</label>
-              </div>
-            </div>
-            <label>Arquivo genoma</label>
-            <div class="file-field input-field">
-              <div class="btn waves-effect waves-light">
-                <span>Selecionar</span>
-                <input type="file" id="file-genoma" />
-              </div>
-              <div class="file-path-wrapper">
-                <input class="file-path validate" type="text" placeholder="Upload arquivo" id="file-genoma" />
-              </div>
-              <button class="btn waves-effect waves-light" type="submit" name="action" id="btn-genoma">Enviar</button>
-            </div>
-          </form>
-          <div class="col s8">
-            <div class="return-block r2">
-              <h5>Resposta do servidor</h5>
-              <blockquote class="pre" id="genoma-upload">
-              </blockquote>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="divider"></div>
-      <div class="section">
-        <h2>Lista de Genomas</h2>
-        <p class="flow-text">Devolve uma lista com todos os genomas relacionados ao laboratório</p>
-        <div class="row valign-wrapper">
-          <form action="#" class="col s4">
-            <button class="btn waves-effect waves-light" type="submit" name="action" id="btn-genoma-index">Enviar</button>
-          </form>
-          <div class="col s8">
-            <div class="return-block r3">
-              <h5>Resposta do servidor</h5>
-              <blockquote class="pre" id="genoma-index">
-              </blockquote>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="divider"></div>
-      <div class="section">
-        <h2>Lista de Usuários</h2>
-        <p class="flow-text">Devolve uma lista com todos os usuários relacionados ao laboratório</p>
-        <div class="row valign-wrapper">
-          <form action="#" class="col s4">
-            <button class="btn waves-effect waves-light" type="submit" name="action" id="btn-users-index">Enviar</button>
-          </form>
-          <div class="col s8">
-            <div class="return-block r4">
-              <h5>Resposta do servidor</h5>
-              <blockquote class="pre" id="users-index">
-              </blockquote>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="divider"></div>
-      <div class="section">
-        <h2>Exibir Genoma</h2>
-        <p class="flow-text">Devolve um genoma com id específico</p>
-        <div class="row valign-wrapper">
-          <form action="#" class="col s4">
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="genoma-show-id" type="text" min="1" max="9999999" class="validate" maxlength="7">
-                <label for="genoma-show-id" class="active">Id do genoma</label>
-              </div>
-            </div>
-            <button class="btn waves-effect waves-light" type="submit" name="action" id="btn-genoma-show">Enviar</button>
-          </form>
-          <div class="col s8">
-            <div class="return-block r5">
-              <h5>Resposta do servidor</h5>
-              <blockquote class="pre" id="genoma-show">
-              </blockquote>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="divider"></div>
-      <div class="section">
-        <h2>Exibir Usuário</h2>
-        <p class="flow-text">Devolve um usuário com id específico</p>
-        <div class="row valign-wrapper">
-          <form action="#" class="col s4">
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="user-show-id" type="text" min="1" max="9999999" class="validate" maxlength="7">
-                <label for="user-show-id" class="active">Id do usuário</label>
-              </div>
-            </div>
-            <button class="btn waves-effect waves-light" type="submit" name="action" id="btn-user-show">Enviar</button>
-          </form>
-          <div class="col s8">
-            <div class="return-block r6">
-              <h5>Resposta do servidor</h5>
-              <blockquote class="pre" id="user-show">
-              </blockquote>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="divider"></div>
-      <div class="section">
-        <h2>Exibir genoma mais recente</h2>
-        <p class="flow-text">Devolve o último genoma enviado</p>
-        <div class="row valign-wrapper">
-          <form action="#" class="col s4">
-            <button class="btn waves-effect waves-light" type="submit" name="action" id="btn-genoma-show-last">Enviar</button>
-          </form>
-          <div class="col s8">
-            <div class="return-block r7">
-              <h5>Resposta do servidor</h5>
-              <blockquote class="pre" id="genoma-show-last">
-              </blockquote>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="divider"></div>
-      <div class="section">
-          <h2>Exibir usuário mais recente</h2>
-          <p class="flow-text">Devolve o último usuário criado</p>
-          <div class="row valign-wrapper">
-            <form action="#" class="col s4">
-              <button class="btn waves-effect waves-light" type="submit" name="action" id="btn-user-show-last">Enviar</button>
-            </form>
-            <div class="col s8">
-              <div class="return-block r8">
-                <h5>Resposta do servidor</h5>
-                <blockquote class="pre" id="user-show-last">
+              <form action="#" class="col s4">
+                <blockquote class="monospace pre">rs12564807 1 734462 AA
+                  rs3131972 1 752721 GG
+                  rs148828841 1 760998 CC
+                  rs12124819 1 776546 AA
+                  (...)
                 </blockquote>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="user-id" type="number" min="1" max="9999999" class="validate" maxlength="7">
+                    <label for="user-id">Id do usuário</label>
+                  </div>
+                </div>
+                <label>Arquivo genoma</label>
+                <div class="file-field input-field">
+                  <div class="btn waves-effect waves-light">
+                    <span>Selecionar</span>
+                    <input type="file" id="file-genoma" />
+                  </div>
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="Upload arquivo" id="file-genoma" />
+                  </div>
+                  <button class="btn waves-effect waves-light" type="submit" name="action" id="btn-genoma">Enviar</button>
+                </div>
+              </form>
+              <div class="col s8">
+                <div class="return-block r2">
+                  <h5>Resposta do servidor</h5>
+                  <blockquote class="pre" id="genoma-upload">
+                  </blockquote>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="divider"></div>
-    </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <h4>Lista de Genomas</h4>
+          </div>
+          <div class="collapsible-body">
+            <p class="flow-text">Devolve uma lista com todos os genomas relacionados ao laboratório</p>
+            <div class="row valign-wrapper">
+              <form action="#" class="col s4">
+                <button class="btn waves-effect waves-light" type="submit" name="action" id="btn-genoma-index">Enviar</button>
+              </form>
+              <div class="col s8">
+                <div class="return-block r3">
+                  <h5>Resposta do servidor</h5>
+                  <blockquote class="pre" id="genoma-index">
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <h4>Lista de Usuários</h4>
+          </div>
+          <div class="collapsible-body">
+            <p class="flow-text">Devolve uma lista com todos os usuários relacionados ao laboratório</p>
+            <div class="row valign-wrapper">
+              <form action="#" class="col s4">
+                <button class="btn waves-effect waves-light" type="submit" name="action" id="btn-users-index">Enviar</button>
+              </form>
+              <div class="col s8">
+                <div class="return-block r4">
+                  <h5>Resposta do servidor</h5>
+                  <blockquote class="pre" id="users-index">
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <h4>Exibir Genoma</h4>
+          </div>
+          <div class="collapsible-body">
+            <p class="flow-text">Devolve um genoma com id específico</p>
+            <div class="row valign-wrapper">
+              <form action="#" class="col s4">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="genoma-show-id" type="text" min="1" max="9999999" class="validate" maxlength="7">
+                    <label for="genoma-show-id" class="active">Id do genoma</label>
+                  </div>
+                </div>
+                <button class="btn waves-effect waves-light" type="submit" name="action" id="btn-genoma-show">Enviar</button>
+              </form>
+              <div class="col s8">
+                <div class="return-block r5">
+                  <h5>Resposta do servidor</h5>
+                  <blockquote class="pre" id="genoma-show">
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <h4>Exibir Usuário</h4>
+          </div>
+          <div class="collapsible-body">
+            <p class="flow-text">Devolve um usuário com id específico</p>
+            <div class="row valign-wrapper">
+              <form action="#" class="col s4">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="user-show-id" type="text" min="1" max="9999999" class="validate" maxlength="7">
+                    <label for="user-show-id" class="active">Id do usuário</label>
+                  </div>
+                </div>
+                <button class="btn waves-effect waves-light" type="submit" name="action" id="btn-user-show">Enviar</button>
+              </form>
+              <div class="col s8">
+                <div class="return-block r6">
+                  <h5>Resposta do servidor</h5>
+                  <blockquote class="pre" id="user-show">
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <h4>Exibir genoma mais recente</h4>
+          </div>
+          <div class="collapsible-body">
+            <p class="flow-text">Devolve o último genoma enviado</p>
+            <div class="row valign-wrapper">
+              <form action="#" class="col s4">
+                <button class="btn waves-effect waves-light" type="submit" name="action" id="btn-genoma-show-last">Enviar</button>
+              </form>
+              <div class="col s8">
+                <div class="return-block r7">
+                  <h5>Resposta do servidor</h5>
+                  <blockquote class="pre" id="genoma-show-last">
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+              <h4>Exibir usuário mais recente</h4>
+          </div>
+          <div class="collapsible-body">
+              <p class="flow-text">Devolve o último usuário criado</p>
+              <div class="row valign-wrapper">
+                <form action="#" class="col s4">
+                  <button class="btn waves-effect waves-light" type="submit" name="action" id="btn-user-show-last">Enviar</button>
+                </form>
+                <div class="col s8">
+                  <div class="return-block r8">
+                    <h5>Resposta do servidor</h5>
+                    <blockquote class="pre" id="user-show-last">
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </li>
+      </ul>
   </main>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>

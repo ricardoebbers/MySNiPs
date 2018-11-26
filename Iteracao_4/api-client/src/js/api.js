@@ -1,7 +1,11 @@
 
-const url = "http://mysnips.herokuapp.com"
+const url = "http://localhost:3000"
 var authToken;
 var uploadResponse;
+var elem = document.querySelector('.collapsible.expandable');
+var instance = M.Collapsible.init(elem, {
+  accordion: false
+});
 $('.url').text(url);
 $('#btn-auth').click(function (e) {
   e.preventDefault();
