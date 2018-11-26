@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_26_025529) do
+ActiveRecord::Schema.define(version: 2018_11_26_032724) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2018_11_26_025529) do
   end
 
   create_table "genomas", force: :cascade do |t|
-    t.string "status", default: "1"
+    t.string "status", default: "Pendente"
     t.string "log_error"
     t.integer "user_id"
     t.datetime "created_at", null: false
