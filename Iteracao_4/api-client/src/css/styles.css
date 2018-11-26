@@ -1,0 +1,19 @@
+.padding {
+    padding: 4em;
+}
+.return-block {
+  word-wrap: break-word;
+  display:none;
+}
+
+.bg-gray {
+  background-color: lightgray;
+  height: 100%
+}
+
+.monospace {
+  font-family: "Lucida Console", Monaco, monospace
+}
+.pre {
+  white-space:pre-line;
+}
