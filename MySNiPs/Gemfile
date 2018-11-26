@@ -64,6 +64,10 @@ group :test do
   gem 'minitest'
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'rails-controller-testing'
+  gem 'factory_bot_rails'
+  gem 'database_cleaner'
+  gem 'rubocop-rspec'
 end
 
 # Front
