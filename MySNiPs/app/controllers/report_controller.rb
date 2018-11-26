@@ -52,14 +52,14 @@ class ReportController < ApplicationController
     if current_user.nil?
       user = User.find_by(identifier: "0010000001")
       if user.nil?
-        @user_identifer = "nil"
+        @user_identifier = "nil"
         0
       else
-        @user_identifer = "Example"
+        @user_identifier = "Example"
         user.id
       end
     else
-      @user_identifer = current_user.identifier
+      @user_identifier = current_user.identifier
       current_user.id
     end
   end
