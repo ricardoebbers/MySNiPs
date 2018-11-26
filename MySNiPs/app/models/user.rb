@@ -35,7 +35,7 @@ class User < ApplicationRecord
   def self.format_identifier_for lab_identifier, id_number
     return id_number if lab_identifier == "admin"
 
-    lab_identifier + id_number.to_s.rjust(IDENTIFIER_LENGTH, "0")
+    lab_identifier.to_s.rjust(LAB_LENGTH, "0") + id_number.to_s.rjust(IDENTIFIER_LENGTH, "0")
   end
 
   def self.generate_random_password
