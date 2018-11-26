@@ -1,7 +1,11 @@
 
-const url = "http://mysnips.herokuapp.com"
+const url = "https://mysnips.herokuapp.com"
 var authToken;
 var uploadResponse;
+var elem = document.querySelector('.collapsible.expandable');
+var instance = M.Collapsible.init(elem, {
+  accordion: false
+});
 $('.url').text(url);
 $('#btn-auth').click(function (e) {
   e.preventDefault();
@@ -65,8 +69,6 @@ function getAuthToken(id, pass) {
       authToken = data.auth_token;
       $(".r1").show();
       $("#api-key").text(JSON.stringify(data, null, 2));
-      $("#auth-token-textarea").val(authToken);
-      M.textareaAutoResize($('#auth-token-textarea'));
     });
 }
 
