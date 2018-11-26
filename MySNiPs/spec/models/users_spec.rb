@@ -1,29 +1,36 @@
 require "rails_helper"
 
-describe User do
-  it "should validate a new User" do
-    role = Role.create(role_name: "test")
+describe User, type: :model do
+  let(:role) { Role.create(role_name: "Test") }
+  let(:user) { described_class.new(identifier: "0000000000", password: "000000", role_id: role.id) }
 
-    user = User.new(identifier: "1234567", password: "12345", role_id: role.id)
-    expect(user.valid?).to eq true
+  it "is valid with valid attributes" do
+    expect(user).to be_valid
   end
 
-  it "should not validate a identifier-less User" do
-    role = Role.new(role_name: "test")
-
-    user = User.new(password: "12345", role_id: role.id)
-    expect(user.valid?).to eq false
+  it "is not valid without an identifier" do
+    user.identifier = nil
+    expect(user).to_not be_valid
   end
 
-  it "should not validate a password-less User" do
-    role = Role.create(role_name: "test")
-
-    user = User.new(identifier: "1234567", role_id: role.id)
-    expect(user.valid?).to eq false
+  it "is not valid if the identifier is duplicate" do
+    user.save
+    duplicate_user = user.dup
+    duplicate_user.validate
+    expect(duplicate_user.errors[:identifier].first).to eq "has already been taken"
   end
 
-  it "should not validate a role-less User" do
-    user = User.new(identifier: "1234567", password: "12345")
-    expect(user.valid?).to eq false
+  it "is not valid if the identifier has letters" do
+    user.identifier = "Letters"
+    expect(user).to_not be_valid
+  end
+
+  it "is not valid if the identifier is too long" do
+    user.identifier = "12345678901234567890"
+    expect(user).to_not be_valid
+  end
+
+  it "formats integers and strings into identifier format" do
+    expect(User.format_identifier_for(1, "1")).to eq("0010000001")
   end
 end

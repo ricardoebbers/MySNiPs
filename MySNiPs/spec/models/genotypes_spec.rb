@@ -1,29 +1,37 @@
 require "rails_helper"
 
-describe Genotype do
-  it "should not validate a blank Genotype" do
-    genotype = Genotype.new
-    expect(genotype.valid?).to eq false
+describe Genotype, type: :model  do
+  let(:gene) { Gene.create(title: "Test") }
+  let(:geno) { described_class.new(title: "Test", allele1: "G", allele2: "G", gene_id: gene.id) }
+
+  it "is valid with valid attributes" do
+    expect(geno).to be_valid
   end
 
-  it "should accept a valid Genotype" do
-    gene = Gene.create(title: "Test gene")
-    genotype = Genotype.new(title: "Valid title", allele1: "A", allele2: "B", gene_id: gene.id)
-    expect(genotype.valid?).to eq true
+  it "is not valid without a title" do
+    geno.title = nil
+    expect(geno).to_not be_valid
   end
 
-  it "should not accept Genotypes without a Gene" do
-    genotype = Genotype.new(title: "Valid title", allele1: "A", allele2: "B")
-    expect(genotype.valid?).to eq false
+  it "is not valid if the title is duplicate" do
+    geno.save
+    duplicate_geno = geno.dup
+    duplicate_geno.validate
+    expect(duplicate_geno.errors[:title].first).to eq "has already been taken"
   end
 
-  it "should not accept alleles longer than 1 character" do
-    genotype = Genotype.new(title: "Valid title", allele1: "Too", allele2: "Long")
-    expect(genotype.valid?).to eq false
+  it "is not valid without a Gene" do
+    geno.gene_id = nil
+    expect(geno.valid?).to eq false
   end
 
-  it "should return the right repute and magnitude color" do
-    genotype = Genotype.new(title: "Valid title", allele1: "A", allele2: "B", magnitude: 6, repute: 1)
-    expect(genotype.color).to eq "rgb(0,200,0)"
+  it "is not valid without one of the alleles" do
+    geno.allele1 = nil
+    expect(geno.valid?).to eq false
+  end
+
+  it "is not valid if one of the allele's length is higher than 1" do
+    geno.allele2 = "Too long"
+    expect(geno.valid?).to eq false
   end
 end

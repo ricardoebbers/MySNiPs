@@ -1,24 +1,21 @@
 require "rails_helper"
 
-describe Gene do
-  it "should validate a new Gene" do
-    gene = Gene.new(title: "Valid Gene Title")
-    expect(gene.valid?).to eq true
+describe Gene, type: :model do
+  let(:gene) { described_class.new(title: "Test") }
+
+  it "is valid with valid attributes" do
+    expect(gene).to be_valid
   end
 
-  it "should not accept Genes without titles" do
-    gene = Gene.new
-    expect(gene.valid?).to eq false
+  it "is not valid without a title" do
+    gene.title = nil
+    expect(gene).to_not be_valid
   end
 
-  it "should not accept duplicate Genes" do
-    gene1 = Gene.create(title: "Same title")
-    gene2 = Gene.new(title: "Same title")
-    expect(gene2.valid?).to eq false
-  end
-
-  it "should return 'Gene title' when we check the 'Gene title' Gene" do
-    gene = Gene.new(title: "Gene title")
-    expect(gene.title).to eq "Gene title"
+  it "is not valid if the title is duplicate" do
+    gene.save
+    duplicate_gene = gene.dup
+    duplicate_gene.validate
+    expect(duplicate_gene.errors[:title].first).to eq "has already been taken"
   end
 end
