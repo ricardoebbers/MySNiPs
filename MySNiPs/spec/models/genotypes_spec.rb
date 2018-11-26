@@ -1,7 +1,6 @@
 require "rails_helper"
 
 describe Genotype, type: :model  do
-  let(:gene) { build_stubbed(:gene) }
   let(:geno) { build(:genotype) }
 
   it "is valid with valid attributes" do

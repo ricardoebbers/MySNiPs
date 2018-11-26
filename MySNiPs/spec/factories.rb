@@ -4,13 +4,13 @@ FactoryBot.define do
   end
 
   factory :user do
-    role
+    role { Role.first || association(:role) }
     identifier { "0000000000" }
     password { "000000" }
   end
 
   factory :genoma do
-    user
+    user { User.first || association(:user) }
   end
 
   factory :gene do
@@ -18,7 +18,7 @@ FactoryBot.define do
   end
 
   factory :genotype do
-    gene
+    gene { Gene.first || association(:gene) }
     title { "Test" }
     allele1 { "G" }
     allele2 { "G" }
@@ -28,7 +28,7 @@ FactoryBot.define do
   end
 
   factory :card do
-    user
-    genotype
+    user { User.first || association(:user) }
+    genotype { Genotype.first || association(:genotype) }
   end
 end

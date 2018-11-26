@@ -1,7 +1,6 @@
 require "rails_helper"
 
 describe User, type: :model do
-  let(:role) { build_stubbed(:role) }
   let(:user) { build(:user) }
 
   it "is valid with valid attributes" do

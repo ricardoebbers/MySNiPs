@@ -1,10 +1,6 @@
 require "rails_helper"
 
 describe Card, type: :model do
-  let(:role) { build_stubbed(:role) }
-  let(:user) { build_stubbed(:user) }
-  let(:gene) { build_stubbed(:gene) }
-  let(:geno) { build_stubbed(:genotype) }
   let(:card) { build(:card) }
 
   it "is valid with valid attributes" do

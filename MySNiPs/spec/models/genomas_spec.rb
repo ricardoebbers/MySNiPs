@@ -1,8 +1,6 @@
 require "rails_helper"
 
 describe Genoma, type: :model do
-  let(:role) { build_stubbed(:role) }
-  let(:user) { build_stubbed(:user) }
   let(:genoma) { build(:genoma) }
 
   it "is valid with valid attributes" do
