@@ -22,6 +22,8 @@
                 <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
                 <li class="text-center text-primary"style="margin-left:-20px;"><%=current_identifier%></li>
                 <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
+                <li class="text-center text-primary"style="margin-left:-20px;"><%= text_for_total_or_found @total_cards, @found_cards %></li>
+                <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
                 <li style="display:inline-block;">
                 <div class="form-check">
                   <%= radio_button_tag :rep, "1", @repute_1, type: "radio", class: "form-check-input",style:"visibility:hidden;width:0px;height:0px;",id:"rb1" %>
@@ -64,8 +66,7 @@
     <div id="page-content-wrapper">
       <div class="container-fluid">
         <div id="cards">
-          <%= text_for_total_or_found @total_cards, @found_cards %>
-          <%= render @cards rescue "Ocorreu um erro :(" %>
+        <%= render @cards rescue "Ocorreu um erro :(" %>
         </div>
         <div id="infinite-scrolling">
           <%= will_paginate @cards rescue nil %>
