@@ -60,7 +60,7 @@
                 </li>
                 <%end%>
             </ul>
-    </div>   
+    </div>
     <!-- /#sidebar-wrapper -->
     <!-- Page Content -->
     <div id="page-content-wrapper">
@@ -101,14 +101,14 @@
 <%= javascript_include_tag 'sidebar'%>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/9.0.0/nouislider.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.0.4/wNumb.min.js'></script>
-<script> 
+<script>
 var min = <%= @min %>;
 var max = <%= @max %>;
 </script>
 <%= javascript_include_tag 'rangeslider'%>
 <script>
-var rep1= '<%=@repute_1%>';
-var rep2= '<%=@repute_2%>';
+var rep1= '<%=@repute1%>';
+var rep2= '<%=@repute2%>';
 var rep1b = ($('#rep1').attr('class').split(" "));
 var rep2b = ($('#rep2').attr('class').split(" "));
 if(rep1=='true'){
@@ -124,7 +124,7 @@ rep2b.push('active');
 rep2b.join(" ");
 document.getElementById("rep2").className = rep2b.join(" ");}
 
-$('button.repBut').click(function() { 
+$('button.repBut').click(function() {
     var id = $(this).attr('id');
     if(id=='goodBut'){$("#radioGood").prop("checked", true);}
     else if(id=='badBut'){$("#radioBad").prop("checked", true);}
