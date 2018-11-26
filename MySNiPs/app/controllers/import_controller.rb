@@ -23,13 +23,13 @@ class ImportController < ApplicationController
   # 1. Get a Genotype
   # 2. Search its Gene using its title
   # 3.a. If the Gene is in the database, load it
-  # 3.b. If the Gene isn't in the database, get from the file
-  # 3.c. If the Gene isn't found anywhere, go for the next Genotype
+  # 3.b.             isn't in the database, get from the file
+  # 3.c.             isn't found anywhere, go for the next Genotype
   # 4. Checks if the Genotype is valid
   # 5.a. If its invalid and the Gene is in the database, discard the Genotype
-  # 5.b. If its invalid and the Gene was loaded from file, discard both
+  # 5.b.                and the Gene was loaded from file, discard both
   # 5.c. If its valid and the Gene is in the database, save the Genotype
-  # 5.d. If its valid and the Gene was loaded from file, save both
+  # 5.d.              and the Gene was loaded from file, save both
   def do_import
     last_gene_title = nil
     gene = nil
