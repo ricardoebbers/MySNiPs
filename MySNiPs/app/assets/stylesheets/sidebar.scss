@@ -119,3 +119,9 @@
       margin-right: 0;
     }
   }
+.noUi-tooltip {
+    visibility: hidden;
+}
+.noUi-active .noUi-tooltip {
+    visibility: visible;
+}

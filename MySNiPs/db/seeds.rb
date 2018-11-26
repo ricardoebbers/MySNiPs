@@ -28,4 +28,4 @@ User.create(identifier: "0010000001",
             password_digest: "$2a$10$tUJcvKA.QbKuBSKfno2CtuTjmgLo89/6zdWO3mFMB4LaHBG0Qmz3m",
             role_id: role.id)
 user = User.find_by(identifier: "0010000001")
-Genoma.create(status: 1, user_id: user.id)
+Genoma.create(user_id: user.id)

@@ -20,30 +20,37 @@
                     <a href="/"><%= image_tag("logo.png", :style=>'height:35px;', :class=>'d-inline-block align-bottom px-5') %></a>
                 </li>
                 <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
-                <li class="text-center text-primary"><%=current_identifier%></li>
+                <li class="text-center text-primary"style="margin-left:-20px;"><%=current_identifier%></li>
+                <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
+                <li class="text-center text-primary"style="margin-left:-20px;"><%= text_for_total_or_found @total_cards, @found_cards %></li>
                 <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
                 <li style="display:inline-block;">
                 <div class="form-check">
-                  <%= radio_button_tag :rep, "1", @repute1, type: "radio", class: "form-check-input",style:"visibility:hidden;width:0px;height:0px;",id:"rb1" %>
-                  <%=label_tag('rep_1' , '', class: 'form-check-label fas fa-dna fa btn btn-outline-success',id:'rep1') %>
+                  <%= radio_button_tag :rep, "1", @repute_1, type: "radio", class: "form-check-input",style:"visibility:hidden;width:0px;height:0px;",id:"rb1" %>
+                  <%=label_tag('rep_1' , '', class: 'form-check-label fas fa-dna fa btn btn-outline-success',id:'rep1',style:'width:100px;margin-left:-15px;padding-right:30px;') %>
                 </div></li>
                 <li style="display:inline-block;">
                 <div class="form-check">
-                  <%= radio_button_tag :rep, "2", @repute2, type: "radio", class: "form-check-input",style:"visibility:hidden;width:0px;height:0px;",id:"rb2" %>
-                  <%=label_tag('rep_2' , '', class: 'form-check-label fas fa-dna fa btn btn-outline-danger',id:'rep2') %>
+                  <%= radio_button_tag :rep, "2", @repute_2, type: "radio", class: "form-check-input",style:"visibility:hidden;width:0px;height:0px;",id:"rb2" %> 
+                  <%=label_tag('rep_2' , '', class: 'form-check-label fas fa-dna fa btn btn-outline-danger',id:'rep2',style:'width:100px;margin-left:-45px;padding-right:30px;') %>
                 </div>
                 </li>
                 <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
-                <li><div id="slider" class="noUiSlider" style="display: block;margin-left: auto;margin-right: auto;width: 80%;"></div></li>
+                <li><div id="slider" class="noUiSlider" style="display: block;margin-left: auto;margin-right: auto;width: 67%;"></div></li>
                 <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
-                <li style="text-align:center;"><button class="btn btn-primary fas fa-search col-2 mt-3" type="submit"></button></li>
                 <li><select class="form-control" id="min" name="min" style="visibility:hidden;width:0px;height:0px;"></select></li>
                 <li><select class="form-control" id="max" name="max" style="visibility:hidden;width:0px;height:0px;"></select></li>
+                <li style="display:inline-block;" class="ml-5"><button class="btn btn-primary fas fa-search" type="submit"></button></li>
                 <% end %>
-                <%= button_to 'Reset filter', :report_index, method: :get %>
+                <li style="display:inline-block" class=ml-2>
+                  <form class="button_to" method="get" action="/report">
+                    <button class="btn btn-primary fas fa-undo" type="submit"></button>
+                  </form>
+                </li>
+                <!--<%= button_to 'Reset filter', :report_index, method: :get %>-->
                 <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
-                <li class="text-center">
-                    <a href="#" class=" text-muted">Termos de Uso</a>
+                <li class="text-center">          
+                    <a href="#" class=" text-muted" data-toggle="modal" data-target="#termos_uso">Termos de Uso</a>
                 </li><%if current_user%>
                 <li class="text-center">
                     <a href="/logout" class=" text-muted">Logout</a>
@@ -59,8 +66,7 @@
     <div id="page-content-wrapper">
       <div class="container-fluid">
         <div id="cards">
-          <%= text_for_total_or_found @total_cards, @found_cards %>
-          <%= render @cards rescue "Ocorreu um erro :(" %>
+        <%= render @cards rescue "Ocorreu um erro :(" %>
         </div>
         <div id="infinite-scrolling">
           <%= will_paginate @cards rescue nil %>
@@ -73,7 +79,25 @@
   <!-- /#wrapper -->
 
 
-
+<!-- Modal -->
+<div class="modal fade" id="termos_uso" tabindex="-1" role="dialog" aria-labelledby="termos_uso" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Termos de Uso</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true" class="text-danger">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
 <%= javascript_include_tag 'sidebar'%>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/9.0.0/nouislider.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.0.4/wNumb.min.js'></script>

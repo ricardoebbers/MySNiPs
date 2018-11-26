@@ -5,12 +5,12 @@ if (slider != null) {
     start: [0, 10],
     connect: true,
     range: {
-      'min': 0,
-      'max': 10
-    }, step: 1
-  });
-  var selectmin = document.getElementById('min');
-  var selectmax = document.getElementById('max');
+        'min': 0,
+        'max': 10
+    },step:1,tooltips:[true,true]
+});
+var selectmin = document.getElementById('min');
+var selectmax = document.getElementById('max');
 
   // Append the option elements
   for (var i = 0; i <= 10; i++) {

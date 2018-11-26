@@ -77,6 +77,8 @@ gem 'simple_command'
 # Temporary infinite scrolling gem
 gem 'will_paginate'
 
-
 # Gem needed for Heroku scout app
 gem 'scout_apm'
+
+# Cors para habilitar acessos ao api
+gem 'rack-cors', require: 'rack/cors'

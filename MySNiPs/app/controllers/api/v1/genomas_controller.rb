@@ -1,7 +1,6 @@
 module Api
   module V1
     class GenomasController < ApiController
-
       def create
         # Only labs and admins can post genomas
         return json_response({error: "Invalid credentials"}, 401) unless authority_valid?
@@ -29,8 +28,7 @@ module Api
 
         return json_response({error: "Error while creating User"}, 500) if user.nil?
 
-        # Genomas always start with Status 1: queue
-        genoma = Genoma.new(user_id: user.id, status: 1)
+        genoma = Genoma.new(user_id: user.id)
         unless genoma.valid?
           raw = nil
           params = nil
