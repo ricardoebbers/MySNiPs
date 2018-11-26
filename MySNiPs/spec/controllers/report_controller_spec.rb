@@ -20,7 +20,7 @@ describe ReportController, type: :controller do
     end
 
     context "filters" do
-      it "unset by default" do
+      it "are unset by default" do
         get :index
         expect(assigns(:min)).to eq 0
         expect(assigns(:max)).to eq 10
@@ -45,28 +45,87 @@ describe ReportController, type: :controller do
     end
 
     context "with a logged in user" do
-      let!(:role) { build_stubbed(:role) }
-      let!(:user) { build_stubbed(:user) }
-      let!(:gene) { build_stubbed(:gene) }
-      let!(:geno) { build_stubbed(:genotype) }
-      let!(:card) { build_stubbed(:card) }
+      let!(:user) { create(:user) }
+      let!(:geno1) { create(:genotype, title: "Test1", repute: 0, magnitude: 1) }
+      let!(:geno2) { create(:genotype, title: "Test2", repute: 1, magnitude: 5) }
+      let!(:geno3) { create(:genotype, title: "Test3", repute: 2, magnitude: 9) }
+      let!(:card1) { create(:card, genotype_id: geno1.id) }
+      let!(:card2) { create(:card, genotype_id: geno2.id) }
+      let!(:card3) { create(:card, genotype_id: geno3.id) }
 
-      before { allow(controller).to receive(:current_user) { card.user } }
+      before { allow(controller).to receive(:current_user) { user } }
 
-      it "to have a correct identifier" do
+      it "has the right current identifier" do
         get :index
         expect(controller.current_identifier).to eq user.identifier
       end
 
-      it "result in all cards by default" do
+      it "results in all cards by default" do
         get :index
         expect(assigns(:total_cards) == assigns(:found_cards)).to be true
       end
 
-      #it "to have the right amount of cards" do
-        #get :index
-        #expect(assigns(:total_cards)).to eq 3
-      #end
+      it "has the right amount of cards" do
+        get :index
+        expect(assigns(:total_cards)).to eq 3
+      end
+
+      context "orders by" do
+        it "descending magnitude" do
+          get :index
+          expect(assigns(:cards).to_a).to eq user.cards.to_a.reverse
+        end
+      end
+
+      context "filters" do
+        context "repute for" do
+          it "good" do
+            params = {rep: 1}
+            get :index, params: params
+            expect(assigns(:found_cards)).to eq 1
+          end
+
+          it "bad" do
+            params = {rep: 2}
+            get :index, params: params
+            expect(assigns(:found_cards)).to eq 1
+          end
+        end
+
+        context "magnitude for" do
+          it "min" do
+            params = {min: 6}
+            get :index, params: params
+            expect(assigns(:found_cards)).to eq 1
+          end
+
+          it "max" do
+            params = {max: 4}
+            get :index, params: params
+            expect(assigns(:found_cards)).to eq 1
+          end
+
+          it "min and max" do
+            params = {min: 4, max: 6}
+            get :index, params: params
+            expect(assigns(:found_cards)).to eq 1
+          end
+        end
+
+        context "searches for a" do
+          it "generic term" do
+            params = {search: "Test"}
+            get :index, params: params
+            expect(assigns(:found_cards) == assigns(:total_cards)).to eq true
+          end
+
+          it "specific term" do
+            params = {search: "Test1"}
+            get :index, params: params
+            expect(assigns(:found_cards)).to eq 1
+          end
+        end
+      end
     end
   end
 end
