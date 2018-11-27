@@ -2,7 +2,7 @@
 
 Projeto da disciplina Engenharia de Software (IF977) do período 2018.2 do curso de graduação em Sistemas de Informação da Universidade Federal de Pernambuco.
 
-Link do App: [TBD]
+Link do App: https://mysnips.herokuapp.com/
 
 Screencast: [TBD]
 
