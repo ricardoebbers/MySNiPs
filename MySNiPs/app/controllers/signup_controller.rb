@@ -24,6 +24,6 @@ class SignupController < ApplicationController
   def signup_params
     # strong parameters - whitelist of allowed fields #=> permit(:name, :email, ...)
     # that can be submitted by a form to the user model #=> require(:user)
-    params.require(:user).permit(:identifier, :password)
+    params.require(:user).permit(:identifier, :password, :password_confirmation)
   end
 end

@@ -33,7 +33,7 @@ end
 
 Dado("que o usuário {string} nunca logou") do |string|
   user = User.find_by(identifier: string)
-  assert_nil user.last_login
+  assert_nil(user.nil? ? nil : user.last_login)
 end
 
 Quando("inserir {string} no campo login") do |string|
