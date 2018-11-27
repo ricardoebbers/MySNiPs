@@ -4,7 +4,7 @@ Projeto da disciplina Engenharia de Software (IF977) do período 2018.2 do curso
 
 Link do App: https://mysnips.herokuapp.com/
 
-Screencast: [TBD]
+Screencast: https://www.youtube.com/watch?v=_sbrQmip2cc
 
 ## Equipe
 
