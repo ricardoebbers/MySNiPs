@@ -38,18 +38,17 @@ end
 
 # You may also want to configure DatabaseCleaner to use different strategies for certain features and scenarios.
 # See the DatabaseCleaner documentation for details. Example:
-#
-#   Before('@no-txn,@selenium,@culerity,@celerity,@javascript') do
-#     # { except: [:widgets] } may not do what you expect here
-#     # as Cucumber::Rails::Database.javascript_strategy overrides
-#     # this setting.
-#     DatabaseCleaner.strategy = :truncation
-#   end
-#
-#   Before('not @no-txn', 'not @selenium', 'not @culerity', 'not @celerity', 'not @javascript') do
-#     DatabaseCleaner.strategy = :transaction
-#   end
-#
+
+Before('@no-txn,@selenium,@culerity,@celerity,@javascript') do
+  # { except: [:widgets] } may not do what you expect here
+  # as Cucumber::Rails::Database.javascript_strategy overrides
+  # this setting.
+  DatabaseCleaner.strategy = :truncation
+end
+
+Before('not @no-txn', 'not @selenium', 'not @culerity', 'not @celerity', 'not @javascript') do
+  DatabaseCleaner.strategy = :transaction
+end
 
 # Possible values are :truncation and :transaction
 # The :transaction strategy is faster, but might give you threading problems.
@@ -57,18 +56,19 @@ end
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
 # Clean the database before and after each scenario
-# Before do
-#   DatabaseCleaner.start
-# end
+Before do
+  DatabaseCleaner.start
+end
 
-# After do |scenario|
-#   DatabaseCleaner.clean
-# end
+After do |scenario|
+  DatabaseCleaner.clean
+end
 
 # Register Chrome as the default driver
 Capybara.register_driver :chrome do |app|
   options = Selenium::WebDriver::Chrome::Options.new(args: %w[no-sandbox headless disable-gpu])
   Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
+  #Capybara::Selenium::Driver.new(app, browser: :chrome)
 end
 
 Capybara.javascript_driver = :chrome
