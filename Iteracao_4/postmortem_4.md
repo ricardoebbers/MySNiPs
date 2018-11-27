@@ -26,7 +26,6 @@ Planejado | Responsável | Observações
 --------- | ----------- | -----------
 Modelar e implementar o layout do Relatorio | José Reginaldo
 Implementar upload via API | João Rafael
-Criar testes para a GenomikAPI | Ricardo Ebbers
 Criar testes para o match genoma vs base SNPedia | João Rafael
 Implementar buscas no relatório | João Lira
 Implementar filtros com base em repute e magnitude | João Lira
@@ -36,8 +35,9 @@ Elaborar termos de uso | José Reginaldo + Ricardo Ebbers
 
 ## O que não foi entregue
 
-Entregamos tudo que foi planejado
-
+Planejado | Responsável | Observações
+--------- | ----------- | -----------
+Criar testes para a GenomikAPI | Ricardo Ebbers
 
 ## Foi feito algo que não estava planejado?
 
