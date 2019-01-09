@@ -86,3 +86,6 @@ gem 'scout_apm'
 
 # Cors para habilitar acessos ao api
 gem 'rack-cors', require: 'rack/cors'
+
+# Gem for charts
+gem "chartkick"
