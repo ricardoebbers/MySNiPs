@@ -88,4 +88,7 @@ gem 'scout_apm'
 gem 'rack-cors', require: 'rack/cors'
 
 # Gem for charts
-gem "chartkick"
+gem 'chartkick'
+
+# Gem to group by time periods
+gem 'groupdate'
