@@ -4,9 +4,10 @@ class ReportController < ApplicationController
   def reset_filters
     redirect_to :report_index
   end
+
   def index
     @cards = Card.from_user(example_or_logged_in)
-    @total_cards = @cards.size
+    @all_cards = @cards
 
     # Applies an eager_join so the other tables' columns can be used
     @cards = @cards.eager_join_tables

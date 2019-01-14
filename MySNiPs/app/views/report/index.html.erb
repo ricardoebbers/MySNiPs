@@ -22,7 +22,7 @@
                 <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
                 <li class="text-center text-primary"style="margin-left:-20px;"><%=current_identifier%></li>
                 <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
-                <li class="text-center text-primary"style="margin-left:-20px;"><%= text_for_total_or_found @total_cards, @found_cards %></li>
+                <li class="text-center text-primary"style="margin-left:-20px;"><%= text_for_total_or_found @all_cards.size, @found_cards %></li>
                 <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
                 <li style="display:inline-block;">
                 <div class="form-check">
@@ -31,7 +31,7 @@
                 </div></li>
                 <li style="display:inline-block;">
                 <div class="form-check">
-                  <%= radio_button_tag :rep, "2", @repute2, type: "radio", class: "form-check-input",style:"visibility:hidden;width:0px;height:0px;",id:"rb2" %> 
+                  <%= radio_button_tag :rep, "2", @repute2, type: "radio", class: "form-check-input",style:"visibility:hidden;width:0px;height:0px;",id:"rb2" %>
                   <%=label_tag('rep_2' , '', class: 'form-check-label fas fa-dna fa btn btn-outline-danger',id:'rep2',style:'width:100px;margin-left:-45px;padding-right:30px;') %>
                 </div>
                 </li>
@@ -49,7 +49,9 @@
                 </li>
                 <!--<%= button_to 'Reset filter', :report_index, method: :get %>-->
                 <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
-                <li class="text-center">          
+                <%= pie_chart @cards.group("genotypes.repute").count %>
+                <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
+                <li class="text-center">
                     <a href="#" class=" text-muted" data-toggle="modal" data-target="#termos_uso">Termos de Uso</a>
                 </li><%if current_user%>
                 <li class="text-center">
