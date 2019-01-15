@@ -17,7 +17,7 @@ class ReportController < ApplicationController
     apply_filters
     execute_search
 
-    @found_cards = @cards.size
+    @found_cards = @cards
     @cards = @cards.paginate(page: params[:page], per_page: 20)
 
     respond_to do |format|

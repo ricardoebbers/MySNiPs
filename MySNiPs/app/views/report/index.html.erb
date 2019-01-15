@@ -22,7 +22,7 @@
                 <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
                 <li class="text-center text-primary"style="margin-left:-20px;"><%=current_identifier%></li>
                 <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
-                <li class="text-center text-primary"style="margin-left:-20px;"><%= text_for_total_or_found @all_cards.size, @found_cards %></li>
+                <li class="text-center text-primary"style="margin-left:-20px;"><%= text_for_total_or_found @all_cards.size, @found_cards.size %></li>
                 <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
                 <li style="display:inline-block;">
                 <div class="form-check">
@@ -49,11 +49,16 @@
                 </li>
                 <!--<%= button_to 'Reset filter', :report_index, method: :get %>-->
                 <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
-                <%= pie_chart @cards.group("genotypes.repute").count %>
+
+                <li class="text-center">
+                <%= graph_by_repute_or_magnitude %>
+                </li>
                 <hr class="deep-purple accent-2 d-inline-block mx-4" style="width: 200px;">
+
                 <li class="text-center">
                     <a href="#" class=" text-muted" data-toggle="modal" data-target="#termos_uso">Termos de Uso</a>
-                </li><%if current_user%>
+                </li>
+                <%if current_user%>
                 <li class="text-center">
                     <a href="/logout" class=" text-muted">Logout</a>
                 </li>
